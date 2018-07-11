@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <script src="https://code.jquery.com/jquery.min.js"></script>
+   <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <p id = "demo">
+    </p>
+    
+   <script>
+       var txt
+       $.getJSON("talks.json", function(json) {
+       var obj = json;
+        var table = "";
+    
+            for (var y = 0; y < (obj.talks).length;y++){
+                if(obj.talks[y].Catergories === "Demo"){
+                var txt = "<table border='1'>"
+                    txt += "<tr>";
+                        txt += "<td>" + "Title" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
+                    txt+= "</tr>"   
+
+                    txt += "<tr>";  
+                        txt += "<td>" + "Time" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Time) + "</td>"
+                    txt+= "</tr>" 
+                    txt += "<tr>";   
+                         txt += "<td>" + "Location" + "</td>"  
+                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                    txt+= "</tr>"    
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Host" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                    txt+= "</tr>"  
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Summary" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
+                     txt+= "</tr>"
+
+                    txt += "</table><br>" 
+                        table += txt;
+                }
+            };
+
+        
+
+            document.getElementById("demo").innerHTML = table;
+
+    
+    });
+   
+
+    
+   </script>
+
+</body>

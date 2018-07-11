@@ -1,0 +1,45 @@
+{
+"events":
+[
+    {    
+        "Title": "Demo1",
+        "Time": "10:00",
+        "Location": "Nuuk",
+        "Host": "Lucy",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Demo"
+    },
+    {
+        "Title": "Demo2",
+        "Time": "11:00",
+        "Location": "Moscow",
+        "Host": "Tim",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Demo"
+    },
+    {
+        "Title": "Demo3",
+        "Time": "12:00",
+        "Location": "Warsaw",
+        "Host": "Kate",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Demo"
+    },
+    {
+        "Title": "Tech Talk",
+        "Time": "15:00",
+        "Location": "Nuuk",
+        "Host": "Lisa",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Talk"
+    },
+    {
+        "Title": "Tech talk 2",
+        "Time": "16:00",
+        "Location": "Nuuk",
+        "Host": "Lucy",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Talk"
+    }
+]
+}
