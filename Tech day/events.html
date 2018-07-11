@@ -2,58 +2,93 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <script src="https://code.jquery.com/jquery.min.js"></script>
-   <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+   <script src="main.js"></script>
 </head>
 <body>
-    <p id = "demo">
-    </p>
+    
+        <nav class="navbar">
+                <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff"
+                            stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff"
+                            stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff"
+                            stroke-width="5"/>
+                        </svg>
+                    </a>
+                </span>
+        
+                <ul class="navbar-nav">
+                    <li><a href="https://www.google.ie">Home</a></li>
+                    <li><a href="https://www.google.ie">Events</a></li>
+                    <li><a href="https://www.google.ie">Map</a></li>
+                    <li><a href="https://www.google.ie">Food</a></li>
+                    <li><a href="https://www.google.ie">About</a></li>
+                    <li><a href="https://www.google.ie">Favourites</a></li>
+                </ul>
+        
+                <div id="side-menu" class="side-nav">
+                    <a href="#" class="btn-close"
+                    onclick="closeSlideMenu()">&times;</a>
+                    <a href="https://www.google.ie">Home</a>
+                    <a href="https://www.google.ie">Events</a>
+                    <a href="https://www.google.ie">Map</a>
+                    <a href="https://www.google.ie">Food</a>
+                    <a href="https://www.google.ie">About</a>
+                    <a href="https://www.google.ie">Favourites</a>
+        
+                </div>
+            </nav>
+            
+            <div id="main">
+        
+                    <header>
+                            <img src = "TechDayBannerInternal.svg">
+                        </header>
+                        <br>
+                    
+                    
+                    <div class="grid">
+                        
+                                <div>
+                                     <a href="#">
+                                             <img src="demo banner.jpg">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="live events banner.png">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="talks banner.jpg">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <img src="favourites banner.jpg">
+                                    </a>
+                                </div>
+
+                              </div>
+                </main>
+
     
    <script>
-       var txt
-       $.getJSON("talks.json", function(json) {
-       var obj = json;
-        var table = "";
-    
-            for (var y = 0; y < (obj.talks).length;y++){
-                if(obj.talks[y].Catergories === "Demo"){
-                var txt = "<table border='1'>"
-                    txt += "<tr>";
-                        txt += "<td>" + "Title" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                    txt+= "</tr>"   
 
-                    txt += "<tr>";  
-                        txt += "<td>" + "Time" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                    txt+= "</tr>" 
-                    txt += "<tr>";   
-                         txt += "<td>" + "Location" + "</td>"  
-                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
-                    txt+= "</tr>"    
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Host" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                    txt+= "</tr>"  
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Summary" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                     txt+= "</tr>"
+    function openSlideMenu() {
+        document.getElementById('side-menu').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+    }
 
-                    txt += "</table><br>" 
-                        table += txt;
-                }
-            };
-
-        
-
-            document.getElementById("demo").innerHTML = table;
-
-    
-    });
-   
+    function closeSlideMenu() {
+        document.getElementById('side-menu').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+    }
 
     
    </script>
