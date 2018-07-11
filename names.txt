@@ -1,3 +1,14 @@
 --Type your names below--
+<<<<<<< HEAD
 kashif shah
 
+=======
+Lucy Sheridan
+Aoife Broderick
+Iram Mehdi
+<<<<<<< HEAD
+Patrick McMahon
+=======
+Bryan Tiernan
+>>>>>>> d80ac40ea3a98c8943147de3680607155b2e0fa9
+>>>>>>> ae8efd8360a740a5022574203db89e5c2d334a70
