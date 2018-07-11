@@ -6,3 +6,4 @@ Gormlaith Mandal
 Iram Mehdi
 Patrick McMahon
 Bryan Tiernan
+Emmet Connolly
