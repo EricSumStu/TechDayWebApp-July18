@@ -1,0 +1,180 @@
+body{
+    overflow-x:hidden;
+}
+
+.navbar{
+
+    background-color:#000000;
+    overflow: hidden;
+    height: 63
+    px;
+}
+
+.navbar a{
+    float:left;
+    display:block;
+    color:#fff;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size:17px;
+}
+
+.navbar ul{
+    margin:8px 0 0 0;
+    list-style:none;
+}
+
+.side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:1s;
+}
+
+.side-nav a{
+    padding:10px 10px 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size:22px;
+    color:#fff;
+    display:block;
+    transition:0.7s;
+}
+
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+}
+
+#main{
+    transition:margin-left 0.5s;
+    padding:20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media(max-width:560px){
+    .navbar-nav{display:none}
+}
+.grid > div {
+  padding:1em;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top"
+                         "middle-left middle-middle middle-right"
+                         "bottom-left bottom-middle bottom right";
+    text-align: center;
+}
+
+@media screen and (max-width: 670px){
+    .grid{
+        grid-template-columns: 50% 50%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top"
+                         "middle-left middle-right"
+                         "bottom-left bottom right";
+    text-align: center;
+    }
+}
+
+@media screen and (max-width: 415px){
+    .grid{
+        grid-template-columns: 100%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top";
+    text-align: center;
+    }
+
+    
+}
+
+img  {
+    display: block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:5px; 
+}
+
+
+
+.button2{
+    display: block;
+    width: 90%;
+    height:250px;
+    position: relative;
+    border: 2px solid #04a;
+    margin: auto;
+    border-radius:5px;
+    background-color: #06c;
+    font-family: hilda;
+}
+
+.button2 .content {
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    background-color: #09f;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 6px 0 #06c;
+    border-radius:5px;
+    transition: all 0.2s linear;
+}
+
+.button2:active .content{
+    bottom:0px;
+    box-shadow: 0 0 0 #06c;
+}
+
+.button3{
+    display: block;
+    width: 90%;
+    height:250px;
+    position: relative;
+    border: 2px solid #04a;
+    margin: auto;
+    border-radius:5px;
+    background-color: #06c;
+    font-family: hilda;
+}
+
+.button3 .content {
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    background-color: #09f;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 6px 0 #06c;
+    border-radius:5px;
+    transition: all 0.2s linear;
+}
+
+.button3:active .content{
+    bottom:0px;
+    box-shadow: 0 0 0 #06c;
+}
+
