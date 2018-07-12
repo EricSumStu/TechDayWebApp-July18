@@ -52,30 +52,63 @@
        var obj = json;
         var table = "";
     
-            for (var y = 0; y < (obj.talks).length;y++){
-                if(obj.talks[y].Catergories === "Talk"){
+        for (var y = 0; y < (obj.talks).length;y++){
+                if(obj.talks[y].Catergories === "Demo"){
                 var txt = "<table>"
+                        txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
                     txt += "<tr>";
-                        txt += "<td>" + "Title" + "</td>"
+                        txt += "<td>" + "Title:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                        txt += "<td>" + "Time" + "</td>"
+                    txt+= "</tr>" 
+                    txt += "<tr>";   
+                            txt += "<td>" + "Time:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Time) + "</td>"
                     txt+= "</tr>"   
                     txt += "<tr>";   
-                         txt += "<td>" + "Location" + "</td>"  
+                         txt += "<td>" + "Location:" + "</td>"  
                          txt += "<td>" + (obj.talks[y].Location) + "</td>"
                     txt+= "</tr>"    
                     txt += "<tr>"; 
-                            txt += "<td>" + "Host" + "</td>"
+                            txt += "<td>" + "Host:" + "</td>"
                          txt += "<td>" + (obj.talks[y].Host) + "</td>"
                     txt+= "</tr>"  
                     txt += "<tr>"; 
-                            txt += "<td>" + "Summary" + "</td>"
+                            txt += "<td>" + "Summary:" + "</td>"
                          txt += "<td>" + (obj.talks[y].Summary) + "</td>"
                      txt+= "</tr>"
-
+                     txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "" + "</td>"  
+                         txt += "<td>" + "" + "</td>"
+                    txt+= "</tr>"
                     txt += "</table><br>" 
-                        table += txt;
+                        table += txt
                 }
             };
 
