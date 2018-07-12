@@ -40,6 +40,14 @@
         "Host": "Lucy",
         "Summary": "Bla  Bla Bla",
         "Catergories": "Talk"
+    },
+    {
+        "Title": "You have not selected any favourites. Please go to events to select favourites",
+        "Time": "16:00",
+        "Location": "Nuuk",
+        "Host": "Lucy",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "favourites"
     }
 ]
 }

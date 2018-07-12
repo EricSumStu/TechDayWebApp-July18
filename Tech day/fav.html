@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Favourites</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="details.css" />
+    
+</head>
+<body>
+    
+    <p id = "demo">
+    </p>
+<script>
+var txt
+$.getJSON("talks.json", function(json) {
+var obj = json;
+var table = "";
+
+    for (var y = 0; y < (obj.talks).length;y++){
+        if(obj.talks[y].Catergories === "favourites"){
+        var txt = "<table>"
+            txt += "<tr>";
+                txt += "<td>" + (obj.talks[y].Title) + "</td>"
+            txt+= "</tr>"   
+
+            txt += "</table><br>" 
+                table += txt;
+        }
+    };
+
+    document.getElementById("demo").innerHTML = table;
+
+
+});
+</script>        
+</body>
+</html>
