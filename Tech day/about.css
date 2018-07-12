@@ -1,7 +1,62 @@
+.navbar{
+
+    background-color:#000000;
+    overflow: hidden;
+    height: 63
+    px;
+}
+
+.navbar a{
+    float:left;
+    display:block;
+    color:#fff;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size:17px;
+}
+
+.navbar ul{
+    margin:8px 0 0 0;
+    list-style:none;
+}
+
+.side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:1s;
+}
+
+.side-nav a{
+    padding:10px 10px 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size:22px;
+    color:#fff;
+    display:block;
+    transition:0.7s;
+}
+
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+}
+
+
 #about{
     background-image: url("/images/1111.jpg");
     background-repeat: no-repeat;
-    background-size: 1400px 1000px;
+    background-size: 2000px 1000px;
     border-style: solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
