@@ -11,41 +11,6 @@
 </head>
 <body>
     
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#fff"
-                    stroke-width="5"/>
-                    <path d="M0,14 30,14" stroke="#fff"
-                    stroke-width="5"/>
-                    <path d="M0,23 30,23" stroke="#fff"
-                    stroke-width="5"/>
-                </svg>
-            </a>
-        </span>
-
-        <ul class="navbar-nav">
-            <li><a href="https://www.google.ie">Home</a></li>
-            <li><a href="https://www.google.ie">Events</a></li>
-            <li><a href="https://www.google.ie">Map</a></li>
-            <li><a href="https://www.google.ie">Food</a></li>
-            <li><a href="https://www.google.ie">About</a></li>
-            <li><a href="https://www.google.ie">Favourites</a></li>
-        </ul>
-
-        <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close"
-            onclick="closeSlideMenu()">&times;</a>
-            <a href="https://www.google.ie">Home</a>
-            <a href="https://www.google.ie">Events</a>
-            <a href="https://www.google.ie">Map</a>
-            <a href="https://www.google.ie">Food</a>
-            <a href="https://www.google.ie">About</a>
-            <a href="https://www.google.ie">Favourites</a>
-
-        </div>
-    </nav>
     
     
     
@@ -54,8 +19,8 @@
         
         <header>
                 <img src = "./images/TechDayBannerInternal.svg">
-            </header>
-            <br>
+        </header>
+        
         
          
             <div class="grid">
@@ -92,17 +57,37 @@
                       </div>
     </main>
 
-    <script>
-    function openSlideMenu() {
-        document.getElementById('side-menu').style.width = '250px';
-        document.getElementById('main').style.marginLeft = '250px';
-    }
+    <p id="demo"></p>
 
-    function closeSlideMenu() {
-        document.getElementById('side-menu').style.width = '0';
-        document.getElementById('main').style.marginLeft = '0';
-    }
-    </script>
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
     
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    </script>
 </body>
 </html>
