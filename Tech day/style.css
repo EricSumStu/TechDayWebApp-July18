@@ -1,6 +1,22 @@
+@font-face{
+    font-family: 'EricssonHilda-Regular';
+   src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
+   }
 
-
-
+@font-face {
+   font-family: 'EricssonHilda-Light';
+   src: url('fonts/EricssonHilda-Light.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Medium';
+   src: url('fonts/EricssonHilda-Medium.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Bold';
+   src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
+   }
+   body   
+   {font-family: 'EricssonHilda-Light';}
 #main{
     transition:margin-left 0.5s;
     padding:20px;
@@ -60,7 +76,7 @@ img {
 body{
 	text-align: center;
 	
-  font-family: sans-serif;
+  font-family: 'EricssonHilda-Light';
   font-weight: 100;
 }
 
@@ -72,7 +88,7 @@ h1{
 }
 
 #clockdiv{
-	font-family: sans-serif;
+	font-family: 'EricssonHilda-Light';
 	color: #fff;
 	display: inline-block;
 	font-weight: 100;
@@ -105,7 +121,7 @@ footer {
     border-width: 100px;
     text-align: center;
     background-color: blue;
-    font-size: 100px;
+    font-size: 50px;
     
 
 }
