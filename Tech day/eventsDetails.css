@@ -1,8 +1,30 @@
+
 body{
     overflow-x:hidden;
 }
 
+.navbar{
 
+    background-color:#000000;
+    overflow: hidden;
+    height: 63
+    px;
+}
+
+.navbar a{
+    float:left;
+    display:block;
+    color:#fff;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size:17px;
+}
+
+.navbar ul{
+    margin:8px 0 0 0;
+    list-style:none;
+}
 
 .side-nav{
     height:100%;
@@ -19,14 +41,13 @@ body{
 }
 
 .side-nav a{
-    padding:10px 10px 10px 10px 10px 10px 10px;
+    padding:10px 10px 10px 10px 10px 30px;
     text-decoration: none;
     font-size:22px;
     color:#fff;
+    display:block;
     transition:0.7s;
-    float: left;
 }
-
 
 .side-nav .btn-close{
     position: absolute;
@@ -36,28 +57,7 @@ body{
     margin-left:50px;
 }
 
-.side-nav ul li{
-    text-align:left;
-    text-decoration: none;
-    list-style: none;
-    padding:1em;
-}
+table {
 
- ul li .current {
-    background-color:green;
-}
-#main{
-    transition:margin-left 0.5s;
-    padding:20px;
-    overflow: hidden;
-    width: 100%;
-}
 
-img  {
-    display: block;
-    width: 90%;
-    height:80%;
-    position: relative;
-    margin: auto;
-    border-radius:20px; 
 }

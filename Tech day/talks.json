@@ -41,6 +41,54 @@
         "Summary": "Bla  Bla Bla",
         "Catergories": "Talk"
     },
+    {    
+        "Title": "Real",
+        "Time": "10:00",
+        "Location": "Nuuk",
+        "Host": "Emma",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Event"
+    },
+    {    
+        "Title": "Ice cream",
+        "Time": "10:00",
+        "Location": "Nuuk",
+        "Host": "Lucy",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Event"
+    },
+    {    
+        "Title": "Event",
+        "Time": "10:00",
+        "Location": "Nuuk",
+        "Host": "Aoife",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Event"
+    },
+    {    
+        "Title": "About me",
+        "Time": "13:00",
+        "Location": "Nuuk",
+        "Host": "Lisa",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Talk"
+    },
+    {    
+        "Title": "This one",
+        "Time": "12:00",
+        "Location": "Nuuk",
+        "Host": "Patrick",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Event"
+    },
+    {    
+        "Title": "Demo6",
+        "Time": "10:00",
+        "Location": "Nuuk",
+        "Host": "Emment",
+        "Summary": "Bla  Bla Bla",
+        "Catergories": "Demo"
+    },
     {
         "Title": "You have not selected any favourites. Please go to events to select favourites",
         "Time": "16:00",
