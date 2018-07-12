@@ -52,3 +52,22 @@ img  {
     margin: auto;
     border-radius:20px; 
 }
+
+#about{
+    background-image: url("/images/1.jpg");
+    /*background-repeat: no-repeat; */
+    border-style: solid;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 25px;
+    text-align: left;
+    color: white;
+    float: left;
+  }

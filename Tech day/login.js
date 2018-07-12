@@ -5,8 +5,8 @@ var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if ( username == "admin" && password == "password"){
 alert ("Login successful. Welcome admin!");
-window.close("login.html");
-window.open("adminindex.html"); // Redirecting to other page.
+window.close("index.html");
+window.open("index.html"); // Redirecting to other page.
 return false;
 }
 else{
