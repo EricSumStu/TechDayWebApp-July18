@@ -77,7 +77,8 @@ img  {
 }
 
 #about{
-    background-color: white;
+    background-image: url("/images/1.jpg");
+    /*background-repeat: no-repeat; */
     border-style: solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -90,6 +91,6 @@ img  {
     margin-right: 25px;
     font-size: 25px;
     text-align: left;
-    color: #111;
+    color: white;
     float: left;
   }
