@@ -43,9 +43,7 @@ body{
     padding:1em;
 }
 
- ul li .current {
-    background-color:green;
-}
+
 #main{
     transition:margin-left 0.5s;
     padding:20px;
