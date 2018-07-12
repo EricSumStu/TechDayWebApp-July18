@@ -117,11 +117,15 @@ h1{
 
 footer {
     border-style: solid ;
-    border-color: blue;
-    border-width: 100px;
+    border-color: white;
+    border-width: 10px;
     text-align: center;
-    background-color: blue;
-    font-size: 50px;
-    
+    background-color: white;
+    font-size: 50px; 
+}
 
+p2 {
+    font-size: 20px;
+    font-family: 'EricssonHilda-Light';
+    font-weight: bold;
 }

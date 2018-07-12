@@ -17,11 +17,10 @@
    }
 
 
-body{
+   body{
     overflow-x:hidden;
+    font-family: 'EricssonHilda-Light';
 }
-
-
 
 .side-nav{
     height:100%;
