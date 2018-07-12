@@ -36,7 +36,16 @@ body{
     margin-left:50px;
 }
 
+.side-nav ul li{
+    text-align:left;
+    text-decoration: none;
+    list-style: none;
+    padding:1em;
+}
 
+ ul li .current {
+    background-color:green;
+}
 #main{
     transition:margin-left 0.5s;
     padding:20px;

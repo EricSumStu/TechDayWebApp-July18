@@ -25,15 +25,32 @@
         
 
         <div id="side-menu" class="side-nav">
+
             <a href="#" class="btn-close"
             onclick="closeSlideMenu()">&times;</a>
+        <ul>
+            <li>
             <a href="index.html">Home</a>
+            </li>
+            <li>
             <a href="events.html">Events</a>
-            <a href="Map.html">Map</a>
+            </li>
+            <li>
+            <a href="Map.html" class="current">Map</a>
+            </li>
+            <li>
             <a href="https://www.google.ie">Entertainment</a>
+            </li>
+            <li>
             <a href="fav.html">Favourites</a>
+            </li>
+            <li>
             <a href="https://www.google.ie">Past Tech Days</a>
+            </li>
+            <li>
             <a href="about.html">About</a>
+            </li>
+            </ul>
         </div>
     </nav>
     <div id="main">
@@ -41,8 +58,8 @@
     </div>
     <script>
         function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '200px';
-            document.getElementById('main').style.marginLeft = '200px';
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
         }
     
         function closeSlideMenu() {
