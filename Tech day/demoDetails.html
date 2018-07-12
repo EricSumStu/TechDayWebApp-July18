@@ -5,7 +5,7 @@
         <script src="https://code.jquery.com/jquery.min.js"></script>
          <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
-          <link href="details.css" rel="stylesheet" type="text/css" />
+          <link href="demoDetails.css" rel="stylesheet" type="text/css" />
  </head>
 <body>
         <nav class="navbar">
@@ -45,6 +45,7 @@
             </nav>
         
 <p id = "demo"></p>
+
  <script>
      var txt
        $.getJSON("talks.json", function(json) {
@@ -53,16 +54,13 @@
     
             for (var y = 0; y < (obj.talks).length;y++){
                 if(obj.talks[y].Catergories === "Demo"){
-                var txt = "<table border='1'>"
+                var txt = "<table>"
                     txt += "<tr>";
                         txt += "<td>" + "Title" + "</td>"
                         txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                    txt+= "</tr>"   
-
-                    txt += "<tr>";  
                         txt += "<td>" + "Time" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                    txt+= "</tr>" 
+                        txt += "<td>" + (obj.talks[y].Time) + "</td>"
+                    txt+= "</tr>"   
                     txt += "<tr>";   
                          txt += "<td>" + "Location" + "</td>"  
                          txt += "<td>" + (obj.talks[y].Location) + "</td>"
