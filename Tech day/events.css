@@ -4,6 +4,11 @@ body{
 }
 
 
+body{
+    overflow-x:hidden;
+}
+
+
 
 .side-nav{
     height:100%;
@@ -43,6 +48,7 @@ body{
     list-style: none;
     padding:1em;
 }
+
 
 #main{
     transition:margin-left 0.5s;
