@@ -81,8 +81,18 @@ table {
     color: black;
     border-collapse: collapse;
     border: 15px solid #0082f0;
-    
     font-size: 35px;
+    display: block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:35px; 
+
+}
+
+table, tbody, tr, td {
+    vertical-align: top;
 }
 
 body {text-align:left;}
