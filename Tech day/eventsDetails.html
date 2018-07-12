@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+         <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
+          <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+ </head>
+<body>
+        <nav class="navbar">
+                <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff"
+                            stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff"
+                            stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff"
+                            stroke-width="5"/>
+                        </svg>
+                    </a>
+                </span>
+                <ul class="navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="Map.html">Map</a></li>
+                        <li><a href="https://www.google.ie">Entertainment</a></li>
+                        <li><a href="fav.html">Favourites</a></li>
+                        <li><a href="https://www.google.ie">Past Tech Days</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+            
+                    <div id="side-menu" class="side-nav">
+                        <a href="#" class="btn-close"
+                        onclick="closeSlideMenu()">&times;</a>
+                        <a href="index.html">Home</a>
+                        <a href="events.html">Events</a>
+                        <a href="Map.html">Map</a>
+                        <a href="https://www.google.ie">Entertainment</a>
+                        <a href="fav.html">Favourites</a>
+                        <a href="https://www.google.ie">Past Tech Days</a>
+                        <a href="about.html">About</a>
+                    </div>
+            </nav>
+        
+<p id = "demo"></p>
+
+ <script>
+     var txt
+       $.getJSON("talks.json", function(json) {
+       var obj = json;
+        var table = "";
+    
+            for (var y = 0; y < (obj.talks).length;y++){
+                if(obj.talks[y].Catergories === "Event"){
+                var txt = "<table>"
+                    txt += "<tr>";
+                        txt += "<td>" + "Title" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
+                        txt += "<td>" + "Time" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Time) + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>";   
+                         txt += "<td>" + "Location" + "</td>"  
+                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                    txt+= "</tr>"    
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Host" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                    txt+= "</tr>"  
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Summary" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
+                     txt+= "</tr>"
+
+                    txt += "</table><br>" 
+                        table += txt;
+                }
+            };
+
+        
+
+            document.getElementById("demo").innerHTML = table;
+
+    
+    });
+    
+    function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+    
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+    </script>        
+</body>
+</html>
