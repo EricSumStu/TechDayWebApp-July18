@@ -98,3 +98,14 @@ h1{
 	padding-top: 5px;
 	font-size: 16px;
 }
+
+footer {
+    border-style: solid ;
+    border-color: blue;
+    border-width: 100px;
+    text-align: center;
+    background-color: blue;
+    font-size: 100px;
+    
+
+}
