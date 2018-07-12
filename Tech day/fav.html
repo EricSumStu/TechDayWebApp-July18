@@ -12,11 +12,11 @@
     
     <p id = "demo">
     </p>
-<script>
-var txt
-$.getJSON("talks.json", function(json) {
-var obj = json;
-var table = "";
+ <script>
+        var txt
+    $.getJSON("talks.json", function(json) {
+    var obj = json;
+    var table = "";
 
     for (var y = 0; y < (obj.talks).length;y++){
         if(obj.talks[y].Catergories === "favourites"){
@@ -34,6 +34,6 @@ var table = "";
 
 
 });
-</script>        
+    </script>        
 </body>
 </html>
