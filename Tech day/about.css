@@ -22,8 +22,6 @@
     font-family: 'EricssonHilda-Light';
 }
 
-
-
 .side-nav{
     height:100%;
     width:0;
@@ -62,6 +60,7 @@
     list-style: none;
     padding:1em;
 }
+
 
 #about{
     background-image: url("/images/1111.jpg");
