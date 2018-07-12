@@ -78,7 +78,8 @@ img  {
 
 #about{
     background-image: url("/images/1.jpg");
-    /*background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    background-size: 100%;
     border-style: solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
