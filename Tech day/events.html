@@ -3,7 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" media="screen" href="events.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="login.style.css" />
    <script src="main.js"></script>
+   <script src="login.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -47,6 +49,32 @@
             </li>
             <li>
             <a href="about.html">About</a>
+            </li>
+            <li>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <div id="id01" class="modal">
+                       <form name ="login" form class="modal-content animate">
+                         <div class="imgcontainer">
+                           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                           <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
+                           <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
+                           <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
+                                       <!---->
+                <form id="form_id" method="post" name="myform">
+                       <div class="container">
+                       <label>Username: </label>
+                       <input type="text" name="username" id="username"/>
+                       <label>Password: </label>
+                       <input type="password" name="password" id="password"/>
+                       <button type="submit" id="submit" onclick="validate()">Login</button>
+                       <!--  <span><b class="note">Note: </b>For this demo use following username and password. 
+                        <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
+                      <label><br><br>Log-in is only allowed for the web admin.<br><br><br> </label>
+                             
+                   </div>
+                   </div>
+               </div>
+              </form>
             </li>
             </ul>
         </div>
