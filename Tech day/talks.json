@@ -3,7 +3,7 @@
 [
     {    
         "Title": "Demo1",
-        "Time": "10:00",
+        "Time": 10,
         "Location": "Nuuk",
         "Host": "Lucy",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -11,7 +11,7 @@
     },
     {
         "Title": "Demo2",
-        "Time": "11:00",
+        "Time": 11,
         "Location": "Moscow",
         "Host": "Tim",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -19,7 +19,7 @@
     },
     {
         "Title": "Demo3",
-        "Time": "12:00",
+        "Time": 12,
         "Location": "Warsaw",
         "Host": "Kate",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -27,7 +27,7 @@
     },
     {
         "Title": "Tech Talk",
-        "Time": "15:00",
+        "Time": 15,
         "Location": "Nuuk",
         "Host": "Lisa",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -35,7 +35,7 @@
     },
     {
         "Title": "Tech talk 2",
-        "Time": "16:00",
+        "Time": 16,
         "Location": "Nuuk",
         "Host": "Lucy",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -43,7 +43,7 @@
     },
     {    
         "Title": "Real",
-        "Time": "10:00",
+        "Time": 10,
         "Location": "Nuuk",
         "Host": "Emma",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -51,7 +51,7 @@
     },
     {    
         "Title": "Ice cream",
-        "Time": "10:00",
+        "Time": 10,
         "Location": "Nuuk",
         "Host": "Lucy",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -59,7 +59,7 @@
     },
     {    
         "Title": "Event",
-        "Time": "10:00",
+        "Time": 10,
         "Location": "Nuuk",
         "Host": "Aoife",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -67,7 +67,7 @@
     },
     {    
         "Title": "About me",
-        "Time": "13:00",
+        "Time": 13,
         "Location": "Nuuk",
         "Host": "Lisa",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -75,7 +75,7 @@
     },
     {    
         "Title": "This one",
-        "Time": "12:00",
+        "Time": 12,
         "Location": "Nuuk",
         "Host": "Patrick",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -83,7 +83,7 @@
     },
     {    
         "Title": "Demo6",
-        "Time": "10:00",
+        "Time": 10,
         "Location": "Nuuk",
         "Host": "Emmet",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
@@ -91,7 +91,7 @@
     },
     {
         "Title": "You have not selected any favourites. Please go to events to select favourites",
-        "Time": "16:00",
+        "Time": 16,
         "Location": "Nuuk",
         "Host": "Lucy",
         "Summary": "Bla  Bla Bla",
