@@ -69,12 +69,12 @@ body /*{font-family: Arial, Helvetica, sans-serif;}*/
         /* Set a style for all buttons */
         button {
             font-family: 'EricssonHilda-Bold';
-            color: #f35041;
+            color:black;
             font-size: 1em;
             background: white;
             padding: .5em 1em;
             text-align: center;
-            border: solid 2px #f35041;
+            border: solid 2px white;
             cursor: pointer;
             width: 100%;
         }
@@ -88,9 +88,9 @@ body /*{font-family: Arial, Helvetica, sans-serif;}*/
             font-family: 'Montserrat', sans-serif;
             width: auto;
             padding: .5em 1em;
-            color: #f35041;
+            color: black;
             background: white;
-            border: solid 2px #f35041;
+            border: solid 2px black;
         }
         
         /* Center the image and position the close button */
@@ -144,9 +144,8 @@ body /*{font-family: Arial, Helvetica, sans-serif;}*/
             font-weight: bold;
         }
         
-        .close:hover,
-        .close:focus {
-            color: red;
+        .close {
+            color: black;
             cursor: pointer;
         }
         
