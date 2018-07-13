@@ -69,5 +69,15 @@ p{
     vertical-align: baseline;
     background-color: white;
 
+    
 
+
+}
+img  {
+    display: block;
+    width: 60%;
+    height:50%;
+    position: relative;
+    margin: auto;
+    border-radius:5px; 
 }
