@@ -88,5 +88,12 @@ table, tbody, tr, td {
 
 body {text-align:left;}
 
-
+img  {
+    display: block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:5px; 
+}
 
