@@ -78,7 +78,7 @@
 
    
        for (var y = 0; y < (obj.talks).length;y++){
-               if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
+               if((obj.talks[y].Catergories === "Event") && (techDay === false)){
                    var txt = "<table>"
                        txt += "<tr>";   
                         txt += "<td>" + "" + "</td>"  
@@ -135,7 +135,7 @@
                    txt += "</table><br>" 
                        table += txt;
 
-            }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
+            }else if((obj.talks[y].Catergories === "Event") && (techDay === true)  && (obj.talks[y].Time >= now)){
                var txt = "<table>"
                        txt += "<tr>";   
                         txt += "<td>" + "" + "</td>"  
