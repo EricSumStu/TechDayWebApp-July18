@@ -1,0 +1,117 @@
+@font-face{
+    font-family: 'EricssonHilda-Regular';
+   src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
+   }
+
+@font-face {
+   font-family: 'EricssonHilda-Light';
+   src: url('fonts/EricssonHilda-Light.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Medium';
+   src: url('fonts/EricssonHilda-Medium.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Bold';
+   src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
+   }
+   body{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+main {
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    border-style: solid ;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+    background-color: white;
+    font-size: 50px; 
+    font-family: 'EricssonHilda-Regular';
+}
+
+
+.side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:1s;
+}
+
+.side-nav a{
+    padding:10px 10px 10px 10px 10px 10px 10px;
+    text-decoration: none;
+    font-size:22px;
+    font-family: 'EricssonHilda-Regular';
+    color:#fff;
+    transition:0.7s;
+    float: left;
+}
+
+
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+}
+
+.side-nav ul li{
+    text-align:left;
+    text-decoration: none;
+    list-style: none;
+    padding:1em;
+}
+
+
+table {
+ 
+    margin-left:auto; 
+    margin-right:auto;
+    color: black;
+    border-collapse: collapse;
+    border: 15px solid #0082f0;
+    font-size: 35px;
+    display: block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:35px; 
+    font-family: 'EricssonHilda-Regular';
+
+}
+
+table, tbody, tr, td {
+    vertical-align: top;
+}
+
+body {text-align:left;}
+
+img  {
+    display: block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:5px; 
+}
+

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<title>Past Tech Days</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" media="screen" href="pasttechday.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@font-face { 
+    font-family: 'EricssonHilda-Regular';
+    src: url('fonts/EricssonHilda-Regular.ttf') format('TrueType');
+    }
+
+@font-face { 
+    font-family: 'EricssonHilda-Light';
+    src: url('fonts/EricssonHilda-Light.ttf') format('TrueType');
+    }
+@font-face { 
+    font-family: 'EricssonHilda-Medium';
+    src: url('fonts/EricssonHilda-Medium.ttf') format('TrueType');
+    }
+ @font-face { 
+    font-family: 'EricssonHilda-Bold';
+    src: url('fonts/EricssonHilda-Bold.ttf') format('TrueType');
+    }
+
+body,h1,h2,h3,h4 
+{font-family: 'EricssonHilda-Light';}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+p{
+  margin-left: 10px;
+}
+
+span
+{
+  font-family: 'EricssonHilda-Bold';
+}
+
+video{
+width: 100%;
+height: auto;
+}
+    
+
+    .side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:1s;
+}
+
+.side-nav a{
+    padding:10px 10px 10px 10px 10px 10px 10px;
+    text-decoration: none;
+    font-size:22px;
+    color:#fff;
+    transition:0.7s;
+    float: left;
+}
+
+
+.side-nav .btn-close{
+    position: absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+}
+
+.side-nav ul li{
+    text-align:left;
+    text-decoration: none;
+    list-style: none;
+    padding:1em;
+}
+</style>
+
+
+<body>
+<!-- WEB TEMPLATE CODE GOES HERE-->
+<nav class="navbar">
+    <span class="open-slide">
+        <a href="#" onclick="openSlideMenu()">
+            <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#000"
+                stroke-width="5"/>
+                <path d="M0,14 30,14" stroke="#000"
+                stroke-width="5"/>
+                <path d="M0,23 30,23" stroke="#000"
+                stroke-width="5"/>
+            </svg>
+        </a>
+    </span>
+
+    
+
+    <div id="side-menu" class="side-nav">
+
+        <a href="#" class="btn-close"
+        onclick="closeSlideMenu()">&times;</a>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="Events.html">Events</a>
+        </li>
+        <li>
+            <a href="Map.html">Map</a>
+        </li>
+        <li>
+            <a href="https://www.google.ie">Entertainment</a>
+        </li>
+        <li>
+             <a href="fav.html">Favourites</a>
+        </li>
+        <li>
+            <a href="pasttechday.html">Past Tech Days</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Content -->
+<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:40px">
+
+  <div class="w3-panel">
+    <h1><b>Past Tech Days</b></h1>
+  </div>
+<p>
+  Ericsson Ireland Technology Day took place on 14th September in our Software Campus, Athlone.  “Visualize, Virtualize, Digitalize” was the theme for 2017 and was hosted jointly by John Griffin (Managing Director, Ericsson Ireland) and Mårten Pehrson (Head of PDU Network Analytics and Mgmt. & Athlone Site). The day was formally opened by Her Excellency Anna Brandt, Swedish Ambassador to Ireland. Ms. Brandt spoke about the unique business and cultural links between Ireland and Sweden. It was a great start to a great day.</p>
+  <!-- Slideshow -->
+  <div class="w3-container">
+    <div class="w3-display-container mySlides">
+      <img src="images/techday0.png" style="width:100%">
+      <div class="w3-display-topleft w3-container w3-padding-32">
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/techday1.png" style="width:100%">
+      <div class="w3-display-middle w3-container w3-padding-32">
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/techday2.png" style="width:100%">
+      <div class="w3-display-topright w3-container w3-padding-32">
+      </div>
+</div>
+      <div class="w3-display-container mySlides">
+        <img src="images/techday3.png" style="width:100%">
+        <div class="w3-display-topright w3-container w3-padding-32">
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="images/techday4.png" style="width:100%">
+      <div class="w3-display-topright w3-container w3-padding-32">
+    </div>
+  </div>
+  <div class="w3-display-container mySlides">
+    <img src="images/techday5.png" style="width:100%">
+    <div class="w3-display-topright w3-container w3-padding-32">
+  </div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday6.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday7.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday8.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday9.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday10.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday11.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday12.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday13.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday14.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday15.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday16.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday17.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday18.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday19.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday20.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday21.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday22.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday23.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday24.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday25.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday26.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday27.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday28.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday29.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday30.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday31.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday32.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+</div>
+</div>
+<div class="w3-display-container mySlides">
+  <img src="images/techday33.png" style="width:100%">
+  <div class="w3-display-topright w3-container w3-padding-32">
+      <div class="w3-display-container mySlides">
+          <img src="images/techday34.png" style="width:100%">
+          <div class="w3-display-topright w3-container w3-padding-32">
+        </div>
+      </div>
+      <div class="w3-display-container mySlides">
+          <img src="images/techday35.png" style="width:100%">
+          <div class="w3-display-topright w3-container w3-padding-32">
+        </div>
+      </div>
+</div>
+</div>
+
+
+    <!-- Slideshow next/previous buttons -->
+    <div class="w3-container w3-white w3-padding w3-xlarge">
+      <div class="w3-left" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+      <div class="w3-right" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+
+        <div class="w3-center">
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(8)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(9)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(10)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(11)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(12)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(13)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(14)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(15)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(16)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(17)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(18)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(19)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(20)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(21)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(22)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(23)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(24)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(25)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(26)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(27)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(28)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(29)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(30)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(31)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(32)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(33)"></span>
+          <span class="w3-tag demodots w3-border w3-transparent w3-hover-white" onclick="currentDiv(34)"></span>
+
+        </div>
+      </div>
+      
+  </div>
+  
+</div>
+<p>The Technology Day plays an important role in cross-pollinating ideas and highlighting synergies between areas. 2017 was no different. In the area of automation, it was clear to see the links emerging between data & analytics & full-scale autonomics. Features such as Incident management are driving us further into the automation space. It was also great to see how our knowledge of network management has moved seamlessly into the 5G domain. In the area of continuous deployment & delivery, several demos showcased the parts that are coming together & will eventually allow us to deploy software continuously in our customer deployments. There was of course a strong link here with our emerging cloud deployments.
+  </p>
+  
+  <p>Last year, we had a Tech Talk from the GAA Official Technology Partner with Enda Finnan and Tomás Meehan. We learned the context of Ericsson technology partnerships in other sporting fields, the nature of the relationship with the GAA and the potential for technology innovation this partnership presents. We also got an insight into the technology challenges and vision for Croke Park and for the broader GAA.
+  Overall, we had approximately 40 demos on the day. The overwhelming feeling was that there was just not enough time to take everything in. The winning demo was a very innovative one, which harnessed the model driven capabilities of ENM. The demo showed the integration of a Lego “node” on ENM proving conclusively that “ENM is Awesome”.
+  </p>
+
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Our Ambitions</span>
+    </div>
+    <div class="w3-col l3 m6 w3-green w3-container w3-padding-16">
+      <h3>Showcasing</h3>
+      <p>Enabling employees to showcase their work to many</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-indigo w3-container w3-padding-16">
+      <h3>Interaction</h3>
+      <p>Enabling our Customers to interact directly with our engineers</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-red w3-container w3-padding-16">
+      <h3>Insight</h3>
+      <p>Providing an insight into activities that colleagues are engaged in	</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-deep-orange w3-container w3-padding-16">
+      <h3>Opportunity</h3>
+      <p>Providing an exchange and an opportunity for networking</p>
+    </div>
+  </div>
+
+
+  <div class="w3-row w3-container">
+    <div class="w3-center w3-padding-64">
+  <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Past Tech Day Videos</span>
+</div>
+<h3>
+  2017
+</h3>
+    <video width="350" src="media/techday2017.mp4" frameborder="0" allowfullscreen, controls>
+    </video>
+    <h3>
+      2016
+    </h3>
+        <video width="350" src="media/techday2016.mp4" frameborder="0" allowfullscreen, controls>
+        </video>
+      
+<script>
+  function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+    
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+
+
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>

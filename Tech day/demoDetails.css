@@ -24,7 +24,6 @@ body{
 }
 
 
-
 .side-nav{
     height:100%;
     width:0;
@@ -93,10 +92,10 @@ body {text-align:left;}
 
 img  {
     display: block;
-    width: 90%;
+    width: 100%;
     height:80%;
     position: relative;
     margin: auto;
-    border-radius:5px; 
+    border-radius:px; 
 }
 
