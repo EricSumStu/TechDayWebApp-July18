@@ -44,7 +44,7 @@ for (var y = 0; y < (obj.talks).length;y++){
       if(techDay === false){
      countdown()
 
-         }else if(techDay === true && obj.talks[y].Time === nowTime + 1 ){
+         }else if(techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime ){
              console.log("Tech Day is Today and event is this hour")
              
          var txt = "<table>"

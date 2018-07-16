@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <script src="https://code.jquery.com/jquery.min.js"></script>
-         <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
  </head>
 <body>
@@ -54,7 +52,7 @@
         <main>
             <div>
                 <a href="#">
-                    <img src="./images/talks banner.jpg">
+                    <img src="./images/talks straight border.png">
                     </a>
             </div>
         </main>
@@ -66,12 +64,14 @@
       $.getJSON("talks.json", function(json) {
       var obj = json;
        var table = "";
-       var techDate = new Date("2018-10-4") ;
+       var techDate = new Date("2018-7-16");
        var today = new Date();
-       console.log(techDate, today )
+       var techDateSmall = techDate.toDateString(0, 10);
+       var todaySmall = today.toDateString(0, 10);
+        console.log(techDateSmall, todaySmall);
        var now = new Date().getUTCHours() + 1 ;
        var techDay = false;
-       if(techDate <= today){
+       if(todaySmall === techDateSmall){
                techDay = true
                console.log('equal')
        };
@@ -212,6 +212,6 @@
            document.getElementById('side-menu').style.width = '0';
            document.getElementById('main').style.marginLeft = '0';
        }
-   </script>          
+   </script>   
 </body>
 </html>
