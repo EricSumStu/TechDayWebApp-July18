@@ -47,12 +47,12 @@ h2
   font-size: 25px;
 }
 
-
-
-img.ri
+img.map
 {
-	position: absolute;
-
+    width: 100%;
+	height: auto;
+    margin: auto;
+    border-radius:20px; 
 }
 
 .navbar {
@@ -124,14 +124,6 @@ img.ri
     width: 100%;
 }
 
-img  {
-    display: block;
-    width: 90%;
-    height:80%;
-    position: relative;
-    margin: auto;
-    border-radius:20px; 
-}
 
 @media screen and (max-width: 800px){
     .navbar {
