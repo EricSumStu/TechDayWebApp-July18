@@ -43,6 +43,7 @@
     color:#fff;
     transition:0.7s;
     float: left;
+    font-family: 'EricssonHilda-Regular';
 }
 
 
@@ -80,4 +81,5 @@
     text-align: left;
     color: white;
     float: left;
+    font-family: 'EricssonHilda-Regular';
   }
