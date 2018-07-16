@@ -23,6 +23,23 @@ body{
     overflow-x:hidden;
 }
 
+main {
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    border-style: solid ;
+    border-color: white;
+    border-width: 10px;
+    text-align: center;
+    background-color: white;
+    font-size: 50px; 
+    font-family: 'EricssonHilda-Regular';
+}
+
 
 .side-nav{
     height:100%;

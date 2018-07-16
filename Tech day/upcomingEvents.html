@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+     <script src="upcoming.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
+      <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000"
+                    stroke-width="5"/>
+                    <path d="M0,14 30,14" stroke="#000"
+                    stroke-width="5"/>
+                    <path d="M0,23 30,23" stroke="#000"
+                    stroke-width="5"/>
+                </svg>
+            </a>
+        </span>
+<div id="side-menu" class="side-nav">
+
+        <a href="#" class="btn-close"
+        onclick="closeSlideMenu()">&times;</a>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="Events.html">Events</a>
+        </li>
+        <li>
+            <a href="Map.html">Map</a>
+        </li>
+        <li>
+            <a href="eventsDetails.html">Entertainment</a>
+        </li>
+        <li>
+             <a href="fav.html">Favourites</a>
+        </li>
+        <li>
+            <a href="https://www.google.ie">Past Tech Days</a>
+        </li>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        </ul>
+    </div>
+</nav>
+<main id = "count"></main>
+
+<p id = "demo"></p>
+</body>
+</html>
