@@ -1,5 +1,42 @@
+@font-face
+{font-family: 'EricssonHilda-Regular';
+   src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
+   }
+
+@font-face {
+   font-family: 'EricssonHilda-Light';
+   src: url('fonts/EricssonHilda-Light.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Medium';
+   src: url('fonts/EricssonHilda-Medium.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Bold';
+   src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
+   }
+
+   @font-face
+{font-family: 'EricssonHilda-Regular';
+   src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
+   }
+
+@font-face {
+   font-family: 'EricssonHilda-Light';
+   src: url('fonts/EricssonHilda-Light.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Medium';
+   src: url('fonts/EricssonHilda-Medium.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Bold';
+   src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
+   }
+
 body{
     overflow-x:hidden;
+    font-family: 'EricssonHilda-Light';
 }
 
 .navbar {
