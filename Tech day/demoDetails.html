@@ -55,8 +55,8 @@
                     </a>
             </div>
        </main>
-    <p id = "demo"></p>
-
+    <p id = "demo" ></p>
+    
  <script>
      var txt
        $.getJSON("talks.json", function(json) {
@@ -73,12 +73,14 @@
                 techDay = true
                 console.log('equal')
         };
+        
 
     
         for (var y = 0; y < (obj.talks).length;y++){
                 if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
-                    var txt = "<table>"
-                    txt += "<tr id = favourite >";   
+                    
+                    var txt = "<table id = favourite onclick= addFavourite()>"
+                    txt += "<tr  >";   
                          txt += "<td>" + "Favourite" + "</td>"  
                          txt += "<td>" + "" + "</td>"
                     txt+= "</tr>"
@@ -106,10 +108,10 @@
                         table += txt;
 
              }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
-                var txt = "<table>"
-                    txt += "<tr id = favourite >"; 
+                     var txt = "<table>"
+                    txt += "<tr id = favourite  >"; 
                          txt += "<td>" + "Favourite"  + "</td>"  
-                         txt += "<td>" + "me" + "</td>"
+                         txt += "<td>" + "" + "</td>"
                     txt+= "</tr>"
                     txt += "<tr>";
                         txt += "<td>" + "Title:" + "</td>"
@@ -133,6 +135,7 @@
                      txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
+   
              }
             };
 
@@ -143,7 +146,11 @@
     
     });
 
+    document.getElementById("favourite").addEventListener('select', addFavourite)
 
+    function addFavourite(){
+        console.log("YOOOOOO")
+    }
     
     function openSlideMenu() {
             document.getElementById('side-menu').style.width = '250px';
