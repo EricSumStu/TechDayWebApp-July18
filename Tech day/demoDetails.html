@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <script src="https://code.jquery.com/jquery.min.js"></script>
-         <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
  </head>
 <body>
@@ -64,7 +62,7 @@
        $.getJSON("talks.json", function(json) {
        var obj = json;
         var table = "";
-        var techDate = new Date("2018-7-16");
+        var techDate = new Date("2018-10-4");
         var today = new Date();
         var techDateSmall = techDate.toDateString(0, 10);
         var todaySmall = today.toDateString(0, 10);
@@ -80,20 +78,8 @@
         for (var y = 0; y < (obj.talks).length;y++){
                 if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
                     var txt = "<table>"
-                        txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
+                    txt += "<tr id = favourite >";   
+                         txt += "<td>" + "Favourite" + "</td>"  
                          txt += "<td>" + "" + "</td>"
                     txt+= "</tr>"
                     txt += "<tr>";
@@ -116,42 +102,14 @@
                             txt += "<td>" +  "Summary:" + "</td>"
                          txt += "<td>" + (obj.talks[y].Summary) + "</td>"
                      txt+= "</tr>"
-                     txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
 
              }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
                 var txt = "<table>"
-                        txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
+                    txt += "<tr id = favourite >"; 
+                         txt += "<td>" + "Favourite"  + "</td>"  
+                         txt += "<td>" + "me" + "</td>"
                     txt+= "</tr>"
                     txt += "<tr>";
                         txt += "<td>" + "Title:" + "</td>"
@@ -173,22 +131,6 @@
                             txt += "<td>" +  "Summary:" + "</td>"
                          txt += "<td>" + (obj.talks[y].Summary) + "</td>"
                      txt+= "</tr>"
-                     txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
              }
