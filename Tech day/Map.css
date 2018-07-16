@@ -50,16 +50,19 @@ h2
   font-size: 25px;
 }
 
+.w3-container
+{
+    text-align: center;
+    font-family: 'EricssonHilda-Bold';
+}
+
+
 img.map
 {
     width: 100%;
 	height: auto;
     margin: auto;
     border-radius:20px; 
-=======
-body{
-    overflow-x:hidden;
->>>>>>> 06b43ee531934c6a8a223aa2914a55a84e7b25fa
 }
 
 .navbar {

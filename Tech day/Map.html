@@ -6,6 +6,7 @@
     <title>Map and Locations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="map.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <nav class="navbar">
@@ -28,7 +29,7 @@
             <li><a href="Map.html">Map</a></li>
             <li><a href="eventsDetails.html">Entertainment</a></li>
             <li><a href="fav.html">Favourites</a></li>
-            <li><a href="#">Past Tech Days</a></li>
+            <li><a href="pasttechday.html">Past Tech Days</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
         
@@ -66,8 +67,115 @@
     </nav>
     <div id="main">
         <h2> Map and Locations</h2>
+        <p> Here we are able to see the current events/talks/demos and the rooms/zones that they are located in. Below is a map of the building.</p>
         <img src="images/map.jpg"class="map" />
     </div>
+
+    <div class="w3-container">
+            <h2>Zones</h2>
+            </div>
+            <div class="w3-container w3-red">
+                        <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-red">ZONE ONE</button></p>
+                    </div>
+                </div>
+                    <div id="id01" class="w3-modal">
+                            <div class="w3-modal-content">
+                              <div class="w3-container ">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <p>Some text. Some text. Some text.</p>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+
+            <div class="w3-container w3-orange">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-orange">ZONE TWO</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+            <div class="w3-container w3-teal">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-teal">ZONE THREE</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+            <div class="w3-container w3-green">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">ZONE FOUR</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            <div class="w3-container w3-light-blue">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-light-blue">ZONE FIVE</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            <div class="w3-container w3-yellow">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-yellow">ZONE SIX</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            <div class="w3-container w3-purple">
+                    <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-purple">ZONE SEVEN</button></p>
+                </div>
+            </div>
+                <div id="id01" class="w3-modal">
+                        <div class="w3-modal-content">
+                          <div class="w3-container ">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <p>Some text. Some text. Some text.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            
+
+
+
+
+
+
     <script>
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '250px';
@@ -78,11 +186,7 @@
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
         }
-        </script>
-        
-    
-    
-    
+        </script>    
     
 </body>
 </html>
