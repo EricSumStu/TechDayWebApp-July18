@@ -43,6 +43,7 @@ body{
     padding:10px 10px 10px 10px 10px 10px 10px;
     text-decoration: none;
     font-size:22px;
+    font-family: 'EricssonHilda-Regular';
     color:#fff;
     transition:0.7s;
     float: left;
@@ -79,8 +80,9 @@ table {
     height:80%;
     position: relative;
     margin: auto;
-    border-radius:35px;
+    border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
+
 }
 
 table, tbody, tr, td {

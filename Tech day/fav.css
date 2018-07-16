@@ -41,6 +41,7 @@
     padding:10px 10px 10px 10px 10px 10px 10px;
     text-decoration: none;
     font-size:22px;
+    font-family: 'EricssonHilda-Regular';
     color:#fff;
     transition:0.7s;
     float: left;
@@ -68,14 +69,12 @@ p{
     text-align: center;
     vertical-align: baseline;
     background-color: white;
-
-    
-
+    font-family: 'EricssonHilda-Regular';
 
 }
 img  {
     display: block;
-    width: 60%;
+    width: 90%;
     height:50%;
     position: relative;
     margin: auto;

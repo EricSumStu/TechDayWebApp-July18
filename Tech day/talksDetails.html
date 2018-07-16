@@ -57,92 +57,161 @@
                     <img src="./images/talks banner.jpg">
                     </a>
             </div>
-        </main>>
+        </main>
         
 <p id = "demo"></p>
 
- <script>
-     var txt
-       $.getJSON("talks.json", function(json) {
-       var obj = json;
-        var table = "";
-    
-        for (var y = 0; y < (obj.talks).length;y++){
-                if(obj.talks[y].Catergories === "Talk"){
-                var txt = "<table>"
-                        txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";
-                        txt += "<td>" + "Title:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                    txt+= "</tr>" 
-                    txt += "<tr>";   
-                            txt += "<td>" + "Time:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                    txt+= "</tr>"   
-                    txt += "<tr>";   
-                         txt += "<td>" + "Location:" + "</td>"  
-                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
-                    txt+= "</tr>"    
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                    txt+= "</tr>"  
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Summary:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                     txt+= "</tr>"
-                     txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "</table><br>" 
-                        table += txt
-                }
-            };
+<script>
+    var txt
+      $.getJSON("talks.json", function(json) {
+      var obj = json;
+       var table = "";
+       var techDate = new Date("2018-10-4") ;
+       var today = new Date();
+       console.log(techDate, today )
+       var now = new Date().getUTCHours() + 1 ;
+       var techDay = false;
+       if(techDate <= today){
+               techDay = true
+               console.log('equal')
+       };
 
-        
+   
+       for (var y = 0; y < (obj.talks).length;y++){
+               if((obj.talks[y].Catergories === "Talk") && (techDay === false)){
+                   var txt = "<table>"
+                       txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";
+                       txt += "<td>" + "Title:" + "</td>"
+                       txt += "<td>" + (obj.talks[y].Title) + "</td>"
+                   txt+= "</tr>" 
+                   txt += "<tr>";   
+                           txt += "<td>" + "Time:" + "</td>"
+                       txt += "<td>" + (obj.talks[y].Time) + "</td>"
+                   txt+= "</tr>"   
+                   txt += "<tr>";   
+                        txt += "<td>" + "Location:" + "</td>"  
+                        txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                   txt+= "</tr>"    
+                   txt += "<tr>"; 
+                           txt += "<td>" + "Host:" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                   txt+= "</tr>"  
+                   txt += "<tr>"; 
+                           txt += "<td>" +  "Summary:" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Summary) + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "</table><br>" 
+                       table += txt;
 
-            document.getElementById("demo").innerHTML = table;
+            }else if((obj.talks[y].Catergories === "Talk") && (techDay === true)  && (obj.talks[y].Time >= now)){
+               var txt = "<table>"
+                       txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";
+                       txt += "<td>" + "Title:" + "</td>"
+                       txt += "<td>" + (obj.talks[y].Title) + "</td>"
+                   txt+= "</tr>" 
+                   txt += "<tr>";   
+                           txt += "<td>" + "Time:" + "</td>"
+                       txt += "<td>" + (obj.talks[y].Time) + "</td>"
+                   txt+= "</tr>"   
+                   txt += "<tr>";   
+                        txt += "<td>" + "Location:" + "</td>"  
+                        txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                   txt+= "</tr>"    
+                   txt += "<tr>"; 
+                           txt += "<td>" + "Host:" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                   txt+= "</tr>"  
+                   txt += "<tr>"; 
+                           txt += "<td>" +  "Summary:" + "</td>"
+                        txt += "<td>" + (obj.talks[y].Summary) + "</td>"
+                    txt+= "</tr>"
+                    txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "<tr>";   
+                        txt += "<td>" + "" + "</td>"  
+                        txt += "<td>" + "" + "</td>"
+                   txt+= "</tr>"
+                   txt += "</table><br>" 
+                       table += txt;
+            }
+           };
 
-    
-    });
-    
-    function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '250px';
-            document.getElementById('main').style.marginLeft = '250px';
-        }
-    
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-            document.getElementById('main').style.marginLeft = '0';
-        }
-    </script>        
+       
+
+           document.getElementById("demo").innerHTML = table;
+
+   
+   });
+
+
+   
+   function openSlideMenu() {
+           document.getElementById('side-menu').style.width = '250px';
+           document.getElementById('main').style.marginLeft = '250px';
+       }
+   
+       function closeSlideMenu() {
+           document.getElementById('side-menu').style.width = '0';
+           document.getElementById('main').style.marginLeft = '0';
+       }
+   </script>          
 </body>
 </html>
