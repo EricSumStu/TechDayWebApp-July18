@@ -73,17 +73,10 @@
                 techDay = true
                 console.log('equal')
         };
-        $('favButton').toggleClass('YES');
 
-    
         for (var y = 0; y < (obj.talks).length;y++){
                 if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
-                    
                     var txt = "<table id ='Top'>"
-                    txt += "<tr>";   
-                         txt += "<td>" + "<button id='favButton' class='' onclick=addFavourite() >" + "Add to Favourites" + "</button>" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
                     txt += "<tr>";
                         txt += "<td>" + "Title:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Title) + "</td>"
@@ -98,12 +91,16 @@
                     txt+= "</tr>"    
                     txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' onclick=openBiography() >" + "Biography" + "</button>" + "</button>" + "</td>"
                     txt+= "</tr>"  
                     txt += "<tr>"; 
                             txt += "<td>" +  "Summary:" + "</td>"
                          txt += "<td>" + (obj.talks[y].Summary) + "</td>"
                      txt+= "</tr>"
+                     txt += '<tr>';
+                         txt += "<td>" + "" + "</td>"  
+                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + obj.talks[y].Title + " onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
+                    txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
                         
@@ -125,7 +122,7 @@
                     txt+= "</tr>"   
                     txt += "<tr>";   
                          txt += "<td>" + "Location:" + "</td>"  
-                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' onclick=openBiography() >" + "Biography" + "</button>" + "</td>"
                     txt+= "</tr>"    
                     txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
@@ -146,10 +143,16 @@
             document.getElementById("demo").innerHTML = table;
              
     });
+    
 
-    function addFavourite(){
-        console.log("YOOOOOO")
+    function addFavourite(title){
+        console.log(title)
         
+    }
+
+    function openBiography(){
+        console.log("Biography")
+
     }
     
     function openSlideMenu() {
@@ -163,4 +166,4 @@
         }
     </script>        
 </body>
-</html>
+</html> 
