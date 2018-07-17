@@ -73,15 +73,15 @@
                 techDay = true
                 console.log('equal')
         };
-        
+        $('favButton').toggleClass('YES');
 
     
         for (var y = 0; y < (obj.talks).length;y++){
                 if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
                     
-                    var txt = "<table id = favourite onclick= addFavourite()>"
-                    txt += "<tr  >";   
-                         txt += "<td>" + "Favourite" + "</td>"  
+                    var txt = "<table id ='Top'>"
+                    txt += "<tr>";   
+                         txt += "<td>" + "<button id='favButton' class='' onclick=addFavourite() >" + "Add to Favourites" + "</button>" + "</td>"  
                          txt += "<td>" + "" + "</td>"
                     txt+= "</tr>"
                     txt += "<tr>";
@@ -106,11 +106,13 @@
                      txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
+                        
+           
 
              }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
                      var txt = "<table>"
-                    txt += "<tr id = favourite  >"; 
-                         txt += "<td>" + "Favourite"  + "</td>"  
+                    txt += "<tr>"; 
+                        txt += "<td>" + "<button id='favButton' onclick=addFavourite() >" + "Add to Favourites" + "</button>" + "</td>"  
                          txt += "<td>" + "" + "</td>"
                     txt+= "</tr>"
                     txt += "<tr>";
@@ -135,21 +137,19 @@
                      txt+= "</tr>"
                     txt += "</table><br>" 
                         table += txt;
-   
+                
              }
             };
 
         
 
             document.getElementById("demo").innerHTML = table;
-
-    
+             
     });
-
-    document.getElementById("favourite").addEventListener('select', addFavourite)
 
     function addFavourite(){
         console.log("YOOOOOO")
+        
     }
     
     function openSlideMenu() {

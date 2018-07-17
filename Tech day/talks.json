@@ -2,6 +2,7 @@
 "talks":
 [
     {   
+        "ID": "1",
         "Title": "Demo1",
         "Time": 10,
         "Location": "Nuuk",
@@ -10,6 +11,7 @@
         "Catergories": "Demo"
     },
     {    
+        "ID": "2",
         "Title": "Early Demo",
         "Time": 6,
         "Location": "Nuuk",
@@ -18,6 +20,7 @@
         "Catergories": "Demo"
     },
     {
+        "ID": "3",
         "Title": "Demo2",
         "Time": 11,
         "Location": "Moscow",
@@ -26,6 +29,7 @@
         "Catergories": "Demo"
     },
     {
+        "ID": "4",
         "Title": "Demo3",
         "Time": 12,
         "Location": "Warsaw",
@@ -34,6 +38,7 @@
         "Catergories": "Demo"
     },
     {
+        "ID": "5",
         "Title": "Tech Talk",
         "Time": 15,
         "Location": "Nuuk",
@@ -42,6 +47,7 @@
         "Catergories": "Talk"
     },
     {
+        "ID": "6",
         "Title": "Tech talk 2",
         "Time": 16,
         "Location": "Nuuk",
@@ -50,6 +56,7 @@
         "Catergories": "Talk"
     },
     {    
+        "ID": "7",
         "Title": "Real",
         "Time": 10,
         "Location": "Nuuk",
@@ -58,6 +65,7 @@
         "Catergories": "Event"
     },
     {    
+        "ID": "8",
         "Title": "Ice cream",
         "Time": 11,
         "Location": "Nuuk",
@@ -66,6 +74,7 @@
         "Catergories": "Event"
     },
     {    
+        "ID": "9",
         "Title": "Event",
         "Time": 10,
         "Location": "Nuuk",
@@ -74,6 +83,7 @@
         "Catergories": "Event"
     },
     {    
+        "ID": "10",
         "Title": "About me",
         "Time": 13,
         "Location": "Nuuk",
@@ -82,6 +92,7 @@
         "Catergories": "Talk"
     },
     {    
+        "ID": "11",
         "Title": "This one",
         "Time": 12,
         "Location": "Nuuk",
@@ -90,6 +101,7 @@
         "Catergories": "Event"
     },
     {    
+        "ID": "YES",
         "Title": "Demo6",
         "Time": 15,
         "Location": "Nuuk",
@@ -98,6 +110,7 @@
         "Catergories": "Demo"
     },
     {    
+        "ID": "13",
         "Title": "Early Talk",
         "Time": 6,
         "Location": "Nuuk",

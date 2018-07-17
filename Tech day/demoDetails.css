@@ -85,6 +85,10 @@ table {
 
 }
 
+button.YES{
+   background-color: aqua
+}
+
 table, tbody, tr, td {
     vertical-align: top;
 }
