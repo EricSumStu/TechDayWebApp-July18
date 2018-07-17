@@ -77,6 +77,10 @@ z1txt += "</table>";
 window.onload = function(){
 document.getElementById("zone1").innerHTML = z1txt;
 }
+
+
+
+
 /*
 document.getElementById("z2").innerHTML = table;
 document.getElementById("z3").innerHTML = table;
