@@ -7,134 +7,68 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-@font-face { 
-    font-family: 'EricssonHilda-Regular';
-    src: url('fonts/EricssonHilda-Regular.ttf') format('TrueType');
-    }
 
-@font-face { 
-    font-family: 'EricssonHilda-Light';
-    src: url('fonts/EricssonHilda-Light.ttf') format('TrueType');
-    }
-@font-face { 
-    font-family: 'EricssonHilda-Medium';
-    src: url('fonts/EricssonHilda-Medium.ttf') format('TrueType');
-    }
- @font-face { 
-    font-family: 'EricssonHilda-Bold';
-    src: url('fonts/EricssonHilda-Bold.ttf') format('TrueType');
-    }
-
-body,h1,h2,h3,h4 
-{font-family: 'EricssonHilda-Light';}
-.mySlides {display:none}
-.w3-tag, .fa {cursor:pointer}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-p{
-  margin-left: 10px;
-}
-
-span
-{
-  font-family: 'EricssonHilda-Bold';
-}
-
-video{
-width: 100%;
-height: auto;
-}
-    
-
-    .side-nav{
-    height:100%;
-    width:0;
-    position:fixed;
-    z-index:1;
-    top:0;
-    left:0;
-    background-color: #111;
-    opacity: 0.9;
-    overflow-x:hidden;
-    padding-top:60px;
-    transition:1s;
-}
-
-.side-nav a{
-    padding:10px 10px 10px 10px 10px 10px 10px;
-    text-decoration: none;
-    font-size:22px;
-    color:#fff;
-    transition:0.7s;
-    float: left;
-}
-
-
-.side-nav .btn-close{
-    position: absolute;
-    top:0;
-    right:22px;
-    font-size:36px;
-    margin-left:50px;
-}
-
-.side-nav ul li{
-    text-align:left;
-    text-decoration: none;
-    list-style: none;
-    padding:1em;
-}
-</style>
 
 
 <body>
 <!-- WEB TEMPLATE CODE GOES HERE-->
+
 <nav class="navbar">
-    <span class="open-slide">
-        <a href="#" onclick="openSlideMenu()">
-            <svg width="30" height="30">
-                <path d="M0,5 30,5" stroke="#000"
-                stroke-width="5"/>
-                <path d="M0,14 30,14" stroke="#000"
-                stroke-width="5"/>
-                <path d="M0,23 30,23" stroke="#000"
-                stroke-width="5"/>
-            </svg>
-        </a>
-    </span>
+  <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+          <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="#000"
+              stroke-width="5"/>
+              <path d="M0,14 30,14" stroke="#000"
+              stroke-width="5"/>
+              <path d="M0,23 30,23" stroke="#000"
+              stroke-width="5"/>
+          </svg>
+      </a>
+  </span>
 
-    
+  <ul class="navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Events.html">Events</a></li>
+      <li><a href="Map.html">Map</a></li>
+      <li><a href="eventsDetails.html">Entertainment</a></li>
+      <li><a href="fav.html">Favourites</a></li>
+      <li><a href="pasttechday.html">Past Tech Days</a></li>
+      <li><a href="about.html">About</a></li>
+  </ul>
+  
 
-    <div id="side-menu" class="side-nav">
+  <div id="side-menu" class="side-nav">
 
-        <a href="#" class="btn-close"
-        onclick="closeSlideMenu()">&times;</a>
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="Events.html">Events</a>
-        </li>
-        <li>
-            <a href="Map.html">Map</a>
-        </li>
-        <li>
-            <a href="https://www.google.ie">Entertainment</a>
-        </li>
-        <li>
-             <a href="fav.html">Favourites</a>
-        </li>
-        <li>
-            <a href="pasttechday.html">Past Tech Days</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        </ul>
-    </div>
+      <a href="#" class="btn-close"
+      onclick="closeSlideMenu()">&times;</a>
+      <ul>
+              <li>
+                  <a href="index.html">Home</a>
+              </li>
+              <li>
+                  <a href="Events.html">Events</a>
+              </li>
+              <li>
+                  <a href="Map.html">Map</a>
+              </li>
+              <li>
+                  <a href="eventsDetails.html">Entertainment</a>
+              </li>
+              <li>
+                   <a href="fav.html">Favourites</a>
+              </li>
+              <li>
+                  <a href="https://www.google.ie">Past Tech Days</a>
+              </li>
+              <li>
+                  <a href="about.html">About</a>
+              </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
 </nav>
-
 <!-- Content -->
 <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:40px">
 
