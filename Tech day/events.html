@@ -8,6 +8,7 @@
    <script src="login.js"></script>
 </head>
 <body>
+   
     <nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
@@ -22,35 +23,63 @@
             </a>
         </span>
 
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Map.html">Map</a></li>
+            <li><a href="eventsDetails.html">Entertainment</a></li>
+            <li><a href="fav.html">Favourites</a></li>
+            <li><a href="pasttechday.html">Past Tech Days</a></li>
+            <li><a href="about.html">About</a></li>
+            <li> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <div id="id01" class="modal">
+                       <form name ="login" form class="modal-content animate">
+                         <div class="imgcontainer">
+                           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                           <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
+                           <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
+                           <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
+                                       <!---->
+                <form id="form_id" method="post" name="myform">
+                       <div class="container">
+                       <label>Username: </label>
+                       <input type="text" name="username" id="username"/>
+                       <label>Password: </label>
+                       <input type="password" name="password" id="password"/>
+                       <button type="submit" id="submit" onclick="validate()">Login</button>
+                       <!--  <span><b class="note">Note: </b>For this demo use following username and password. 
+                        <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
+                      <label><br><br>Log-in is only allowed for the web admin.<br><br><br> </label></li>
+        </ul>
         
 
         <div id="side-menu" class="side-nav">
 
             <a href="#" class="btn-close"
             onclick="closeSlideMenu()">&times;</a>
-        <ul>
-            <li>
-            <a href="index.html">Home</a>
-            </li>
-            <li>
-            <a href="events.html">Events</a>
-            </li>
-            <li>
-            <a href="Map.html">Map</a>
-            </li>
-            <li>
-            <a href="https://www.google.ie">Entertainment</a>
-            </li>
-            <li>
-            <a href="fav.html">Favourites</a>
-            </li>
-            <li>
-            <a href="pasttechday.html">Past Tech Days</a>
-            </li>
-            <li>
-            <a href="about.html">About</a>
-            </li>
-            <li>
+            <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="Events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="Map.html">Map</a>
+                    </li>
+                    <li>
+                        <a href="eventsDetails.html">Entertainment</a>
+                    </li>
+                    <li>
+                         <a href="fav.html">Favourites</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.ie">Past Tech Days</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
                 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
                 <div id="id01" class="modal">
                        <form name ="login" form class="modal-content animate">
@@ -70,7 +99,7 @@
                        <!--  <span><b class="note">Note: </b>For this demo use following username and password. 
                         <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
                       <label><br><br>Log-in is only allowed for the web admin.<br><br><br> </label>
-                             
+                    </li>        
                    </div>
                    </div>
                </div>

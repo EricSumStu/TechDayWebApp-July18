@@ -10,6 +10,29 @@ body{
 
 
 
+
+.navbar {
+    background-color: #111;
+    overflow: hidden;
+    height:63px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size:17px;
+    color:#f2f2f2;
+    font-family: 'EricssonHilda-Regular';
+}
+
+.navbar ul{
+    margin:8px 0 0 0;
+    list-style:none;
+}
+
 .side-nav{
     height:100%;
     width:0;
@@ -49,6 +72,32 @@ body{
     list-style: none;
     padding:1em;
 }
+
+
+#main{
+    transition:margin-left 0.5s;
+    padding:20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 800px){
+    .navbar {
+       background-color:white;
+    }
+
+    .navbar a{
+        color:white;
+    }
+}
+
+@media screen and (min-width:800px){
+    .open-slide{
+        display:none;
+    }
+}
+
 
 
 #main{
