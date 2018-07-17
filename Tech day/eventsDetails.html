@@ -64,7 +64,7 @@
       $.getJSON("talks.json", function(json) {
       var obj = json;
        var table = "";
-       var techDate = new Date("2018-7-16");
+       var techDate = new Date("2018-10-4");
        var today = new Date();
        var techDateSmall = techDate.toDateString(0, 10);
        var todaySmall = today.toDateString(0, 10);
@@ -93,9 +93,9 @@
                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
                    txt+= "</tr>"    
                    txt += "<tr>"; 
-                           txt += "<td>" + "Host:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                   txt+= "</tr>"  
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>" 
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
@@ -122,9 +122,9 @@
                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
                    txt+= "</tr>"    
                    txt += "<tr>"; 
-                           txt += "<td>" + "Host:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                   txt+= "</tr>"  
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"     
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
@@ -150,6 +150,10 @@ function addFavourite(ID){
 
     };
     
+function openBiography(ID){
+    console.log(ID)
+    
+};
    
    function openSlideMenu() {
            document.getElementById('side-menu').style.width = '250px';

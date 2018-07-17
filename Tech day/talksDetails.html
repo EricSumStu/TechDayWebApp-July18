@@ -93,9 +93,9 @@
                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
                    txt+= "</tr>"    
                    txt += "<tr>"; 
-                           txt += "<td>" + "Host:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                   txt+= "</tr>"  
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"    
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
@@ -122,9 +122,9 @@
                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
                    txt+= "</tr>"    
                    txt += "<tr>"; 
-                           txt += "<td>" + "Host:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                   txt+= "</tr>"  
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"    
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
