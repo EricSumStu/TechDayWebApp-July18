@@ -89,21 +89,6 @@ td.ONE{
     padding-top: 25px;
 }
 
-button.Bio{
-    align-self: left;
-    background-color:gray;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 20px;
-    font-family: 'EricssonHilda-Regular'
-
-}
-
 button.Fav{
     align-self: left;
     background-color: #Af78D2;
