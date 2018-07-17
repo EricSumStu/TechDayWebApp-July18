@@ -19,3 +19,7 @@ var location =
 (4, "Demo Room"), (4, "Kuala Lumpur"), (5, "Stockholm"), (5, "Berlin"), (5, "Helsinki"), (5, "Rome"),
 (6, "Wellington"), (6, "Canberra"), (6, "Tokyo"), (6, "Warsaw"), (6, "Kiev"), (6, "Moscow")
 (7, "Cape Town"), (7, "Jakarta")];
+
+for (key in location){
+    console.log(location[key])
+}
