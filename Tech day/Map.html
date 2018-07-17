@@ -6,9 +6,13 @@
     <title>Map and Locations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="map.css" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+        <script src="map.js"></script>
+
     <nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
@@ -82,7 +86,7 @@
                             <div class="w3-modal-content">
                               <div class="w3-container ">
                                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                                <p>Some text. Some text. Some text.</p>
+                                <p class ="z1"> Some text. Some text. Some text.</p>
                               </div>
                             </div>
                           </div>
@@ -192,7 +196,10 @@
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
         }
+
         </script>    
     
+
+
 </body>
 </html>
