@@ -85,9 +85,41 @@ table {
 
 }
 
-button.YES{
-   background-color: aqua
+td.ONE{
+    padding-top: 25px;
 }
+
+button.Bio{
+    align-self: left;
+    background-color:gray;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'EricssonHilda-Regular'
+
+}
+
+button.Fav{
+    align-self: left;
+    background-color: #Af78D2;
+    border: none;
+    color: white;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'EricssonHilda-Regular'
+
+}
+
+
 
 table, tbody, tr, td {
     vertical-align: top;
