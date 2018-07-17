@@ -109,7 +109,7 @@
                    txt+= "</tr>"    
                    txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
                     txt+= "</tr>" 
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
@@ -138,7 +138,7 @@
                    txt+= "</tr>"    
                    txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
                     txt+= "</tr>"     
                    txt += "<tr>"; 
                            txt += "<td>" +  "Summary:" + "</td>"
@@ -167,7 +167,7 @@ function addFavourite(ID){
     
 function openBiography(ID){
     console.log(ID)
-    
+
 };
    
    function openSlideMenu() {
