@@ -91,7 +91,7 @@
                     txt+= "</tr>"    
                     txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' onclick=openBiography() >" + "Biography" + "</button>" + "</button>" + "</td>"
                     txt+= "</tr>"  
                     txt += "<tr>"; 
                             txt += "<td>" +  "Summary:" + "</td>"
@@ -122,7 +122,7 @@
                     txt+= "</tr>"   
                     txt += "<tr>";   
                          txt += "<td>" + "Location:" + "</td>"  
-                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
+                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='' onclick=openBiography() >" + "Biography" + "</button>" + "</td>"
                     txt+= "</tr>"    
                     txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
@@ -149,6 +149,11 @@
         console.log(title)
         
     }
+
+    function openBiography(){
+        console.log("Biography")
+
+    }
     
     function openSlideMenu() {
             document.getElementById('side-menu').style.width = '250px';
@@ -161,4 +166,4 @@
         }
     </script>        
 </body>
-</html>
+</html> 
