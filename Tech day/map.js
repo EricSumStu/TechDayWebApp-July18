@@ -64,12 +64,25 @@ for (var y = 0; y < (obj.talks).length;y++){
     }
 }
 }
-});
+var z1txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
+for(x=0; x<z1.length; x++){
 
-document.getElementById("z1").innerHTML = table;
+    var aTitle = z1[x].Title; 
+    var aTime = z1[x].Time;  
+    
+    z1txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
+}
+z1txt += "</table>";
+
+window.onload = function(){
+document.getElementById("zone1").innerHTML = z1txt;
+}
+/*
 document.getElementById("z2").innerHTML = table;
 document.getElementById("z3").innerHTML = table;
 document.getElementById("z4").innerHTML = table;
 document.getElementById("z5").innerHTML = table;
 document.getElementById("z6").innerHTML = table;
 document.getElementById("z7").innerHTML = table;
+*/
+});
