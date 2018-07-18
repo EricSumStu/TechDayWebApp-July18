@@ -59,7 +59,7 @@
     overflow-x:hidden;
     padding-top:60px;
     transition:1s;
-    
+    text-align: left; 
 }
 
 .side-nav a{
