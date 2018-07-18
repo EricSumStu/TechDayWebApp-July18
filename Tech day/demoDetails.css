@@ -131,18 +131,32 @@ table {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
+    
 
 }
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
     padding: 20px;
-    background-color: #0082f0;
+    background-color: #0fc373;
     color: white;
+    border-radius: 30px;
+    text-align: center;
 }
+
+.modal-content {
+    padding:9px 15px;
+    background-color: #0fc373;
+     border-radius: 30px;
+     text-align: center;
+ }
 td.ONE{
     padding-top: 25px;
 }
+td.TWO{
+    text-align: justify;
+}
+
 
 button.Fav{
     align-self: left;
