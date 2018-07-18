@@ -43,10 +43,11 @@ for (var key in myArray){
     console.log(myArray[key]);
 }*/
 for (x=1; x<8; x++){
-    
+    var now = new Date().getUTCHours() + 1 ;
 for (var y = 0; y < (obj.talks).length;y++){
     for (var key in myArray2){ 
-        if (myArray2[key] === obj.talks[y].Location) {
+        if ((myArray2[key] === obj.talks[y].Location) && (obj.talks[y].Time >= now)) {
+
             var zone = myArray[key];        
             if (zone == x){
               /*  ZoneOneEvents.push(obj.talks[y]);*/
@@ -65,7 +66,6 @@ for (var y = 0; y < (obj.talks).length;y++){
 }
 }
 
-/*zone 1*/
 var z1txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
 for(x=0; x<z1.length; x++){
 
@@ -79,46 +79,6 @@ z1txt += "</table>";
 window.onload = function(){
 document.getElementById("zone1").innerHTML = z1txt;
 }
-
-
-/*zone 1*/
-var z6txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
-for(x=0; x<z6.length; x++){
-
-    var aTitle = z6[x].Title; 
-    var aTime = z6[x].Time;  
-    
-    z6txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
-}
-z6txt += "</table>";
-
-window.onload = function(){
-
-document.getElementById("zone6").innerHTML = z6txt;
-}
-
-document.getElementById("zone2").innerHTML = z2txt;
-}
-
-/*zone 3*/
-/*
-var z3txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
-for(x=0; x<z3.length; x++){
-
-    var aTitle = z3[x].Title; 
-    var aTime = z3[x].Time;  
-    
-    z3txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
-}
-z3txt += "</table>";
-
-
-window.onload = function(){
-document.getElementById("zone3").innerHTML = z3txt;
-}*/
-
-
-
 /*
 document.getElementById("z2").innerHTML = table;
 document.getElementById("z3").innerHTML = table;
@@ -127,4 +87,4 @@ document.getElementById("z5").innerHTML = table;
 document.getElementById("z6").innerHTML = table;
 document.getElementById("z7").innerHTML = table;
 */
-);
+});
