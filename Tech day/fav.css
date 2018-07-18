@@ -68,6 +68,7 @@
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 
@@ -111,6 +112,16 @@
     }
 }
 
+.center {
+    margin:auto ;
+    width: 40%;
+    border: 4px solid black;
+    margin-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
 
 
 p{

@@ -2,6 +2,48 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script href="indexDB.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
@@ -26,7 +68,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Events.html">Events</a></li>
             <li><a href="Map.html">Map</a></li>
-            <li><a href="eventsDetails.html">Entertainment</a></li>
+            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
             <li><a href="fav.html">Favourites</a></li>
             <li><a href="pasttechday.html">Past Tech Days</a></li>
             <li><a href="about.html">About</a></li>
@@ -48,13 +90,13 @@
                         <a href="Map.html">Map</a>
                     </li>
                     <li>
-                        <a href="eventsDetails.html">Entertainment</a>
+                        <a href="upcomingEvents.html">Upcoming Events</a>
                     </li>
                     <li>
                          <a href="fav.html">Favourites</a>
                     </li>
                     <li>
-                        <a href="https://www.google.ie">Past Tech Days</a>
+                        <a href="pasttechday.html">Past Tech Days</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -66,20 +108,33 @@
     </nav>
     <br>
     
-        <main>
+        <div id="main">
             <div>
                 <a href="#">
                     <img src="./images/demo straight border.png">
                     </a>
             </div>
-       </main>
+      
     <p id = "demo" ></p>
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+
+        <!-- Modal content -->
+       
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id = "bioText">Some text in the Modal..</p>
+        </div>
     
+    </div>
+</div>
  <script>
      var txt
-       $.getJSON("talks.json", function(json) {
+     var modal = document.getElementById('myModal');
+     var table = "";
+    $.getJSON("talks.json", function(json) {
        var obj = json;
-        var table = "";
         var techDate = new Date("2018-10-4");
         var today = new Date();
         var techDateSmall = techDate.toDateString(0, 10);
@@ -89,121 +144,87 @@
         var techDay = false;
         if(todaySmall === techDateSmall){
                 techDay = true
-                console.log('equal')
         };
-
         for (var y = 0; y < (obj.talks).length;y++){
-                if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
-                    var txt = "<table id ='Top'>"
-                    txt += "<tr>";
-                        txt += "<td>" + "Title:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                    txt+= "</tr>" 
-                    txt += "<tr>";   
-                            txt += "<td>" + "Time:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                    txt+= "</tr>"   
-                    txt += "<tr>";   
-                         txt += "<td>" + "Location:" + "</td>"  
-                         txt += "<td>" + (obj.talks[y].Location) + "</td>"
-                    txt+= "</tr>"    
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
-                    txt+= "</tr>"  
-                    txt += "<tr>"; 
-                            txt += "<td>" +  "Summary:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                     txt+= "</tr>"
-                     txt += '<tr>';
-                         txt += "<td>" + "" + "</td>"  
-                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+obj.talks[y].ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
-                    txt+= "</tr>"
-                    txt += "</table><br>" 
-                        table += txt;
-                        
-           
-
-             }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
-                     var txt = "<table>"
-                    txt += "<tr>"; 
-                        txt += "<td>" + "<button id='favButton' onclick=addFavourite() >" + "Add to Favourites" + "</button>" + "</td>"  
-                         txt += "<td>" + "" + "</td>"
-                    txt+= "</tr>"
-                    txt += "<tr>";
-                        txt += "<td>" + "Title:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                    txt+= "</tr>" 
-                    txt += "<tr>";   
-                            txt += "<td>" + "Time:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                    txt+= "</tr>"   
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
-                    txt+= "</tr>"   
-                    txt += "<tr>"; 
-                            txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "</td>"
-                    txt+= "</tr>"  
-                    txt += "<tr>"; 
-                            txt += "<td>" +  "Summary:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                     txt+= "</tr>"
-                     txt += '<tr>';
-                         txt += "<td>" + "" + "</td>"  
-                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+obj.talks[y].ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
-                    txt+= "</tr>"
-                    txt += "</table><br>" 
-                        table += txt;
-                
-             }
-            };
-
-        
-
+             if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
+                    printEvent(obj.talks[y])
+            }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
+                    printEvent(obj.talks[y])  
+             }};
             document.getElementById("demo").innerHTML = table;
-             
-    });
+        });
     
-    function createIndexedDB() {
-  'use strict';
-    if (!('indexedDB' in window)) {
-      console.log('This browser doesn\'t support IndexedDB');
-      return;
+    function printEvent(event){
+        var txt = "<table>"
+                    txt += "<tr>";
+                        txt += "<td>" + "Title:" + "</td>"
+                        txt += "<td>" + (event.Title) + "</td>"
+                    txt+= "</tr>" 
+                    txt += "<tr>";   
+                            txt += "<td>" + "Time:" + "</td>"
+                        txt += "<td>" + (event.Time) + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value="+event.ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                        txt += "<td>" + "Location:" + "</td>"
+                     txt += "<td>" + (event.Location) + "</td>"
+                txt+= "</tr>"  
+                    txt += "<tr>"; 
+                            txt += "<td>" +  "Summary:" + "</td>"
+                         txt += "<td class='TWO'>" + (event.Summary) + "</td>"
+                     txt+= "</tr>"
+                     txt += '<tr>';
+                         txt += "<td>" + "" + "</td>"  
+                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+event.ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
+                    txt+= "</tr>"
+                    txt += "</table><br>" 
+                        table += txt;
     }
-  
-    var dbPromise = idb.open('test-db1', 1);
-    if (!upgradeDb.objectStoreNames.contains('Fav')) {
-        var favOS = upgradeDb.createObjectStore('Fav', {keyPath: 'ID'});
-      
-      }
-};
-
-    window.addEventListener('load', async e =>{
-        createIndexedDB();
-    });
+    
 
     function addFavourite(ID){
         console.log(ID)
-        dbPromise.then(function(db) {
-        var tx = db.transaction('Fav', 'readwrite');
-        var store = tx.objectStore('Fav');
-        store.add(ID);
-        return tx.complete;
-         }).then(function() {
-        console.log('added item to the store os!');
-    });
+    
     }
     
 
-    function openBiography(){
-        console.log("Biography")
+    function openBiography(ID){
+        modal.style.display = "block";
+        var txt = ""
+       $.getJSON("talks.json", function(json) {
+       var obj = json;
+       for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                    txt = "Biography:" + " " + (obj.talks[y].Bio);
+               }else{
+               }
+            document.getElementById("bioText").innerHTML = txt
+       }})
 
+    };
+
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
     }
+}
+
+
     
     function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
         }
     

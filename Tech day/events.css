@@ -1,3 +1,20 @@
+@font-face
+{font-family: 'EricssonHilda-Regular';
+   src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
+   }
+
+@font-face {
+   font-family: 'EricssonHilda-Light';
+   src: url('fonts/EricssonHilda-Light.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Medium';
+   src: url('fonts/EricssonHilda-Medium.otf') format('OpenType');
+   }
+@font-face {
+   font-family: 'EricssonHilda-Bold';
+   src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
+   }
 
 body{
     overflow-x:hidden;
@@ -45,6 +62,7 @@ body{
     overflow-x:hidden;
     padding-top:60px;
     transition:1s;
+    text-align: left;
 }
 
 .side-nav a{
@@ -55,8 +73,8 @@ body{
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
-
 
 .side-nav .btn-close{
     position: absolute;

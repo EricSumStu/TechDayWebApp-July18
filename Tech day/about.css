@@ -22,6 +22,12 @@
     font-family: 'EricssonHilda-Light';
 }
 
+#main {
+    transition:margin-left 0.7s;
+    padding:20px;
+    overflow: hidden;
+    width: 100%;
+}
 .navbar {
     background-color: #111;
     overflow: hidden;
@@ -67,6 +73,7 @@
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 

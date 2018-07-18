@@ -19,15 +19,11 @@
     overflow-x:hidden;
 }
 
-body{
-    overflow-x:hidden;
-}
-
-
 .navbar {
     background-color: #111;
     overflow: hidden;
     height:63px;
+  
 }
 
 .navbar a {
@@ -58,6 +54,7 @@ body{
     overflow-x:hidden;
     padding-top:60px;
     transition:1s;
+    text-align: left; 
 }
 
 .side-nav a{
@@ -68,6 +65,7 @@ body{
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 
@@ -88,14 +86,14 @@ body{
 
 
 #main{
-    transition:margin-left 0.5s;
+    transition:margin-left 0.7s;
     padding:20px;
     overflow: hidden;
     width: 100%;
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 600px){
     .navbar {
        background-color:white;
     }
@@ -105,13 +103,11 @@ body{
     }
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:600px){
     .open-slide{
         display:none;
     }
 }
-
-
 
 
 table {
@@ -130,12 +126,32 @@ table {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
+    
 
 }
+#bioText{
+    font-family: 'EricssonHilda-Regular';
+    font-size: 25px;
+    padding: 20px;
+    background-color: #0fc373;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+}
 
+.modal-content {
+    padding:9px 15px;
+    background-color: #0fc373;
+     border-radius: 30px;
+     text-align: center;
+ }
 td.ONE{
     padding-top: 25px;
 }
+td.TWO{
+    text-align: justify;
+}
+
 
 button.Fav{
     align-self: left;
@@ -179,7 +195,7 @@ img  {
     height:80%;
     position: relative;
     margin: auto;
-    border-radius:px; 
+    border-radius:5px; 
 }
 .count {
     left: 0;
@@ -198,4 +214,11 @@ img  {
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+footer{
+    text-align: left;
+    background-color: #0082f0;
+    font-size: 50px; 
+    font-family: 'EricssonHilda-Regular';
+}
+
 
