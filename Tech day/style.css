@@ -17,7 +17,8 @@
    }
    body   
    {font-family: 'EricssonHilda-Light';}
-#main{
+
+   #main{
     transition:margin-left 0.5s;
     padding:20px;
     overflow: hidden;
