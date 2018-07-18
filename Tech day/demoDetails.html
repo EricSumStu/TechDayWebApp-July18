@@ -183,25 +183,6 @@
                         table += txt;
     }
     
-    function openBiography(ID){
-        var txt = ""
-        $.getJSON("talks.json", function(json) {
-        var obj = json;
-        for (var y = 0; y < (obj.talks).length;y++){
-                if(ID === obj.talks[y].ID){
-                     txt = "Biography:" + " " + (obj.talks[y].Bio);
-                        console.log(txt);
-                        alert(txt)
-
-                }else{
-                    console.log("Not a match")
-                }
-             document.getElementById("bioText").innerHTML = txt
-        }})
-     
-       
-    };
-
   /*  function createIndexedDB() {
         if (!('indexedDB' in window)) {
             console.log('This browser doesn\'t support IndexedDB');
