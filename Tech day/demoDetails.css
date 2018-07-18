@@ -132,7 +132,13 @@ table {
     padding: 20px;
 
 }
-
+#bioText{
+    font-family: 'EricssonHilda-Regular';
+    font-size: 25px;
+    padding: 20px;
+    background-color: #0082f0;
+    color: white;
+}
 td.ONE{
     padding-top: 25px;
 }
