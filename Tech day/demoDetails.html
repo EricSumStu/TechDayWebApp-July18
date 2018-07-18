@@ -184,67 +184,6 @@
                         table += txt;
     }
     
-  /*  function createIndexedDB() {
-        if (!('indexedDB' in window)) {
-            console.log('This browser doesn\'t support IndexedDB');
-            return;
-        }
-        
-        var dbPromise = indexedDB.open('test-4', 1);
-        createObjectStore('test-4','fav');
-
-        
-        openRequest = window.indexedDB.open("test-4", 1);
-        /////   
-        var items = [1,2,3];
-        openRequest.onerror = function(event) {
-            console.error(event);
-        };
-        openRequest.onsuccess = function (event) {
-            var db = openRequest.result;
-            db.onerror = function(event) {
-                // Generic error handler for all errors targeted at this database's requests
-                console.error(event.target);
-                window.alert("Database error: " + event.target.wePutrrorMessage || event.target.error.name || event.target.error || event.target.errorCode);
-            };
-            var transaction = db.transaction('fav', "readwrite");
-            var itemStore = transaction.objectStore("fav", "fav");
-            putNext();
-
-            function putNext() {
-                if (i<items.length) {
-                    console.log(items);
-                    itemStore.put(items[i]).onsuccess = putNext;
-                    ++i;
-                } else {   // complete
-                    console.log('populate complete');
-                    callback();
-                }
-            }           
-        };      
-        }
-    
-
-    function createObjectStore(dbName, storeName) {
-        var request = indexedDB.open(dbName);
-        request.onsuccess = function (e){
-            var database = e.target.result;
-            var version =  parseInt(database.version);
-            database.close();
-            var secondRequest = indexedDB.open(dbName, version+1);
-            secondRequest.onupgradeneeded = function (e) {
-                var database = e.target.result;
-                var objectStore = database.createObjectStore('fav', 'id');
-            };
-            secondRequest.onsuccess = function (e) {
-                e.target.result.close();
-            }
-        }
-    }
-
-    window.addEventListener('load', async e =>{
-        createIndexedDB();
-    });*/
 
     function addFavourite(ID){
         console.log(ID)
@@ -253,7 +192,6 @@
     
 
     function openBiography(ID){
-        console.log("Biography "+ ID);
         modal.style.display = "block";
         var txt = ""
        $.getJSON("talks.json", function(json) {
@@ -261,7 +199,6 @@
        for (var y = 0; y < (obj.talks).length;y++){
                if(ID === obj.talks[y].ID){
                     txt = "Biography:" + " " + (obj.talks[y].Bio);
-                       console.log(txt);
                }else{
                }
             document.getElementById("bioText").innerHTML = txt

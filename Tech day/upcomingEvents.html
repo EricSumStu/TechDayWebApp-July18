@@ -127,7 +127,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </div>
 
 </div>  
-<<<<<<< HEAD
 <script>
     var table = "";
 var txt
@@ -221,7 +220,6 @@ function addFavourite(ID){
 };
 
 function openBiography(ID){
-    console.log("Biography "+ ID);
     modal.style.display = "block";
     var txt = ""
    $.getJSON("talks.json", function(json) {
@@ -229,7 +227,6 @@ function openBiography(ID){
    for (var y = 0; y < (obj.talks).length;y++){
            if(ID === obj.talks[y].ID){
                 txt = "Biography:" + " " + (obj.talks[y].Bio);
-                   console.log(txt);
            }else{
            }
         document.getElementById("bioText").innerHTML = txt
@@ -252,8 +249,5 @@ if (event.target == modal) {
 }
 };
 </script>  
-=======
-</div>  
->>>>>>> 3454e1aa70f2238a18fb293acae6cd7d01d442f0
 </body>
 </html>
