@@ -1,5 +1,6 @@
 var table = "";
 var txt
+var modal = document.getElementById('myModal');
 $.getJSON("talks.json", function(json) {
 var obj = json;
  var techDate = new Date("2018-7-18");
@@ -81,4 +82,41 @@ document.getElementById('main').style.marginLeft = '250px';
 function closeSlideMenu() {
 document.getElementById('side-menu').style.width = '0';
 document.getElementById('main').style.marginLeft = '0';
+};
+
+function addFavourite(ID){
+    console.log(ID)
+
+}
+
+function openBiography(ID){
+    console.log("Biography "+ ID);
+    modal.style.display = "block";
+    var txt = ""
+   $.getJSON("talks.json", function(json) {
+   var obj = json;
+   for (var y = 0; y < (obj.talks).length;y++){
+           if(ID === obj.talks[y].ID){
+                txt = "Biography:" + " " + (obj.talks[y].Bio);
+                   console.log(txt);
+           }else{
+           }
+        document.getElementById("bioText").innerHTML = txt
+   }})
+
+};
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+modal.style.display = "none";
+};
+
+
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";
+}
 };
