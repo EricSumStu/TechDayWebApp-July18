@@ -72,29 +72,7 @@
                 </div>
             </main>
 
- <script>
-        var txt
-    $.getJSON("talks.json", function(json) {
-    var obj = json;
-    var table = "";
-
-    for (var y = 0; y < (obj.talks).length;y++){
-        if(obj.talks[y].Catergories === "favourites"){
-        var txt = "<table>"
-            txt += "<tr>";
-                txt += "<td>" + (obj.talks[y].Title) + "</td>"
-            txt+= "</tr>"   
-
-            txt += "</table><br>" 
-                table += txt;
-        }
-    };
-
-    document.getElementById("demo").innerHTML = table;
-
-
-});
-    
+ <script>   
             function openSlideMenu() {
                 document.getElementById('side-menu').style.width = '250px';
                 document.getElementById('main').style.marginLeft = '250px';
@@ -104,27 +82,10 @@
                 document.getElementById('side-menu').style.width = '0';
                 document.getElementById('main').style.marginLeft = '0';
             }
-            </script>
+</script>
             
  
 </body>
-
-
-
-<style>
-.center {
-    margin:auto ;
-    width: 40%;
-    border: 4px solid black;
-    margin-top: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-</style>
-
-
 <div class="center">
   <p>"You have not selected any favourites. Please go to events to select favourites".</p>
 </div>

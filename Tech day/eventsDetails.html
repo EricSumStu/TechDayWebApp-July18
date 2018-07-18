@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <script src="https://code.jquery.com/jquery.min.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+          <script src="login.js"></script>
  </head>
 <body>
         
@@ -75,102 +76,88 @@
 <p id = "demo"></p>
 
 <script>
-    var txt
-      $.getJSON("talks.json", function(json) {
-      var obj = json;
-       var table = "";
-       var techDate = new Date("2018-10-4");
-       var today = new Date();
-       var techDateSmall = techDate.toDateString(0, 10);
-       var todaySmall = today.toDateString(0, 10);
-        console.log(techDateSmall, todaySmall);
-       var now = new Date().getUTCHours() + 1 ;
-       var techDay = false;
-       if(todaySmall === techDateSmall){
-               techDay = true
-               console.log('equal')
-       };
-
-   
-       for (var y = 0; y < (obj.talks).length;y++){
-               if((obj.talks[y].Catergories === "Event") && (techDay === false)){
-                   var txt = "<table>"
-                   txt += "<tr>";
-                       txt += "<td>" + "Title:" + "</td>"
-                       txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                   txt+= "</tr>" 
-                   txt += "<tr>";   
-                           txt += "<td>" + "Time:" + "</td>"
-                       txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                   txt+= "</tr>"   
-                   txt += "<tr>";   
-                        txt += "<td>" + "Location:" + "</td>"  
-                        txt += "<td>" + (obj.talks[y].Location) + "</td>"
-                   txt+= "</tr>"    
-                   txt += "<tr>"; 
-                            txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+ var table = "";
+     var txt;
+    $.getJSON("talks.json", function(json) {
+       var obj = json;
+        var techDate = new Date("2018-10-4");
+        var today = new Date();
+        var techDateSmall = techDate.toDateString(0, 10);
+        var todaySmall = today.toDateString(0, 10);
+         console.log(techDateSmall, todaySmall);
+        var now = new Date().getUTCHours() + 1 ;
+        var techDay = false;
+        if(todaySmall === techDateSmall){
+                techDay = true
+        };
+        for (var y = 0; y < (obj.talks).length;y++){
+             if((obj.talks[y].Catergories === "Demo") && (techDay === false)){
+                    printEvent(obj.talks[y])
+            }else if((obj.talks[y].Catergories === "Demo") && (techDay === true)  && (obj.talks[y].Time >= now)){
+                    printEvent(obj.talks[y])  
+             }};
+            document.getElementById("demo").innerHTML = table;
+        });
+    
+    function printEvent(event){
+        var txt = "<table>"
+                    txt += "<tr>";
+                        txt += "<td>" + "Title:" + "</td>"
+                        txt += "<td>" + (event.Title) + "</td>"
                     txt+= "</tr>" 
-                   txt += "<tr>"; 
-                           txt += "<td>" +  "Summary:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                    txt+= "</tr>"
-                    txt += '<tr>';
-                         txt += "<td>" + "" + "</td>"  
-                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+obj.talks[y].ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
-                    txt+= "</tr>"
-                   txt += "</table><br>" 
-                       table += txt;
-
-            }else if((obj.talks[y].Catergories === "Event") && (techDay === true)  && (obj.talks[y].Time >= now)){
-               var txt = "<table>"
-                   txt += "<tr>";
-                       txt += "<td>" + "Title:" + "</td>"
-                       txt += "<td>" + (obj.talks[y].Title) + "</td>"
-                   txt+= "</tr>" 
-                   txt += "<tr>";   
-                           txt += "<td>" + "Time:" + "</td>"
-                       txt += "<td>" + (obj.talks[y].Time) + "</td>"
-                   txt+= "</tr>"   
-                   txt += "<tr>";   
-                        txt += "<td>" + "Location:" + "</td>"  
-                        txt += "<td>" + (obj.talks[y].Location) + "</td>"
-                   txt+= "</tr>"    
-                   txt += "<tr>"; 
+                    txt += "<tr>";   
+                            txt += "<td>" + "Time:" + "</td>"
+                        txt += "<td>" + (event.Time) + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
                             txt += "<td>" + "Host:" + "</td>"
-                         txt += "<td>" + (obj.talks[y].Host) + "<button id='hostButton' class='Host' value="+obj.talks[y].ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
-                    txt+= "</tr>"     
-                   txt += "<tr>"; 
-                           txt += "<td>" +  "Summary:" + "</td>"
-                        txt += "<td>" + (obj.talks[y].Summary) + "</td>"
-                    txt+= "</tr>"
-                    txt += '<tr>';
+                         txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value="+event.ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                        txt += "<td>" + "Location:" + "</td>"
+                     txt += "<td>" + (event.Location) + "</td>"
+                txt+= "</tr>"  
+                  txt += "<tr>"; 
+                            txt += "<td>" +  "Summary:" + "</td>"
+                         txt += "<td>" + (event.Summary) + "</td>"
+                     txt+= "</tr>"
+                     txt += '<tr>';
                          txt += "<td>" + "" + "</td>"  
-                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+obj.talks[y].ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
+                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+event.ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
                     txt+= "</tr>"
-                   txt += "</table><br>" 
-                       table += txt;
-            }
-           };
-
-       
-
-           document.getElementById("demo").innerHTML = table;
-
-   
-   });
+                    txt += "</table><br>" 
+                        table += txt;
+    }
 
 function addFavourite(ID){
         console.log(ID)
-
-    };
+ };
     
+      
 function openBiography(ID){
     console.log(ID)
+    var currentID = ID;
+    $.getJSON("talks.json", function(json2) {
+      var obj = json2;
+      var fill = ""
+      for (var y = 0; y < (obj.talks).length;y++){
+        if(obj.talks[y].ID === currentID){
+            var txt = "<table>"
+                   txt += "<tr>";
+                       txt += "<td>" + (obj.talks[y].Host) + "</td>"
+                       txt += "<td>" + (obj.talks[y].Bio) + "</td>"
+                   txt+= "</tr>"
+                   txt += "</table><br>" 
+                       fill += txt;
 
+        }else{
+            console.log("Nope")
+        };
+    }});
+    document.getElementById('bio').innerHTML = fill
 };
    
-   function openSlideMenu() {
+function openSlideMenu() {
            document.getElementById('side-menu').style.width = '250px';
            document.getElementById('main').style.marginLeft = '250px';
        }
@@ -179,6 +166,8 @@ function openBiography(ID){
            document.getElementById('side-menu').style.width = '0';
            document.getElementById('main').style.marginLeft = '0';
        }
-   </script>   
+   </script>  
+ <p id ="bio">
+</p>            
 </body>
 </html>
