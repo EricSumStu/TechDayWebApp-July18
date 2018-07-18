@@ -141,8 +141,107 @@
         "Host": "Emmet",
         "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
         "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
-        "Catergories": "talk",
+        "Catergories": "Talk",
         "Theme": "5G"
+    },
+    {
+        "ID": "14",
+        "Title": "Networks Talk",
+        "Time": 11,
+        "Location": "Paris",
+        "Host": "Adam",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Talk",
+        "Theme": "The Future of Network Management"
+    },
+    {
+        "ID": "15",
+        "Title": "Cloud Native Event",
+        "Time": 9,
+        "Location": "Rome",
+        "Host": "Ian",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Event",
+        "Theme": "Cloud Native"
+    },
+    {
+        "ID": "16",
+        "Title": "Zero Touch Demo",
+        "Time": 12,
+        "Location": "Kuala Lumpur",
+        "Host": "Mark",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Demo",
+        "Theme": "Zero Touch"
+    },
+    {
+        "ID": "17",
+        "Title": "Networks Demo",
+        "Time": 13,
+        "Location": "Jakarta",
+        "Host": "Thomas",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Demo",
+        "Theme": "The Future of Network Management"
+    },
+    {
+        "ID": "18",
+        "Title": "Networks Talk",
+        "Time": 14,
+        "Location": "Berlin",
+        "Host": "Ciaran",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Talk",
+        "Theme": "Cloud Native"
+    },
+    {
+        "ID": "19",
+        "Title": "Zero Touch Event",
+        "Time": 16,
+        "Location": "Cape Town",
+        "Host": "Jack",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Event",
+        "Theme": "Zero Touch"
+    },
+    {
+        "ID": "20",
+        "Title": "Cloud Native Demo",
+        "Time": 17,
+        "Location": "Paris",
+        "Host": "Tadhg",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Demo",
+        "Theme": "Cloud Native"
+    },
+    {
+        "ID": "21",
+        "Title": "Networks Event",
+        "Time": 16,
+        "Location": "Demo Room",
+        "Host": "Sean",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Demo",
+        "Theme": "The Future of Network Management"
+    },
+    {
+        "ID": "22",
+        "Title": "Cloud Native Talk",
+        "Time": 8,
+        "Location": "Stockholm",
+        "Host": "Adam",
+        "Bio":"This speaker is a world renowned tech person. He has been part of Ericsson for 10 years and is passionate about his work. He specialises in 5G",
+        "Summary": "a an act of describing specifically discourse intended to give a mental image of something experienced beautiful beyond description gave an accurate description of what he saw b a statement or account giving the characteristics of someone or something a descriptive statement or account The review was little more than a description of the film's plot. 2 kind or character especially as determined by salient (see 1salient 3b) features someone fitting the suspect's description had toys of every description opposed to any tax of so radical a description.",
+        "Catergories": "Talk",
+        "Theme": "Cloud Native"
     }
 ]
 }
