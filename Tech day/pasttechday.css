@@ -62,6 +62,7 @@ body{
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 
@@ -134,6 +135,7 @@ height: auto;
     font-size:17px;
     color:#f2f2f2;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 .navbar ul{
