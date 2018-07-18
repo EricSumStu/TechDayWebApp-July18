@@ -25,7 +25,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Events.html">Events</a></li>
             <li><a href="Map.html">Map</a></li>
-            <li><a href="eventsDetails.html">Entertainment</a></li>
+            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
             <li><a href="fav.html">Favourites</a></li>
             <li><a href="pasttechday.html">Past Tech Days</a></li>
             <li><a href="about.html">About</a></li>
@@ -47,7 +47,7 @@
                         <a href="Map.html">Map</a>
                     </li>
                     <li>
-                        <a href="eventsDetails.html">Entertainment</a>
+                        <a href="upcomingEvents.html">Upcoming Events</a>
                     </li>
                     <li>
                          <a href="fav.html">Favourites</a>
@@ -72,31 +72,9 @@
                 </div>
             </main>
 
- <script>
-        var txt
-    $.getJSON("talks.json", function(json) {
-    var obj = json;
-    var table = "";
-
-    for (var y = 0; y < (obj.talks).length;y++){
-        if(obj.talks[y].Catergories === "favourites"){
-        var txt = "<table>"
-            txt += "<tr>";
-                txt += "<td>" + (obj.talks[y].Title) + "</td>"
-            txt+= "</tr>"   
-
-            txt += "</table><br>" 
-                table += txt;
-        }
-    };
-
-    document.getElementById("demo").innerHTML = table;
-
-
-});
-    
+ <script>   
             function openSlideMenu() {
-                document.getElementById('side-menu').style.width = '250px';
+                document.getElementById('side-menu').style.width = '230px';
                 document.getElementById('main').style.marginLeft = '250px';
             }
         
@@ -104,27 +82,10 @@
                 document.getElementById('side-menu').style.width = '0';
                 document.getElementById('main').style.marginLeft = '0';
             }
-            </script>
+</script>
             
  
 </body>
-
-
-
-<style>
-.center {
-    margin:auto ;
-    width: 40%;
-    border: 4px solid black;
-    margin-top: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-</style>
-
-
 <div class="center">
   <p>"You have not selected any favourites. Please go to events to select favourites".</p>
 </div>

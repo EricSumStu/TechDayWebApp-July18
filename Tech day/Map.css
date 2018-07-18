@@ -42,12 +42,15 @@ body,h1
 p{
   margin-left: 10px;
 }
+.zone1
+{    text-align: center;}
 
 h2
 {
   font-family: 'EricssonHilda-Bold';
   font-size: 25px;
 }
+
 .map
 {
     text-align: center;
@@ -113,6 +116,7 @@ img.map
     transition:0.7s;
     float: left;
     font-family: 'EricssonHilda-Regular';
+    text-align: left;
 }
 
 

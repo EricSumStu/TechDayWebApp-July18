@@ -64,12 +64,49 @@ for (var y = 0; y < (obj.talks).length;y++){
     }
 }
 }
-});
 
-document.getElementById("z1").innerHTML = table;
+/*zone 1*/
+var z1txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
+for(x=0; x<z1.length; x++){
+
+    var aTitle = z1[x].Title; 
+    var aTime = z1[x].Time;  
+    
+    z1txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
+}
+z1txt += "</table>";
+
+window.onload = function(){
+document.getElementById("zone1").innerHTML = z1txt;
+}
+
+
+/*zone 2*/
+/*
+var z2txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
+for(x=0; x<z1.length; x++){
+
+    var aTitle = z1[x].Title; 
+    var aTime = z1[x].Time;  
+    
+    z2txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
+}
+z2txt += "</table>";
+
+window.onload = function(){
+document.getElementById("zone2").innerHTML = z2txt;
+}
+*/
+
+
+
+
+/*
 document.getElementById("z2").innerHTML = table;
 document.getElementById("z3").innerHTML = table;
 document.getElementById("z4").innerHTML = table;
 document.getElementById("z5").innerHTML = table;
 document.getElementById("z6").innerHTML = table;
 document.getElementById("z7").innerHTML = table;
+*/
+});
