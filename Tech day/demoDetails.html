@@ -131,13 +131,11 @@
     }
     
     function openBiography(ID){
-        var identifier =ID
-        var output = ""
         var txt = ""
         $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
-                if(identifier === obj.talks[y].ID){
+                if(ID === obj.talks[y].ID){
                      txt = "Biography:" + " " + (obj.talks[y].Bio);
                         console.log(txt);
                         alert(txt)
