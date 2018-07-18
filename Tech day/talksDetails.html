@@ -127,6 +127,19 @@
                     txt += "</table><br>" 
                         table += txt;
     }
+    function openBiography(ID){
+        var txt = ""
+        $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+                if(ID === obj.talks[y].ID){
+                     txt = "Biography:" + " " + (obj.talks[y].Bio);
+                        console.log(txt);
+                        alert(txt)
+
+                }else{}
+        }})  
+    };
 
 function addFavourite(ID){
         console.log(ID)

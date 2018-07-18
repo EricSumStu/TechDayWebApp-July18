@@ -2,6 +2,48 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script href="indexDB.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
@@ -54,7 +96,7 @@
                          <a href="fav.html">Favourites</a>
                     </li>
                     <li>
-                        <a href="https://www.google.ie">Past Tech Days</a>
+                        <a href="pasttechday.html">Past Tech Days</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
@@ -74,11 +116,22 @@
             </div>
        </main>
     <p id = "demo" ></p>
-    <header id = "bioText" ></header>
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+
+        <!-- Modal content -->
+       
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id = "bioText">Some text in the Modal..</p>
+        </div>
     
+    </div>
  <script>
+     var txt
+     var modal = document.getElementById('myModal');
      var table = "";
-     var txt;
     $.getJSON("talks.json", function(json) {
        var obj = json;
         var techDate = new Date("2018-10-4");
@@ -131,13 +184,11 @@
     }
     
     function openBiography(ID){
-        var identifier =ID
-        var output = ""
         var txt = ""
         $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
-                if(identifier === obj.talks[y].ID){
+                if(ID === obj.talks[y].ID){
                      txt = "Biography:" + " " + (obj.talks[y].Bio);
                         console.log(txt);
                         alert(txt)
@@ -218,6 +269,39 @@
     
     }
     
+
+    function openBiography(ID){
+        console.log("Biography "+ ID);
+        modal.style.display = "block";
+        var txt = ""
+       $.getJSON("talks.json", function(json) {
+       var obj = json;
+       for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                    txt = "Biography:" + " " + (obj.talks[y].Bio);
+                       console.log(txt);
+               }else{
+               }
+            document.getElementById("bioText").innerHTML = txt
+       }})
+
+    };
+
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 
     
     function openSlideMenu() {
