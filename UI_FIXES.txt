@@ -1,0 +1,8 @@
+List of UI elements that need to adjusted/fixed/etc:
+---------------------------------------------------
+TODO:
+
+
+
+DONE:
+   
