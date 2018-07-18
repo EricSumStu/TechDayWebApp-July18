@@ -190,7 +190,6 @@ function addFavourite(ID){
     
   
  function openBiography(ID){
-        console.log("Biography "+ ID);
         modal.style.display = "block";
         var txt = ""
        $.getJSON("talks.json", function(json) {
@@ -198,7 +197,6 @@ function addFavourite(ID){
        for (var y = 0; y < (obj.talks).length;y++){
                if(ID === obj.talks[y].ID){
                     txt = "Biography:" + " " + (obj.talks[y].Bio);
-                       console.log(txt);
                }else{
                }
             document.getElementById("bioText").innerHTML = txt
@@ -229,8 +227,6 @@ function openSlideMenu() {
            document.getElementById('side-menu').style.width = '0';
            document.getElementById('main').style.marginLeft = '0';
        }
-   </script>  
- <p id ="bio">
-</p>            
+   </script>           
 </body>
 </html>
