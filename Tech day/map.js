@@ -32,12 +32,12 @@ $.getJSON("talks.json", function(json) {
     var myArray = [("Lars Magnus", "1"), ("Reykjavik", "1"), ("Nuuk", "1"), ("Paris", "3"), 
     ("Demo Room", "4"), ("Kuala Lumpur", "4"), ("Stockholm", "5"), ("Berlin", "5"), ("Helsinki", "5"), ("Rome", "5"),
     ("Wellington", "6"), ("Canberra", "6"), ("Tokyo", "6"), ("Warsaw", "6"), ("Kiev", "6"), ("Moscow", "6"),
-    ("Cape Town", "7"), ("Jakarta", "7")];
+    ("Cape Town", "7"), ("Jakarta", "7"),("Lecture Theatre", "7")];
     
     var myArray2 = [("Lars Magnus"), ("Reykjavik"), ("Nuuk"), ("Paris"), 
     ("Demo Room"), ("Kuala Lumpur"), ("Stockholm"), ("Berlin"), ("Helsinki"), ("Rome"),
     ("Wellington"), ("Canberra"), ("Tokyo"), ("Warsaw"), ("Kiev"), ("Moscow"),
-    ("Cape Town"), ("Jakarta")];
+    ("Cape Town"), ("Jakarta"), ("Lecture Theatre")];
     /*
     for (var key in myArray){
         console.log(myArray[key]);
