@@ -46,6 +46,8 @@
     </style>
         <script src="https://code.jquery.com/jquery.min.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+          <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+          <script src="db.js"></script>
  </head>
 <body>
    
@@ -116,15 +118,10 @@
         
 <p id = "demo"></p>
 <div id="myModal" class="modal">
-
-
-    <!-- Modal content -->
-   
     <div class="modal-content">
     <span class="close">&times;</span>
     <p id = "bioText">Some text in the Modal..</p>
     </div>
-
 </div>
 </div>
 <script>
@@ -151,7 +148,22 @@
              }};
             document.getElementById("demo").innerHTML = table;
         });
-    
+
+    function addFavourite(ID){
+        $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                   db.favourites.bulkPut([ID], obj.talks[y].Title);
+               }else{
+                   console.log(ID)
+               }
+       }});
+    };      
+
+    window.addEventListener('load', e =>{
+        getEvents();
+    });
     function printEvent(event){
         var txt = "<table>"
                     txt += "<tr>";
@@ -183,7 +195,6 @@
     }
     
     function openBiography(ID){
-        console.log("Biography "+ ID);
         modal.style.display = "block";
         var txt = ""
        $.getJSON("talks.json", function(json) {
@@ -191,7 +202,6 @@
        for (var y = 0; y < (obj.talks).length;y++){
                if(ID === obj.talks[y].ID){
                     txt = "Biography:" + " " + (obj.talks[y].Bio);
-                       console.log(txt);
                }else{
                }
             document.getElementById("bioText").innerHTML = txt
@@ -213,10 +223,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-function addFavourite(ID){
-        console.log(ID)
 
-    };
    
    function openSlideMenu() {
            document.getElementById('side-menu').style.width = '230px';
