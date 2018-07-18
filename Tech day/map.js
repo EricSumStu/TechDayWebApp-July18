@@ -81,21 +81,24 @@ document.getElementById("zone1").innerHTML = z1txt;
 }
 
 
-/*zone 2*/
-/*
-var z2txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
-for(x=0; x<z2.length; x++){
+/*zone 1*/
+var z6txt = '<table><tr><td>"Title"</td><td>"Time"</td></tr>';
+for(x=0; x<z6.length; x++){
 
-    var aTitle = z2[x].Title; 
-    var aTime = z2[x].Time;  
+    var aTitle = z6[x].Title; 
+    var aTime = z6[x].Time;  
     
-    z2txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
+    z6txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
 }
-z2txt += "</table>";
+z6txt += "</table>";
 
 window.onload = function(){
+
+document.getElementById("zone6").innerHTML = z6txt;
+}
+
 document.getElementById("zone2").innerHTML = z2txt;
-}*/
+}
 
 /*zone 3*/
 /*
@@ -108,6 +111,7 @@ for(x=0; x<z3.length; x++){
     z3txt +='<tr><td>"'+ aTitle + '"</td><td>"' + aTime +'"</td></tr>';  
 }
 z3txt += "</table>";
+
 
 window.onload = function(){
 document.getElementById("zone3").innerHTML = z3txt;
@@ -123,4 +127,4 @@ document.getElementById("z5").innerHTML = table;
 document.getElementById("z6").innerHTML = table;
 document.getElementById("z7").innerHTML = table;
 */
-});
+);
