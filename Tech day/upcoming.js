@@ -1,135 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-</style>
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-     <script src="upcoming.js"></script>
-      <link href="demoDetails.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,14 30,14" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,23 30,23" stroke="#000"
-                    stroke-width="5"/>
-                </svg>
-            </a>
-        </span>
-
-        <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="Map.html">Map</a></li>
-            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
-            <li><a href="fav.html">Favourites</a></li>
-            <li><a href="pasttechday.html">Past Tech Days</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-        
-
-        <div id="side-menu" class="side-nav">
-
-            <a href="#" class="btn-close"
-            onclick="closeSlideMenu()">&times;</a>
-            <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="Events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="Map.html">Map</a>
-                    </li>
-                    <li>
-                        <a href="upcomingEvents.html">Upcoming Events</a>
-                    </li>
-                    <li>
-                         <a href="fav.html">Favourites</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.ie">Past Tech Days</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </nav>
-    <div id="main">
-<main class='pic'>
-    <div>
-        <a href="#">
-            <img src="./images/upcoming events banner not rounded.png">
-            </a>
-    </div>
-</main>
-<main id ="count" class ='count'></main>
-<p id = "demo"></p>
-<div id="myModal" class="modal">
-
-
-    <!-- Modal content -->
-   
-    <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id = "bioText">Some text in the Modal..</p>
-    </div>
-
-</div>  
-<<<<<<< HEAD
-<script>
-    var table = "";
+var table = "";
 var txt
 var modal = document.getElementById('myModal');
 $.getJSON("talks.json", function(json) {
@@ -144,7 +13,7 @@ var obj = json;
  if(todaySmall === techDateSmall){
          techDay = true
  };
-    var countdown = function(){
+var countdown = function(){
   // Set the date we're counting down to
   var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
      // Update the count down every 1 second
@@ -161,9 +30,9 @@ var obj = json;
  document.getElementById("count").innerHTML = "Please come back in:" + '<br>' + days + "d " + hours + "h"
  + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
  }, 1000);
-    };
+};
 
-    for (var y = 0; y < (obj.talks).length;y++){
+for (var y = 0; y < (obj.talks).length;y++){
       if(techDay === false){
      countdown()
 
@@ -203,10 +72,10 @@ function printEvent(event){
                 txt+= "</tr>"
                 txt += "</table><br>" 
                     table += txt;
-};
+}
 
 function openSlideMenu() {
-document.getElementById('side-menu').style.width = '250px';
+document.getElementById('side-menu').style.width = '230px';
 document.getElementById('main').style.marginLeft = '250px';
 };
 
@@ -218,7 +87,7 @@ document.getElementById('main').style.marginLeft = '0';
 function addFavourite(ID){
     console.log(ID)
 
-};
+}
 
 function openBiography(ID){
     console.log("Biography "+ ID);
@@ -251,9 +120,3 @@ if (event.target == modal) {
     modal.style.display = "none";
 }
 };
-</script>  
-=======
-</div>  
->>>>>>> 3454e1aa70f2238a18fb293acae6cd7d01d442f0
-</body>
-</html>
