@@ -68,7 +68,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Events.html">Events</a></li>
             <li><a href="Map.html">Map</a></li>
-            <li><a href="eventsDetails.html">Entertainment</a></li>
+            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
             <li><a href="fav.html">Favourites</a></li>
             <li><a href="pasttechday.html">Past Tech Days</a></li>
             <li><a href="about.html">About</a></li>
@@ -90,7 +90,7 @@
                         <a href="Map.html">Map</a>
                     </li>
                     <li>
-                        <a href="eventsDetails.html">Entertainment</a>
+                        <a href="upcomingEvents.html">Upcoming Events</a>
                     </li>
                     <li>
                          <a href="fav.html">Favourites</a>
@@ -108,13 +108,13 @@
     </nav>
     <br>
     
-        <main>
+        <div id="main">
             <div>
                 <a href="#">
                     <img src="./images/demo straight border.png">
                     </a>
             </div>
-       </main>
+      
     <p id = "demo" ></p>
         <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -128,6 +128,7 @@
         </div>
     
     </div>
+</div>
  <script>
      var txt
      var modal = document.getElementById('myModal');
@@ -173,7 +174,7 @@
                 txt+= "</tr>"  
                     txt += "<tr>"; 
                             txt += "<td>" +  "Summary:" + "</td>"
-                         txt += "<td>" + (event.Summary) + "</td>"
+                         txt += "<td class='TWO'>" + (event.Summary) + "</td>"
                      txt+= "</tr>"
                      txt += '<tr>';
                          txt += "<td>" + "" + "</td>"  
@@ -286,7 +287,7 @@ window.onclick = function(event) {
 
     
     function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
         }
     
