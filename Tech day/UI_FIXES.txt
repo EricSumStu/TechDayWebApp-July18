@@ -1,7 +1,7 @@
 List of UI elements that need to adjusted/fixed/etc:
 ---------------------------------------------------
 TODO:
-
+>Make banner on home page square 
 
 
 DONE:
