@@ -128,7 +128,17 @@
     text-align: center;
 }
 
-
+table{
+    text-align: left;
+    font-family:'EricssonHilda-Regular';
+    font: 30px;
+    color: black;
+    padding: 10%
+}
+tr#THREE{
+    font-family:'EricssonHilda-Bold';
+    
+}
 
 img  {
     display: block;
