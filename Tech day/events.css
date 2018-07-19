@@ -16,15 +16,6 @@
    src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
    }
 
-body{
-    overflow-x:hidden;
-}
-
-
-body{
-    overflow-x:hidden;
-}
-
 
 
 
@@ -116,27 +107,6 @@ body{
     }
 }
 
-
-
-#main{
-    transition:margin-left 0.5s;
-    padding:20px;
-    overflow: hidden;
-    width: 100%;
-}
-
-#header{
-    display: block;
-    width: 100%;
-    height:80%;
-    position: relative;
-    margin: auto;
-    border-radius:0px;
-    font-family: 'EricssonHilda-Regular';
-}
-#txt{
-    text-align: center
-}
 .grid > div {
   padding:1em;
 }
@@ -152,27 +122,7 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width: 670px){
-    .grid{
-        grid-template-columns: 100%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top top"
-                         "middle-left"
-                         "bottom-left";
-    text-align: center;
-    }
-}
 
-@media screen and (max-width: 415px){
-    .grid{
-        grid-template-columns: 100%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top";
-    text-align: center;
-    }
-
-    
-}
 
 img  {
     display: block;
@@ -183,33 +133,5 @@ img  {
     border-radius:5px; 
 }
 
-button{
-    display: block;
-    width: 98%;
-    height:80%;
-    position: relative;
-    margin: auto;
-    border-radius:10px;
-    font-size: 30px;
-    font-family: 'EricssonHilda-Regular';
-    padding: 20px;
 
-    color: white;
-}
-#zoneOne{
-    background-color: rgb(18, 165, 18);
-}
-#zoneTwo{
-    background-color: orangered;
-}
-#zoneThree{
-    background-color:rgb(3, 82, 27);
-}#zoneFour{
-    background-color: purple;
-}#zoneFive{
-    background-color:lightseagreen; 
-}#zoneSix{
-    background-color:red; 
-}#zoneSeven{
-    background-color: yellow;
-}
+
