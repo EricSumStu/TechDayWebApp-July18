@@ -1,0 +1,9 @@
+List of UI elements that need to adjusted/fixed/etc:
+---------------------------------------------------
+TODO:
+> Make banner on home page square 
+> Navbar displayed on mobile version of demoDetails.html, should be only visible after touching button?
+
+
+DONE:
+   

@@ -16,15 +16,6 @@
    src: url('fonts/EricssonHilda-Bold.otf') format('OpenType');
    }
 
-body{
-    overflow-x:hidden;
-}
-
-
-body{
-    overflow-x:hidden;
-}
-
 
 
 
@@ -116,16 +107,6 @@ body{
     }
 }
 
-
-
-#main{
-    transition:margin-left 0.5s;
-    padding:20px;
-    overflow: hidden;
-    width: 100%;
-}
-
-
 .grid > div {
   padding:1em;
 }
@@ -141,27 +122,7 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width: 670px){
-    .grid{
-        grid-template-columns: 100%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top top"
-                         "middle-left"
-                         "bottom-left";
-    text-align: center;
-    }
-}
 
-@media screen and (max-width: 415px){
-    .grid{
-        grid-template-columns: 100%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top";
-    text-align: center;
-    }
-
-    
-}
 
 img  {
     display: block;
