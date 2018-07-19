@@ -108,11 +108,14 @@
 }
 .modal-content {
     padding:9px 15px;
-    background-color: #0fc373;
      border-radius: 30px;
      text-align: center;
+     margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: white;
  }
-
 .grid > div {
   padding:1em;
 }
@@ -132,14 +135,12 @@ table{
     text-align: left;
     font-family:'EricssonHilda-Regular';
     font: 30px;
-    color: black;
     padding: 10%
 }
 tr#THREE{
     font-family:'EricssonHilda-Bold';
     
 }
-
 img  {
     display: block;
     width: 90%;
@@ -184,6 +185,32 @@ button.Host{
     background-color: red;
     font-family: "EricssonHilda-Regular";
 }#zoneSeven{
+    background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
+}
+#zoneOne2{
+    background-color: #00ff00;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneTwo2{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneThree2{
+    background-color: rgb(33, 82, 53);
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFour2{
+    background-color: #490d30;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFive2{
+    background-color: rgb(31, 182, 241);
+    font-family: "EricssonHilda-Regular";
+}#zoneSix2{
+    background-color: red;
+    font-family: "EricssonHilda-Regular";
+}#zoneSeven2{
     background-color: rgb(255, 230, 4);
     font-family: "EricssonHilda-Regular";
 }

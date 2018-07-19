@@ -142,9 +142,10 @@ table {
 .modal-content {
     padding:9px 15px;
     background-color: #0fc373;
-     border-radius: 30px;
-     text-align: center;
+    border-radius: 30px;
+    text-align: center;
  }
+
 td.ONE{
     padding-top: 25px;
 }
@@ -215,9 +216,6 @@ img  {
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
-
-
-
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
