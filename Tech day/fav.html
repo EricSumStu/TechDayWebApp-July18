@@ -226,12 +226,12 @@
         }
 
         function displayByType(event,valueInDropdown) {
-            if (event.Type === valueInDropdown || valueInDropdown === "Type") {
+            if (event.Catergories === valueInDropdown || valueInDropdown === "Type") {
                 printEvent(event);
                 console.log(event);
             }
 
-            document.getElementById("type").innerHTML = table;
+            document.getElementById("demo").innerHTML = table;
         };
 
         function printEvent(event) {
