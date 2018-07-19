@@ -106,6 +106,12 @@
         display:none;
     }
 }
+.modal-content {
+    padding:9px 15px;
+    background-color: #0fc373;
+     border-radius: 30px;
+     text-align: center;
+ }
 
 .grid > div {
   padding:1em;
@@ -133,5 +139,35 @@ img  {
     border-radius:5px; 
 }
 
-
+button.Host{
+    display: block;
+    width: 98%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:20px; 
+    padding: 30px;
+    font: 40px;
+    font-family:'EricssonHilda-Regular';
+    color:white;
+}
+#zoneOne{
+    background-color: #00ff00;
+}
+#zoneTwo{
+    background-color: #ff6600 ;
+}
+#zoneThree{
+    background-color: rgb(33, 82, 53);
+}
+#zoneFour{
+    background-color: #490d30;
+}
+#zoneFive{
+    background-color: rgb(31, 182, 241);
+}#zoneSix{
+    background-color: red;
+}#zoneSeven{
+    background-color: rgb(255, 230, 4);
+}
 
