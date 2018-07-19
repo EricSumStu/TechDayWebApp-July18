@@ -236,8 +236,8 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table {           /*for demodetails*/
- 
+  table {  
+    text-align: left;        /*for demodetails*/
     margin-left:auto; 
     margin-right:auto;
     color: black;
@@ -315,7 +315,7 @@ table, tbody, tr, td {
 
 body {text-align:left;}
 
-.count {                   /*demodetails*/
+.count {                   /*countdown on upcoming events*/
     left: 0;
     line-height: 200px;
     margin: auto;
