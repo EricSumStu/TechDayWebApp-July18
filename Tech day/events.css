@@ -122,6 +122,7 @@
 
 .grid {
     display: grid;
+    align-self: auto;
 
     grid-template-columns: 100%;
     grid-auto-rows: auto ;
@@ -150,7 +151,7 @@ img  {
     border-radius:5px; 
 }
 
-button.Host{
+button{
     display: block;
     width: 98%;
     height:80%;
@@ -162,29 +163,29 @@ button.Host{
     font-family:'EricssonHilda-Regular';
     color:white;
 }
-#zoneOne{
+.zoneOne{
     background-color: #00ff00;
     font-family: "EricssonHilda-Regular";
 }
-#zoneTwo{
+.zoneTwo{
     background-color: #ff6600 ;
     font-family: "EricssonHilda-Regular";
 }
-#zoneThree{
+.zoneThree{
     background-color: rgb(33, 82, 53);
     font-family: "EricssonHilda-Regular";
 }
-#zoneFour{
+.zoneFour{
     background-color: #490d30;
     font-family: "EricssonHilda-Regular";
 }
-#zoneFive{
+.zoneFive{
     background-color: rgb(31, 182, 241);
     font-family: "EricssonHilda-Regular";
-}#zoneSix{
+}.zoneSix{
     background-color: red;
     font-family: "EricssonHilda-Regular";
-}#zoneSeven{
+}.zoneSeven{
     background-color: rgb(255, 230, 4);
     font-family: "EricssonHilda-Regular";
 }
@@ -215,15 +216,16 @@ button.Host{
     font-family: "EricssonHilda-Regular";
 }
 
-.header{
-    text-align: center;
-    border: 5px solid #000;
-    display: grid;
-    position: relative;
-    margin: auto;
-    border-radius:15px; 
-    background-color: #000;
-    color:white;
+.address{
     font-family: "EricssonHilda-Regular";
     font-size: 17px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    border: 5px solid black;
+    display: grid;
+    border-radius:15px; 
+    background-color: black;
+    color:white;
+  
 }

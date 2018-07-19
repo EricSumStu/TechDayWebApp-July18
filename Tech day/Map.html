@@ -120,20 +120,14 @@
             </ul>
         </div>
     </nav>
-
-    <div id="header">
-        <img src="images/TechDayBannerInternal.svg" class="banner" />
-        <h2> Map and Locations</h2>
-        <p id="txt"> Here we are able to see the current events/talks/demos and the rooms/zones that they are located in. Below is a map
-            of the building.</p>
-        <img src="images/map.jpg" class="map" />
-    </div>
-
+    <div><img src="images/TechDayBannerInternal.svg" class="banner" /></div>
+    <br>
+    <div><img  src="images/map.jpg" class="map"  /></div>
     <div id="main">
         <div class="grid">
             <div>
-                <button id="zoneOne" class="Host" onclick=openEvents(id)>Zone One</button>
-                <div id="zoneOne1" class="modal">
+                <button class="zoneOne" id="1" onclick=openEvents(id)>Zone One</button>
+                <div id="11" class="modal">
                     <div id="zoneOne2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone One</h2>
@@ -143,8 +137,8 @@
                 </div>
             </div>
             <div>
-                <button id="zoneTwo" class="Host" onclick=openEvents(id)>Zone Two</button>
-                <div id="zoneTwo1" class="modal">
+                <button class="zoneTwo" id="2" onclick=openEvents(id)>Zone Two</button>
+                <div id="21" class="modal">
                     <div id="zoneTwo2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone Two</h2>
@@ -154,8 +148,8 @@
                 </div>
             </div>
             <div>
-                <button id="zoneThree" class="Host" onclick=openEvents(id)>Zone Three</button>
-                <div id="zoneThree1" class="modal">
+                <button id="3" class="zoneThree" onclick=openEvents(id)>Zone Three</button>
+                <div id="31" class="modal">
                     <div id="zoneThree2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone Three</h2>
@@ -165,8 +159,8 @@
                 </div>
             </div>
             <div>
-                <button id="zoneFour" class="Host" onclick=openEvents(id)>Zone Four</button>
-                <div id="zoneFour1" class="modal">
+                <button id="4" class="zoneFour" onclick=openEvents(id)>Zone Four</button>
+                <div id="41" class="modal">
                     <div id="zoneFour2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone Four</h2>
@@ -176,8 +170,8 @@
                 </div>
             </div>
             <div>
-                <button id="zoneFive" class="Host" onclick=openEvents(id)>Zone Five</button>
-                <div id="zoneFive1" class="modal">
+                <button id="5" class="zoneFive" onclick=openEvents(id)>Zone Five</button>
+                <div id="51" class="modal">
                     <div id="zoneFive2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone Five</h2>
@@ -187,8 +181,8 @@
                 </div>
             </div>
             <div>
-                <button id="zoneSix" class="Host" onclick=openEvents(id)>Zone Six</button>
-                <div id="zoneSix1" class="modal">
+                <button id="6" class="zoneSix" onclick=openEvents(id)>Zone Six</button>
+                <div id="61" class="modal">
                     <div id="zoneSix2" class="modal-content">
                         <span class="close">&times;</span>
                         <h2>Events on in Zone Six</h2>
@@ -198,8 +192,8 @@
                 </div>
             </div>
             <div>
-                    <button id="zoneSeven" class="Host" onclick=openEvents(id)>Zone Seven</button>
-                    <div id="zoneSeven1" class="modal">
+                    <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
+                    <div id="71" class="modal">
                         <div id="zoneSeven2" class="modal-content">
                             <span id="modal7" class="close">&times;</span>
                             <h2>Events on in Zone Seven</h2>
@@ -212,7 +206,7 @@
     </div>
 
 
-    <div class="header">
+    <div class="address">
         <h2>Tech Day Venue</h2>
         <p id="txt"> Ericsson Software Campus,
             <br> Cornamaddy,
@@ -236,29 +230,25 @@
         var modal = document.getElementById('zoneFour');
         var modal = document.getElementById('zoneFive');
         var modal = document.getElementById('zoneSix');*/
-        
+        var spanID
         function openEvents(id) {
             var modalID = id + "1"
             var box = document.getElementById(modalID)
             box.style.display = "block";
-            
-        };
-        
-    var modal = document.getElementsByClassName('modal')[0];
-
-    var span = document.getElementsByClassName("close")[0];
-
-
-      span.onclick = function () {
-        modal.style.display = "none";
-        }
-
-
-       window.onclick = function (event) {
+            var spanID = parseInt(id) - 1
+            var modal = document.getElementsByClassName('modal')[spanID];
+            var span = document.getElementsByClassName("close")[spanID];
+            span.onclick = function () {
+            modal.style.display = "none";
+            }
+            window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+        };
+        
+    
 
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';

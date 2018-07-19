@@ -211,11 +211,27 @@
 
         function removeFavourite(ID) {
             removeEvents(ID);
-        
+            table = "";
+            
+            db.favourites.each(p => display(p));
+                function display(i) {
+                    var obj = i;
+
+                    //for (var y = 0; y < obj.length;y++){
+                    if ((techDay === false)) {
+                        printEvent(obj);
+                    } else if ((techDay === true) && (obj.Time >= now)) {
+                        printEvent(obj);
+                    }
+                  document.getElementById("demo").innerHTML = table;  
+                };
+            document.getElementById("demo").innerHTML = table;
+            
             console.log("REMOVED");
 
 
         };
+
         function openBiography(ID) {
             modal.style.display = "block";
             var txt = ""
