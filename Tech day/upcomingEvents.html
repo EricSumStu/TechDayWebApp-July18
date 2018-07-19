@@ -60,7 +60,6 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="upcoming.js"></script>
     <link href="demoDetails.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="db.js"></script>
@@ -145,10 +144,6 @@
         <main id="count" class='count'></main>
         <p id="demo"></p>
         <div id="myModal" class="modal">
-
-
-            <!-- Modal content -->
-
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <p id="bioText">Some text in the Modal..</p>
@@ -159,37 +154,36 @@
             var table = "";
             var txt
             var techDate = new Date("2018-7-19");
-                var today = new Date();
-                var techDateSmall = techDate.toDateString(0, 10);
-                var todaySmall = today.toDateString(0, 10);
-                console.log(techDateSmall, todaySmall);
-                var nowTime = new Date().getUTCHours() + 1;
-                var techDay = false;
-                if (todaySmall === techDateSmall) {
-                    techDay = true
-                };
+            var today = new Date();
+            var techDateSmall = techDate.toDateString(0, 10);
+            var todaySmall = today.toDateString(0, 10);
+            console.log(techDateSmall, todaySmall);
+            var nowTime = new Date().getUTCHours() + 1;
+            var techDay = false;
+            if (todaySmall === techDateSmall) {
+                techDay = true
+            };
             var modal = document.getElementById('myModal');
+            var countdown = function () {
+                // Set the date we're counting down to
+                var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
+                // Update the count down every 1 second
+                var x = setInterval(function () {
+                    // Get todays date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now an the count down date
+                    var distance = countDownDate - now;
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    document.getElementById("count").innerHTML = "Please come back in:" + '<br>' + days + "d " + hours + "h"
+                        + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
+                }, 1000);
+            };
             $.getJSON("talks.json", function (json) {
                 var obj = json;
-                var countdown = function () {
-                    // Set the date we're counting down to
-                    var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
-                    // Update the count down every 1 second
-                    var x = setInterval(function () {
-                        // Get todays date and time
-                        var now = new Date().getTime();
-                        // Find the distance between now an the count down date
-                        var distance = countDownDate - now;
-                        // Time calculations for days, hours, minutes and seconds
-                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                        document.getElementById("count").innerHTML = "Please come back in:" + '<br>' + days + "d " + hours + "h"
-                            + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
-                    }, 1000);
-                };
-
                 for (var y = 0; y < (obj.talks).length; y++) {
                     if (techDay === false) {
                         countdown()
