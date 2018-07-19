@@ -162,22 +162,22 @@ button.Host{
     color:white;
 }
 #zoneOne{
-    background-color: green;
+    background-color: #00ff00;
 }
 #zoneTwo{
-    background-color: orangered ;
+    background-color: #ff6600 ;
 }
 #zoneThree{
-    background-color: rgb(3, 75, 27);
+    background-color: rgb(33, 82, 53);
 }
 #zoneFour{
-    background-color: purple;
+    background-color: #490d30;
 }
 #zoneFive{
-    background-color: lightskyblue;
+    background-color: rgb(31, 182, 241);
 }#zoneSix{
     background-color: red;
 }#zoneSeven{
-    background-color: yellow;
+    background-color: rgb(255, 230, 4);
 }
 
