@@ -236,8 +236,8 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table {           /*for demodetails*/
- 
+  table {  
+    text-align: left;        /*for demodetails*/
     margin-left:auto; 
     margin-right:auto;
     color: black;
@@ -265,7 +265,7 @@ img  {
     text-align: center;
 }
 
-.modal-content {            /*demodetails*/
+.modal-content1 {            /*demodetails*/
     padding:9px 15px;
     background-color: #0fc373;
      border-radius: 30px;
@@ -315,7 +315,7 @@ table, tbody, tr, td {
 
 body {text-align:left;}
 
-.count {                   /*demodetails*/
+.count {                   /*countdown on upcoming events*/
     left: 0;
     line-height: 200px;
     margin: auto;
