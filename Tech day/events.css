@@ -153,21 +153,40 @@ button.Host{
 }
 #zoneOne{
     background-color: #00ff00;
+    font-family: "EricssonHilda-Regular";
 }
 #zoneTwo{
     background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
 }
 #zoneThree{
     background-color: rgb(33, 82, 53);
+    font-family: "EricssonHilda-Regular";
 }
 #zoneFour{
     background-color: #490d30;
+    font-family: "EricssonHilda-Regular";
 }
 #zoneFive{
     background-color: rgb(31, 182, 241);
+    font-family: "EricssonHilda-Regular";
 }#zoneSix{
     background-color: red;
+    font-family: "EricssonHilda-Regular";
 }#zoneSeven{
     background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
 }
 
+.header{
+    text-align: center;
+    border: 5px solid #000;
+    display: grid;
+    position: relative;
+    margin: auto;
+    border-radius:15px; 
+    background-color: #000;
+    color:white;
+    font-family: "EricssonHilda-Regular";
+    font-size: 17px;
+}
