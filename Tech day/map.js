@@ -24,10 +24,20 @@ $.getJSON("talks.json", function (json) {
     ("Brasilia"), ("Washington DC"), ("V.A. Lab"))];
 
     for (var x = 1; x < 8; x++) {
+        var techDate = new Date("2018-10-4");
+        var today = new Date();
+        var techDateSmall = techDate.toDateString(0, 10);
+        var todaySmall = today.toDateString(0, 10);
+        console.log(techDateSmall, todaySmall);
+        var now = new Date().getUTCHours() + 1;
+        var techDay = false;
+        if (todaySmall === techDateSmall) {
+            techDay = true
+        };
         var now = new Date().getUTCHours() + 1;
         for (var y = 0; y < (obj.talks).length; y++) {
             for (var key in myArray2) {
-                if ((myArray2[key] === obj.talks[y].Location) && (obj.talks[y].Time >= now)) {
+                if ((myArray2[key] === obj.talks[y].Location) && (techDay === false) ) {
                     var zone = myArray[key];
                     if (zone == x) {
                         switch (x) {
@@ -40,7 +50,20 @@ $.getJSON("talks.json", function (json) {
                             case (7): { z7.push(obj.talks[y]) }; break;
                         }
                     }
-                }
+                }else if((myArray2[key] === obj.talks[y].Location) && (techDay === true) &&(obj.talks[y].Time >= now)){
+                    var zone = myArray[key];
+                    if (zone == x) {
+                        switch (x) {
+                            case (1): { z1.push(obj.talks[y]) }; break;
+                            case (2): { z2.push(obj.talks[y]) }; break;
+                            case (3): { z3.push(obj.talks[y]) }; break;
+                            case (4): { z4.push(obj.talks[y]) }; break;
+                            case (5): { z5.push(obj.talks[y]) }; break;
+                            case (6): { z6.push(obj.talks[y]) }; break;
+                            case (7): { z7.push(obj.talks[y]) }; break;
+                        }
+                    }
+                };
             }
         }
     }
