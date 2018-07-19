@@ -154,16 +154,14 @@
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
                if(ID === obj.talks[y].ID){
-                   db.favourites.bulkPut([ID], obj.talks[y].Title);
+                   getEvents(obj.talks[y]);
+                   console.log("ADDED");
                }else{
-                   console.log(ID)
+                   console.log(ID);
                }
        }});
     };      
 
-    window.addEventListener('load', e =>{
-        getEvents();
-    });
     function printEvent(event){
         var txt = "<table>"
                     txt += "<tr>";
