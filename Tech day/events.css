@@ -106,6 +106,12 @@
         display:none;
     }
 }
+.modal-content {
+    padding:9px 15px;
+    background-color: #0fc373;
+     border-radius: 30px;
+     text-align: center;
+ }
 
 .grid > div {
   padding:1em;

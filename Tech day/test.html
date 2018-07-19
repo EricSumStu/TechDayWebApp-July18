@@ -144,7 +144,7 @@
         <div class="grid">
 
             <div>
-                <button id="zoneOne" class="modal">Zone One</button>
+                <button id="zoneOne" class="modal" onclick=openBiography(id)>Zone One</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone One</h2>
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneTwo" class="modal">Zone Two</button>
+                <button id="zoneTwo" class="modal" onclick=openBiography(id)>Zone Two</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Two</h2>
@@ -162,7 +162,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneThree" class="modal">Zone Three</button>
+                <button id="zoneThree" class="modal" onclick=openBiography(id)>Zone Three</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Three</h2>
@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneFour" class="modal">Zone Four</button>
+                <button id="zoneFour" class="modal" onclick=openBiography(id)>Zone Four</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Four</h2>
@@ -180,7 +180,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneFive" class="modal">Zone Five</button>
+                <button id="zoneFive" class="modal" onclick=openBiography(id)>Zone Five</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Five</h2>
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneSix" class="modal">Zone Six</button>
+                <button id="zoneSix" class="modal" onclick=openBiography(id)>Zone Six</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Six</h2>
@@ -198,7 +198,7 @@
                 </div>
             </div>
             <div>
-                <button id="zoneSeven" class="modal">Zone Seven</button>
+                <button id="zoneSeven" class="modal" onclick=openBiography(id)>Zone Seven</button>
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Events on in Zone Seven</h2>
@@ -231,7 +231,36 @@
         var modal = document.getElementById('zoneFive');
         var modal = document.getElementById('zoneSix');
         var modal = document.getElementById('zoneSeven');*/
+        function openBiography(ID) {
+            modal.style.display = "block";
+            var txt = ""
+            $.getJSON("talks.json", function (json) {
+                var obj = json;
+                for (var y = 0; y < (obj.talks).length; y++) {
+                    if (ID === obj.talks[y].ID) {
+                        txt = "Biography:" + " " + (obj.talks[y].Bio);
+                    } else {
+                    }
+                    document.getElementById("bioText").innerHTML = txt
+                }
+            })
 
+        };
+
+
+        var span = document.getElementsByClassName("close")[0];
+
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
