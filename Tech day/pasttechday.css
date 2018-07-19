@@ -103,8 +103,8 @@ body{
 body,h1,h2,h3,h4 
 {font-family: 'EricssonHilda-Light';}
 .mySlides {display:none}
-.w3-tag, .fa {cursor:pointer}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+.tag, .fa {cursor:pointer}
+.tag {height:15px;width:15px;padding:0;margin-top:6px}
 p{
   margin-left: 10px;
 }
