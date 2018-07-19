@@ -31,7 +31,7 @@
 
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -47,6 +47,8 @@
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script href="indexDB.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+          <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+          <script src="db.js"></script>
  </head>
 <body>
        
@@ -68,7 +70,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Events.html">Events</a></li>
             <li><a href="Map.html">Map</a></li>
-            <li><a href="eventsDetails.html">Entertainment</a></li>
+            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
             <li><a href="fav.html">Favourites</a></li>
             <li><a href="pasttechday.html">Past Tech Days</a></li>
             <li><a href="about.html">About</a></li>
@@ -90,7 +92,7 @@
                         <a href="Map.html">Map</a>
                     </li>
                     <li>
-                        <a href="eventsDetails.html">Entertainment</a>
+                        <a href="upcomingEvents.html">Upcoming Events</a>
                     </li>
                     <li>
                          <a href="fav.html">Favourites</a>
@@ -108,13 +110,13 @@
     </nav>
     <br>
     
-        <main>
+        <div id="main">
             <div>
                 <a href="#">
                     <img src="./images/demo straight border.png">
                     </a>
             </div>
-       </main>
+      
     <p id = "demo" ></p>
         <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -128,6 +130,7 @@
         </div>
     
     </div>
+</div>
  <script>
      var txt
      var modal = document.getElementById('myModal');
@@ -183,76 +186,20 @@
                         table += txt;
     }
     
-  /*  function createIndexedDB() {
-        if (!('indexedDB' in window)) {
-            console.log('This browser doesn\'t support IndexedDB');
-            return;
-        }
-        
-        var dbPromise = indexedDB.open('test-4', 1);
-        createObjectStore('test-4','fav');
-
-        
-        openRequest = window.indexedDB.open("test-4", 1);
-        /////   
-        var items = [1,2,3];
-        openRequest.onerror = function(event) {
-            console.error(event);
-        };
-        openRequest.onsuccess = function (event) {
-            var db = openRequest.result;
-            db.onerror = function(event) {
-                // Generic error handler for all errors targeted at this database's requests
-                console.error(event.target);
-                window.alert("Database error: " + event.target.wePutrrorMessage || event.target.error.name || event.target.error || event.target.errorCode);
-            };
-            var transaction = db.transaction('fav', "readwrite");
-            var itemStore = transaction.objectStore("fav", "fav");
-            putNext();
-
-            function putNext() {
-                if (i<items.length) {
-                    console.log(items);
-                    itemStore.put(items[i]).onsuccess = putNext;
-                    ++i;
-                } else {   // complete
-                    console.log('populate complete');
-                    callback();
-                }
-            }           
-        };      
-        }
-    
-
-    function createObjectStore(dbName, storeName) {
-        var request = indexedDB.open(dbName);
-        request.onsuccess = function (e){
-            var database = e.target.result;
-            var version =  parseInt(database.version);
-            database.close();
-            var secondRequest = indexedDB.open(dbName, version+1);
-            secondRequest.onupgradeneeded = function (e) {
-                var database = e.target.result;
-                var objectStore = database.createObjectStore('fav', 'id');
-            };
-            secondRequest.onsuccess = function (e) {
-                e.target.result.close();
-            }
-        }
-    }
-
-    window.addEventListener('load', async e =>{
-        createIndexedDB();
-    });*/
-
     function addFavourite(ID){
-        console.log(ID)
-    
-    }
-    
+        $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                   getEvents(obj.talks[y]);
+                   console.log("ADDED");
+               }else{
+                   console.log(ID);
+               }
+       }});
+    };  
 
     function openBiography(ID){
-        console.log("Biography "+ ID);
         modal.style.display = "block";
         var txt = ""
        $.getJSON("talks.json", function(json) {
@@ -260,7 +207,6 @@
        for (var y = 0; y < (obj.talks).length;y++){
                if(ID === obj.talks[y].ID){
                     txt = "Biography:" + " " + (obj.talks[y].Bio);
-                       console.log(txt);
                }else{
                }
             document.getElementById("bioText").innerHTML = txt
