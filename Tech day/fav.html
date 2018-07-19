@@ -161,21 +161,21 @@
         var now = new Date().getUTCHours() + 1;
         var techDay = false;
         if (todaySmall === techDateSmall) {
-                techDay = true
+            techDay = true
         };
 
         db.favourites.each(p => display(p));
         function display(i) {
             var obj = i;
-            
-        //for (var y = 0; y < obj.length;y++){
+
+            //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
                 printEvent(obj)
             }
             document.getElementById("demo").innerHTML = table;
-            };
+        };
 
         //};
 
@@ -201,10 +201,20 @@
             txt += "<td>" + "Summary:" + "</td>"
             txt += "<td>" + (event.Summary) + "</td>"
             txt += "</tr>"
+            txt += '<tr>';
+            txt += "<td>" + "" + "</td>"
+            txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=removeFavourite(value)>Remove Favourite</button>" + "</td>"
+            txt += "</tr>"
             txt += "</table><br>"
             table += txt;
         };
 
+        function removeFavourite(ID) {
+            removeEvents(ID);
+            console.log("REMOVED");
+
+
+        };
 
 
 

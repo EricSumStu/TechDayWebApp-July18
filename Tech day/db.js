@@ -11,3 +11,8 @@ async function getEvents(talk) {
     console.log(talk.Title);
     db.favourites.add(talk);
 }
+async function removeEvents(talk){
+    console.log(talk);
+    console.log(talk.Title);
+    db.favourites.delete(talk);
+}
