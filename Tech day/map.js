@@ -43,7 +43,7 @@ $.getJSON("talks.json", function (json) {
         }
     }
 
-    var z1txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z1txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z1.length; x++) {
 
         var aTitle = z1[x].Title;
@@ -53,7 +53,7 @@ $.getJSON("talks.json", function (json) {
     }
     z1txt += "</table>";
 
-    var z2txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z2txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z2.length; x++) {
 
         var aTitle = z2[x].Title;
@@ -63,7 +63,7 @@ $.getJSON("talks.json", function (json) {
     }
     z2txt += "</table>";
 
-    var z3txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z3txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z3.length; x++) {
 
         var aTitle = z3[x].Title;
@@ -73,7 +73,7 @@ $.getJSON("talks.json", function (json) {
     }
     z3txt += "</table>";
 
-    var z4txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z4txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z4.length; x++) {
 
         var aTitle = z4[x].Title;
@@ -83,7 +83,7 @@ $.getJSON("talks.json", function (json) {
     }
     z4txt += "</table>";
 
-    var z5txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z5txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z5.length; x++) {
 
         var aTitle = z5[x].Title;
@@ -93,7 +93,7 @@ $.getJSON("talks.json", function (json) {
     }
     z5txt += "</table>";
 
-    var z4txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z4txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z4.length; x++) {
 
         var aTitle = z4[x].Title;
@@ -103,7 +103,7 @@ $.getJSON("talks.json", function (json) {
     }
     z4txt += "</table>";
 
-    var z5txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z5txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z5.length; x++) {
 
         var aTitle = z5[x].Title;
@@ -113,7 +113,7 @@ $.getJSON("talks.json", function (json) {
     }
     z5txt += "</table>";
 
-    var z6txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z6txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z6.length; x++) {
 
         var aTitle = z6[x].Title;
@@ -123,7 +123,7 @@ $.getJSON("talks.json", function (json) {
     }
     z6txt += "</table>";
 
-    var z7txt = '<table><tr><td>Title</td><td>Time</td></tr>';
+    var z7txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td></tr>';
     for (var x = 0; x < z7.length; x++) {
 
         var aTitle = z7[x].Title;
