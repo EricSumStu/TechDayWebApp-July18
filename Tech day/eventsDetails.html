@@ -46,6 +46,8 @@
     </style>
         <script src="https://code.jquery.com/jquery.min.js"></script>
           <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+          <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+          <script src="db.js"></script>
  </head>
 <body>
    
@@ -214,9 +216,17 @@ window.onclick = function(event) {
     }
 }
 function addFavourite(ID){
-        console.log(ID)
-
-    };
+        $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                   getEvents(obj.talks[y]);
+                   console.log("ADDED");
+               }else{
+                   console.log(ID);
+               }
+       }});
+    };  
    
    function openSlideMenu() {
            document.getElementById('side-menu').style.width = '230px';
