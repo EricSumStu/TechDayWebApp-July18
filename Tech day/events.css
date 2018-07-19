@@ -139,5 +139,35 @@ img  {
     border-radius:5px; 
 }
 
-
+button.Host{
+    display: block;
+    width: 98%;
+    height:80%;
+    position: relative;
+    margin: auto;
+    border-radius:20px; 
+    padding: 30px;
+    font: 40px;
+    font-family:'EricssonHilda-Regular';
+    color:white;
+}
+#zoneOne{
+    background-color: green;
+}
+#zoneTwo{
+    background-color: orangered ;
+}
+#zoneThree{
+    background-color: rgb(3, 75, 27);
+}
+#zoneFour{
+    background-color: purple;
+}
+#zoneFive{
+    background-color: lightskyblue;
+}#zoneSix{
+    background-color: red;
+}#zoneSeven{
+    background-color: yellow;
+}
 
