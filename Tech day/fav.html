@@ -141,7 +141,29 @@
             </a>
         </div>
     </div>
+
+    
+
+    <select id="mySelect" onchange="filterThemes()">
+            <option value="All">Themes
+            <option value="5G">5G
+            <option value="Cloud Native">Cloud Native
+            <option value="The Future Of Network Management">The Future Of Network Management
+            <option value="Zero Touch">Zero Touch    
+
+    </select>
+
+    <select id="typeSelect" onchange="filterType()">
+            <option value="Type">Type of events
+            <option value="Event">Events
+            <option value="Demo">Demos
+            <option value="Tech Talk">Tech Talks
+              
+
+    </select>
+
     <p id="demo"></p>
+    <p id="type"></p>
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -178,6 +200,39 @@
         };
 
         //};
+        
+        function filterThemes(){
+            var valueInDropdown  = document.getElementById("mySelect").value;
+            console.log("You selected: " + valueInDropdown);
+            table = "";
+            db.favourites.each(event => displayByTheme(event,valueInDropdown));
+        }
+
+        function displayByTheme(event,valueInDropdown) {
+            if (event.Theme === valueInDropdown || valueInDropdown === "All") {
+                printEvent(event);
+                console.log(event);
+            }
+
+            document.getElementById("demo").innerHTML = table;
+        };
+
+
+        function filterType(){
+            var valueInDropdown  = document.getElementById("typeSelect").value;
+            console.log("You selected: " + valueInDropdown);
+            table = "";
+            db.favourites.each(event => displayByType(event,valueInDropdown));
+        }
+
+        function displayByType(event,valueInDropdown) {
+            if (event.Type === valueInDropdown || valueInDropdown === "Type") {
+                printEvent(event);
+                console.log(event);
+            }
+
+            document.getElementById("type").innerHTML = table;
+        };
 
         function printEvent(event) {
             var txt = "<table>"
