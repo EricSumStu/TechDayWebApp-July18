@@ -60,7 +60,7 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="demoDetails.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="db.js"></script>
 </head>
@@ -266,12 +266,26 @@
 
         function removeFavourite(ID) {
             removeEvents(ID);
+            table = "";
+            
+            db.favourites.each(p => display(p));
+                function display(i) {
+                    var obj = i;
+
+                    //for (var y = 0; y < obj.length;y++){
+                    if ((techDay === false)) {
+                        printEvent(obj);
+                    } else if ((techDay === true) && (obj.Time >= now)) {
+                        printEvent(obj);
+                    }
+                  document.getElementById("demo").innerHTML = table;  
+                };
+            document.getElementById("demo").innerHTML = table;
+            
             console.log("REMOVED");
 
 
         };
-
-
 
         function openBiography(ID) {
             modal.style.display = "block";
@@ -288,22 +302,15 @@
             })
 
         };
-
-
         var span = document.getElementsByClassName("close")[0];
-
-
         span.onclick = function () {
             modal.style.display = "none";
         };
-
-
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         };
-
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
@@ -313,11 +320,6 @@
             document.getElementById('main').style.marginLeft = '0';
         }
     </script>
-
-
 </body>
-
-
 </body>
-
 </html>

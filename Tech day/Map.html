@@ -1,232 +1,270 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Map and Locations</title>
+    <title>Map Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="map.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="events.css" />
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body>
-        
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
+        /* The Modal (background) */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* The Close Button */
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="map.js"></script>
     <nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
                 <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,14 30,14" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,23 30,23" stroke="#000"
-                    stroke-width="5"/>
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
                 </svg>
             </a>
         </span>
 
         <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="Map.html">Map</a></li>
-            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
-            <li><a href="fav.html">Favourites</a></li>
-            <li><a href="pasttechday.html">Past Tech Days</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="Events.html">Events</a>
+            </li>
+            <li>
+                <a href="Map.html">Map</a>
+            </li>
+            <li>
+                <a href="upcomingEvents.html">Upcoming Events</a>
+            </li>
+            <li>
+                <a href="fav.html">Favourites</a>
+            </li>
+            <li>
+                <a href="pasttechday.html">Past Tech Days</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
         </ul>
-        
 
         <div id="side-menu" class="side-nav">
-
-            <a href="#" class="btn-close"
-            onclick="closeSlideMenu()">&times;</a>
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="Events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="Map.html">Map</a>
-                    </li>
-                    <li>
-                        <a href="upcomingEvents.html">Upcoming Events</a>
-                    </li>
-                    <li>
-                         <a href="fav.html">Favourites</a>
-                    </li>
-                    <li>
-                        <a href="pasttechday.html">Past Tech Days</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Events.html">Events</a>
+                </li>
+                <li>
+                    <a href="Map.html">Map</a>
+                </li>
+                <li>
+                    <a href="upcomingEvents.html">Upcoming Events</a>
+                </li>
+                <li>
+                    <a href="fav.html">Favourites</a>
+                </li>
+                <li>
+                    <a href="pasttechday.html">Past Tech Days</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div id="main">
-        <h2> Map and Locations</h2>
-        <p> Here we are able to see the current events/talks/demos and the rooms/zones that they are located in. Below is a map of the building.</p>
-        <img src="images/map.jpg"class="map" />
+
+    <div id="header">
+        <img src="images/mapsbanner.png" class="Banner" />
+        <br>
+        <img src="images/map.jpg" class="map" />
     </div>
 
-    <div class="w3-container">
-            <h2>Zones</h2>
-            </div>
-            <div class="w3-container w3-red">
-                        <p><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-red">ZONE ONE</button></p>
+    <div id="main">
+        <div class="grid">
+            <div>
+                <button class="zoneOne" id="1" onclick=openEvents(id)>Zone One</button>
+                <div id="11" class="modal">
+                    <div id="zoneOne2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone One</h2>
+                        <p id="zone1"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
                     </div>
                 </div>
-                    <div id="id01" class="w3-modal">
-                            <div class="w3-modal-content">
-                              <div class="w3-container ">
-                                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                                <h1>Zone One Locations</h1>
-                                <img src="images/zone1.png"/>
-                                <h3>Upcoming Events</h3>
-                                <p>For more information, please refer to the map or check out the events page.</p>
-                                <p id="zone1" class ="zone1"> Some text. Some text. Some text.</p>
-                              </div>
-                            </div>
-                          </div>
-                       </div>
-
-            <div class="w3-container w3-orange">
-                    <p><button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-orange">ZONE TWO</button></p>
+            </div>
+            <div>
+                <button class="zoneTwo" id="2" onclick=openEvents(id)>Zone Two</button>
+                <div id="21" class="modal">
+                    <div id="zoneTwo2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Two</h2>
+                        <p id="zone2"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
-                <div id="id02" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Two Locations</h1>
-                            <h3>Upcoming Events</h3>
+            <div>
+                <button id="3" class="zoneThree" onclick=openEvents(id)>Zone Three</button>
+                <div id="31" class="modal">
+                    <div id="zoneThree2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Three</h2>
+                        <p id="zone3"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="4" class="zoneFour" onclick=openEvents(id)>Zone Four</button>
+                <div id="41" class="modal">
+                    <div id="zoneFour2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Four</h2>
+                        <p id="zone4"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="5" class="zoneFive" onclick=openEvents(id)>Zone Five</button>
+                <div id="51" class="modal">
+                    <div id="zoneFive2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Five</h2>
+                        <p id="zone5"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="6" class="zoneSix" onclick=openEvents(id)>Zone Six</button>
+                <div id="61" class="modal">
+                    <div id="zoneSix2" class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Six</h2>
+                        <p id="zone6"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                    <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
+                    <div id="71" class="modal">
+                        <div id="zoneSeven2" class="modal-content">
+                            <span id="modal7" class="close">&times;</span>
+                            <h2>Events on in Zone Seven</h2>
+                            <p id="zone7"></p>
                             <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone2">Some text. Some text. Some text.</p>
-                          </div>
                         </div>
-                      </div>
                     </div>
-
-            <div class="w3-container w3-teal">
-                    <p><button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-teal">ZONE THREE</button></p>
                 </div>
-            </div>
-                <div id="id03" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Three Locations</h1>
-                            <img src="images/zone3.png"/>
-                            <h3>Upcoming Events</h3>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone3">Some text. Some text. Some text.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-            <div class="w3-container w3-green">
-                    <p><button onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-green">ZONE FOUR</button></p>
-                </div>
-            </div>
-                <div id="id04" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Four Locations</h1>
-                            <img src="images/zone4.png"/>
-                            <h3>Upcoming Events</h3>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone4">Some text. Some text. Some text.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            <div class="w3-container w3-light-blue">
-                    <p><button onclick="document.getElementById('id05').style.display='block'" class="w3-button w3-light-blue">ZONE FIVE</button></p>
-                </div>
-            </div>
-                <div id="id05" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Five Locations</h1>
-                            <img src="images/zone5.png"/>
-                            <h3>Upcoming Events</h3>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone5">Some text. Some text. Some text.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            <div class="w3-container w3-yellow">
-                    <p><button onclick="document.getElementById('id06').style.display='block'" class="w3-button w3-yellow">ZONE SIX</button></p>
-                </div>
-            </div>
-                <div id="id06" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Six Locations</h1>
-                            <img src="images/zone6.png"/>
-                            <h3>Upcoming Events</h3>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone6">Some text. Some text. Some text.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            <div class="w3-container w3-purple">
-                    <p><button onclick="document.getElementById('id07').style.display='block'" class="w3-button w3-purple">ZONE SEVEN</button></p>
-                </div>
-            </div>
-                <div id="id07" class="w3-modal">
-                        <div class="w3-modal-content">
-                          <div class="w3-container ">
-                            <span onclick="document.getElementById('id07').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                            <h1>Zone Seven Locations</h1>
-                            <img src="images/zone7.png"/>
-                            <h3>Upcoming Events</h3>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                            <p id="zone7">Some text. Some text. Some text.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-  
-            
-    <div class="map">
-            <h2>Tech Day Venue</h2>
-<p> Ericsson Software Campus,<br> Cornamaddy,<br> Athlone<br> Co. Westmeath<br>(090) 643 1000</p><br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813" width="100%" height="600"></iframe>
-        
-</div>
+        </div>
+    </div>
 
 
-<script src="map.js"></script>
+    <div class="address">
+        <h2>Tech Day Venue</h2>
+        <p id="txt"> Ericsson Software Campus,
+            <br> Cornamaddy,
+            <br> Athlone
+            <br> Co. Westmeath
+            <br>(090) 643 1000</p>
+        </div>
+        <br>
+        <div class="googleMaps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813"
+            width="100%" height="600"></iframe>
+
+    </div>
 
 
     <script>
+        //var modal = document.getElementById('myModal');
+        //var modal = document.getElementById('modal1');
+        /*var modal = document.getElementById('');
+        var modal = document.getElementById('zoneThree');
+        var modal = document.getElementById('zoneFour');
+        var modal = document.getElementById('zoneFive');
+        var modal = document.getElementById('zoneSix');*/
+        var spanID
+        function openEvents(id) {
+            var modalID = id + "1"
+            var box = document.getElementById(modalID)
+            box.style.display = "block";
+            var spanID = parseInt(id) - 1
+            var modal = document.getElementsByClassName('modal')[spanID];
+            var span = document.getElementsByClassName("close")[spanID];
+            span.onclick = function () {
+            modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        };
+        
+    
+
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
         }
-    
+
         function closeSlideMenu() {
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
         }
 
-        </script>    
-    
-
-
+    </script>
 </body>
+
 </html>
