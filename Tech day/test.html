@@ -7,6 +7,8 @@
     <title>Map Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="events.css" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +68,7 @@
 </head>
 
 <body>
-
+    <script src="map.js"></script>
     <nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
@@ -102,9 +104,7 @@
             </li>
         </ul>
 
-
         <div id="side-menu" class="side-nav">
-
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
@@ -131,8 +131,7 @@
             </ul>
         </div>
     </nav>
-    </div>
-    </nav>
+
     <div id="header">
         <img src="images/TechDayBannerInternal.svg" class="banner" />
         <h2> Map and Locations</h2>
@@ -140,75 +139,90 @@
             of the building.</p>
         <img src="images/map.jpg" class="map" />
     </div>
+
     <div id="main">
         <div class="grid">
-
             <div>
-                <button id="zoneOne" class="modal">Zone One</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone One</h2>
-                    <p id="zone1"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneOne" class="Host" onclick=openEvents(id)>Zone One</button>
+                <div id="zoneOne1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone One</h2>
+                        <p id="zone1"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneTwo" class="modal">Zone Two</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Two</h2>
-                    <p id="zone2"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneTwo" class="Host" onclick=openEvents(id)>Zone Two</button>
+                <div id="zoneTwo1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Two</h2>
+                        <p id="zone2"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneThree" class="modal">Zone Three</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Three</h2>
-                    <p id="zone3"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneThree" class="Host" onclick=openEvents(id)>Zone Three</button>
+                <div id="zoneThree1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Three</h2>
+                        <p id="zone3"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneFour" class="modal">Zone Four</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Four</h2>
-                    <p id="zone4"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneFour" class="Host" onclick=openEvents(id)>Zone Four</button>
+                <div id="zoneFour1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Four</h2>
+                        <p id="zone4"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneFive" class="modal">Zone Five</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Five</h2>
-                    <p id="zone5"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneFive" class="Host" onclick=openEvents(id)>Zone Five</button>
+                <div id="zoneFive1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Five</h2>
+                        <p id="zone5"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneSix" class="modal">Zone Six</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Six</h2>
-                    <p id="zone6"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                <button id="zoneSix" class="Host" onclick=openEvents(id)>Zone Six</button>
+                <div id="zoneSix1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Events on in Zone Six</h2>
+                        <p id="zone6"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
                 </div>
             </div>
             <div>
-                <button id="zoneSeven" class="modal">Zone Seven</button>
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Events on in Zone Seven</h2>
-                    <p id="zone7"></p>
-                    <p>For more information, please refer to the map or check out the events page.</p>
+                    <button id="zoneSeven" class="Host" onclick=openEvents(id)>Zone Seven</button>
+                    <div id="zoneSeven1" class="modal">
+                        <div class="modal-content">
+                            <span id="modal7" class="close">&times;</span>
+                            <h2>Events on in Zone Seven</h2>
+                            <p id="zone7"></p>
+                            <p>For more information, please refer to the map or check out the events page.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
         </div>
     </div>
+
+
     <div class="header">
         <h2>Tech Day Venue</h2>
         <p id="txt"> Ericsson Software Campus,
@@ -221,16 +235,39 @@
             width="100%" height="600"></iframe>
 
     </div>
-    <script src="map.js"></script>
+
+
     <script>
-        var modal = document.getElementById('modal-content');
-        /*var modal = document.getElementById('zoneOne');
-        var modal = document.getElementById('zoneTwo');
+        //var modal = document.getElementById('myModal');
+        //var modal = document.getElementById('modal1');
+        /*var modal = document.getElementById('');
         var modal = document.getElementById('zoneThree');
         var modal = document.getElementById('zoneFour');
         var modal = document.getElementById('zoneFive');
-        var modal = document.getElementById('zoneSix');
-        var modal = document.getElementById('zoneSeven');*/
+        var modal = document.getElementById('zoneSix');*/
+        
+        function openEvents(id) {
+            var modalID = id + "1"
+            var box = document.getElementById(modalID)
+            box.style.display = "block";
+            
+        };
+        
+    var modal = document.getElementsByClassName('modal')[1];
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+      span.onclick = function () {
+        modal.style.display = "none";
+        }
+
+
+       window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
