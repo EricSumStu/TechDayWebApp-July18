@@ -65,7 +65,15 @@
     
 }
 
-img {
+.Banner {
+    display: block;
+    width: 100%;
+    height:80%;
+    position: relative;
+    margin: auto;
+}
+
+.Tiles {
     display: block;
     width: 90%;
     height:80%;
