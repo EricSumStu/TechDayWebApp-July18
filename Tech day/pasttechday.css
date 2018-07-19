@@ -104,7 +104,12 @@ body,h1,h2,h3,h4
 {font-family: 'EricssonHilda-Light';}
 .mySlides {display:none}
 .tag, .fa {cursor:pointer}
-.tag {height:15px;width:15px;padding:0;margin-top:6px}
+.tag {
+    height:15px;
+    width:15px;
+    padding:0;
+    margin-top:6px;
+}
 p{
   margin-left: 10px;
 }
