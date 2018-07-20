@@ -116,6 +116,7 @@
     width: 80%;
     color: white;
  }
+
 .grid > div {
   padding:1em;
 }
@@ -152,20 +153,21 @@ img  {
 }
 
 button{
-    display: block;
-    width: 98%;
+   
+    width: 100%;
     height:80%;
     position: relative;
-    margin: auto;
     border-radius:20px; 
     padding: 30px;
-    font: 40px;
     font-family:'EricssonHilda-Regular';
     color:white;
+    align-content: left;
 }
 .zoneOne{
     background-color: #00ff00;
     font-family: "EricssonHilda-Regular";
+    
+    
 }
 .zoneTwo{
     background-color: #ff6600 ;
@@ -229,3 +231,4 @@ button{
     color:white;
   
 }
+
