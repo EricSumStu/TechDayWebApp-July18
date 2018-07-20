@@ -145,7 +145,7 @@ tr#THREE{
 }
 img  {
     display: block;
-    width: 100%;
+    width: 90%;
     height:80%;
     position: relative;
     margin: auto;
@@ -154,7 +154,7 @@ img  {
 
 button{
     position:sticky;
-    width: 100%;
+    width: 90%;
     height:80%;
     position:sticky;
     border-radius:20px; 
@@ -224,11 +224,12 @@ button{
     text-align: center;
     position: relative;
     margin: auto;
-    border: 5px solid black;
+    border: 5px solid #111;
     display: grid;
-    border-radius:15px; 
-    background-color: black;
+    border-radius:20px; 
+    background-color: #111;
     color:white;
+    width: 90%;
   
 }
 
