@@ -145,7 +145,7 @@ tr#THREE{
 }
 img  {
     display: block;
-    width: 90%;
+    width: 100%;
     height:80%;
     position: relative;
     margin: auto;
@@ -153,15 +153,15 @@ img  {
 }
 
 button{
-   
+    position:sticky;
     width: 100%;
     height:80%;
-    position: relative;
+    position:sticky;
     border-radius:20px; 
-    padding: 30px;
+    padding:30px;
     font-family:'EricssonHilda-Regular';
     color:white;
-    align-content: left;
+
 }
 .zoneOne{
     background-color: #00ff00;
