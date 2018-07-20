@@ -5,86 +5,86 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="login.style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="login.js"></script>
 </head>
-
-<body>
-    <nav class="navbar">
+<nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
                 <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,14 30,14" stroke="#000"
-                    stroke-width="5"/>
-                    <path d="M0,23 30,23" stroke="#000"
-                    stroke-width="5"/>
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
                 </svg>
             </a>
         </span>
 
         <ul class="navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Events.html">Events</a></li>
-            <li><a href="Map.html">Map</a></li>
-            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
-            <li><a href="fav.html">Favourites</a></li>
-            <li><a href="pasttechday.html">Past Tech Days</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="Events.html">Events</a>
+            </li>
+            <li>
+                <a href="Map.html">Map</a>
+            </li>
+            <li>
+                <a href="upcomingEvents.html">Upcoming Events</a>
+            </li>
+            <li>
+                <a href="fav.html">Favourites</a>
+            </li>
+            <li>
+                <a href="pasttechday.html">Past Tech Days</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
         </ul>
-        
 
         <div id="side-menu" class="side-nav">
-
-            <a href="#" class="btn-close"
-            onclick="closeSlideMenu()">&times;</a>
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="Events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="Map.html">Map</a>
-                    </li>
-                    <li>
-                        <a href="upcomingEvents.html">Upcoming Events</a>
-                    </li>
-                    <li>
-                         <a href="fav.html">Favourites</a>
-                    </li>
-                    <li>
-                        <a href="pasttechday.html">Past Tech Days</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    </ul>
-                </div>
-            </nav>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Events.html">Events</a>
+                </li>
+                <li>
+                    <a href="Map.html">Map</a>
+                </li>
+                <li>
+                    <a href="upcomingEvents.html">Upcoming Events</a>
+                </li>
+                <li>
+                    <a href="fav.html">Favourites</a>
+                </li>
+                <li>
+                    <a href="pasttechday.html">Past Tech Days</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+</nav>
+<body>
+
+    <br>
+    <div id="main"> 
     <div id="header">
             <img src="images/Eventsbanner.png" class="Banner" />
     </div>
     
 
 
-    <script>
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '230px';
-            document.getElementById('main').style.marginLeft = '250px';
-        }
-
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-            document.getElementById('main').style.marginLeft = '0';
-        }
-    </script>
+    
 
 
-    <div id="main">
+    
         <div class="grid1">
 
             <div>
@@ -117,7 +117,17 @@
 
     </div>
 
-
+    <script>
+            function openSlideMenu() {
+                document.getElementById('side-menu').style.width = '230px';
+                document.getElementById('main').style.marginLeft = '230px';
+            }
+    
+            function closeSlideMenu() {
+                document.getElementById('side-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+            }
+        </script>
 
 
 </body>

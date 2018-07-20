@@ -84,7 +84,7 @@
 
 
 #main{
-    transition:margin-left 0.5s;
+    transition:margin-left 0.7s;
     padding:20px;
     overflow: hidden;
     width: 100%;
@@ -116,6 +116,7 @@
     width: 80%;
     color: white;
  }
+
 .grid > div {
   padding:1em;
 }
@@ -152,20 +153,21 @@ img  {
 }
 
 button{
-    display: block;
-    width: 98%;
+    position:sticky;
+    width: 90%;
     height:80%;
-    position: relative;
-    margin: auto;
+    position:sticky;
     border-radius:20px; 
-    padding: 30px;
-    font: 40px;
+    padding:30px;
     font-family:'EricssonHilda-Regular';
     color:white;
+
 }
 .zoneOne{
     background-color: #00ff00;
     font-family: "EricssonHilda-Regular";
+    
+    
 }
 .zoneTwo{
     background-color: #ff6600 ;
@@ -222,10 +224,12 @@ button{
     text-align: center;
     position: relative;
     margin: auto;
-    border: 5px solid black;
+    border: 5px solid #111;
     display: grid;
-    border-radius:15px; 
-    background-color: black;
+    border-radius:20px; 
+    background-color: #111;
     color:white;
+    width: 90%;
   
 }
+
