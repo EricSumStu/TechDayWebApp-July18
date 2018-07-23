@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tech Day Ireland | All Events</title>
+        <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+    
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    </style>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+          <link href="main.css" rel="stylesheet" type="text/css" />
+          <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+          <script src="db.js"></script>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+<body>
+   
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000"
+                    stroke-width="5"/>
+                    <path d="M0,14 30,14" stroke="#000"
+                    stroke-width="5"/>
+                    <path d="M0,23 30,23" stroke="#000"
+                    stroke-width="5"/>
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Events.html">Events</a></li>
+            <li><a href="Map.html">Map</a></li>
+            <li><a href="upcomingEvents.html">Upcoming Events</a></li>
+            <li><a href="fav.html">Favourites</a></li>
+            <li><a href="pasttechday.html">Past Tech Days</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        
+
+        <div id="side-menu" class="side-nav">
+
+            <a href="#" class="btn-close"
+            onclick="closeSlideMenu()">&times;</a>
+            <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="Events.html">Events</a>
+                    </li>
+                    <li>
+                        <a href="Map.html">Map</a>
+                    </li>
+                    <li>
+                        <a href="upcomingEvents.html">Upcoming Events</a>
+                    </li>
+                    <li>
+                         <a href="fav.html">Favourites</a>
+                    </li>
+                    <li>
+                        <a href="pasttechday.html">Past Tech Days</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <br>
+        <div id="main">
+            <div>
+                <a href="#">
+                    <img src="./images/eventsBanner.png">
+                    </a>
+            </div>
+       
+        
+<p id = "demo"></p>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id = "bioText">Some text in the Modal..</p>
+    </div>
+</div>
+</div>
+<script>
+    var table = "";
+    var modal = document.getElementById('myModal');
+     var txt;
+    $.getJSON("talks.json", function(json) {
+       var obj = json;
+        var techDate = new Date("2018-10-4");
+        var today = new Date();
+        var techDateSmall = techDate.toDateString(0, 10);
+        var todaySmall = today.toDateString(0, 10);
+         console.log(techDateSmall, todaySmall);
+        var now = new Date().getUTCHours() + 1 ;
+        var techDay = false;
+        if(todaySmall === techDateSmall){
+                techDay = true
+        };
+        for (var y = 0; y < (obj.talks).length;y++){
+             if( (techDay === false)){
+                    printEvent(obj.talks[y])
+            }else if((techDay === true)  && (obj.talks[y].Time >= now)){
+                    printEvent(obj.talks[y])  
+             }};
+            document.getElementById("demo").innerHTML = table;
+        });
+
+    function addFavourite(ID){
+        $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                   getEvents(obj.talks[y]);
+                   console.log("ADDED");
+               }else{
+                   console.log(ID);
+               }
+       }});
+    };      
+
+    function printEvent(event){
+        var txt = "<table class='events'>"
+            txt += "<tr>";
+            txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "" + "</td>"
+            txt += "</tr>"
+                    txt += "<tr>";
+                        txt += "<td>" + "Title:" + "</td>"
+                        txt += "<td>" + (event.Title) + "</td>"
+                    txt+= "</tr>" 
+                    txt += "<tr>";   
+                            txt += "<td>" + "Time:" + "</td>"
+                        txt += "<td>" + (event.Time) + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value="+event.ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                        txt += "<td>" + "Location:" + "</td>"
+                     txt += "<td>" + (event.Location) + "</td>"
+                txt+= "</tr>"  
+                    txt += "<tr>"; 
+                            txt += "<td>" +  "Summary:" + "</td>"
+                         txt += "<td>" + (event.Summary) + "</td>"
+                     txt+= "</tr>"
+                     txt += '<tr>';
+                         txt += "<td>" + "" + "</td>"  
+                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+event.ID+" onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"    
+                    txt+= "</tr>"
+                    txt += "</table><br>" 
+                        table += txt;
+    }
+    
+    function openBiography(ID){
+        modal.style.display = "block";
+        var txt = ""
+       $.getJSON("talks.json", function(json) {
+       var obj = json;
+       for (var y = 0; y < (obj.talks).length;y++){
+               if(ID === obj.talks[y].ID){
+                    txt = "Biography:" + " " + (obj.talks[y].Bio);
+               }else{
+               }
+            document.getElementById("bioText").innerHTML = txt
+       }})
+
+    };
+
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+    span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+   
+   function openSlideMenu() {
+           document.getElementById('side-menu').style.width = '230px';
+           document.getElementById('main').style.marginLeft = '250px';
+       }
+   
+       function closeSlideMenu() {
+           document.getElementById('side-menu').style.width = '0';
+           document.getElementById('main').style.marginLeft = '0';
+       }
+   </script>   
+</body>
+</html>
