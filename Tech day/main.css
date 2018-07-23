@@ -20,7 +20,7 @@
 
    #main{
     transition:margin-left 0.5s;
-    padding:20px;
+  
     overflow: hidden;
     width: 100%;
 }
@@ -197,6 +197,14 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
+#little{
+    display: block;
+    width: 500%;
+    height:100%;
+    position: relative;
+    margin: auto;
+    border-radius:5px; 
+}
 
 .Banner {               /*Style for Homepage*/
     display: block;
@@ -236,17 +244,17 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table {  
+  table.events {  
     text-align: left;        /*for demodetails*/
     margin-left:auto; 
     margin-right:auto;
     color: black;
     border-collapse: collapse;
     border: 15px solid #0082f0;
-    font-size: 35px;
+    font-size:3vw;
     display: block;
-    width: 90%;
-    height:80%;
+    width: auto;
+    height:auto;
     position: relative;
     margin: auto;
     border-radius:35px; 
@@ -255,6 +263,14 @@ img  {
     
 
 }
+
+@media only screen and (max-width: 320px) {
+
+    body { 
+       font-size: 2em; 
+    }
+ 
+ }
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -270,6 +286,7 @@ img  {
     background-color: #0fc373;
      border-radius: 30px;
      text-align: center;
+     
  }
 td.ONE{
     padding-top: 25px;
@@ -309,7 +326,7 @@ button.Host{
 
 
 
-table, tbody, tr, td {
+table.events, tbody, tr, td {
     vertical-align: top;
 }
 
@@ -385,6 +402,7 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
+<<<<<<< HEAD
 
 #mySelect {
     border-style: groove;
@@ -398,3 +416,119 @@ footer {                        /*countdown*/
 #typeSelect {
 
 }
+=======
+table.map{                           /*Maps*/
+    text-align: left;
+    font-family:'EricssonHilda-Regular';
+    font: 30px;
+    padding: 10%
+}
+tr#THREE{
+    font-family:'EricssonHilda-Bold';
+}
+button{                         
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;
+}
+
+.zoneOne{
+    background-color: #94b32a;
+    font-family: "EricssonHilda-Regular";  
+    
+}
+.zoneTwo{
+    background-color: #d99e4e;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneThree{
+    background-color: #21524c;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneFour{
+    background-color: #702249;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneFive{
+    background-color: #31a2b4;
+    font-family: "EricssonHilda-Regular";
+}.zoneSix{
+    background-color: #a4292a;
+    font-family: "EricssonHilda-Regular";
+}.zoneSeven{
+    background-color: #e0c240;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneEight{
+    background-color: #c27527 ;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneNine{
+    background-color: #5c1733;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneOne2{
+    background-color: #94b32a;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneTwo2{
+    background-color: #d99e4e ;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneThree2{
+    background-color: #21524c;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFour2{
+    background-color: #702249;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFive2{
+    background-color: #31a2b4;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}#zoneSix2{
+    background-color: #a4292a;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}#zoneSeven2{
+    background-color: #e0c240;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneEight2{
+    background-color: #c27527 ;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneNine2{
+    background-color: #5c1733;
+    color: white;
+    font-family: "EricssonHilda-Regular";
+}
+
+.address{
+    font-family: "EricssonHilda-Regular";
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    border: 5px solid #111;
+    display: grid;
+    border-radius:20px; 
+    background-color: #111;
+    color:white;
+    width: 90%;
+  
+}
+
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a

@@ -87,7 +87,7 @@
 
 #main{
     transition:margin-left 0.7s;
-    padding:20px;
+
     overflow: hidden;
     width: 100%;
 }
@@ -112,21 +112,18 @@
 
 table {
  
-    margin-left:auto; 
-    margin-right:auto;
     color: black;
-    border-collapse: collapse;
+   
     border: 15px solid #0082f0;
     font-size: 35px;
     display: block;
     width: 90%;
     height: 80%;
-    position: relative;
-    margin: auto;
+   
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
-    padding: 20px;
-    
+
+
 
 }
 #bioText{

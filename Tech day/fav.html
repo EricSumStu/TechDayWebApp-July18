@@ -3,6 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Tech Day Ireland | Favourites</title>
+                            <!--FAVICONS-->
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -102,7 +120,6 @@
             </li>
         </ul>
 
-
         <div id="side-menu" class="side-nav">
 
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -140,37 +157,34 @@
                 <img src="./images/favourites banner not rounded.png">
             </a>
         </div>
-    
 
 
+        <select id="mySelect" onchange="filterThemes()">
+            <option value="All">Themes
+                <option value="5G">5G
+                    <option value="Cloud Native">Cloud Native
+                        <option value="The Future Of Network Management">The Future Of Network Management
+                            <option value="Zero Touch">Zero Touch
 
-    <select id="mySelect" onchange="filterThemes()">
-        <option value="All">Themes
-            <option value="5G">5G
-                <option value="Cloud Native">Cloud Native
-                    <option value="The Future Of Network Management">The Future Of Network Management
-                        <option value="Zero Touch">Zero Touch
+        </select>
 
-    </select>
+        <select id="typeSelect" onchange="filterType()">
+            <option value="Type">Type of events
+                <option value="Event">Events
+                    <option value="Demo">Demos
+                        <option value="Tech Talk">Tech Talks
 
-    <select id="typeSelect" onchange="filterType()">
-        <option value="Type">Type of events
-            <option value="Event">Events
-                <option value="Demo">Demos
-                    <option value="Tech Talk">Tech Talks
+        </select>
 
-
-    </select>
-
-    <p id="demo"></p>
-    <p id="type"></p>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="bioText">Some text in the Modal..</p>
+        <p id="demo"></p>
+        <p id="type"></p>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="bioText">Some text in the Modal..</p>
+            </div>
         </div>
     </div>
-</div>
     <script>  
 
         var table = "";
@@ -199,9 +213,27 @@
             }
         }
 
+<<<<<<< HEAD
         function display(i) {
             var obj = i;
             console.log(i)
+=======
+        load();
+
+        async function load() {
+            await db.favourites.each(p => list.push(p));
+            var sortedList = bubbleSort(list);
+            for (i = 0; i < sortedList.length; i++) {
+                display(sortedList[i]);
+            }
+        }
+
+        function display(i) {
+            var obj = i;
+            console.log(i)
+
+            //for (var y = 0; y < obj.length;y++){
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -233,7 +265,6 @@
             document.getElementById("demo").innerHTML = table;
         };
 
-
         function filterType() {
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
@@ -249,7 +280,11 @@
                 display(event);
                 console.log(event);
             }
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             document.getElementById("demo").innerHTML = table;
         };
         
@@ -267,12 +302,33 @@
 
                  return events;
 
+<<<<<<< HEAD
             }
     
+=======
+        function bubbleSort(events) {
+            for (var i = 0; i < (events.length - 1); i++) {
+                for (var j = 0; j < (events.length - i - 1); j++) {
+                    if (events[j].Time > events[j + 1].Time) {
+                        var tmp = events[j];
+                        events[j] = events[j + 1];
+                        events[j + 1] = tmp;
+                    }
+                }
+            }
+            return events;
+        }
+
+
+
+
+
+
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
 
 
         function printEvent(event) {
-            var txt = "<table>"
+            var txt = "<table class='events'>"
             txt += "<tr>";
             txt += "<td>" + "Title:" + "</td>"
             txt += "<td>" + (event.Title) + "</td>"
@@ -318,7 +374,6 @@
             document.getElementById("demo").innerHTML = table;
 
             console.log("REMOVED");
-
 
         };
 

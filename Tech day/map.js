@@ -1,4 +1,4 @@
-var table = "";
+var tablemap = "";
 var txt;
 var modal = document.getElementById('myModal');
 $.getJSON("talks.json", function (json) {
@@ -22,8 +22,8 @@ $.getJSON("talks.json", function (json) {
     var myArray2 = [("Lars Magnus"), ("Reykjavik"), ("Nuuk"), ("Paris"), ("Athlone"),
     ("Demo Room"), ("Kuala Lumpur"), ("Lecture Theatre"), ("Stockholm"), ("Berlin"), ("Helsinki"), ("Rome"),
     ("Wellington"), ("Canberra"), ("Tokyo"), ("Warsaw"), ("Kiev"), ("Moscow"),
-    ("Cape Town"), ("Jakarta", ("Honolulu"), ("Ottowa"), ("Anchorage"), ("Buenos Aires"), 
-    ("Brasilia"), ("Washington DC"), ("V.A. Lab"))];
+    ("Cape Town"), ("Jakarta"), ("Honolulu"), ("Ottowa"), ("Anchorage"), ("Buenos Aires"), 
+    ("Brasilia"), ("Washington DC"), ("V.A. Lab")];
 
     for (var x = 1; x < 10; x++) {
         var techDate = new Date("2018-10-4");
@@ -42,6 +42,7 @@ $.getJSON("talks.json", function (json) {
                 if ((myArray2[key] === obj.talks[y].Location) && (techDay === false) ) {
                     var zone = myArray[key];
                     if (zone == x) {
+                        console.log(x);
                         switch (x) {
                             case (1): { z1.push(obj.talks[y]) }; break;
                             case (2): { z2.push(obj.talks[y]) }; break;
@@ -74,7 +75,7 @@ $.getJSON("talks.json", function (json) {
         }
     }
 
-    var z1txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z1txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z1.length; x++) {
 
         var aTitle = z1[x].Title;
@@ -83,20 +84,20 @@ $.getJSON("talks.json", function (json) {
 
         z1txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z1txt += "</table>";
+    z1txt += '</table>';
 
-    var z2txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z2txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z2.length; x++) {
 
         var aTitle = z2[x].Title;
         var aTime = z2[x].Time;
-        var aLocation = z2[x].Location
+        var aLocation = z2[x].Location;
         
         z2txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z2txt += "</table>";
+    z2txt += '</table>';
 
-    var z3txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z3txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z3.length; x++) {
 
         var aTitle = z3[x].Title;
@@ -105,9 +106,9 @@ $.getJSON("talks.json", function (json) {
 
         z3txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z3txt += "</table>";
+    z3txt += '</table>';
 
-    var z4txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z4txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z4.length; x++) {
 
         var aTitle = z4[x].Title;
@@ -116,9 +117,9 @@ $.getJSON("talks.json", function (json) {
 
         z4txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z4txt += "</table>";
+    z4txt += '</table>';
 
-    var z5txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z5txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z5.length; x++) {
 
         var aTitle = z5[x].Title;
@@ -127,9 +128,9 @@ $.getJSON("talks.json", function (json) {
 
         z5txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z5txt += "</table>";
+    z5txt += '</table>';
 
-    var z6txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z6txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z6.length; x++) {
 
         var aTitle = z6[x].Title;
@@ -138,9 +139,9 @@ $.getJSON("talks.json", function (json) {
 
         z6txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z6txt += "</table>";
+    z6txt += '</table>';
 
-    var z7txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z7txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z7.length; x++) {
 
         var aTitle = z7[x].Title;
@@ -149,9 +150,9 @@ $.getJSON("talks.json", function (json) {
 
         z7txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z7txt += "</table>";
+    z7txt += '</table>';
 
-    var z8txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z8txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z8.length; x++) {
 
         var aTitle = z8[x].Title;
@@ -160,9 +161,9 @@ $.getJSON("talks.json", function (json) {
 
         z8txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z8txt += "</table>";
+    z8txt += '</table>';
     
-    var z9txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z9txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z9.length; x++) {
 
         var aTitle = z9[x].Title;
@@ -171,7 +172,7 @@ $.getJSON("talks.json", function (json) {
 
         z9txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z9txt += "</table>";
+    z9txt += '</table>';
 
     window.onload = function () {
         document.getElementById("zone1").innerHTML = z1txt;
