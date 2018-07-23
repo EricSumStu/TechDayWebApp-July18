@@ -172,6 +172,7 @@
     </div>
 </div>
     <script>  
+
         var table = "";
         var list = [];
         var modal = document.getElementById('myModal');
@@ -187,9 +188,20 @@
             techDay = true
         };
 
-        db.favourites.each(p => display(p));
+
+        load(); 
+        
+        async function load(){
+            await db.favourites.each(p => list.push(p));
+            var sortedList = bubbleSort(list);
+            for(i=0; i<sortedList.length;i++){
+                display(sortedList[i]);
+            }
+        }
+
         function display(i) {
             var obj = i;
+            console.log(i)
 
             //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
@@ -234,28 +246,21 @@
             }
             
             document.getElementById("demo").innerHTML = table;
-
-            function bubbleSort(event) {
-                list.push(event.Time);
-                console.log('Sorted List: ' + list.sort());                
-                
-                // for (var i = (length - 1); i >= 0; i--) {
-                //     //Number of passes
-                //     console.log(i);
-                //     for (var j = (length - i); j > 0; j--) {
-                //         //Compare the adjacent positions
-                //         console.log(j);
-                //         if (list[j] < list[j - 1]) {
-                //             //Swap the numbers
-                //             var tmp = list[j];
-                //             list[j] = list[j - 1];
-                //             list[j - 1] = tmp;
-                //             console.log();
-                //         }
-                //     }
-                // }
-            }
         };
+        
+        function bubbleSort(events) {
+                 for (var i =0; i < (events.length - 1); i++) {
+                     for (var j = 0; j < (events.length - i - 1); j++) {
+                        if(events[j].Time > events[j+1].Time) {
+                            var tmp = events[j];  
+                            events[j] = events[j+1]; 
+                            events[j+1] = tmp; 
+                        }
+                    }  
+                 }
+                 return events;
+            }
+     
 
 
 
