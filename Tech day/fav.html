@@ -3,6 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Tech Day Ireland | Favourites</title>
+<<<<<<< HEAD
+=======
+                            <!--FAVICONS-->
+<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+>>>>>>> ae1e8f2bbc9dbaa08eea21f816388481147855cb
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -183,7 +204,23 @@
         if (todaySmall === techDateSmall) {
             techDay = true
         };
+        var sortedList;
 
+        load(); 
+        
+        async function load(){
+            await db.favourites.each(p => list.push(p));
+             sortedList = bubbleSort(list);
+            for(i=0; i<sortedList.length;i++){
+                display(sortedList[i]);
+            }
+        }
+
+<<<<<<< HEAD
+        function display(i) {
+            var obj = i;
+            console.log(i)
+=======
         load();
 
         async function load() {
@@ -199,6 +236,7 @@
             console.log(i)
 
             //for (var y = 0; y < obj.length;y++){
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -207,18 +245,23 @@
             document.getElementById("demo").innerHTML = table;
         };
 
-        //};
+    
 
-        function filterThemes() {
+        async function filterThemes() {
             var valueInDropdown = document.getElementById("mySelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
-            db.favourites.each(event => displayByTheme(event, valueInDropdown));
+            for(i=0; i<sortedList.length;i++){
+                displayByTheme(sortedList[i], valueInDropdown);
+            }
+            //db.favourites.each(event =>  displayByTheme(event, valueInDropdown));
+            
+            
         }
 
         function displayByTheme(event, valueInDropdown) {
             if (event.Theme === valueInDropdown || valueInDropdown === "All") {
-                printEvent(event);
+                display(event);
                 console.log(event);
             }
 
@@ -229,19 +272,43 @@
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
-            db.favourites.each(event => displayByType(event, valueInDropdown));
+            for(i=0; i<sortedList.length;i++){
+                displayByType(sortedList[i], valueInDropdown);
+            }
+
         }
 
         function displayByType(event, valueInDropdown) {
             if (event.Catergories === valueInDropdown || valueInDropdown === "Type") {
-                printEvent(event);
-                bubbleSort(event);
+                display(event);
                 console.log(event);
             }
+<<<<<<< HEAD
+            
+=======
 
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             document.getElementById("demo").innerHTML = table;
         };
+        
+        function bubbleSort(events) {
+            
+                 for (var i =0; i < (events.length - 1); i++) {
+                     for (var j = 0; j < (events.length - i - 1); j++) {
+                        if(events[j].Time > events[j+1].Time) {
+                            var tmp = events[j];  
+                            events[j] = events[j+1]; 
+                            events[j+1] = tmp; 
+                        }
+                    }  
+                 }
 
+                 return events;
+
+<<<<<<< HEAD
+            }
+    
+=======
         function bubbleSort(events) {
             for (var i = 0; i < (events.length - 1); i++) {
                 for (var j = 0; j < (events.length - i - 1); j++) {
@@ -260,6 +327,7 @@
 
 
 
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
 
 
         function printEvent(event) {
@@ -299,8 +367,6 @@
             db.favourites.each(p => display(p));
             function display(i) {
                 var obj = i;
-
-                //for (var y = 0; y < obj.length;y++){
                 if ((techDay === false)) {
                     printEvent(obj);
                 } else if ((techDay === true) && (obj.Time >= now)) {

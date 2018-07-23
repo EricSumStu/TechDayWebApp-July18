@@ -404,6 +404,21 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
+<<<<<<< HEAD
+
+#mySelect {
+    border-style: groove;
+    background-color: lightgrey;
+    border-radius:25px;
+
+
+}
+
+
+#typeSelect {
+
+}
+=======
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -518,3 +533,28 @@ button{
   
 }
 
+<<<<<<< HEAD
+#mySelect {
+    background-color: #0fc373;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: "EricssonHilda-Regular"
+}
+
+#typeSelect {
+    background-color: #0fc373;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: "EricssonHilda-Regular"
+}
+=======
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
+>>>>>>> ae1e8f2bbc9dbaa08eea21f816388481147855cb
