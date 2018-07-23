@@ -251,10 +251,10 @@ img  {
     color: black;
     border-collapse: collapse;
     border: 15px solid #0082f0;
-    font-size: 35px;
+    font-size:3vw;
     display: block;
-    width: 90%;
-    height:80%;
+    width: auto;
+    height:auto;
     position: relative;
     margin: auto;
     border-radius:35px; 
@@ -263,6 +263,14 @@ img  {
     
 
 }
+
+@media only screen and (max-width: 320px) {
+
+    body { 
+       font-size: 2em; 
+    }
+ 
+ }
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -278,6 +286,7 @@ img  {
     background-color: #0fc373;
      border-radius: 30px;
      text-align: center;
+     
  }
 td.ONE{
     padding-top: 25px;
@@ -393,6 +402,21 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
+<<<<<<< HEAD
+
+#mySelect {
+    border-style: groove;
+    background-color: lightgrey;
+    border-radius:25px;
+
+
+}
+
+
+#typeSelect {
+
+}
+=======
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -507,6 +531,7 @@ button{
   
 }
 
+<<<<<<< HEAD
 #mySelect {
     background-color: #0fc373;
     color: white;
@@ -528,3 +553,6 @@ button{
     font-size: 20px;
     font-family: "EricssonHilda-Regular"
 }
+=======
+>>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
+>>>>>>> ae1e8f2bbc9dbaa08eea21f816388481147855cb
