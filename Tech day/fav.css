@@ -138,3 +138,10 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
+
+
+#mySelect {
+    width: 100%;
+    background-color: yellow;
+
+}

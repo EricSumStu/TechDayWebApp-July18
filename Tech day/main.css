@@ -384,3 +384,17 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+
+
+#mySelect {
+    border-style: groove;
+    background-color: lightgrey;
+    border-radius:25px;
+
+
+}
+
+
+#typeSelect {
+
+}
