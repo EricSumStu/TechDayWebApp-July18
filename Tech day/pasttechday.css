@@ -117,6 +117,10 @@ p{
   font-size: 25px;
 }
 
+#txt{
+    text-align: justify;
+}
+
 span
 {
   font-family: 'EricssonHilda-Bold';
