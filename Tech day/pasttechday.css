@@ -427,3 +427,11 @@ img {vertical-align: middle;
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.Banner{
+    display: block;
+    width: 100%;
+    height:50%;
+    position: relative;
+    margin: auto;
+}
