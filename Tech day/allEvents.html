@@ -122,8 +122,7 @@
 <!-- <input type="text" id="myInput"  onkeypress="search()" placeholder="Search by Title">
     <button id='submit' onclick="search()">Submit</button>-->
 
-    <FORM NAME="myform" ACTION="" METHOD="GET">
-Enter something in the box: <BR>
+<FORM NAME="myform" ACTION="" METHOD="GET">
 <INPUT TYPE="text" id="inputbox" VALUE=""><P>
 <INPUT TYPE="button" NAME="button" Value="Click" onClick="search(inputbox.value)">
 </FORM>
@@ -196,7 +195,6 @@ function search(input) {
                    display(obj.talks[y]); 
                }else{
                    console.log('no match')
-                   table = "No match found. Please try again!"
                }
        }});
 
@@ -210,7 +208,7 @@ function search(input) {
                 }
     document.getElementById("demo").innerHTML = table;
             };
-     document.getElementById("demo").innerHTML = table;
+document.getElementById("demo").innerHTML = table;
 
 };
 
