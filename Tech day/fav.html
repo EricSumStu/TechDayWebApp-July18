@@ -187,13 +187,13 @@
         if (todaySmall === techDateSmall) {
             techDay = true
         };
-
+        var sortedList;
 
         load(); 
         
         async function load(){
             await db.favourites.each(p => list.push(p));
-            var sortedList = bubbleSort(list);
+             sortedList = bubbleSort(list);
             for(i=0; i<sortedList.length;i++){
                 display(sortedList[i]);
             }
@@ -202,8 +202,6 @@
         function display(i) {
             var obj = i;
             console.log(i)
-
-            //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -212,18 +210,23 @@
             document.getElementById("demo").innerHTML = table;
         };
 
-        //};
+    
 
-        function filterThemes() {
+        async function filterThemes() {
             var valueInDropdown = document.getElementById("mySelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
-            db.favourites.each(event => displayByTheme(event, valueInDropdown));
+            for(i=0; i<sortedList.length;i++){
+                displayByTheme(sortedList[i], valueInDropdown);
+            }
+            //db.favourites.each(event =>  displayByTheme(event, valueInDropdown));
+            
+            
         }
 
         function displayByTheme(event, valueInDropdown) {
             if (event.Theme === valueInDropdown || valueInDropdown === "All") {
-                printEvent(event);
+                display(event);
                 console.log(event);
             }
 
@@ -235,13 +238,15 @@
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
-            db.favourites.each(event => displayByType(event, valueInDropdown));
+            for(i=0; i<sortedList.length;i++){
+                displayByType(sortedList[i], valueInDropdown);
+            }
+
         }
 
         function displayByType(event, valueInDropdown) {
             if (event.Catergories === valueInDropdown || valueInDropdown === "Type") {
-                printEvent(event);
-                bubbleSort(event);
+                display(event);
                 console.log(event);
             }
             
@@ -249,6 +254,7 @@
         };
         
         function bubbleSort(events) {
+            
                  for (var i =0; i < (events.length - 1); i++) {
                      for (var j = 0; j < (events.length - i - 1); j++) {
                         if(events[j].Time > events[j+1].Time) {
@@ -258,16 +264,11 @@
                         }
                     }  
                  }
+
                  return events;
+
             }
-     
-
-
-
-
-
-
-
+    
 
 
         function printEvent(event) {
@@ -307,8 +308,6 @@
             db.favourites.each(p => display(p));
             function display(i) {
                 var obj = i;
-
-                //for (var y = 0; y < obj.length;y++){
                 if ((techDay === false)) {
                     printEvent(obj);
                 } else if ((techDay === true) && (obj.Time >= now)) {
