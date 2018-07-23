@@ -251,10 +251,10 @@ img  {
     color: black;
     border-collapse: collapse;
     border: 15px solid #0082f0;
-    font-size: 35px;
+    font-size:3vw;
     display: block;
-    width: 90%;
-    height:80%;
+    width: auto;
+    height:auto;
     position: relative;
     margin: auto;
     border-radius:35px; 
@@ -263,6 +263,14 @@ img  {
     
 
 }
+
+@media only screen and (max-width: 320px) {
+
+    body { 
+       font-size: 2em; 
+    }
+ 
+ }
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -278,6 +286,7 @@ img  {
     background-color: #0fc373;
      border-radius: 30px;
      text-align: center;
+     
  }
 td.ONE{
     padding-top: 25px;
