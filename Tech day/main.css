@@ -244,7 +244,7 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table {  
+  table.events {  
     text-align: left;        /*for demodetails*/
     margin-left:auto; 
     margin-right:auto;
@@ -317,7 +317,7 @@ button.Host{
 
 
 
-table, tbody, tr, td {
+table.events, tbody, tr, td {
     vertical-align: top;
 }
 
@@ -393,7 +393,16 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
-button{                         /*Maps*/
+table.map{                           /*Maps*/
+    text-align: left;
+    font-family:'EricssonHilda-Regular';
+    font: 30px;
+    padding: 10%
+}
+tr#THREE{
+    font-family:'EricssonHilda-Bold';
+}
+button{                         
     position:sticky;
     width: 90%;
     height:80%;
@@ -402,8 +411,8 @@ button{                         /*Maps*/
     padding:30px;
     font-family:'EricssonHilda-Regular';
     color:white;
-
 }
+
 .zoneOne{
     background-color: #94b32a;
     font-family: "EricssonHilda-Regular";  
@@ -459,7 +468,7 @@ button{                         /*Maps*/
     background-color: #31a2b4;
     font-family: "EricssonHilda-Regular";
 }#zoneSix2{
-    background-color: #a4292a;
+    background-color: #a4292c;
     font-family: "EricssonHilda-Regular";
 }#zoneSeven2{
     background-color: #e0c240;
