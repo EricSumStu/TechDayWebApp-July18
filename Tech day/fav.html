@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tech Day Ireland: Favourites</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -65,8 +63,6 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="db.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -105,7 +101,6 @@
                 <a href="about.html">About</a>
             </li>
         </ul>
-
 
         <div id="side-menu" class="side-nav">
 
@@ -146,8 +141,6 @@
         </div>
     
 
-
-
     <select id="mySelect" onchange="filterThemes()">
         <option value="All">Themes
             <option value="5G">5G
@@ -163,7 +156,6 @@
                 <option value="Demo">Demos
                     <option value="Tech Talk">Tech Talks
 
-
     </select>
 
     <p id="demo"></p>
@@ -176,6 +168,7 @@
     </div>
 </div>
     <script>  
+
         var table = "";
         var list = [];
         var modal = document.getElementById('myModal');
@@ -191,9 +184,19 @@
             techDay = true
         };
 
-        db.favourites.each(p => display(p));
+        load(); 
+        
+        async function load(){
+            await db.favourites.each(p => list.push(p));
+            var sortedList = bubbleSort(list);
+            for(i=0; i<sortedList.length;i++){
+                display(sortedList[i]);
+            }
+        }
+
         function display(i) {
             var obj = i;
+            console.log(i)
 
             //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
@@ -222,7 +225,6 @@
             document.getElementById("demo").innerHTML = table;
         };
 
-
         function filterType() {
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
@@ -238,30 +240,21 @@
             }
             
             document.getElementById("demo").innerHTML = table;
-
-            function bubbleSort(event) {
-                list.push(event.Time);
-                console.log('Sorted List: ' + list.sort());                
-                
-                // for (var i = (length - 1); i >= 0; i--) {
-                //     //Number of passes
-                //     console.log(i);
-                //     for (var j = (length - i); j > 0; j--) {
-                //         //Compare the adjacent positions
-                //         console.log(j);
-                //         if (list[j] < list[j - 1]) {
-                //             //Swap the numbers
-                //             var tmp = list[j];
-                //             list[j] = list[j - 1];
-                //             list[j - 1] = tmp;
-                //             console.log();
-                //         }
-                //     }
-                // }
-            }
         };
-
-
+        
+        function bubbleSort(events) {
+                 for (var i =0; i < (events.length - 1); i++) {
+                     for (var j = 0; j < (events.length - i - 1); j++) {
+                        if(events[j].Time > events[j+1].Time) {
+                            var tmp = events[j];  
+                            events[j] = events[j+1]; 
+                            events[j+1] = tmp; 
+                        }
+                    }  
+                 }
+                 return events;
+            }
+     
 
 
 
@@ -271,10 +264,6 @@
 
         function printEvent(event) {
             var txt = "<table class='events'>"
-            txt += "<tr>";
-            txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
-            txt += "<td>" + "" + "</td>"
-            txt += "</tr>"
             txt += "<tr>";
             txt += "<td>" + "Title:" + "</td>"
             txt += "<td>" + (event.Title) + "</td>"
@@ -322,7 +311,6 @@
             document.getElementById("demo").innerHTML = table;
 
             console.log("REMOVED");
-
 
         };
 
