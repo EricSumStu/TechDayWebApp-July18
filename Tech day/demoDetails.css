@@ -87,7 +87,7 @@
 
 #main{
     transition:margin-left 0.7s;
-    padding:20px;
+
     overflow: hidden;
     width: 100%;
 }

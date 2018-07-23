@@ -20,7 +20,7 @@
 
    #main{
     transition:margin-left 0.5s;
-    padding:20px;
+  
     overflow: hidden;
     width: 100%;
 }
@@ -392,3 +392,4 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+
