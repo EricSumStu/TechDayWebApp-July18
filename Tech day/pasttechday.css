@@ -241,11 +241,13 @@ height: auto;
     height:80%;
     display: block;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius:20px; 
+    align-self: center;
+    justify-self: center;
   }
 
   .grid2 {
@@ -255,11 +257,13 @@ height: auto;
     height:80%;
     display: block;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius:20px;
+    align-self: center;
+    justify-self: center;
   }
 
   .grid3 {
@@ -269,11 +273,13 @@ height: auto;
     height:80%;
     display: block;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius:20px; 
+    border-radius:20px;
+    align-self: center;
+    justify-self: center;
   }
 
   .grid4 {
@@ -283,11 +289,13 @@ height: auto;
     height:80%;
     display: block;
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius:20px;
+    align-self: center;
+    justify-self: center;
   }
   
   @media screen and (max-width: 670px){
