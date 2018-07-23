@@ -114,11 +114,17 @@ h3{
 p{
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
-
+/*
 #txt{
-    text-align: justify;
+    text-align: justify;}*/
+#txt
+{
+margin-left: 10px;
+margin-right: 10px;
+font-size: 20px;
+font-family: 'EricssonHilda-Regular';
 }
 
 span
@@ -338,7 +344,7 @@ margin: 0 auto;
 }
 
 .xlarge {
-    font-size:30px;
+    font-size:25px;
     border-bottom:6px solid #ccc;
 }
 
