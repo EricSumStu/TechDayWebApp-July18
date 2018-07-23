@@ -244,7 +244,7 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table {  
+  table.events {  
     text-align: left;        /*for demodetails*/
     margin-left:auto; 
     margin-right:auto;
@@ -326,7 +326,7 @@ button.Host{
 
 
 
-table, tbody, tr, td {
+table.events, tbody, tr, td {
     vertical-align: top;
 }
 
@@ -402,7 +402,16 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
-button{                         /*Maps*/
+table.map{                           /*Maps*/
+    text-align: left;
+    font-family:'EricssonHilda-Regular';
+    font: 30px;
+    padding: 10%
+}
+tr#THREE{
+    font-family:'EricssonHilda-Bold';
+}
+button{                         
     position:sticky;
     width: 90%;
     height:80%;
@@ -411,8 +420,8 @@ button{                         /*Maps*/
     padding:30px;
     font-family:'EricssonHilda-Regular';
     color:white;
-
 }
+
 .zoneOne{
     background-color: #94b32a;
     font-family: "EricssonHilda-Regular";  
@@ -450,36 +459,45 @@ button{                         /*Maps*/
 }
 #zoneOne2{
     background-color: #94b32a;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneTwo2{
     background-color: #d99e4e ;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneThree2{
     background-color: #21524c;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneFour2{
     background-color: #702249;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneFive2{
     background-color: #31a2b4;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }#zoneSix2{
     background-color: #a4292a;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }#zoneSeven2{
     background-color: #e0c240;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneEight2{
     background-color: #c27527 ;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneNine2{
     background-color: #5c1733;
+    color: white;
     font-family: "EricssonHilda-Regular";
 }
 

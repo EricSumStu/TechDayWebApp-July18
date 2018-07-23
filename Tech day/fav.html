@@ -139,34 +139,34 @@
                 <img src="./images/favourites banner not rounded.png">
             </a>
         </div>
-    
 
-    <select id="mySelect" onchange="filterThemes()">
-        <option value="All">Themes
-            <option value="5G">5G
-                <option value="Cloud Native">Cloud Native
-                    <option value="The Future Of Network Management">The Future Of Network Management
-                        <option value="Zero Touch">Zero Touch
 
-    </select>
+        <select id="mySelect" onchange="filterThemes()">
+            <option value="All">Themes
+                <option value="5G">5G
+                    <option value="Cloud Native">Cloud Native
+                        <option value="The Future Of Network Management">The Future Of Network Management
+                            <option value="Zero Touch">Zero Touch
 
-    <select id="typeSelect" onchange="filterType()">
-        <option value="Type">Type of events
-            <option value="Event">Events
-                <option value="Demo">Demos
-                    <option value="Tech Talk">Tech Talks
+        </select>
 
-    </select>
+        <select id="typeSelect" onchange="filterType()">
+            <option value="Type">Type of events
+                <option value="Event">Events
+                    <option value="Demo">Demos
+                        <option value="Tech Talk">Tech Talks
 
-    <p id="demo"></p>
-    <p id="type"></p>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="bioText">Some text in the Modal..</p>
+        </select>
+
+        <p id="demo"></p>
+        <p id="type"></p>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="bioText">Some text in the Modal..</p>
+            </div>
         </div>
     </div>
-</div>
     <script>  
 
         var table = "";
@@ -184,12 +184,12 @@
             techDay = true
         };
 
-        load(); 
-        
-        async function load(){
+        load();
+
+        async function load() {
             await db.favourites.each(p => list.push(p));
             var sortedList = bubbleSort(list);
-            for(i=0; i<sortedList.length;i++){
+            for (i = 0; i < sortedList.length; i++) {
                 display(sortedList[i]);
             }
         }
@@ -238,23 +238,23 @@
                 bubbleSort(event);
                 console.log(event);
             }
-            
+
             document.getElementById("demo").innerHTML = table;
         };
-        
+
         function bubbleSort(events) {
-                 for (var i =0; i < (events.length - 1); i++) {
-                     for (var j = 0; j < (events.length - i - 1); j++) {
-                        if(events[j].Time > events[j+1].Time) {
-                            var tmp = events[j];  
-                            events[j] = events[j+1]; 
-                            events[j+1] = tmp; 
-                        }
-                    }  
-                 }
-                 return events;
+            for (var i = 0; i < (events.length - 1); i++) {
+                for (var j = 0; j < (events.length - i - 1); j++) {
+                    if (events[j].Time > events[j + 1].Time) {
+                        var tmp = events[j];
+                        events[j] = events[j + 1];
+                        events[j + 1] = tmp;
+                    }
+                }
             }
-     
+            return events;
+        }
+
 
 
 
@@ -263,7 +263,7 @@
 
 
         function printEvent(event) {
-            var txt = "<table>"
+            var txt = "<table class='events'>"
             txt += "<tr>";
             txt += "<td>" + "Title:" + "</td>"
             txt += "<td>" + (event.Title) + "</td>"
@@ -351,4 +351,3 @@
 </body>
 
 </html>
-

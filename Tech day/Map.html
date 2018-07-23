@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tech Day Ireland: Maps</title>
+    <title>Tech Day Ireland | Maps</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
@@ -39,10 +39,11 @@
             background-color: rgba(0, 0, 0, 0.4);
             /* Black w/ opacity */
         }
+
         /* The Close Button */
 
         .close {
-            color: #aaaaaa;
+            color: white;
             float: right;
             font-size: 28px;
             font-weight: bold;
@@ -123,13 +124,13 @@
     </nav>
     <br>
     <div id="main">
-    <div id="header">
-        <img src="images/mapsbanner.png" class="Banner" />
-        <br>
-        <img src="images/groundfloor.png" class="map" />
-    </div>
+        <div id="header">
+            <img src="images/mapsbanner.png" class="Banner" />
+            <br>
+            <img src="images/groundfloor.png" class="map" />
+        </div>
 
-    
+
         <div class="grid1">
             <div>
                 <button class="zoneOne" id="1" onclick=openEvents(id) align="middle">Zone One</button>
@@ -198,57 +199,57 @@
                 </div>
             </div>
             <div>
-                    <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
-                    <div id="71" class="modal">
-                        <div id="zoneSeven2" class="modal-content">
-                            <span id="modal7" class="close">&times;</span>
-                            <h2>Events on in Zone Seven</h2>
-                            <p id="zone7"></p>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                        </div>
+                <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
+                <div id="71" class="modal">
+                    <div id="zoneSeven2" class="modal-content">
+                        <span id="modal7" class="close">&times;</span>
+                        <h2>Events on in Zone Seven</h2>
+                        <p id="zone7"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
                     </div>
                 </div>
+            </div>
             <div>
-                    <button id="8" class="zoneEight" onclick=openEvents(id)>Zone Eight</button>
-                    <div id="81" class="modal">
-                        <div id="zoneEight2" class="modal-content">
-                            <span id="modal8" class="close">&times;</span>
-                            <h2>Events on in Zone Eight</h2>
-                            <p id="zone8"></p>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                        </div>
+                <button id="8" class="zoneEight" onclick=openEvents(id)>Zone Eight</button>
+                <div id="81" class="modal">
+                    <div id="zoneEight2" class="modal-content">
+                        <span id="modal8" class="close">&times;</span>
+                        <h2>Events on in Zone Eight</h2>
+                        <p id="zone8"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
                     </div>
-             </div>
+                </div>
+            </div>
             <div>
-                    <button id="9" class="zoneNine" onclick=openEvents(id)>Zone Nine</button>
-                    <div id="91" class="modal">
-                        <div id="zoneNine2" class="modal-content">
-                            <span id="modal9" class="close">&times;</span>
-                            <h2>Events on in Zone Nine</h2>
-                            <p id="zone9"></p>
-                            <p>For more information, please refer to the map or check out the events page.</p>
-                        </div>
+                <button id="9" class="zoneNine" onclick=openEvents(id)>Zone Nine</button>
+                <div id="91" class="modal">
+                    <div id="zoneNine2" class="modal-content">
+                        <span id="modal9" class="close">&times;</span>
+                        <h2>Events on in Zone Nine</h2>
+                        <p id="zone9"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
                     </div>
+                </div>
             </div>
         </div>
-   
 
 
-    <div class="address">
-        <h2>Tech Day Venue</h2>
-        <p id="txt"> Ericsson Software Campus,
-            <br> Cornamaddy,
-            <br> Athlone
-            <br> Co. Westmeath
-            <br>(090) 643 1000</p>
+
+        <div class="address">
+            <h2>Tech Day Venue</h2>
+            <p id="txt"> Ericsson Software Campus,
+                <br> Cornamaddy,
+                <br> Athlone
+                <br> Co. Westmeath
+                <br>(090) 643 1000</p>
         </div>
         <br>
         <div class="googleMaps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813"
-            width="100%" height="600"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813"
+                width="100%" height="600"></iframe>
 
+        </div>
     </div>
-</div>
 
     <script>
         var spanID
@@ -260,16 +261,16 @@
             var modal = document.getElementsByClassName('modal')[spanID];
             var span = document.getElementsByClassName("close")[spanID];
             span.onclick = function () {
-            modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-            if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         };
-        
-    
+
+
 
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
