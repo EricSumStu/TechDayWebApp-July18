@@ -393,3 +393,99 @@ footer {                        /*countdown*/
     font-family: 'EricssonHilda-Regular';
 }
 
+button{                         /*Maps*/
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;
+
+}
+.zoneOne{
+    background-color: #00ff00;
+    font-family: "EricssonHilda-Regular";  
+    
+}
+.zoneTwo{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneThree{
+    background-color: rgb(33, 82, 53);
+    font-family: "EricssonHilda-Regular";
+}
+.zoneFour{
+    background-color: #490d30;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneFive{
+    background-color: rgb(31, 182, 241);
+    font-family: "EricssonHilda-Regular";
+}.zoneSix{
+    background-color: red;
+    font-family: "EricssonHilda-Regular";
+}.zoneSeven{
+    background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
+}
+.zoneEight{
+    background-color: #fd8e26 ;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneNine{
+    background-color: #58133c;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneOne2{
+    background-color: #00ff00;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneTwo2{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneThree2{
+    background-color: rgb(33, 82, 53);
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFour2{
+    background-color: #490d30;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneFive2{
+    background-color: rgb(31, 182, 241);
+    font-family: "EricssonHilda-Regular";
+}#zoneSix2{
+    background-color: red;
+    font-family: "EricssonHilda-Regular";
+}#zoneSeven2{
+    background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
+}
+#zoneEight2{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneNine2{
+    background-color: #490d30;
+    font-family: "EricssonHilda-Regular";
+}
+
+.address{
+    font-family: "EricssonHilda-Regular";
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    border: 5px solid #111;
+    display: grid;
+    border-radius:20px; 
+    background-color: #111;
+    color:white;
+    width: 90%;
+  
+}
+
