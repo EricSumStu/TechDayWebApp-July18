@@ -165,8 +165,7 @@ button{
 }
 .zoneOne{
     background-color: #00ff00;
-    font-family: "EricssonHilda-Regular";
-    
+    font-family: "EricssonHilda-Regular";  
     
 }
 .zoneTwo{
@@ -189,6 +188,14 @@ button{
     font-family: "EricssonHilda-Regular";
 }.zoneSeven{
     background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
+}
+.zoneEight{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+.zoneNine{
+    background-color: #490d30;
     font-family: "EricssonHilda-Regular";
 }
 #zoneOne2{
@@ -215,6 +222,14 @@ button{
     font-family: "EricssonHilda-Regular";
 }#zoneSeven2{
     background-color: rgb(255, 230, 4);
+    font-family: "EricssonHilda-Regular";
+}
+#zoneEight2{
+    background-color: #ff6600 ;
+    font-family: "EricssonHilda-Regular";
+}
+#zoneNine2{
+    background-color: #490d30;
     font-family: "EricssonHilda-Regular";
 }
 

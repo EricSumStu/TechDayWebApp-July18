@@ -10,6 +10,8 @@ $.getJSON("talks.json", function (json) {
     var z5 = [];
     var z6 = [];
     var z7 = [];
+    var z8 = [];
+    var z9 = [];
 
     var myArray = [("Lars Magnus", "1"), ("Reykjavik", "1"), ("Nuuk", "1"), ("Paris", "3"), ("Athlone", "3"),
     ("Demo Room", "4"), ("Kuala Lumpur", "4"), ("Lecture Theatre", "4"), ("Stockholm", "5"), ("Berlin", "5"), ("Helsinki", "5"), ("Rome", "5"),
@@ -23,7 +25,7 @@ $.getJSON("talks.json", function (json) {
     ("Cape Town"), ("Jakarta", ("Honolulu"), ("Ottowa"), ("Anchorage"), ("Buenos Aires"), 
     ("Brasilia"), ("Washington DC"), ("V.A. Lab"))];
 
-    for (var x = 1; x < 8; x++) {
+    for (var x = 1; x < 10; x++) {
         var techDate = new Date("2018-10-4");
         var today = new Date();
         var techDateSmall = techDate.toDateString(0, 10);
@@ -48,6 +50,8 @@ $.getJSON("talks.json", function (json) {
                             case (5): { z5.push(obj.talks[y]) }; break;
                             case (6): { z6.push(obj.talks[y]) }; break;
                             case (7): { z7.push(obj.talks[y]) }; break;
+                            case (8): { z8.push(obj.talks[y]) }; break;
+                            case (9): { z9.push(obj.talks[y]) }; break;
                         }
                     }
                 }else if((myArray2[key] === obj.talks[y].Location) && (techDay === true) &&(obj.talks[y].Time >= now)){
@@ -61,6 +65,8 @@ $.getJSON("talks.json", function (json) {
                             case (5): { z5.push(obj.talks[y]) }; break;
                             case (6): { z6.push(obj.talks[y]) }; break;
                             case (7): { z7.push(obj.talks[y]) }; break;
+                            case (8): { z8.push(obj.talks[y]) }; break;
+                            case (9): { z9.push(obj.talks[y]) }; break;
                         }
                     }
                 };
@@ -145,6 +151,28 @@ $.getJSON("talks.json", function (json) {
     }
     z7txt += "</table>";
 
+    var z8txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    for (var x = 0; x < z8.length; x++) {
+
+        var aTitle = z8[x].Title;
+        var aTime = z8[x].Time;
+        var aLocation = z8[x].Location;
+
+        z8txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
+    }
+    z8txt += "</table>";
+    
+    var z9txt = '<table><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    for (var x = 0; x < z9.length; x++) {
+
+        var aTitle = z9[x].Title;
+        var aTime = z9[x].Time;
+        var aLocation = z9[x].Location;
+
+        z9txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
+    }
+    z9txt += "</table>";
+
     window.onload = function () {
         document.getElementById("zone1").innerHTML = z1txt;
         document.getElementById("zone2").innerHTML = z2txt;
@@ -153,6 +181,9 @@ $.getJSON("talks.json", function (json) {
         document.getElementById("zone5").innerHTML = z5txt;
         document.getElementById("zone6").innerHTML = z6txt;
         document.getElementById("zone7").innerHTML = z7txt;
+        document.getElementById("zone8").innerHTML = z8txt;
+        document.getElementById("zone9").innerHTML = z9txt;
+
     }
 });
 
