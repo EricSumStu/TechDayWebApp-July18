@@ -202,7 +202,7 @@ img  {
     width: 500%;
     height:100%;
     position: relative;
-    margin:none;
+    margin: auto;
     border-radius:5px; 
 }
 
