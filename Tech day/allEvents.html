@@ -118,9 +118,16 @@
                     <img src="./images/AllEventsSquareBanner.png">
                     </a>
             </div>
-            <input type="text" id="myInput" onkeyup="search()" placeholder="Search by Title">
-       
-        
+           
+<!-- <input type="text" id="myInput"  onkeypress="search()" placeholder="Search by Title">
+    <button id='submit' onclick="search()">Submit</button>-->
+
+    <FORM NAME="myform" ACTION="" METHOD="GET">
+Enter something in the box: <BR>
+<INPUT TYPE="text" id="inputbox" VALUE=""><P>
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="search(inputbox.value)">
+</FORM>
+
 <p id = "demo"></p>
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -133,6 +140,16 @@
     var table = "";
     var modal = document.getElementById('myModal');
      var txt;
+     var techDate = new Date("2018-10-4");
+        var today = new Date();
+        var techDateSmall = techDate.toDateString(0, 10);
+        var todaySmall = today.toDateString(0, 10);
+         console.log(techDateSmall, todaySmall);
+        var now = new Date().getUTCHours() + 1 ;
+        var techDay = false;
+        if(todaySmall === techDateSmall){
+                techDay = true
+        };
     $.getJSON("talks.json", function(json) {
        var obj = json;
         var techDate = new Date("2018-10-4");
@@ -167,27 +184,38 @@
        }});
     };      
 
-//search
-    function search() {
-  // Declare variables 
-  var input, filter, Table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  Table = document.getElementById("demo");
-  tr = table.getElementsByTagName("tr");
-// Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < Table.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    } 
-  }
-}
-    function printEvent(event){
+//search by speaker
+function search(input) {
+  table = "";
+  //input= document.getElementById('myInput').getAttribute(value)
+  console.log(input)
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               if(input === obj.talks[y].Title){
+                   display(obj.talks[y]); 
+               }else{
+                   console.log('no match')
+                   table = "No match found. Please try again!"
+               }
+       }});
+
+    function display(i) {
+     var obj = i;
+    if ((techDay === false)) {
+        console.log('printing');
+        printEvent(obj); 
+     } else if ((techDay === true) && (obj.Time >= now)) {
+        printEvent(obj);
+                }
+    document.getElementById("demo").innerHTML = table;
+            };
+     document.getElementById("demo").innerHTML = table;
+
+};
+
+
+function printEvent(event){
         var txt = "<table class='events'>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
