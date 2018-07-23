@@ -250,7 +250,7 @@ img  {
     margin-right:auto;
     color: black;
     border-collapse: collapse;
-    border: 15px solid #0082f0;
+    border: 5px solid #0082f0;
     font-size:3vw;
     display: block;
     width: auto;
@@ -267,7 +267,7 @@ img  {
 @media only screen and (max-width: 320px) {
 
     body { 
-       font-size: 2em; 
+       font-size: 1.5em; 
     }
  
  }
@@ -297,17 +297,19 @@ td.TWO{
 
 
 button.Fav{
-    align-self: left;
+    
     background-color: #Af78D2;
     border: none;
     color: white;
     padding: 15px 100px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    
     font-size: 20px;
     border-radius: 20px;
-    font-family: 'EricssonHilda-Regular'
+    font-family: 'EricssonHilda-Regular';
+    height:50%;
+    width: 50%;
 
 }
 
@@ -401,6 +403,7 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+<<<<<<< HEAD
 
 
 #mySelect {
@@ -415,6 +418,8 @@ footer {                        /*countdown*/
 #typeSelect {
 
 }
+=======
+>>>>>>> 8ad05a4b5d187eae8b762e8ba8ffc25c82f0d6bc
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -529,3 +534,27 @@ button{
   
 }
 
+<<<<<<< HEAD
+=======
+#mySelect {
+    background-color: #0fc373;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: "EricssonHilda-Regular"
+}
+
+#typeSelect {
+    background-color: #0fc373;
+    color: white;
+    border-radius: 20px;
+    height: 50px;
+    margin-top: 10px;
+    position: relative;
+    font-size: 20px;
+    font-family: "EricssonHilda-Regular"
+}
+>>>>>>> 8ad05a4b5d187eae8b762e8ba8ffc25c82f0d6bc
