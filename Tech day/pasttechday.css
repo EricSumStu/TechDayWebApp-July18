@@ -127,8 +127,11 @@ span
 }
 
 video{
-width: 100%;
+width: 75%;
 height: auto;
+align-self: center;
+display: block;
+margin: 0 auto;
 }
     
 
