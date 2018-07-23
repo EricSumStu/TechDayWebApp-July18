@@ -22,8 +22,8 @@ $.getJSON("talks.json", function (json) {
     var myArray2 = [("Lars Magnus"), ("Reykjavik"), ("Nuuk"), ("Paris"), ("Athlone"),
     ("Demo Room"), ("Kuala Lumpur"), ("Lecture Theatre"), ("Stockholm"), ("Berlin"), ("Helsinki"), ("Rome"),
     ("Wellington"), ("Canberra"), ("Tokyo"), ("Warsaw"), ("Kiev"), ("Moscow"),
-    ("Cape Town"), ("Jakarta", ("Honolulu"), ("Ottowa"), ("Anchorage"), ("Buenos Aires"), 
-    ("Brasilia"), ("Washington DC"), ("V.A. Lab"))];
+    ("Cape Town"), ("Jakarta"), ("Honolulu"), ("Ottowa"), ("Anchorage"), ("Buenos Aires"), 
+    ("Brasilia"), ("Washington DC"), ("V.A. Lab")];
 
     for (var x = 1; x < 10; x++) {
         var techDate = new Date("2018-10-4");
@@ -42,6 +42,7 @@ $.getJSON("talks.json", function (json) {
                 if ((myArray2[key] === obj.talks[y].Location) && (techDay === false) ) {
                     var zone = myArray[key];
                     if (zone == x) {
+                        console.log(x);
                         switch (x) {
                             case (1): { z1.push(obj.talks[y]) }; break;
                             case (2): { z2.push(obj.talks[y]) }; break;
@@ -90,7 +91,7 @@ $.getJSON("talks.json", function (json) {
 
         var aTitle = z2[x].Title;
         var aTime = z2[x].Time;
-        var aLocation = z2[x].Location
+        var aLocation = z2[x].Location;
         
         z2txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }

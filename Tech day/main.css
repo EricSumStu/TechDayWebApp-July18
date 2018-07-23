@@ -197,6 +197,14 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
+#little{
+    display: block;
+    width: 500%;
+    height:100%;
+    position: relative;
+    margin:none;
+    border-radius:5px; 
+}
 
 .Banner {               /*Style for Homepage*/
     display: block;

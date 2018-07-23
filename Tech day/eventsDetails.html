@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             body {font-family: Arial, Helvetica, sans-serif;}
     
@@ -156,6 +158,10 @@
     
     function printEvent(event){
         var txt = "<table>"
+            txt += "<tr>";
+            txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "" + "</td>"
+            txt += "</tr>"
                     txt += "<tr>";
                         txt += "<td>" + "Title:" + "</td>"
                         txt += "<td>" + (event.Title) + "</td>"
