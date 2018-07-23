@@ -213,11 +213,6 @@
             }
         }
 
-<<<<<<< HEAD
-        function display(i) {
-            var obj = i;
-            console.log(i)
-=======
         load();
 
         async function load() {
@@ -233,7 +228,6 @@
             console.log(i)
 
             //for (var y = 0; y < obj.length;y++){
->>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -280,32 +274,10 @@
                 display(event);
                 console.log(event);
             }
-<<<<<<< HEAD
-            
-=======
-
->>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
             document.getElementById("demo").innerHTML = table;
         };
         
-        function bubbleSort(events) {
-            
-                 for (var i =0; i < (events.length - 1); i++) {
-                     for (var j = 0; j < (events.length - i - 1); j++) {
-                        if(events[j].Time > events[j+1].Time) {
-                            var tmp = events[j];  
-                            events[j] = events[j+1]; 
-                            events[j+1] = tmp; 
-                        }
-                    }  
-                 }
 
-                 return events;
-
-<<<<<<< HEAD
-            }
-    
-=======
         function bubbleSort(events) {
             for (var i = 0; i < (events.length - 1); i++) {
                 for (var j = 0; j < (events.length - i - 1); j++) {
@@ -317,14 +289,13 @@
                 }
             }
             return events;
-        }
+        };
 
 
 
 
 
 
->>>>>>> 0287d3932128a080d2e4e37e21e3eba6c8e5982a
 
 
         function printEvent(event) {
