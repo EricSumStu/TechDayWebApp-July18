@@ -385,18 +385,11 @@ p3{                                 /*fav*/
 }
 
 p {                            /*Tech Day is in...*/
-    margin-left: 10px;
-  margin-right: 10px;
-  font-size: 20px;
-  font-family: 'EricssonHilda-Light';
-}
-
-                         /*Tech Day is in... p{
     font-size: 20px;
     text-align: center;
     font-family: 'EricssonHilda-Light';
     font-weight: bold;
-}*/
+}
 
 footer {                        /*countdown*/
     border-style: solid ;
