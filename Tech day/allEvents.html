@@ -159,16 +159,6 @@
         };
     $.getJSON("talks.json", function(json) {
        var obj = json;
-        var techDate = new Date("2018-10-4");
-        var today = new Date();
-        var techDateSmall = techDate.toDateString(0, 10);
-        var todaySmall = today.toDateString(0, 10);
-         console.log(techDateSmall, todaySmall);
-        var now = new Date().getUTCHours() + 1 ;
-        var techDay = false;
-        if(todaySmall === techDateSmall){
-                techDay = true
-        };
         for (var y = 0; y < (obj.talks).length;y++){
              if( (techDay === false)){
                     printEvent(obj.talks[y])
