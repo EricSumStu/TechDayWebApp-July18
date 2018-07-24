@@ -23,7 +23,7 @@
    #main{
     transition:margin-left 0.5s;
   
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -252,7 +252,7 @@ img  {
     color: black;
     border-collapse: collapse;
     border: 5px solid #0082f0;
-    font-size:3vw;
+    font-size:20px;
     display: block;
     width: auto;
     height:auto;
@@ -261,8 +261,11 @@ img  {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
-   word-wrap: break-word; 
-
+    table-layout: fixed;
+   
+}
+table.events td{
+    word-wrap: break-word;
 }
 
 #bioText{
