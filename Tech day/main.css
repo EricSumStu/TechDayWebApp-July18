@@ -384,11 +384,18 @@ p3{                                 /*fav*/
 }
 
 p {                            /*Tech Day is in...*/
+    margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-family: 'EricssonHilda-Light';
+}
+
+                         /*Tech Day is in... p{
     font-size: 20px;
     text-align: center;
     font-family: 'EricssonHilda-Light';
     font-weight: bold;
-}
+}*/
 
 footer {                        /*countdown*/
     border-style: solid ;
@@ -418,7 +425,42 @@ button{
     font-family:'EricssonHilda-Regular';
     color:white;
 }
+/*All Page */
+#searchSelect { 
+    display: inline-block;
+    width: 25%;
+    height:80%;
+    border-radius:20px; 
+    padding:10px;
+    margin-right:-4px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none;
+}
 
+#searchButton{
+    display: inline-block;
+    width: 25%;
+    height:80%;
+    border-radius:20px; 
+    padding:10px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none;
+}
+#inputbox{
+    display: inline-block;
+    width: 45%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:10px;
+    border: solid 1px gray;
+    font-family:'EricssonHilda-Regular';
+
+}
 .zoneOne{
     background-color: #94b32a;
     font-family: "EricssonHilda-Regular";  
@@ -514,6 +556,7 @@ button{
 }
 
 #mySelect {
+    display: inline-block;
     background-color: #0fc373;
     color: white;
     border-radius: 20px;
@@ -521,7 +564,8 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
 
 #typeSelect {
@@ -532,6 +576,7 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
 

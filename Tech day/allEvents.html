@@ -124,15 +124,14 @@
 
 <FORM NAME="myform" ACTION="" METHOD="GET">
     
- <select id="mySelect" >
+ <select id="searchSelect" >
                 <option value="All">Search by
                     <option value="Title">Event Title
                         <option value="Host">Host/Speaker
                                 <option value="Theme">Theme
     
             </select>
-<INPUT TYPE="text" id="inputbox" VALUE=""><P>
-<INPUT TYPE="button" NAME="button" Value="Click" onClick="search(inputbox.value, mySelect.value)">
+<INPUT TYPE="text" id="inputbox" VALUE=""><INPUT TYPE="button" id="searchButton" Value="Click to Search" onClick="search(inputbox.value, searchSelect.value)">
 </FORM>
 
 <p id = "demo"></p>
@@ -176,7 +175,6 @@
                    getEvents(obj.talks[y]);
                    console.log("ADDED");
                }else{
-                   console.log(ID);
                }
        }});
     };      
@@ -207,18 +205,15 @@ function search(input, valueInDropDown){
 //search by Title
 function searchTitle(input) {
   table = "";
-  console.log(input)
  $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
                var titleCaps = (obj.talks[y].Title).toUpperCase();
                var inputCaps = input.toUpperCase();
               var searchResult = titleCaps.search(inputCaps)
-              console.log(searchResult)
                if(searchResult > -1){
                    display(obj.talks[y]); 
                }else{
-                   console.log('no match')
                }
        }});
     document.getElementById("demo").innerHTML = table;
@@ -226,18 +221,15 @@ function searchTitle(input) {
 //search by Host
 function searchHost(input) {
   table = "";
-  console.log(input)
  $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
                var hostCaps = (obj.talks[y].Host).toUpperCase();
                var inputCaps = input.toUpperCase();
               var searchResult = hostCaps.search(inputCaps)
-              console.log(searchResult)
                if(searchResult > -1){
                    display(obj.talks[y]); 
                }else{
-                   console.log('no match')
                }
        }});
     document.getElementById("demo").innerHTML = table;
@@ -246,18 +238,15 @@ function searchHost(input) {
 //search by Theme
 function searchTheme(input) {
   table = "";
-  console.log(input)
  $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
                var themeCaps = (obj.talks[y].Theme).toUpperCase();
                var inputCaps = input.toUpperCase();
               var searchResult = themeCaps.search(inputCaps)
-              console.log(searchResult)
                if(searchResult > -1){
                    display(obj.talks[y]); 
                }else{
-                   console.log('no match')
                }
        }});
     document.getElementById("demo").innerHTML = table;
@@ -266,7 +255,6 @@ function searchTheme(input) {
  function display(i) {
      var obj = i;
     if ((techDay === false)) {
-        console.log('printing');
         printEvent(obj); 
      } else if ((techDay === true) && (obj.Time >= now)) {
         printEvent(obj);
