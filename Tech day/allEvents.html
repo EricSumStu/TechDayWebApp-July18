@@ -192,9 +192,9 @@ function search(input) {
         for (var y = 0; y < (obj.talks).length;y++){
                var titleCaps = (obj.talks[y].Title).toUpperCase();
                var inputCaps = input.toUpperCase();
-               console.log(inputCaps);
-               console.log(titleCaps);
-               if(inputCaps == titleCaps){
+              var searchResult = titleCaps.search(inputCaps)
+              console.log(searchResult)
+               if(searchResult > 0){
                    display(obj.talks[y]); 
                }else{
                    console.log('no match')
