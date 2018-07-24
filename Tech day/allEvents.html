@@ -186,12 +186,15 @@
 //search by speaker
 function search(input) {
   table = "";
-  //input= document.getElementById('myInput').getAttribute(value)
   console.log(input)
  $.getJSON("talks.json", function(json) {
         var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
-               if(input === obj.talks[y].Title){
+               var titleCaps = (obj.talks[y].Title).toUpperCase();
+               var inputCaps = input.toUpperCase();
+               console.log(inputCaps);
+               console.log(titleCaps);
+               if(inputCaps == titleCaps){
                    display(obj.talks[y]); 
                }else{
                    console.log('no match')
