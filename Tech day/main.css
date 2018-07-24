@@ -252,7 +252,7 @@ img  {
     color: black;
     border-collapse: collapse;
     border: 5px solid #0082f0;
-    font-size:3vw;
+    
     display: block;
     width: auto;
     height:auto;
@@ -263,6 +263,14 @@ img  {
     padding: 20px;
     
 
+}
+
+
+
+@media screen and (max-width:350px){
+    table.events{
+       font-size: 30px;
+    }
 }
 
 
