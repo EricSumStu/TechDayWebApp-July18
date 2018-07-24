@@ -145,9 +145,6 @@
             </a>
         </div>
 
-        <!-- <input type="text" id="myInput"  onkeypress="search()" placeholder="Search by Title">
-    <button id='submit' onclick="search()">Submit</button>-->
-
         <FORM NAME="myform" ACTION="" METHOD="GET">
 
             <select id="searchSelect">
@@ -279,14 +276,30 @@
                     var inputCaps = input.toUpperCase();
                     var searchResult = themeCaps.search(inputCaps)
                     if (searchResult > -1) {
-                        display(obj.talks[y]);
+                        displaySearch(obj.talks[y]);
                     } else {
-                    }
+                    };
                 }
+                console.log(resultDisplay)
+                if(resultDisplay === ""){
+                var txt = "<table class='events'>"
+                txt += "<tr>";
+                txt += "<td>" + "<img id='little' src ='./images/favicon/android-icon-144x144.png'>" + "</td>"
+                txt += "<td>" + "" + "</td>"
+                txt += "</tr>"
+                txt += "<tr>";
+                txt += "<td>" + "Sorry" + "</td>"
+                txt += "<td>" + "Nothing matches your search please try again" + "</td>"
+                txt += "</tr>"
+                txt += "</table>"
+                table += txt 
+                document.getElementById("demo").innerHTML = table;
+            }else{};
             });
+            
             document.getElementById("demo").innerHTML = table;
         };
-
+var resultDisplay = ""
         function display(i) {
             var obj = i;
             if ((techDay === false)) {
@@ -294,6 +307,15 @@
             } else if ((techDay === true) && (obj.Time >= now)) {
                 printEvent(obj);
             }
+        };
+        function displaySearch(i) {
+            var obj = i;
+            if ((techDay === false)) {
+                printEvent(obj);
+            } else if ((techDay === true) && (obj.Time >= now)) {
+                printEvent(obj);
+            }
+            resultDisplay = table
             document.getElementById("demo").innerHTML = table;
         };
         function printEvent(event) {
