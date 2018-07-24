@@ -229,6 +229,7 @@
     
 
         function filterThemes() {
+            document.getElementById("typeSelect").value = 'Type';
             var valueInDropdown = document.getElementById("mySelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
@@ -249,6 +250,7 @@
         };
 
         function filterType() {
+            document.getElementById("mySelect").value = 'All';
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
