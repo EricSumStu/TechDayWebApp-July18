@@ -843,6 +843,36 @@ button{
             border-radius:20px; 
         }
 
+.countdownGrid {
+    display: grid;
+    grid-template-rows: 50% 50%;                  
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #FF3232;
+    color: white;
+    border-radius: 20px;
+    width: 90%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.countdown1 {
+    font-size: 35px;
+    font-family: 'EricssonHilda-Regular';
+    margin: 10px;
+}
+
+.countdown2 {
+    font-size: 35px;
+    font-family: 'EricssonHilda-Light';
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
         .grid3 {                            
             background-color: #0FC373 ;
             color: white;
