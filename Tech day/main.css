@@ -561,7 +561,8 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
 
 #typeSelect {
@@ -572,5 +573,6 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
