@@ -190,7 +190,16 @@ function search(input, valueInDropDown){
   }else if(valueInDropDown === 'Theme' ){
     searchTheme(input)
   }else if(valueInDropDown === 'All'){
-
+    $.getJSON("talks.json", function(json) {
+       var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+             if( (techDay === false)){
+                    printEvent(obj.talks[y])
+            }else if((techDay === true)  && (obj.talks[y].Time >= now)){
+                    printEvent(obj.talks[y])  
+             }};
+            document.getElementById("demo").innerHTML = table;
+        });
   };
 
 };
