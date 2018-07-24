@@ -84,7 +84,7 @@
 
     
     <FORM NAME="myform" ACTION="" METHOD="GET">
-    <h2>Add Event</h2>
+    <p>Add Event</p>
     <div>
         <p>ID</p>
         <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
@@ -121,7 +121,7 @@
         <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
     </div>
     <div>
-        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
+        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
     </div>
 
     </FORM>
@@ -129,18 +129,15 @@
 
    
     <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
-    <h2>Update Event</h2>
+    <p>Update Event</p>
                 <div>
-                <select id="updateSelect">
-                    <option value="All">Find By
-                        <option value="Title">Event Title
-                            <option value="Host">Host/Speaker
-                                <option value="Theme">Theme
-    
-                </select>
                 <div>
                     <p>Title</p>
                     <INPUT TYPE="text" id="inputboxUTitle" VALUE="" placeholder="Event Name">
+                </div>
+                <div>
+                    <p>ID</p>
+                    <INPUT TYPE="text" id="inputboxUID" VALUE="" placeholder="A Unique Number">
                 </div>
                 <div>
                     <p>Host</p>
@@ -170,15 +167,18 @@
                     <INPUT TYPE="text" id="inputboxUCategory" VALUE="" placeholder="Type e.g Talk, Demo">
                 </div>
                 <div>
-                    <INPUT TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
+                    <INPUT TYPE="button" id="findButton" Value="Find Event" onClick="findEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
+                    <INPUT TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxUTitle.value, inputboxUID.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
                 </div>
                 <div>
-                <h2>Remove Event</h2>
+                <p>Remove Event</p>
     
                 <INPUT TYPE="button" id="removeButton" Value="Click to Remove" onClick="">
                 </div>
                 </FORM>
-          
+                <div></div>
+                        <INPUT TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
+                        </div>
     
                 
    
@@ -187,6 +187,7 @@
             clearEvents();
             getEvents();
         });
+       
         function addNewEvent(newID, title, host, bio, location, time, summary, theme, category){
             //var lastID = db.events.get();
            // var count = lastID.value
@@ -199,6 +200,32 @@
 
         }
         
+        function findEvent(title, id, host, bio, location, time, summary, theme, category){
+            db.events.where('Title').equals(title).each(p => display(p))
+             console.log(title)
+            function display(p){
+            document.getElementById('inputboxUID').value = p.ID
+            document.getElementById('inputboxUHost').value = p.Host
+            document.getElementById('inputboxUBiography').value = p.Bio
+            document.getElementById('inputboxULocation').value = p.Location
+            document.getElementById('inputboxUTime').value = p.Time
+            document.getElementById('inputboxUSummary').value = p.Summary
+            document.getElementById('inputboxUTheme').value = p.Theme
+            document.getElementById('inputboxUCategory').value = p.Categories
+            };
+            
+        }
+function remove(talk){
+               db.events.delete(talk);
+            }
+
+        function updateEvent(title, id, host, bio, location, time, summary, theme, category){
+           db.events.where('Title').equals(title).each(p => removeEvent(p))
+           
+            //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+             //}
+            //addEvent(talk)
+        };
        
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
