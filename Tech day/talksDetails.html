@@ -161,9 +161,9 @@
                 techDay = true
         };
         for (var y = 0; y < (obj.talks).length;y++){
-             if((obj.talks[y].Catergories === "Talk") && (techDay === false)){
+             if((obj.talks[y].Categories === "Talk") && (techDay === false)){
                     printEvent(obj.talks[y])
-            }else if((obj.talks[y].Catergories === "Talk") && (techDay === true)  && (obj.talks[y].Time >= now)){
+            }else if((obj.talks[y].Categories === "Talk") && (techDay === true)  && (obj.talks[y].Time >= now)){
                     printEvent(obj.talks[y])  
              }};
             document.getElementById("demo").innerHTML = table;
