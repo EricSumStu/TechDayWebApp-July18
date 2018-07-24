@@ -696,6 +696,9 @@ button{
             text-align: center;
             font-family:'EricssonHilda-Regular';
             color: white;
+            position: absolute;
+            padding-left:710px;
+            font-size: 17px;        
         }
 
         #submit{
