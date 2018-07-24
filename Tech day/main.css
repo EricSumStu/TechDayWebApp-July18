@@ -696,15 +696,14 @@ button{
         
         /* Set a style for all buttons */
         button {
-            font-family: 'EricssonHilda-Bold';
-            color:black;
-            font-size: 1em;
-            background: white;
-            padding: .5em 1em;
-            text-align: center;
-            border: solid 2px white;
-            cursor: pointer;
-            width: 100%;
+            position:sticky;
+            width: 90%;
+            height:80%;
+            position:sticky;
+            border-radius:20px; 
+            padding:30px;
+            font-family:'EricssonHilda-Regular';
+            color:white;
         }
         
         button:hover {
