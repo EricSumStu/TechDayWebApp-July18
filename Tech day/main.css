@@ -227,7 +227,7 @@ img  {
 #about{
     background-image: url("/images/1111.jpg");
     background-repeat: no-repeat;
-    background-size: 2000px 2000px;
+    background-size: 2000px 1750px;
     border-style: solid;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -235,11 +235,10 @@ img  {
     border-bottom-left-radius: 20px;
     padding-left: 25px;
     padding-right: 25px;
-    margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: auto;;
+    margin-top: 5px;
     font-size: 25px;
-    text-align: left;
+    text-align: center;
     color: white;
     float: left;
     font-family: 'EricssonHilda-Regular';
@@ -511,8 +510,8 @@ button{
     width: 90%;
     height:100%;
     border-radius:20px; 
-    padding:15px;
-    margin-right:-4px;
+    padding:5px;
+    margin-right:0px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
@@ -525,7 +524,7 @@ button{
     width: 90%;
     height:100%;
     border-radius:20px; 
-    padding:15px;
+    padding:5px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
@@ -536,10 +535,11 @@ button{
 #inputbox{
     display: inline-block;
     width: 90%;
-    height:70%;
+    height:85%;
     position: relative;
     border-radius:20px; 
-    padding: 7px;
+    padding: 5px;
+    padding-bottom: 2%;
     border: solid 1px gray;
     font-family:'EricssonHilda-Regular';
     font-size: 20px;
@@ -640,11 +640,11 @@ button{
 
 #mySelect {
     display: inline-block;
-    background-color: #0fc373;
+    background-color: #0082f0;
     color: white;
     border-radius: 20px;
     height: auto;
-    width: auto;
+    width: 50%;
     max-width: 100%;
     margin-top: 10px;
     position: relative;
@@ -654,11 +654,11 @@ button{
 }
 
 #typeSelect {
-    background-color: #0fc373;
+    background-color: #0082f0;
     color: white;
     border-radius: 20px;
     height: auto;
-    width: auto;
+    width: 49%;
     max-width: 100%;
     margin-top: 10px;
     position: relative;
