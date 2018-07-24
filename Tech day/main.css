@@ -374,8 +374,7 @@ body {text-align:left;}
   .center {                    /*fav*/
     margin:auto ;
     width: 40%;
-    border: 4px solid black;
-    margin-top: 200px;
+    margin-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 0px;
@@ -851,6 +850,15 @@ button{
     margin-left: 5px;
     margin-right: 5px;
 }
+
+video {
+    width: 100%;
+    width: 75%;
+    height: auto;
+    align-self: center;
+    display: block;
+    margin: 0 auto;
+    }
 
 .grid2 {
     display: grid;
