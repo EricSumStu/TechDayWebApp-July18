@@ -201,7 +201,7 @@ img  {
 #little{
     display: block;
     width: 500%;
-    height:100%;
+    height:60%;
     position: relative;
     margin: auto;
     border-radius:5px; 
@@ -244,24 +244,7 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table.events {  
-    text-align: left;        /*for demodetails*/
-    margin-left:auto; 
-    margin-right:auto;
-    color: black;
-    border-collapse: collapse;
-    border: 5px solid #0082f0;
-    font-size: 40px;
-    display: block;
-    width: auto;
-    height:auto;
-    position: relative;
-    margin: auto;
-    border-radius:35px; 
-    font-family: 'EricssonHilda-Regular';
-    padding: 20px;
-} 
-
+ 
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -319,7 +302,7 @@ button.Fav{
     border: none;
     color: white;
     padding: 15px 100px;
-    text-align: center;
+    text-align: right;
     text-decoration: none; 
     font-size: 20px;
     border-radius: 20px;
@@ -709,15 +692,13 @@ button{
     }
         
 /* Set a style for all buttons */
-        button {
-            position:sticky;
-            width: 80%;
-            height:90%;
-            border-radius:20px; 
+        .loginButton { 
             text-align: center;
             font-family:'EricssonHilda-Regular';
-            background-color: transparent;
             color: white;
+            position: absolute;
+            padding-left:710px;
+            font-size: 17px;        
         }
 
         #submit{
@@ -784,6 +765,7 @@ button{
             margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
             width: 90%; /* Could be more or less, depending on screen size */
+            border-radius: 20px;
         }
         
         /* The Close Button (x) */

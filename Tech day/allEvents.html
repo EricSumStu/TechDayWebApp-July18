@@ -287,37 +287,37 @@
             document.getElementById("demo").innerHTML = table;
         };
         function printEvent(event) {
-            var txt = "<table class='events'>"
+            var txt = "<table>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
             txt += "</tr>"
-            txt += "<tr>";
-            txt += "<td>" + "Title:" + "</td>"
-            txt += "<td>" + (event.Title) + "</td>"
-            txt += "</tr>"
-            txt += "<tr>";
-            txt += "<td>" + "Time:" + "</td>"
-            txt += "<td>" + (event.Time) + "</td>"
-            txt += "</tr>"
-            txt += "<tr>";
-            txt += "<td>" + "Host:" + "</td>"
-            txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value=" + event.ID + " onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
-            txt += "</tr>"
-            txt += "<tr>";
-            txt += "<td>" + "Location:" + "</td>"
-            txt += "<td>" + (event.Location) + "</td>"
-            txt += "</tr>"
-            txt += "<tr>";
-            txt += "<td>" + "Summary:" + "</td>"
-            txt += "<td>" + (event.Summary) + "</td>"
-            txt += "</tr>"
-            txt += '<tr>';
-            txt += "<td>" + "" + "</td>"
-            txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=addFavourite(value)>Add to Favourites</button>" + "</td>"
-            txt += "</tr>"
-            txt += "</table><br>"
-            table += txt;
+                    txt += "<tr>";
+                        txt += "<td>" + "Title:" + "</td>"
+                        txt += "<td>" + (event.Title) + "</td>"
+                    txt+= "</tr>" 
+                    txt += "<tr>";   
+                            txt += "<td>" + "Time:" + "</td>"
+                        txt += "<td>" + (event.Time) + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                            txt += "<td>" + "Host:" + "</td>"
+                         txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value="+event.ID+" onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt+= "</tr>"   
+                    txt += "<tr>"; 
+                        txt += "<td>" + "Location:" + "</td>"
+                     txt += "<td>" + (event.Location) + "</td>"
+                txt+= "</tr>"  
+                    txt += "<tr>"; 
+                            txt += "<td>" +  "Summary:" + "</td>"
+                            txt += "<td class='TWO'>" + (event.Summary) + "</td>"
+                     txt+= "</tr>"
+                     txt += '<tr>';
+                         txt += "<td>" + "" + "</td>"  
+                         txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value="+event.ID+" onclick=addFavourite(value)>Favourite</button>" + "</td>"    
+                    txt+= "</tr>"
+                    txt += "</table><br>" 
+                        table += txt;
         }
         function openBiography(ID) {
             modal.style.display = "block";
