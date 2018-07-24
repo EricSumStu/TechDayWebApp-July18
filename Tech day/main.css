@@ -690,7 +690,7 @@ button{
     }
         
         /* Set a style for all buttons */
-        button {
+        .loginButton {
             font-family: 'EricssonHilda-Bold';
             color:black;
             font-size: 1em;
@@ -702,7 +702,7 @@ button{
             width: 100%;
         }
         
-        button:hover {
+        .loginButton:hover {
             opacity: 0.8;
         }
         
