@@ -470,6 +470,7 @@ button{
     height:80%;
     border-radius:20px; 
     padding:10px;
+    margin-left:-4px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
