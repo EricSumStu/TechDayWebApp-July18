@@ -123,8 +123,16 @@
     <button id='submit' onclick="search()">Submit</button>-->
 
 <FORM NAME="myform" ACTION="" METHOD="GET">
+    
+ <select id="mySelect" >
+                <option value="All">Search by
+                    <option value="Title">Event Title
+                        <option value="Host">Host/Speaker
+                                <option value="Theme">Theme
+    
+            </select>
 <INPUT TYPE="text" id="inputbox" VALUE=""><P>
-<INPUT TYPE="button" NAME="button" Value="Click" onClick="search(inputbox.value)">
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="search(inputbox.value, mySelect.value)">
 </FORM>
 
 <p id = "demo"></p>
@@ -183,8 +191,22 @@
        }});
     };      
 
-//search by speaker
-function search(input) {
+//search 
+function search(input, valueInDropDown){
+  if(valueInDropDown === 'Title' ){
+    searchTitle(input)
+  }else if(valueInDropDown === 'Host' ){
+    searchHost(input)
+  }else if(valueInDropDown === 'Theme' ){
+    searchTheme(input)
+  }else if(valueInDropDown === 'All'){
+
+  };
+
+};
+
+//search by Title
+function searchTitle(input) {
   table = "";
   console.log(input)
  $.getJSON("talks.json", function(json) {
@@ -200,8 +222,49 @@ function search(input) {
                    console.log('no match')
                }
        }});
+    document.getElementById("demo").innerHTML = table;
+};
+//search by Host
+function searchHost(input) {
+  table = "";
+  console.log(input)
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               var hostCaps = (obj.talks[y].Host).toUpperCase();
+               var inputCaps = input.toUpperCase();
+              var searchResult = hostCaps.search(inputCaps)
+              console.log(searchResult)
+               if(searchResult > -1){
+                   display(obj.talks[y]); 
+               }else{
+                   console.log('no match')
+               }
+       }});
+    document.getElementById("demo").innerHTML = table;
+};
 
-    function display(i) {
+//search by Theme
+function searchTheme(input) {
+  table = "";
+  console.log(input)
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               var themeCaps = (obj.talks[y].Theme).toUpperCase();
+               var inputCaps = input.toUpperCase();
+              var searchResult = themeCaps.search(inputCaps)
+              console.log(searchResult)
+               if(searchResult > -1){
+                   display(obj.talks[y]); 
+               }else{
+                   console.log('no match')
+               }
+       }});
+    document.getElementById("demo").innerHTML = table;
+};
+
+ function display(i) {
      var obj = i;
     if ((techDay === false)) {
         console.log('printing');
@@ -211,11 +274,6 @@ function search(input) {
                 }
     document.getElementById("demo").innerHTML = table;
             };
-document.getElementById("demo").innerHTML = table;
-
-};
-
-
 function printEvent(event){
         var txt = "<table class='events'>"
             txt += "<tr>";
