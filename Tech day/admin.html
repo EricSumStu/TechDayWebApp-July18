@@ -121,7 +121,7 @@
         <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
     </div>
     <div>
-        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
+        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
     </div>
 
     </FORM>
@@ -167,8 +167,8 @@
                     <INPUT TYPE="text" id="inputboxUCategory" VALUE="" placeholder="Type e.g Talk, Demo">
                 </div>
                 <div>
-                    <INPUT TYPE="button" id="findButton" Value="Update Event" onClick="findEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
-                    <INPUT TYPE="button" id="UpdateButton" Value="Find Event" onClick="updateEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
+                    <INPUT TYPE="button" id="findButton" Value="Find Event" onClick="findEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
+                    <INPUT TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxUTitle.value, inputboxUID.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
                 </div>
                 <div>
                 <p>Remove Event</p>
@@ -215,12 +215,16 @@
             };
             
         }
+function remove(talk){
+               db.events.delete(talk);
+            }
 
-        function updateEvent(){
-           // db.events.where('Title').equals(title).each(p => update(p))
-            //function update(p){
-
-            //};
+        function updateEvent(title, id, host, bio, location, time, summary, theme, category){
+           db.events.where('Title').equals(title).each(p => removeEvent(p))
+           
+            //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+             //}
+            //addEvent(talk)
         };
        
         function openSlideMenu() {
