@@ -640,31 +640,30 @@ button{
 
 #mySelect {
     display: inline-block;
+    width: 100%;
+    height:100%;
+    border-radius:20px; 
+    padding:5px;
+    margin-right:0px;
+    font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border-radius: 20px;
-    height: auto;
-    width: 50%;
-    max-width: 100%;
-    margin-top: 10px;
-    position: relative;
+    border: none; 
     font-size: 20px;
-    font-family: "EricssonHilda-Regular";
-    border-color: white;
 }
 
 #typeSelect {
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    border-radius:20px; 
+    padding:5px;
+    margin-right:0px;
+    font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border-radius: 20px;
-    height: auto;
-    width: 49%;
-    max-width: 100%;
-    margin-top: 10px;
-    position: relative;
+    border: none; 
     font-size: 20px;
-    font-family: "EricssonHilda-Regular";
-    border-color: white;
 }
 
 /*login*/
@@ -1041,4 +1040,15 @@ button{
           to {opacity: 1}
         }
 
+        .favGrid {                     /*favpage*/
+            display: grid;
+            padding-top: 5px;
+             grid-template-columns: 100%;
+            grid-auto-rows: auto ; 
+            grid-row-gap: 5px; 
+            grid-template-areas: "top";
+            text-align: center;
+            
         
+            
+        }        
