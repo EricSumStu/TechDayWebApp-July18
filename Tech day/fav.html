@@ -215,21 +215,9 @@
             }
         }
 
-        load();
-
-        async function load() {
-            await db.favourites.each(p => list.push(p));
-            var sortedList = bubbleSort(list);
-            for (i = 0; i < sortedList.length; i++) {
-                display(sortedList[i]);
-            }
-        }
-
         function display(i) {
             var obj = i;
             console.log(i)
-
-            //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -240,14 +228,13 @@
 
     
 
-        async function filterThemes() {
+        function filterThemes() {
             var valueInDropdown = document.getElementById("mySelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
             for(i=0; i<sortedList.length;i++){
                 displayByTheme(sortedList[i], valueInDropdown);
             }
-            //db.favourites.each(event =>  displayByTheme(event, valueInDropdown));
             
             
         }
@@ -292,14 +279,6 @@
             }
             return events;
         };
-
-
-
-
-
-
-
-
         function printEvent(event) {
             var txt = "<table class='events'>"
             txt += "<tr>";
