@@ -305,10 +305,11 @@ img  {
     cursor: pointer;
 }
 td.ONE{
-    padding-top: 25px;
+    padding-top: 20px;
 }
 td.TWO{
-    text-align: justify;
+    text-align: left;
+    padding-right: 10%;
 }
 
 
