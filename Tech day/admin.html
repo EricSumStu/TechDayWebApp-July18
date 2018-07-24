@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,115 +10,160 @@
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="admindb.js"></script>
     <link href="main.css" rel="stylesheet" type="text/css" />
-    
+
 </head>
+
 <body>
-        <nav class="navbar">
-                <span class="open-slide">
-                    <a href="#" onclick="openSlideMenu()">
-                        <svg width="30" height="30">
-                            <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-                            <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-                            <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-                        </svg>
-                    </a>
-                </span>
-        
-                <ul class="navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="Events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="Map.html">Map</a>
-                    </li>
-                    <li>
-                        <a href="upcomingEvents.html">Upcoming Events</a>
-                    </li>
-                    <li>
-                        <a href="fav.html">Favourites</a>
-                    </li>
-                    <li>
-                        <a href="pasttechday.html">Past Tech Days</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                </ul>
-        
-        
-                <div id="side-menu" class="side-nav">
-        
-                    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-                    <ul>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="Events.html">Events</a>
-                        </li>
-                        <li>
-                            <a href="Map.html">Map</a>
-                        </li>
-                        <li>
-                            <a href="upcomingEvents.html">Upcoming Events</a>
-                        </li>
-                        <li>
-                            <a href="fav.html">Favourites</a>
-                        </li>
-                        <li>
-                            <a href="pasttechday.html">Past Tech Days</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                    </ul>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbar-nav">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="Events.html">Events</a>
+            </li>
+            <li>
+                <a href="Map.html">Map</a>
+            </li>
+            <li>
+                <a href="upcomingEvents.html">Upcoming Events</a>
+            </li>
+            <li>
+                <a href="fav.html">Favourites</a>
+            </li>
+            <li>
+                <a href="pasttechday.html">Past Tech Days</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+        </ul>
+
+
+        <div id="side-menu" class="side-nav">
+
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Events.html">Events</a>
+                </li>
+                <li>
+                    <a href="Map.html">Map</a>
+                </li>
+                <li>
+                    <a href="upcomingEvents.html">Upcoming Events</a>
+                </li>
+                <li>
+                    <a href="fav.html">Favourites</a>
+                </li>
+                <li>
+                    <a href="pasttechday.html">Past Tech Days</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    </nav>
+    <br>
+
+    <h2>Add Event</h2>
+    <FORM NAME="myform" ACTION="" METHOD="GET"></FORM>
+    <div>
+        <p>Title</p>
+        <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
+    </div>
+    <div>
+        <p>Host</p>
+        <INPUT TYPE="text" id="inputboxHost" VALUE="" placeholder="Host Name">
+    </div>
+    <div>
+    <p>Biography</p>
+     <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
+    </div>
+    <p>Location</p>
+    <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
+    </div>
+    <div>
+        <p>Time</p>
+        <INPUT TYPE="text" id="inputboxTime" VALUE="" placeholder="Hour only">
+    </div>
+    <div>
+        <p>Summary</p>
+        <INPUT TYPE="text" id="inputboxSummary" VALUE="" placeholder="Description of Event">
+    </div>
+    <div>
+        <p>Theme</p>
+        <INPUT TYPE="text" id="inputboxTheme" VALUE="" placeholder="Theme e.g 5G">
+    </div>
+    <div>
+        <p>Category</p>
+        <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
+    </div>
+    <div>
+        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent()">
+    </div>
+
+    </FORM>
+
+
+    <h2>Update Event</h2>
+    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
+    <div class='searchGrid'>
+                <div>
+                <select id="updateSelect">
+                    <option value="All">Search by
+                        <option value="Title">Event Title
+                            <option value="Host">Host/Speaker
+                                <option value="Theme">Theme
+    
+                </select>
                 </div>
-            </nav>
-            </div>
-            </nav>
-            <br>
-
-        <h2>Add Event</h2>
-        <FORM NAME="myform" ACTION="" METHOD="GET"></FORM>
-                    <div>
-                        <p>Title</p>
-                    <INPUT TYPE="text" id="inputboxTitle" VALUE=""  placeholder= "Search...">
-                    </div>
-                    <div>
-                        <p>Host</p>
-                    <INPUT TYPE="text" id="inputbox" VALUE=""  placeholder= "Search...">
-                    </div>
-                    <div>
-                            <p>Location</p>
-                        <INPUT TYPE="text" id="inputbox" VALUE=""  placeholder= "Search...">
-                        </div>
-                        <div>
-                                <p>Time</p>
-                            <INPUT TYPE="text" id="inputbox" VALUE=""  placeholder= "Search...">
-                            </div>
-                            <div>
-                                    <p>Summary</p>
-                                <INPUT TYPE="text" id="inputbox" VALUE=""  placeholder= "Search...">
-                                </div>
-                                <div>
-                                        <p>Theme</p>
-                                    <INPUT TYPE="text" id="inputbox" VALUE=""  placeholder= "Search...">
-                                    </div>
-                    <div>
-                    <INPUT TYPE="button" id="searchButton" Value="Add Event" onClick="()">
-                    </div>
-              
-         </FORM>
-
-
-        <h2>Update Event</h2>
-        <h2>Remove Event</h2>
-        <script> 
-        window.addEventListener('load', e=>{
-            clearEvents();   
+                <div>
+                <INPUT TYPE="text" id="inputboxUpdate" VALUE=""  placeholder= "Search...">
+                </div>
+                <div>
+                <INPUT TYPE="button" id="updateButton" Value="Click to Update" onClick="">
+                </div>
+    </div>  </FORM>
+          
+    <h2>Remove Event</h2>
+    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
+    <div class='searchGrid'>
+                <div>
+                <select id="updateSelect">
+                    <option value="All">Search by
+                        <option value="Title">Event Title
+                            <option value="Host">Host/Speaker
+                                <option value="Theme">Theme
+    
+                </select>
+                </div>
+                <div>
+                <INPUT TYPE="text" id="inputboxUpdate" VALUE=""  placeholder= "Search...">
+                </div>
+                <div>
+                <INPUT TYPE="button" id="updateButton" Value="Click to Update" onClick="">
+                </div>
+    </div>  </FORM>
+    <script> 
+        window.addEventListener('load', e => {
+            clearEvents();
             getEvents();
         });
         function openSlideMenu() {
@@ -128,6 +174,7 @@
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
         }
-        </script>   
+    </script>
 </body>
+
 </html>

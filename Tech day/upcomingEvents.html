@@ -173,7 +173,7 @@
         <script>
             var table = "";
             var txt
-            var techDate = new Date("2018-7-20");
+            var techDate = new Date("2018-10-4");
             var today = new Date();
             var techDateSmall = techDate.toDateString(0, 10);
             var todaySmall = today.toDateString(0, 10);
@@ -211,11 +211,13 @@
                     } else if (techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime) {
                         console.log("Tech Day is Today and event is this hour")
                         printEvent(obj.talks[y])
+                    }else if(techDay === true && nowTime < 8 && obj.talks[y].Time === 9 || obj.talks[y].Time === 10 ){
+                        printEvent(obj.talks[y])
                     }
                 }
                 document.getElementById("demo").innerHTML = table;
 
-            });
+            })
             function printEvent(event) {
                 var txt = "<table class='events'>"
                     txt += "<tr>";
