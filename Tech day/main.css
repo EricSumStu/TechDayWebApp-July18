@@ -692,14 +692,9 @@ button{
     }
         
 /* Set a style for all buttons */
-        button {
-            position:sticky;
-            width: 80%;
-            height:90%;
-            border-radius:20px; 
+        .loginButton { 
             text-align: center;
             font-family:'EricssonHilda-Regular';
-            background-color: transparent;
             color: white;
         }
 
@@ -767,6 +762,7 @@ button{
             margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
             width: 90%; /* Could be more or less, depending on screen size */
+            border-radius: 20px;
         }
         
         /* The Close Button (x) */
