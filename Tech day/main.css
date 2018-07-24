@@ -260,10 +260,7 @@ img  {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
-    
-
 } 
-
 
 #bioText{
     font-family: 'EricssonHilda-Regular';
@@ -322,8 +319,7 @@ button.Fav{
     color: white;
     padding: 15px 100px;
     text-align: center;
-    text-decoration: none;
-    
+    text-decoration: none; 
     font-size: 20px;
     border-radius: 20px;
     font-family: 'EricssonHilda-Regular';
@@ -715,19 +711,29 @@ button{
     }
         
 /* Set a style for all buttons */
-        button.login {
+        button {
             position:sticky;
-            width: 90%;
-            height:80%;
-            position:sticky;
+            width: 80%;
+            height:90%;
             border-radius:20px; 
-            padding:30px;
+            text-align: center;
             font-family:'EricssonHilda-Regular';
-            background-color:white;
+            background-color: transparent;
+            color: white;
+        }
+
+        #submit{
+            position:sticky;
+            width: 80%;
+            height:90%;
+            border-radius:20px; 
+            text-align: center;
+            font-family:'EricssonHilda-Regular';
+            background-color: transparent;
             color: black;
         }
-        
-        buttom.login:hover {
+
+        button:hover {
             opacity: 0.8;
         }
         
