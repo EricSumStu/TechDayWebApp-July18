@@ -21,62 +21,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* The Modal (background) */
-
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content */
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        /* The Close Button */
-
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="main.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -164,7 +108,7 @@
         <main id="count" class='count'></main>
         <p id="demo"></p>
         <div id="myModal" class="modal">
-            <div class="modal-content">
+            <div class="modal-content1">
                 <span class="close">&times;</span>
                 <p id="bioText">Some text in the Modal..</p>
             </div>
@@ -173,7 +117,7 @@
         <script>
             var table = "";
             var txt
-            var techDate = new Date("2018-7-20");
+            var techDate = new Date("2018-10-4");
             var today = new Date();
             var techDateSmall = techDate.toDateString(0, 10);
             var todaySmall = today.toDateString(0, 10);
@@ -211,11 +155,13 @@
                     } else if (techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime) {
                         console.log("Tech Day is Today and event is this hour")
                         printEvent(obj.talks[y])
+                    }else if(techDay === true && nowTime < 8 && obj.talks[y].Time === 9 || obj.talks[y].Time === 10 ){
+                        printEvent(obj.talks[y])
                     }
                 }
                 document.getElementById("demo").innerHTML = table;
 
-            });
+            })
             function printEvent(event) {
                 var txt = "<table class='events'>"
                     txt += "<tr>";

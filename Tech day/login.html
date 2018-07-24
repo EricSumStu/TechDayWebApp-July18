@@ -31,7 +31,7 @@
 <!--LOGIN FORM: ADMIN-->
      <h2>Admin Login</h2>     
             <!-- POP UP WINDOW -->
- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+ <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="loginButton">Login</button>
      <div id="id01" class="modal">
             <form name ="login" form class="modal-content animate">
               <div class="imgcontainer">
@@ -46,7 +46,7 @@
             <input type="text" name="username" id="username"/>
             <label>Password: </label>
             <input type="password" name="password" id="password"/>
-            <button type="submit" id="submit" onclick="validate()">Login</button>
+            <button type="submit" id="submit" onclick="validate()" class="login">Login</button>
             <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
            <label><br><br>Log-in is only allowed for the web admin. If you are not the web admin, please exit immediately. In accordance with requirements of data protection laws, we hereby inform you that personally identifiable information will be handled in log files for legal, security and costs reasons.</label>
                   
