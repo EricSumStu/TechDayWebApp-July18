@@ -458,12 +458,34 @@ button{
     color:white;
 }
 /*All Page */
+.searchGrid {                     /*Allpage*/
+    display: grid;
+    padding-top: 5px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top";
+                         
+    text-align: center;
+}
+
+@media screen and (max-width: 500px){
+    .searchGrid{
+        grid-template-columns: 100%;
+    grid-auto-rows: auto ; 
+    grid-row-gap: 8px; 
+    grid-template-areas: "top";
+    text-align: center;
+    }
+
+    
+}
 #searchSelect { 
     display: inline-block;
-    width: 25%;
-    height:80%;
+    width: 90%;
+    height:100%;
     border-radius:20px; 
-    padding:10px;
+    padding:15px;
     margin-right:-4px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
@@ -473,10 +495,10 @@ button{
 
 #searchButton{
     display: inline-block;
-    width: 25%;
-    height:80%;
+    width: 90%;
+    height:100%;
     border-radius:20px; 
-    padding:10px;
+    padding:15px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
@@ -485,11 +507,11 @@ button{
 }
 #inputbox{
     display: inline-block;
-    width: 45%;
-    height:80%;
+    width: 90%;
+    height:70%;
     position: relative;
     border-radius:20px; 
-    padding:10px;
+    padding: 7px;
     border: solid 1px gray;
     font-family:'EricssonHilda-Regular';
 
