@@ -1,7 +1,7 @@
 const db = new Dexie('Admin');
 
 db.version(1).stores({
-    events: 'ID,*Title '
+    events: 'ID,*Title, *Host, *Location, *Time, *Bio, *Summary, *Theme'
     });
     
 
