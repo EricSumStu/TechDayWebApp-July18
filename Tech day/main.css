@@ -811,7 +811,7 @@ button{
             border-radius:20px; 
         }
 
-        .grid3 {                            /*past Tech Days*/
+        .grid3 {                            
             background-color: #0FC373 ;
             color: white;
             width: 90%;
@@ -874,16 +874,7 @@ button{
             align-self: center;
             justify-self: center;
           }
-          
-          @media screen and (max-width: 670px){
-              .grid{
-                  grid-template-columns:100%;
-              grid-auto-rows: auto ;
-              grid-template-areas: "top";
-              text-align: center;
-              }
-          }
-          
+                  
           
           .ambitions{
               text-align: center;
@@ -926,9 +917,6 @@ button{
         
         * {box-sizing: border-box}
         .mySlides {display: none}
-        img {vertical-align: middle;
-            border-radius: 20px;
-        }
         
         .slideshow-container {
           max-width: 1000px;
@@ -1000,4 +988,5 @@ button{
           from {opacity: .4} 
           to {opacity: 1}
         }
+
         
