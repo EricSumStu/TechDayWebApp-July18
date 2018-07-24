@@ -1,4 +1,6 @@
+
 @font-face{
+
     font-family: 'EricssonHilda-Regular';
    src: url('fonts/EricssonHilda-Regular.otf') format('OpenType');
    }
@@ -43,7 +45,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 800px){
     .grid{
         grid-template-columns: 50% 50%;
     grid-auto-rows: auto ;
@@ -54,7 +56,7 @@
     }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 500px){
     .grid{
         grid-template-columns: 100%;
     grid-auto-rows: auto ;
@@ -264,13 +266,6 @@ img  {
 
 }
 
-@media only screen and (max-width: 320px) {
-
-    body { 
-       font-size: 1.5em; 
-    }
- 
- }
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -437,10 +432,12 @@ button{
     height:80%;
     border-radius:20px; 
     padding:10px;
+    margin-right:-4px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
     border: none;
+    position: relative;
 }
 
 #searchButton{
@@ -453,12 +450,13 @@ button{
     background-color: #0082f0;
     color: white;
     border: none;
+    position: relative;
 }
 #inputbox{
     display: inline-block;
     width: 45%;
     height:80%;
-    position:sticky;
+    position: relative;
     border-radius:20px; 
     padding:10px;
     border: solid 1px gray;
@@ -568,7 +566,8 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
 
 #typeSelect {
@@ -579,5 +578,7 @@ button{
     margin-top: 10px;
     position: relative;
     font-size: 20px;
-    font-family: "EricssonHilda-Regular"
+    font-family: "EricssonHilda-Regular";
+    border-color: white;
 }
+
