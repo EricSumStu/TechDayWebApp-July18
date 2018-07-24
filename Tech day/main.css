@@ -266,11 +266,6 @@ img  {
 } 
 
 
-
-
-
-
-
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;
@@ -281,7 +276,7 @@ img  {
     text-align: center;
 }
 
-.modal-content {            /*demodetails*/
+.modal-content1 {            /*demodetails*/
     padding:9px 15px;
     background-color: #0fc373;
      border-radius: 30px;
@@ -289,6 +284,30 @@ img  {
      font-family: 'EricssonHilda-Regular';
      
  }
+
+ /* Modal Content */
+.modal-content1 {
+    background-color: #0fc373;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 td.ONE{
     padding-top: 25px;
 }
@@ -317,6 +336,8 @@ button.Fav{
 button.Host{
     background-color: #fad22d;
     border: none;
+    font-size: 20px;
+    font-family: 'EricssonHilda-Regular';
     color: white;
     padding: 5px 10px;
     text-align: center;
@@ -693,8 +714,8 @@ button{
                 color:#000000;
     }
         
-        /* Set a style for all buttons */
-        button {
+/* Set a style for all buttons */
+        button.login {
             position:sticky;
             width: 90%;
             height:80%;
@@ -702,10 +723,11 @@ button{
             border-radius:20px; 
             padding:30px;
             font-family:'EricssonHilda-Regular';
-            color:white;
+            background-color:white;
+            color: black;
         }
         
-        button:hover {
+        buttom.login:hover {
             opacity: 0.8;
         }
         
@@ -754,7 +776,7 @@ button{
         
         /* Modal Content/Box */
         .modal-content {
-            background-color: #0fc373;
+            background-color: white;
             margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
             width: 90%; /* Could be more or less, depending on screen size */
@@ -762,10 +784,10 @@ button{
         
         /* The Close Button (x) */
         .close {
-            position: relative;
+            position: absolute;
             right: 25px;
-            top: 0;
-            color: white;
+            top: 0; 
+            color: black;
             font-size: 35px;
             font-weight: bold;
         }
@@ -811,6 +833,7 @@ button{
             border-radius:20px; 
         }
 
+<<<<<<< HEAD
 .countdownGrid {
     display: grid;
     grid-template-rows: 50% 50%;                  
@@ -841,3 +864,184 @@ button{
     margin-left: 5px;
     margin-right: 5px;
 }
+=======
+        .grid3 {                            
+            background-color: #0FC373 ;
+            color: white;
+            width: 90%;
+            height:80%;
+            display: block;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius:20px; 
+            align-self: center;
+            justify-self: center;
+          }
+        
+          .grid3 {
+            background-color: #AF78D2;
+            color: white;
+            width: 90%;
+            height:80%;
+            display: block;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius:20px;
+            align-self: center;
+            justify-self: center;
+          }
+        
+          .grid4 {
+            background-color: #FF3232;
+            color: white;
+            width: 90%;
+            height:80%;
+            display: block;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius:20px;
+            align-self: center;
+            justify-self: center;
+          }
+        
+          .grid5 {
+            background-color: #FF8C0A;
+            color: white;
+            width: 90%;
+            height:80%;
+            display: block;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius:20px;
+            align-self: center;
+            justify-self: center;
+          }
+                  
+          
+          .ambitions{
+              text-align: center;
+          }
+              
+          
+        .content {
+            max-width:980px;
+            margin:auto;
+        }
+        
+        .panel {
+            padding:0.01em 16px;
+            margin-top:16px;
+            margin-bottom:16px;
+        }
+        
+        .display-topleft {
+            position:absolute;
+            left:0;
+            top:0
+        }
+        
+        .padding {
+            padding:8px 16px!important;
+        }
+        
+        .xlarge {
+            font-size:25px;
+            border-bottom:6px solid #ccc;
+        }
+        
+        .center {
+            text-align:center!important;
+        }
+        
+        .border {
+            border:1px solid #ccc!important;
+        }
+        
+        * {box-sizing: border-box}
+        .mySlides {display: none}
+        
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+          border-radius: 20px;
+          border: solid white;
+        }
+        
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+        
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+
+        
+>>>>>>> 3a49a70fe3a973a52a36d4c90dbd2a2248bd13eb
