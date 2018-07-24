@@ -833,7 +833,6 @@ button{
             border-radius:20px; 
         }
 
-<<<<<<< HEAD
 .countdownGrid {
     display: grid;
     grid-template-rows: 50% 50%;                  
@@ -864,7 +863,6 @@ button{
     margin-left: 5px;
     margin-right: 5px;
 }
-=======
         .grid3 {                            
             background-color: #0FC373 ;
             color: white;
@@ -1044,4 +1042,3 @@ button{
         }
 
         
->>>>>>> 3a49a70fe3a973a52a36d4c90dbd2a2248bd13eb
