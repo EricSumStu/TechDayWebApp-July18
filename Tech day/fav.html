@@ -81,6 +81,8 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="db.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -158,7 +160,7 @@
             </a>
         </div>
 
-
+        
         <select id="mySelect" onchange="filterThemes()">
             <option value="All">Themes
                 <option value="5G">5G
@@ -213,21 +215,9 @@
             }
         }
 
-        load();
-
-        async function load() {
-            await db.favourites.each(p => list.push(p));
-            var sortedList = bubbleSort(list);
-            for (i = 0; i < sortedList.length; i++) {
-                display(sortedList[i]);
-            }
-        }
-
         function display(i) {
             var obj = i;
             console.log(i)
-
-            //for (var y = 0; y < obj.length;y++){
             if ((techDay === false)) {
                 printEvent(obj)
             } else if ((techDay === true) && (obj.Time >= now)) {
@@ -238,14 +228,14 @@
 
     
 
-        async function filterThemes() {
+        function filterThemes() {
+            document.getElementById("typeSelect").value = 'Type';
             var valueInDropdown = document.getElementById("mySelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
             for(i=0; i<sortedList.length;i++){
                 displayByTheme(sortedList[i], valueInDropdown);
             }
-            //db.favourites.each(event =>  displayByTheme(event, valueInDropdown));
             
             
         }
@@ -260,6 +250,7 @@
         };
 
         function filterType() {
+            document.getElementById("mySelect").value = 'All';
             var valueInDropdown = document.getElementById("typeSelect").value;
             console.log("You selected: " + valueInDropdown);
             table = "";
@@ -274,10 +265,10 @@
                 display(event);
                 console.log(event);
             }
+            
             document.getElementById("demo").innerHTML = table;
         };
         
-
         function bubbleSort(events) {
             for (var i = 0; i < (events.length - 1); i++) {
                 for (var j = 0; j < (events.length - i - 1); j++) {
@@ -290,14 +281,6 @@
             }
             return events;
         };
-
-
-
-
-
-
-
-
         function printEvent(event) {
             var txt = "<table class='events'>"
             txt += "<tr>";
