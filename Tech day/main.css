@@ -764,7 +764,7 @@ button{
         
         /* The Close Button (x) */
         .close {
-            position: absolute;
+            position: relative;
             right: 25px;
             top: 0;
             color: white;
