@@ -423,6 +423,29 @@ button{
     color:white;
 }
 
+#searchButton{
+    display: inline-block;
+    width: 33%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:10px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none;
+}
+#inputbox{
+    display: inline-block;
+    width: 33%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:10px;
+    border: solid 5px gray;
+    font-family:'EricssonHilda-Regular';
+
+}
 .zoneOne{
     background-color: #94b32a;
     font-family: "EricssonHilda-Regular";  
@@ -518,6 +541,7 @@ button{
 }
 
 #mySelect {
+    display: inline-block;
     background-color: #0fc373;
     color: white;
     border-radius: 20px;
