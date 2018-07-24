@@ -194,7 +194,7 @@ function search(input) {
                var inputCaps = input.toUpperCase();
               var searchResult = titleCaps.search(inputCaps)
               console.log(searchResult)
-               if(searchResult > 0){
+               if(searchResult > -1){
                    display(obj.talks[y]); 
                }else{
                    console.log('no match')
