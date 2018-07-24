@@ -252,7 +252,7 @@ img  {
     color: black;
     border-collapse: collapse;
     border: 5px solid #0082f0;
-    font-size:3vw;
+    font-size: 40px;
     display: block;
     width: auto;
     height:auto;
@@ -263,7 +263,12 @@ img  {
     padding: 20px;
     
 
-}
+} 
+
+
+
+
+
 
 
 #bioText{
