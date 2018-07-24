@@ -124,14 +124,14 @@
 
 <FORM NAME="myform" ACTION="" METHOD="GET">
     
- <select id="mySelect" >
+ <select id="searchSelect" >
                 <option value="All">Search by
                     <option value="Title">Event Title
                         <option value="Host">Host/Speaker
                                 <option value="Theme">Theme
     
             </select>
-<INPUT TYPE="text" id="inputbox" VALUE=""><P><INPUT TYPE="button" id="searchButton" Value="Click to Search" onClick="search(inputbox.value, mySelect.value)">
+<INPUT TYPE="text" id="inputbox" VALUE=""><INPUT TYPE="button" id="searchButton" Value="Click to Search" onClick="search(inputbox.value, searchSelect.value)">
 </FORM>
 
 <p id = "demo"></p>

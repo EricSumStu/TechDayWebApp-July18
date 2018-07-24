@@ -423,12 +423,23 @@ button{
     font-family:'EricssonHilda-Regular';
     color:white;
 }
+/*All Page */
+#searchSelect { 
+    display: inline-block;
+    width: 25%;
+    height:80%;
+    border-radius:20px; 
+    padding:10px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none;
+}
 
 #searchButton{
     display: inline-block;
-    width: 33%;
+    width: 25%;
     height:80%;
-    position:sticky;
     border-radius:20px; 
     padding:10px;
     font-family:'EricssonHilda-Regular';
@@ -438,12 +449,12 @@ button{
 }
 #inputbox{
     display: inline-block;
-    width: 33%;
+    width: 45%;
     height:80%;
     position:sticky;
     border-radius:20px; 
     padding:10px;
-    border: solid 5px gray;
+    border: solid 1px gray;
     font-family:'EricssonHilda-Regular';
 
 }
