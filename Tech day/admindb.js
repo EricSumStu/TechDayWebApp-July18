@@ -13,6 +13,10 @@ async function getEvents(){
     const json = await response.json();
     db.events.bulkPut(json.talks);
 }
+async function getEventbyTitle(talk){
+    db.events.where(title).equals(talk).each(p => console.log(p))
+    
+}
 
 async function addEvent(talk) {
     console.log(talk);

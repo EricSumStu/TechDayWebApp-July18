@@ -82,8 +82,13 @@
     </nav>
     <br>
 
+    
+    <FORM NAME="myform" ACTION="" METHOD="GET">
     <h2>Add Event</h2>
-    <FORM NAME="myform" ACTION="" METHOD="GET"></FORM>
+    <div>
+        <p>ID</p>
+        <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
+    </div>
     <div>
         <p>Title</p>
         <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
@@ -116,56 +121,85 @@
         <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
     </div>
     <div>
-        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent()">
+        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
     </div>
 
     </FORM>
 
 
+   
+    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
     <h2>Update Event</h2>
-    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
-    <div class='searchGrid'>
                 <div>
                 <select id="updateSelect">
-                    <option value="All">Search by
+                    <option value="All">Find By
                         <option value="Title">Event Title
                             <option value="Host">Host/Speaker
                                 <option value="Theme">Theme
     
                 </select>
+                <div>
+                    <p>Title</p>
+                    <INPUT TYPE="text" id="inputboxUTitle" VALUE="" placeholder="Event Name">
                 </div>
                 <div>
-                <INPUT TYPE="text" id="inputboxUpdate" VALUE=""  placeholder= "Search...">
+                    <p>Host</p>
+                    <INPUT TYPE="text" id="inputboxUHost" VALUE="" placeholder="Host Name">
                 </div>
                 <div>
-                <INPUT TYPE="button" id="updateButton" Value="Click to Update" onClick="">
+                <p>Biography</p>
+                 <INPUT TYPE="text" id="inputboxUBiography" VALUE="" placeholder="Host Biography">
                 </div>
-    </div>  </FORM>
+                <p>Location</p>
+                <INPUT TYPE="text" id="inputboxULocation" VALUE="" placeholder="Location">
+                </div>
+                <div>
+                    <p>Time</p>
+                    <INPUT TYPE="text" id="inputboxUTime" VALUE="" placeholder="Hour only">
+                </div>
+                <div>
+                    <p>Summary</p>
+                    <INPUT TYPE="text" id="inputboxUSummary" VALUE="" placeholder="Description of Event">
+                </div>
+                <div>
+                    <p>Theme</p>
+                    <INPUT TYPE="text" id="inputboxUTheme" VALUE="" placeholder="Theme e.g 5G">
+                </div>
+                <div>
+                    <p>Category</p>
+                    <INPUT TYPE="text" id="inputboxUCategory" VALUE="" placeholder="Type e.g Talk, Demo">
+                </div>
+                <div>
+                    <INPUT TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
+                </div>
+                <div>
+                <h2>Remove Event</h2>
+    
+                <INPUT TYPE="button" id="removeButton" Value="Click to Remove" onClick="">
+                </div>
+                </FORM>
           
-    <h2>Remove Event</h2>
-    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
-    <div class='searchGrid'>
-                <div>
-                <select id="updateSelect">
-                    <option value="All">Search by
-                        <option value="Title">Event Title
-                            <option value="Host">Host/Speaker
-                                <option value="Theme">Theme
     
-                </select>
-                </div>
-                <div>
-                <INPUT TYPE="text" id="inputboxUpdate" VALUE=""  placeholder= "Search...">
-                </div>
-                <div>
-                <INPUT TYPE="button" id="updateButton" Value="Click to Update" onClick="">
-                </div>
-    </div>  </FORM>
+                
+   
     <script> 
-        window.addEventListener('load', e => {
+         window.addEventListener('load', e => {
             clearEvents();
             getEvents();
         });
+        function addNewEvent(newID, title, host, bio, location, time, summary, theme, category){
+            //var lastID = db.events.get();
+           // var count = lastID.value
+            //console.log(lastID);
+           // var newID = toString((parseInt(lastID) +1))
+            //console.log(newID)
+            var talk = { ID:newID, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+             }
+            addEvent(talk)
+
+        }
+        
+       
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
