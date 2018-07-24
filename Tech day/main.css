@@ -201,7 +201,7 @@ img  {
 #little{
     display: block;
     width: 500%;
-    height:100%;
+    height:60%;
     position: relative;
     margin: auto;
     border-radius:5px; 
@@ -244,24 +244,7 @@ img  {
     font-family: 'EricssonHilda-Regular';
   }
 
-  table.events {  
-    text-align: left;        /*for demodetails*/
-    margin-left:auto; 
-    margin-right:auto;
-    color: black;
-    border-collapse: collapse;
-    border: 5px solid #0082f0;
-    font-size: 40px;
-    display: block;
-    width: auto;
-    height:auto;
-    position: relative;
-    margin: auto;
-    border-radius:35px; 
-    font-family: 'EricssonHilda-Regular';
-    padding: 20px;
-} 
-
+ 
 #bioText{
     font-family: 'EricssonHilda-Regular';
     font-size: 25px;

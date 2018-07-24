@@ -135,7 +135,7 @@
         });
     
     function printEvent(event){
-        var txt = "<table class='events'>"
+        var txt = "<table>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
@@ -158,7 +158,7 @@
                 txt+= "</tr>"  
                     txt += "<tr>"; 
                             txt += "<td>" +  "Summary:" + "</td>"
-                         txt += "<td>" + (event.Summary) + "</td>"
+                            txt += "<td class='TWO'>" + (event.Summary) + "</td>"
                      txt+= "</tr>"
                      txt += '<tr>';
                          txt += "<td>" + "" + "</td>"  
