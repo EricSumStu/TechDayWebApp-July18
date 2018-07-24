@@ -261,10 +261,7 @@ img  {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
-    
-
 } 
-
 
 #bioText{
     font-family: 'EricssonHilda-Regular';
@@ -323,8 +320,7 @@ button.Fav{
     color: white;
     padding: 15px 100px;
     text-align: center;
-    text-decoration: none;
-    
+    text-decoration: none; 
     font-size: 20px;
     border-radius: 20px;
     font-family: 'EricssonHilda-Regular';
