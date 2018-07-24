@@ -441,7 +441,7 @@ button{
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border: none;
+    border: none; 
 }
 
 #searchButton{
