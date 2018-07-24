@@ -25,7 +25,8 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="db.js"></script>
-  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -140,7 +141,7 @@
         });
 
         function printEvent(event) {
-            var txt = "<table class='events'>"
+            var txt = "<table>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"

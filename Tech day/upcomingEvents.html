@@ -117,7 +117,7 @@
         <script>
             var table = "";
             var txt
-            var techDate = new Date("2018-10-4");
+            var techDate = new Date("2018-10-04");
             var today = new Date();
             var techDateSmall = techDate.toDateString(0, 10);
             var todaySmall = today.toDateString(0, 10);
@@ -163,7 +163,7 @@
 
             })
             function printEvent(event) {
-                var txt = "<table class='events'>"
+                var txt = "<table>"
                     txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
@@ -186,7 +186,7 @@
                 txt += "</tr>"
                 txt += "<tr>";
                 txt += "<td>" + "Summary:" + "</td>"
-                txt += "<td>" + (event.Summary) + "</td>"
+                txt += "<td class='TWO'>" + (event.Summary) + "</td>"
                 txt += "</tr>"
                 txt += '<tr>';
                 txt += "<td>" + "" + "</td>"
