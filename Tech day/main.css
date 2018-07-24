@@ -437,6 +437,7 @@ button{
     background-color: #0082f0;
     color: white;
     border: none;
+    position: relative;
 }
 
 #searchButton{
@@ -449,12 +450,13 @@ button{
     background-color: #0082f0;
     color: white;
     border: none;
+    position: relative;
 }
 #inputbox{
     display: inline-block;
     width: 45%;
     height:80%;
-    position:sticky;
+    position: relative;
     border-radius:20px; 
     padding:10px;
     border: solid 1px gray;
