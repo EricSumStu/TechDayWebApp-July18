@@ -664,21 +664,20 @@ button{
             background: none;
             width: 100%;
         }
-    
-            
+      
         h2
         {
             font-family: 'EricssonHilda-Bold';
-            color:#000000;
-            font-size: 1em;
+            color:#FFFFFF;
+            font-size: 25px;
             background: none;
             width: 100%;
         }
         h3
         {
             font-family: 'EricssonHilda-Bold';
-            columns: #000000;;
-            font-size: 1em;
+            color:#FFFFFF;
+            font-size: 25px;
             background: none;
             width: 100%;
         }
