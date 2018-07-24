@@ -74,8 +74,7 @@ body{
 	text-align: center;
 	
   font-family: 'EricssonHilda-Light';
-  font-weight: 100;
-}
+  font-weight: 100;}
 
 h1{
   color: #396;
@@ -262,7 +261,7 @@ img  {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
-    
+   word-wrap: break-word; 
 
 }
 
@@ -281,6 +280,7 @@ img  {
     background-color: #0fc373;
      border-radius: 30px;
      text-align: center;
+     font-family: 'EricssonHilda-Regular';
      
  }
 td.ONE{
@@ -407,6 +407,8 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+
+
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -415,6 +417,35 @@ table.map{                           /*Maps*/
 }
 tr#THREE{
     font-family:'EricssonHilda-Bold';
+}
+
+
+button.zoneOne{
+    font-size: 20px;
+}
+button.zoneTwo{
+    font-size: 20px;
+}
+button.zoneThree{
+    font-size: 20px;
+}
+button.zoneFour{
+    font-size: 20px;
+}
+button.zoneFive{
+    font-size: 20px;
+}
+button.zoneSix{
+    font-size: 20px;
+}
+button.zoneSeven{
+    font-size: 20px;
+}
+button.zoneEight{
+    font-size: 20px;
+}
+button.zoneNine{
+    font-size: 20px;
 }
 button{                         
     position:sticky;
@@ -437,8 +468,7 @@ button{
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border: none;
-    position: relative;
+    border: none; 
 }
 
 #searchButton{
@@ -467,7 +497,6 @@ button{
 .zoneOne{
     background-color: #94b32a;
     font-family: "EricssonHilda-Regular";  
-    
 }
 .zoneTwo{
     background-color: #d99e4e;
