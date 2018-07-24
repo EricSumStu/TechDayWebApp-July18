@@ -262,7 +262,7 @@ img  {
     border-radius:35px; 
     font-family: 'EricssonHilda-Regular';
     padding: 20px;
-    
+   word-wrap: break-word; 
 
 }
 
