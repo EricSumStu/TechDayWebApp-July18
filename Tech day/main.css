@@ -406,6 +406,8 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+
+
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -465,8 +467,7 @@ button{
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border: none;
-    position: relative;
+    border: none; 
 }
 
 #searchButton{
