@@ -490,8 +490,8 @@ button{
     width: 90%;
     height:100%;
     border-radius:20px; 
-    padding:15px;
-    margin-right:-4px;
+    padding:5px;
+    margin-right:0px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
@@ -504,7 +504,7 @@ button{
     width: 90%;
     height:100%;
     border-radius:20px; 
-    padding:15px;
+    padding:5px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
@@ -515,10 +515,11 @@ button{
 #inputbox{
     display: inline-block;
     width: 90%;
-    height:70%;
+    height:85%;
     position: relative;
     border-radius:20px; 
-    padding: 7px;
+    padding: 5px;
+    padding-bottom: 2%;
     border: solid 1px gray;
     font-family:'EricssonHilda-Regular';
     font-size: 20px;
@@ -619,11 +620,11 @@ button{
 
 #mySelect {
     display: inline-block;
-    background-color: #0fc373;
+    background-color: #0082f0;
     color: white;
     border-radius: 20px;
     height: auto;
-    width: auto;
+    width: 50%;
     max-width: 100%;
     margin-top: 10px;
     position: relative;
@@ -633,11 +634,11 @@ button{
 }
 
 #typeSelect {
-    background-color: #0fc373;
+    background-color: #0082f0;
     color: white;
     border-radius: 20px;
     height: auto;
-    width: auto;
+    width: 49%;
     max-width: 100%;
     margin-top: 10px;
     position: relative;
