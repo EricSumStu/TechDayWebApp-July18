@@ -9,9 +9,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
-
         /* The Modal (background) */
-
         .modal {
             display: none;
             /* Hidden by default */
@@ -34,9 +32,7 @@
             background-color: rgba(0, 0, 0, 0.4);
             /* Black w/ opacity */
         }
-
         /* Modal Content */
-
         .modal-content {
             background-color: #fefefe;
             margin: auto;
@@ -44,16 +40,13 @@
             border: 1px solid #888;
             width: 80%;
         }
-
         /* The Close Button */
-
         .close {
             color: white;
             float: right;
             font-size: 28px;
             font-weight: bold;
         }
-
         .close:hover,
         .close:focus {
             color: #000;
@@ -145,6 +138,9 @@
             </a>
         </div>
 
+        <!-- <input type="text" id="myInput"  onkeypress="search()" placeholder="Search by Title">
+    <button id='submit' onclick="search()">Submit</button>-->
+
         <FORM NAME="myform" ACTION="" METHOD="GET">
 
             <select id="searchSelect">
@@ -191,7 +187,6 @@
             };
             document.getElementById("demo").innerHTML = table;
         });
-
         function addFavourite(ID) {
             $.getJSON("talks.json", function (json) {
                 var obj = json;
@@ -204,7 +199,6 @@
                 }
             });
         };
-
         //search 
         function search(input, valueInDropDown) {
             if (valueInDropDown === 'Title') {
@@ -225,12 +219,10 @@
                     };
                     document.getElementById("demo").innerHTML = table;
                 });
-
             }else if((valueInDropDown === 'All')){
                 alert('You have not selected a search method. Please select something to search by!')
             }
         };
-
         //search by Title
         function searchTitle(input) {
             table = "";
@@ -265,7 +257,6 @@
             });
             document.getElementById("demo").innerHTML = table;
         };
-
         //search by Theme
         function searchTheme(input) {
             table = "";
@@ -276,30 +267,13 @@
                     var inputCaps = input.toUpperCase();
                     var searchResult = themeCaps.search(inputCaps)
                     if (searchResult > -1) {
-                        displaySearch(obj.talks[y]);
+                        display(obj.talks[y]);
                     } else {
-                    };
+                    }
                 }
-                console.log(resultDisplay)
-                if(resultDisplay === ""){
-                var txt = "<table class='events'>"
-                txt += "<tr>";
-                txt += "<td>" + "<img id='little' src ='./images/favicon/android-icon-144x144.png'>" + "</td>"
-                txt += "<td>" + "" + "</td>"
-                txt += "</tr>"
-                txt += "<tr>";
-                txt += "<td>" + "Sorry" + "</td>"
-                txt += "<td>" + "Nothing matches your search please try again" + "</td>"
-                txt += "</tr>"
-                txt += "</table>"
-                table += txt 
-                document.getElementById("demo").innerHTML = table;
-            }else{};
             });
-            
             document.getElementById("demo").innerHTML = table;
         };
-var resultDisplay = ""
         function display(i) {
             var obj = i;
             if ((techDay === false)) {
@@ -307,15 +281,6 @@ var resultDisplay = ""
             } else if ((techDay === true) && (obj.Time >= now)) {
                 printEvent(obj);
             }
-        };
-        function displaySearch(i) {
-            var obj = i;
-            if ((techDay === false)) {
-                printEvent(obj);
-            } else if ((techDay === true) && (obj.Time >= now)) {
-                printEvent(obj);
-            }
-            resultDisplay = table
             document.getElementById("demo").innerHTML = table;
         };
         function printEvent(event) {
@@ -351,7 +316,6 @@ var resultDisplay = ""
             txt += "</table><br>"
             table += txt;
         }
-
         function openBiography(ID) {
             modal.style.display = "block";
             var txt = ""
@@ -365,30 +329,20 @@ var resultDisplay = ""
                     document.getElementById("bioText").innerHTML = txt
                 }
             })
-
         };
-
-
         var span = document.getElementsByClassName("close")[0];
-
-
         span.onclick = function () {
             modal.style.display = "none";
         }
-
-
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-
-
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
         }
-
         function closeSlideMenu() {
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
