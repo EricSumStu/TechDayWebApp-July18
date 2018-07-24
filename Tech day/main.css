@@ -404,23 +404,8 @@ footer {                        /*countdown*/
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
-<<<<<<< HEAD
 
 
-#mySelect {
-    border-style: groove;
-    background-color: lightgrey;
-    border-radius:25px;
-
-
-}
-
-
-#typeSelect {
-
-}
-=======
->>>>>>> 8ad05a4b5d187eae8b762e8ba8ffc25c82f0d6bc
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -569,8 +554,6 @@ button{
   
 }
 
-<<<<<<< HEAD
-=======
 #mySelect {
     display: inline-block;
     background-color: #0fc373;
@@ -581,6 +564,7 @@ button{
     position: relative;
     font-size: 20px;
     font-family: "EricssonHilda-Regular"
+
 }
 
 #typeSelect {
@@ -593,4 +577,3 @@ button{
     font-size: 20px;
     font-family: "EricssonHilda-Regular"
 }
->>>>>>> 8ad05a4b5d187eae8b762e8ba8ffc25c82f0d6bc
