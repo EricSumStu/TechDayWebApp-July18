@@ -115,11 +115,25 @@
         <div id="main">
             <div>
                 <a href="#">
-                    <img src="./images/eventsBanner.png">
+                    <img src="./images/AllEventsSquareBanner.png">
                     </a>
             </div>
-       
-        
+           
+<!-- <input type="text" id="myInput"  onkeypress="search()" placeholder="Search by Title">
+    <button id='submit' onclick="search()">Submit</button>-->
+
+<FORM NAME="myform" ACTION="" METHOD="GET">
+    
+ <select id="searchSelect" >
+                <option value="All">Search by
+                    <option value="Title">Event Title
+                        <option value="Host">Host/Speaker
+                                <option value="Theme">Theme
+    
+            </select>
+<INPUT TYPE="text" id="inputbox" VALUE=""><INPUT TYPE="button" id="searchButton" Value="Click to Search" onClick="search(inputbox.value, searchSelect.value)">
+</FORM>
+
 <p id = "demo"></p>
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -132,9 +146,7 @@
     var table = "";
     var modal = document.getElementById('myModal');
      var txt;
-    $.getJSON("talks.json", function(json) {
-       var obj = json;
-        var techDate = new Date("2018-10-4");
+     var techDate = new Date("2018-10-4");
         var today = new Date();
         var techDateSmall = techDate.toDateString(0, 10);
         var todaySmall = today.toDateString(0, 10);
@@ -144,6 +156,8 @@
         if(todaySmall === techDateSmall){
                 techDay = true
         };
+    $.getJSON("talks.json", function(json) {
+       var obj = json;
         for (var y = 0; y < (obj.talks).length;y++){
              if( (techDay === false)){
                     printEvent(obj.talks[y])
@@ -161,12 +175,93 @@
                    getEvents(obj.talks[y]);
                    console.log("ADDED");
                }else{
-                   console.log(ID);
                }
        }});
     };      
 
-    function printEvent(event){
+//search 
+function search(input, valueInDropDown){
+  if(valueInDropDown === 'Title' ){
+    searchTitle(input)
+  }else if(valueInDropDown === 'Host' ){
+    searchHost(input)
+  }else if(valueInDropDown === 'Theme' ){
+    searchTheme(input)
+  }else if(valueInDropDown === 'All'){
+    $.getJSON("talks.json", function(json) {
+       var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+             if( (techDay === false)){
+                    printEvent(obj.talks[y])
+            }else if((techDay === true)  && (obj.talks[y].Time >= now)){
+                    printEvent(obj.talks[y])  
+             }};
+            document.getElementById("demo").innerHTML = table;
+        });
+  };
+
+};
+
+//search by Title
+function searchTitle(input) {
+  table = "";
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               var titleCaps = (obj.talks[y].Title).toUpperCase();
+               var inputCaps = input.toUpperCase();
+              var searchResult = titleCaps.search(inputCaps)
+               if(searchResult > -1){
+                   display(obj.talks[y]); 
+               }else{
+               }
+       }});
+    document.getElementById("demo").innerHTML = table;
+};
+//search by Host
+function searchHost(input) {
+  table = "";
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               var hostCaps = (obj.talks[y].Host).toUpperCase();
+               var inputCaps = input.toUpperCase();
+              var searchResult = hostCaps.search(inputCaps)
+               if(searchResult > -1){
+                   display(obj.talks[y]); 
+               }else{
+               }
+       }});
+    document.getElementById("demo").innerHTML = table;
+};
+
+//search by Theme
+function searchTheme(input) {
+  table = "";
+ $.getJSON("talks.json", function(json) {
+        var obj = json;
+        for (var y = 0; y < (obj.talks).length;y++){
+               var themeCaps = (obj.talks[y].Theme).toUpperCase();
+               var inputCaps = input.toUpperCase();
+              var searchResult = themeCaps.search(inputCaps)
+               if(searchResult > -1){
+                   display(obj.talks[y]); 
+               }else{
+               }
+       }});
+    document.getElementById("demo").innerHTML = table;
+};
+
+ function display(i) {
+     var obj = i;
+    if ((techDay === false)) {
+        printEvent(obj); 
+     } else if ((techDay === true) && (obj.Time >= now)) {
+        printEvent(obj);
+                }
+    document.getElementById("demo").innerHTML = table;
+            };
+function printEvent(event){
         var txt = "<table class='events'>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
