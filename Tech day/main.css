@@ -195,6 +195,7 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
+
 #eventsImages{
     display: block;
     width: 500%;
@@ -420,6 +421,70 @@ p {                            /*Tech Day is in...*/
   font-family: 'EricssonHilda-Light';
 }
 
+
+
+/*All Page */
+.searchGrid {                     /*Allpage*/
+    display: grid;
+    padding-top: 5px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top";
+                         
+    text-align: center;
+}
+
+
+
+.searchGrid {                     /*Allpage*/
+    display: grid;
+    padding-top: 5px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top";
+                         
+    text-align: center;
+}
+
+#searchSelect {                 /*Selector for Allpage*/
+    display: inline-block;
+    width: 90%;
+    height:80%;
+    border-radius:20px; 
+    padding:5px;
+    margin-right:0px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none; 
+    font-size: 20px;
+}
+
+#searchButton{
+    display: inline-block;
+    width: 90%;
+    height:80%;
+    border-radius:20px; 
+    padding:5px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none;
+    position: relative;
+    font-size: 20px;
+}
+#inputbox{
+    display: inline-block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    border-radius:20px; 
+    border: solid 1px gray;
+    font-family:'EricssonHilda-Regular';
+    font-size: 20px;
+}                                   /*end of all page*/
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -439,19 +504,21 @@ button{
     padding:30px;
     font-family:'EricssonHilda-Regular';
     color:white;
-}
-/*All Page */
-.searchGrid {                     /*Allpage*/
-    display: grid;
-    padding-top: 5px;
 
-    grid-template-columns: 25% 50% 25%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top top top";
-                         
+}
+.address{
+    font-family: "EricssonHilda-Regular";
+    font-size: 17px;
     text-align: center;
+    position: relative;
+    margin: auto;
+    border: 5px solid #111;
+    display: grid;
+    border-radius:20px; 
+    background-color: #111;
+    color:white;
+    width: 90%; 
 }
-
 .zoneOne{
     font-size: 20px;
     background-color: #FF3232;
@@ -549,69 +616,6 @@ button{
     font-family:'EricssonHilda-Regular';
     color:white;                   /*End of Maps*/
 }
-
-.address{
-    font-family: "EricssonHilda-Regular";
-    font-size: 17px;
-    text-align: center;
-    position: relative;
-    margin: auto;
-    border: 5px solid #111;
-    display: grid;
-    border-radius:20px; 
-    background-color: #111;
-    color:white;
-    width: 90%; 
-}
-
-.searchGrid {                     /*Allpage*/
-    display: grid;
-    padding-top: 5px;
-
-    grid-template-columns: 25% 50% 25%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top top top";
-                         
-    text-align: center;
-}
-
-#searchSelect {                 /*Selector for Allpage*/
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    border-radius:20px; 
-    padding:5px;
-    margin-right:0px;
-    font-family:'EricssonHilda-Regular';
-    background-color: #0082f0;
-    color: white;
-    border: none; 
-    font-size: 20px;
-}
-
-#searchButton{
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    border-radius:20px; 
-    padding:5px;
-    font-family:'EricssonHilda-Regular';
-    background-color: #0082f0;
-    color: white;
-    border: none;
-    position: relative;
-    font-size: 20px;
-}
-#inputbox{
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    position: relative;
-    border-radius:20px; 
-    border: solid 1px gray;
-    font-family:'EricssonHilda-Regular';
-    font-size: 20px;
-}                                   /*end of all page*/
 
 /*login*/
 /* Full-width input fields */
