@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Tech Day | Admin</title>
-                                <!--FAVICONS-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-<script src="admindb.js"></script>
-<link href="main.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tech Day | Admin</title>
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="admindb.js"></script>
+    <link href="main.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-                                <!--NAVBAR-->
-<nav class="navbar">
-<span class="open-slide">
-<a href="#" onclick="openSlideMenu()">
-    <svg width="30" height="30">
-    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-</svg>
-</a>
-</span>
-<ul class="navbar-nav">
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+        <ul class="navbar-nav">
             <li>
                 <a href="index.html">Home</a>
             </li>
@@ -60,11 +62,11 @@
             <li>
                 <a href="about.html">About</a>
             </li>
-</ul>
-                                <!--SIDEBAR-->
-<div id="side-menu" class="side-nav">
-    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-    <ul>
+        </ul>
+        <!--SIDEBAR-->
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -87,161 +89,147 @@
                     <a href="about.html">About</a>
                 </li>
             </ul>
-</div>
-</nav>
-</div>
-</nav>
-<br>
-
-                                    <!--ADD EVENT: ADMIN-->
+        </div>
+    </nav>
+    </div>
+    </nav>
+    <br>
+<div class="main" >
+    <!--ADD EVENT: ADMIN-->
     <FORM NAME="myform" ACTION="" METHOD="GET">
-    <p>Add Event</p>
-    <div>
-        <p>ID</p>
-        <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
-    </div>
-    <div>
-        <p>Title</p>
-        <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
-    </div>
-    <div>
-        <p>Host</p>
-        <INPUT TYPE="text" id="inputboxHost" VALUE="" placeholder="Host Name">
-    </div>
-    <div>
-    <p>Biography</p>
-     <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
-    </div>
-    <p>Location</p>
-    <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
-    </div>
-    <div>
-        <p>Time</p>
-        <INPUT TYPE="text" id="inputboxTime" VALUE="" placeholder="Hour only">
-    </div>
-    <div>
-        <p>Summary</p>
-        <INPUT TYPE="text" id="inputboxSummary" VALUE="" placeholder="Description of Event">
-    </div>
-    <div>
-        <p>Theme</p>
-        <INPUT TYPE="text" id="inputboxTheme" VALUE="" placeholder="Theme e.g 5G">
-    </div>
-    <div>
-        <p>Category</p>
-        <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
-    </div>
-    <div>
-        <INPUT TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
-    </div>
+       <div id=gridInfo> 
+        <p>Add Event </p>
+        <ul>
+            <li>1. Enter event details in the text box</li>
+            <li>2.Click 'Add Event' button</li>
+            <li>3. Click the 'Save changes' button</li>
+        </ul>
+        <p>Update Event </p>
+        <ul>
+                <li>1. Enter event Title in the text box</li>
+                <li>2. Click 'Find Event' button</li>
+                <li>3. Edit the parts of the event as needed in the text boxes</li>
+                <li>4. Click the 'Update Event' button</li>
+                <li>5. Click the 'Save changes' button</li>
+        </ul>
+        <p>Remove Event </p>
+        <ul>
+                <li>1. Enter event Title in the text box</li>
+                <li>2. Click 'Find Event' button</li>
+                <li>3. Click the 'Remove Event' button</li>
+                <li>4. Click the 'Save changes' button</li>
+        </ul>
+       </div>
+        <div>
+            <p>ID</p>
+            <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
+        </div>
+        <div>
+            <p>Title</p>
+            <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
+        </div>
+        <div>
+            <p>Host</p>
+            <INPUT TYPE="text" id="inputboxHost" VALUE="" placeholder="Host Name">
+        </div>
+        <div>
+            <p>Biography</p>
+            <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
+        </div>
+        <p>Location</p>
+        <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
+        </div>
+        <div>
+            <p>Time</p>
+            <INPUT TYPE="text" id="inputboxTime" VALUE="" placeholder="Hour only">
+        </div>
+        <div>
+            <p>Summary</p>
+            <INPUT TYPE="text" id="inputboxSummary" VALUE="" placeholder="Description of Event">
+        </div>
+        <div>
+            <p>Theme</p>
+            <INPUT TYPE="text" id="inputboxTheme" VALUE="" placeholder="Theme e.g 5G">
+        </div>
+        <div>
+            <p>Category</p>
+            <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
+        </div>
+<div id="gridAdmin">
+        <div>
+            <INPUT class="Host" TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
+        </div>
+        <div>
+            <INPUT class="Host" TYPE="button" id="findButton" Value="Find Event" onClick="findEvent(inputboxTitle.value, inputboxHost.value, inputboxBiography.value, inputboxLocation.value, inputboxTime.value, inputboxSummary.value, inputboxTheme.value, inputboxCategory.value )">
 
-    </FORM>
-                                   <!--UPDATE EVENT: ADMIN-->
-    <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
-    <p>Update Event</p>
-                <div>
-                <div>
-                    <p>Title</p>
-                    <INPUT TYPE="text" id="inputboxUTitle" VALUE="" placeholder="Event Name">
-                </div>
-                <div>
-                    <p>ID</p>
-                    <INPUT TYPE="text" id="inputboxUID" VALUE="" placeholder="A Unique Number">
-                </div>
-                <div>
-                    <p>Host</p>
-                    <INPUT TYPE="text" id="inputboxUHost" VALUE="" placeholder="Host Name">
-                </div>
-                <div>
-                <p>Biography</p>
-                 <INPUT TYPE="text" id="inputboxUBiography" VALUE="" placeholder="Host Biography">
-                </div>
-                <p>Location</p>
-                <INPUT TYPE="text" id="inputboxULocation" VALUE="" placeholder="Location">
-                </div>
-                <div>
-                    <p>Time</p>
-                    <INPUT TYPE="text" id="inputboxUTime" VALUE="" placeholder="Hour only">
-                </div>
-                <div>
-                    <p>Summary</p>
-                    <INPUT TYPE="text" id="inputboxUSummary" VALUE="" placeholder="Description of Event">
-                </div>
-                <div>
-                    <p>Theme</p>
-                    <INPUT TYPE="text" id="inputboxUTheme" VALUE="" placeholder="Theme e.g 5G">
-                </div>
-                <div>
-                    <p>Category</p>
-                    <INPUT TYPE="text" id="inputboxUCategory" VALUE="" placeholder="Type e.g Talk, Demo">
-                </div>
-                <div>
-                    <INPUT TYPE="button" id="findButton" Value="Find Event" onClick="findEvent(inputboxUTitle.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
-                    <INPUT TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxUTitle.value, inputboxUID.value, inputboxUHost.value, inputboxUBiography.value, inputboxULocation.value, inputboxUTime.value, inputboxUSummary.value, inputboxUTheme.value, inputboxUCategory.value )">
-                </div>
-                <div>
-                <p>Remove Event</p>
-    
-                <INPUT TYPE="button" id="removeButton" Value="Click to Remove" onClick="">
-                </div>
-                </FORM>
-                <div>
-                <INPUT TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
-                </div>
-    
-                
-                                <!--SCRIPTS-->
-<script> 
-    window.addEventListener('load', e => {
-    clearEvents();
-    getEvents();
-    });
-       
-    function addNewEvent(newID, title, host, bio, location, time, summary, theme, category){
-    //var lastID = db.events.get();
-    // var count = lastID.value
-    //console.log(lastID);
-    // var newID = toString((parseInt(lastID) +1))
-    //console.log(newID)
-    var talk = { ID:newID, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
-    }
-    addEvent(talk)
-
-    }
+        </div>
+        <div>
+            <INPUT class="Host" TYPE="button" id="UpdateButton" Value="Update Event" onClick="updateEvent(inputboxTitle.value, inputboxID.value, inputboxHost.value, inputboxBiography.value, inputboxLocation.value, inputboxTime.value, inputboxSummary.value, inputboxTheme.value, inputboxCategory.value )">
+        </div>
+        <div>
+            <INPUT class="Host" TYPE="button" id="removeButton" Value="Remove Event" onClick="">
+        </div>
         
-    function findEvent(title, id, host, bio, location, time, summary, theme, category){
-    db.events.where('Title').equals(title).each(p => display(p))
-    console.log(title)
-    function display(p){
-    document.getElementById('inputboxUID').value = p.ID
-    document.getElementById('inputboxUHost').value = p.Host
-    document.getElementById('inputboxUBiography').value = p.Bio
-    document.getElementById('inputboxULocation').value = p.Location
-    document.getElementById('inputboxUTime').value = p.Time
-    document.getElementById('inputboxUSummary').value = p.Summary
-    document.getElementById('inputboxUTheme').value = p.Theme
-    document.getElementById('inputboxUCategory').value = p.Categories
-    };  
-    }
-    function remove(talk){
-    db.events.clear(talk);
-    }
-    function updateEvent(title, id, host, bio, location, time, summary, theme, category){
-    db.events.where('Title').equals(title).each(p => removeEvent(p))
-    //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
-    //}
-    //addEvent(talk)
-    };
-    function save(){
-    };
-    function openSlideMenu() {
-    document.getElementById('side-menu').style.width = '230px';
-    document.getElementById('main').style.marginLeft = '250px';
-    }
-    function closeSlideMenu() {
-    document.getElementById('side-menu').style.width = '0';
-    document.getElementById('main').style.marginLeft = '0';
-    }
+</div>
+    <div>
+            <INPUT class="Host" TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
+        </div>
+    </FORM>
+</div>
+    <!--SCRIPTS-->
+    <script> 
+        window.addEventListener('load', e => {
+            clearEvents();
+            getEvents();
+        });
+
+        function addNewEvent(newID, title, host, bio, location, time, summary, theme, category) {
+            //var lastID = db.events.get();
+            // var count = lastID.value
+            //console.log(lastID);
+            // var newID = toString((parseInt(lastID) +1))
+            //console.log(newID)
+            var talk = {
+                ID: newID, Title: title, Host: host, Bio: bio, Time: time, Summary: summary, Theme: theme, Categories: category
+            }
+            addEvent(talk)
+
+        }
+
+        function findEvent(title, id, host, bio, location, time, summary, theme, category) {
+            db.events.where('Title').equals(title).each(p => display(p))
+            console.log(title)
+            function display(p) {
+                document.getElementById('inputboxID').value = p.ID
+                document.getElementById('inputboxHost').value = p.Host
+                document.getElementById('inputboxBiography').value = p.Bio
+                document.getElementById('inputboxLocation').value = p.Location
+                document.getElementById('inputboxTime').value = p.Time
+                document.getElementById('inputboxSummary').value = p.Summary
+                document.getElementById('inputboxTheme').value = p.Theme
+                document.getElementById('inputboxCategory').value = p.Categories
+            };
+        }
+        function remove(talk) {
+            db.events.clear(talk);
+        }
+        function updateEvent(title, id, host, bio, location, time, summary, theme, category) {
+            db.events.where('Title').equals(title).each(p => removeEvent(p))
+            //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+            //}
+            //addEvent(talk)
+        };
+        function save() {
+        };
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '230px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
     </script>
 </body>
+
 </html>

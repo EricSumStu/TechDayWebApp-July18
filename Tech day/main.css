@@ -1119,4 +1119,58 @@ video {
             
         
             
-        }        
+        }  
+        /*Admin Page*/
+        input.Host{
+            background-color: #fad22d;
+            border: none;
+            font-size: 20px;
+            font-family: 'EricssonHilda-Regular';
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            margin: 2px 10px;
+            height:auto;
+            width: 100%;
+        }
+        .gridAdmin > div {               /*Admin*/
+            padding:1em;
+             
+          
+          }
+          
+          #gridAdmin {                     /*Admin*/
+              display: grid;
+          
+              grid-template-columns: 25% 25% 25% 25%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top top top top"
+                                   "middle-left middle-middle middle-middle middle-right"
+                                   "bottom-left bottom-middle bottom-middle bottom right";
+              text-align: center;
+          }
+          
+          @media screen and (max-width: 800px){
+              #gridAdmin{
+                  grid-template-columns: 50% 50%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top top"
+                                   "middle-left middle-right"
+                                   "bottom-left bottom right";
+              text-align: center;
+              }
+          }
+          
+          @media screen and (max-width: 500px){
+              #gridAdmin{
+                  grid-template-columns: 100%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top";
+              text-align: center;
+              }
+          
+              
+          }      
