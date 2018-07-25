@@ -62,24 +62,7 @@
             </li>
                        <!-- POP UP WINDOW -->
  <p class="loginButton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Login</p>
- <div id="id01" class="modal">
-        <form name ="login" form class="modal-content animate">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
-            <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
-            <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
-                        <!---->
- <form id="form_id" method="post" name="myform">
-        <div class="container">
-        <label>Username: </label>
-        <input type="text" name="username" id="username"/>
-        <label>Password: </label>
-        <input type="password" name="password" id="password"/>
-        <button type="submit" id="submit" onclick="validate()">Login</button>
-        <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
-       <label><br><br>Log-in is only allowed for the web admin. </label>
-        </ul>
+ 
 
         <div id="side-menu" class="side-nav">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -109,32 +92,12 @@
              
             <!-- POP UP WINDOW -->
  <p id="loginButton2" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Login</p>
-     <div id="id01" class="modal">
-            <form name ="login" form class="modal-content animate">
-              <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
-                <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
-                <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
-                            <!---->
-     <form id="form_id" method="post" name="myform">
-            <div class="container">
-            <label>Username: </label>
-            <input type="text" name="username" id="username"/>
-            <label>Password: </label>
-            <input type="password" name="password" id="password"/>
-            <button type="submit" id="submit" onclick="validate()">Login</button>
-            <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
-           <label><br><br>Log-in is only allowed for the web admin.</label>
-                  
-                </li>
-            </ul>
-        </div>
 </nav>
 <body>
 
     
     <div id="main"> 
+           
     <div id="header">
             <img src="images/Eventsbanner.png" class="Banner" />
     </div>
@@ -172,7 +135,25 @@
             
 
         </div>
-
+        <div id="id01" class="modal">
+                <form name ="login" form class="modal-content animate">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
+                    <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
+                    <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
+                                <!---->
+         <form id="form_id" method="post" name="myform">
+                <div class="container">
+                <label>Username: </label>
+                <input type="text" name="username" id="username"/>
+                <label>Password: </label>
+                <input type="password" name="password" id="password"/>
+                <button type="submit" id="submit" onclick="validate()">Login</button>
+                <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
+               <label><br><br>Log-in is only allowed for the web admin. </label>
+                </ul>
+            </div>
     </div>
 
     <script>
