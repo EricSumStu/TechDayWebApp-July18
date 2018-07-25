@@ -1107,7 +1107,16 @@ video {
               grid-auto-rows: auto ;
               grid-template-areas: "top";
               text-align: center;
-              }
-          
-              
+              } 
           }      
+
+p6{                             /*404 page*/
+    font-family: 'EricssonHilda-Regular';
+    font-size: 22px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.maintanence {
+    background: red;
+}
