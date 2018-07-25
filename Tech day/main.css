@@ -22,8 +22,8 @@
 
    #main{
     transition:margin-left 0.5s;
-  
-    overflow: hidden;
+    position: relative;
+    overflow: none;
     width: 100%;
 }
 
@@ -73,7 +73,6 @@
 
 body{
 	text-align: center;
-	
   font-family: 'EricssonHilda-Light';
   font-weight: 100;}
 
@@ -366,12 +365,18 @@ body {text-align:left;}
     font-family: 'EricssonHilda-Regular';
 }
 
+#header{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 .grid1 > div {               /*events*/
     padding:1em;
   }
   
   .grid1 {                   /*events*/
       display: grid;
+      position: relative;
   
       grid-template-columns: 100%;
       grid-auto-rows: auto ;
@@ -379,6 +384,7 @@ body {text-align:left;}
                            "middle-left"
                            "bottom-left";
       text-align: center;
+      overflow: none; 
   }
 
   .center {                    /*fav*/
@@ -754,11 +760,6 @@ button{
             position: relative;
             color: white;
         }
-       
-            
-        .container {
-            padding: 16px;
-        }
         
         span.psw {
             float: right;
@@ -772,7 +773,8 @@ button{
             z-index: 1; /* Sit on top */
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
+
+            width: 100vw; /* Full width */
             height: 100%; /* Full height */
             overflow: auto; /* Enable scroll if needed */
             background-color: rgb(0,0,0); /* Fallback color */
@@ -837,7 +839,6 @@ button{
                 top: 0;
                 width: 50%; /* Full width */
                 height: 60%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
                 background-color: rgb(0,0,0); /* Fallback color */
                 background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
                 padding-top: 60px;
@@ -890,7 +891,7 @@ button{
     margin-left: 5px;
     margin-right: 5px;
 }
-
+/*past tech days*/
 video {
     width: 100%;
     width: 75%;
@@ -900,8 +901,14 @@ video {
     margin: 0 auto;
     }
 
+.txt{
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
 .grid2 {
-    display: grid;
+    display: grid; 
     grid-template-rows: 50% 50%;                  
     text-align: center;
     align-self: center;
@@ -910,7 +917,6 @@ video {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
         .grid3 {                            
