@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
 <title>Tech Day Ireland | Upcoming Events</title>
@@ -21,27 +20,26 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
-    <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="db.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="main.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+<script src="db.js"></script>
 </head>
-
 <body>
-
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-                </svg>
-            </a>
-        </span>
-
+                                <!--NAVBAR-->
+<nav class="navbar">
+<span class="open-slide">
+    <a href="#" onclick="openSlideMenu()">
+    <svg width="30" height="30">
+    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+</svg>
+</a>
+</span>
+                                <!--NAVBAR-->
         <ul class="navbar-nav">
             <li>
                 <a href="index.html">Home</a>
@@ -66,7 +64,7 @@
             </li>
         </ul>
 
-
+                                <!--SIDENAV-->
         <div id="side-menu" class="side-nav">
 
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -114,7 +112,8 @@
             </div>
 
         </div>
-        <script>
+                                        <!--SCRIPTS-->
+<script>
             var table = "";
             var txt
             var techDate = new Date("2018-10-04");
