@@ -176,9 +176,9 @@
                 <INPUT TYPE="button" id="removeButton" Value="Click to Remove" onClick="">
                 </div>
                 </FORM>
-                <div></div>
-                        <INPUT TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
-                        </div>
+                <div>
+                <INPUT TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
+                </div>
     
                 
    
@@ -216,7 +216,7 @@
             
         }
 function remove(talk){
-               db.events.delete(talk);
+               db.events.clear(talk);
             }
 
         function updateEvent(title, id, host, bio, location, time, summary, theme, category){
@@ -226,7 +226,10 @@ function remove(talk){
              //}
             //addEvent(talk)
         };
-       
+       function save(){
+
+       };
+
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
