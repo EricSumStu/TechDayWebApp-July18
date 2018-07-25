@@ -347,7 +347,7 @@ table.events, tbody, tr, td {
 
 body {text-align:left;}
 
-.count {                   /*countdown on upcoming events*/
+/*.count {                   
     left: 0;
     line-height: 200px;
     margin: auto;
@@ -364,6 +364,7 @@ body {text-align:left;}
     font-size: 50px; 
     font-family: 'EricssonHilda-Regular';
 }
+*/
 
 #header{
     height: 100%;
@@ -890,6 +891,10 @@ button{
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    background-color: #FF3232;
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'EricssonHilda-Regular';
 }
 /*past tech days*/
 video {
