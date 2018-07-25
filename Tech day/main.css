@@ -430,22 +430,11 @@ p {                            /*Tech Day is in...*/
 
     grid-template-columns: 25% 50% 25%;
     grid-auto-rows: auto ;
-    grid-template-areas: "top top top";
-                         
+    grid-template-areas: "top top top";                   
     text-align: center;
-}
-@media screen and (max-width: 800px){
-    .searchGrid{
-        grid-template-columns: 50% 50%;
-    grid-auto-rows: auto ;
-    grid-template-areas: "top top"
-                         "middle-left middle-right"
-                         "bottom-left bottom right";
-    text-align: center;
-    }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 1050px){
     .searchGrid{
         grid-template-columns: 100%;
     grid-auto-rows: auto ;
@@ -455,7 +444,7 @@ p {                            /*Tech Day is in...*/
 }
 #searchSelect {                 /*Selector for Allpage*/
     display: inline-block;
-    width: 90%;
+    width: 100%;
     height:80%;
     border-radius:20px; 
     padding:5px;
@@ -469,7 +458,7 @@ p {                            /*Tech Day is in...*/
 
 #searchButton{
     display: inline-block;
-    width: 90%;
+    width: 100%;
     height:80%;
     border-radius:20px; 
     padding:5px;
@@ -482,11 +471,11 @@ p {                            /*Tech Day is in...*/
 }
 #inputbox{
     display: inline-block;
-    width: 90%;
+    width: 100%;
     height:80%;
     position: relative;
     border-radius:20px; 
-    border: solid 1px gray;
+    border: solid .5px gray;
     font-family:'EricssonHilda-Regular';
     font-size: 20px;
 }                                   /*end of all page*/
@@ -823,6 +812,7 @@ button{
         }
 
 .countdownGrid {
+    margin-top: 10px;
     display: grid;
     grid-template-rows: 50% 50%;                  
     text-align: center;
@@ -1060,6 +1050,7 @@ video {
         }
 
         /*Admin Page*/
+        /*text boxes*/
         input.Host{
             background-color: #fad22d;
             border: none;
@@ -1075,13 +1066,13 @@ video {
             height:auto;
             width: 100%;
         }
-        .gridAdmin > div {               /*Admin*/
+        .gridAdmin > div {               /*Admin grid for buttons*/
             padding:1em;
              
           
           }
           
-          #gridAdmin {                     /*Admin*/
+          #gridAdmin {                     /*Admin grid for buttons*/
               display: grid;
           
               grid-template-columns: 25% 25% 25% 25%;
@@ -1092,7 +1083,7 @@ video {
               text-align: center;
           }
           
-          @media screen and (max-width: 800px){
+          @media screen and (max-width: 800px){ /*Admin grid for buttons*/
               #gridAdmin{
                   grid-template-columns: 50% 50%;
               grid-auto-rows: auto ;
@@ -1103,7 +1094,7 @@ video {
               }
           }
           
-          @media screen and (max-width: 500px){
+          @media screen and (max-width: 500px){ /*Admin grid for buttons*/
               #gridAdmin{
                   grid-template-columns: 100%;
               grid-auto-rows: auto ;
@@ -1121,4 +1112,9 @@ p6{                             /*404 page*/
 
 #maintanence {
     background: #FAC22D;
+}
+/*Upcoming Events*/
+
+#spacer{
+    padding: 30px;
 }
