@@ -68,9 +68,6 @@
     
 }
 
-
-
-
 body{
 	text-align: center;
   font-family: 'EricssonHilda-Light';
@@ -323,7 +320,8 @@ button.Fav{
 
 }
 
-button.Host{
+button.Host /*Biography Buttons*/
+{
     background-color: #fad22d;
     border: none;
     font-size: 20px;
@@ -346,25 +344,6 @@ table.events, tbody, tr, td {
 }
 
 body {text-align:left;}
-
-/*.count {                   
-    left: 0;
-    line-height: 200px;
-    margin: auto;
-    margin-top: 33px;
-    position: relative;
-    top: 33%;
-    width: 100%;
-    padding-top: 10px;
-    border-style: solid ;
-    border-color: white;
-    border-width: 10px;
-    text-align: center;
-    background-color: white;
-    font-size: 50px; 
-    font-family: 'EricssonHilda-Regular';
-}
-*/
 
 #header{
     height: 100%;
