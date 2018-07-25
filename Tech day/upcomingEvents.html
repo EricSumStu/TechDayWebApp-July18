@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Tech Day Ireland | Upcoming Events</title>
-                                <!--FAVICONS-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<link href="main.css" rel="stylesheet" type="text/css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-<script src="db.js"></script>
+    <meta charset="UTF-8">
+    <title>Tech Day Ireland | Upcoming Events</title>
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="db.js"></script>
 </head>
+
 <body>
-                                <!--NAVBAR-->
-<nav class="navbar">
-<span class="open-slide">
-    <a href="#" onclick="openSlideMenu()">
-    <svg width="30" height="30">
-    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-</svg>
-</a>
-</span>
-                                <!--NAVBAR-->
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+        <!--NAVBAR-->
         <ul class="navbar-nav">
             <li>
                 <a href="index.html">Home</a>
@@ -64,7 +67,7 @@
             </li>
         </ul>
 
-                                <!--SIDENAV-->
+        <!--SIDENAV-->
         <div id="side-menu" class="side-nav">
 
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -100,151 +103,153 @@
         <main class='pic'>
             <div>
                 <a href="#">
-                    <img src="./images/up.png">
+                    <img src="./images/upcoming events banner not round.png">
                 </a>
             </div>
         </main>
         <div class="countdownGrid">
-                <div class="countdown1">
-                        <p id="count" class='countdown1'></p>
-                </div>
-
-        <p id="demo"></p>
-        <div id="myModal" class="modal">
-            <div class="modal-content1">
-                <span class="close1">&times;</span>
-                <p id="bioText">Some text in the Modal..</p>
+            <div class="countdown1">
+                <p id="count" class='countdown1'></p>
             </div>
 
-        </div>                       <!--SCRIPTS-->
-<script>
-    var table = "";
-    var txt
-    var techDate = new Date("2018-10-04");
-    var today = new Date();
-    var techDateSmall = techDate.toDateString(0, 10);
-    var todaySmall = today.toDateString(0, 10);
-    console.log(techDateSmall, todaySmall);
-    var nowTime = new Date().getUTCHours() + 1;
-    var techDay = false;
-    if (todaySmall === techDateSmall) {
-        techDay = true
-    };
-    var modal = document.getElementById('myModal');
-    var countdown = function () {
-    // Set the date we're counting down to
-    var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
-    // Update the count down every 1 second
-    var x = setInterval(function () {
-    // Get todays date and time
-    var now = new Date().getTime();
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("count").innerHTML = "Please come back in:" + '<br>' + days + "d " + hours + "h"
-        + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
-    }, 1000);
-};
-    $.getJSON("talks.json", function (json) {
-    var obj = json;
-    for (var y = 0; y < (obj.talks).length; y++) {
-        if (techDay === false) {
-            countdown()
-        } else if (techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime) {
-            console.log("Tech Day is Today and event is this hour")
-            printEvent(obj.talks[y])
-        }else if(techDay === true && nowTime < 8 && obj.talks[y].Time === 9 || obj.talks[y].Time === 10 ){
-            printEvent(obj.talks[y])
-        }
-    }
-        document.getElementById("demo").innerHTML = table;
-        })
-    function printEvent(event) {
-    var txt = "<table>"
-    txt += "<tr>";
-            txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
-    txt += "<td>" + "" + "</td>"
-    txt += "</tr>"
-    txt += "<tr>";
-    txt += "<td>" + "Title:" + "</td>"
-    txt += "<td>" + (event.Title) + "</td>"
-    txt += "</tr>"
-    txt += "<tr>";
-    txt += "<td>" + "Time:" + "</td>"
-    txt += "<td>" + (event.Time) + "</td>"
-    txt += "</tr>"
-    txt += "<tr>";
-    txt += "<td>" + "Host:" + "</td>"
-    txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value=" + event.ID + " onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
-    txt += "</tr>"
-    txt += "<tr>";
-    txt += "<td>" + "Location:" + "</td>"
-    txt += "<td>" + (event.Location) + "</td>"
-    txt += "</tr>"
-    txt += "<tr>";
-    txt += "<td>" + "Summary:" + "</td>"
-    txt += "<td class='TWO'>" + (event.Summary) + "</td>"
-    txt += "</tr>"
-    txt += '<tr>';
-    txt += "<td>" + "" + "</td>"
-    txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=addFavourite(value)>Favourite</button>" + "</td>"
-    txt += "</tr>"
-    txt += "</table><br>"
-    table += txt;
-};
+            <p id="demo"></p>
+            <div id="myModal" class="modal">
+                <div class="modal-content1">
+                    <span class="close1">&times;</span>
+                    <p id="bioText">Some text in the Modal..</p>
+                </div>
 
-function openSlideMenu() {
-    document.getElementById('side-menu').style.width = '230px';
-    document.getElementById('main').style.marginLeft = '230px';
-};
+            </div>
+            <!--SCRIPTS-->
+            <script>
+                var table = "";
+                var txt
+                var techDate = new Date("2018-10-04");
+                var today = new Date();
+                var techDateSmall = techDate.toDateString(0, 10);
+                var todaySmall = today.toDateString(0, 10);
+                console.log(techDateSmall, todaySmall);
+                var nowTime = new Date().getUTCHours() + 1;
+                var techDay = false;
+                if (todaySmall === techDateSmall) {
+                    techDay = true
+                };
+                var modal = document.getElementById('myModal');
+                var countdown = function () {
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
+                    // Update the count down every 1 second
+                    var x = setInterval(function () {
+                        // Get todays date and time
+                        var now = new Date().getTime();
+                        // Find the distance between now an the count down date
+                        var distance = countDownDate - now;
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        document.getElementById("count").innerHTML = "Please come back in:" + '<br>' + days + "d " + hours + "h"
+                            + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
+                    }, 1000);
+                };
+                $.getJSON("talks.json", function (json) {
+                    var obj = json;
+                    for (var y = 0; y < (obj.talks).length; y++) {
+                        if (techDay === false) {
+                            countdown()
+                        } else if (techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime) {
+                            console.log("Tech Day is Today and event is this hour")
+                            printEvent(obj.talks[y])
+                        } else if (techDay === true && nowTime < 8 && obj.talks[y].Time === 9 || obj.talks[y].Time === 10) {
+                            printEvent(obj.talks[y])
+                        }
+                    }
+                    document.getElementById("demo").innerHTML = table;
+                })
+                function printEvent(event) {
+                    var txt = "<table>"
+                    txt += "<tr>";
+                    txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+                    txt += "<td>" + "" + "</td>"
+                    txt += "</tr>"
+                    txt += "<tr>";
+                    txt += "<td>" + "Title:" + "</td>"
+                    txt += "<td>" + (event.Title) + "</td>"
+                    txt += "</tr>"
+                    txt += "<tr>";
+                    txt += "<td>" + "Time:" + "</td>"
+                    txt += "<td>" + (event.Time) + "</td>"
+                    txt += "</tr>"
+                    txt += "<tr>";
+                    txt += "<td>" + "Host:" + "</td>"
+                    txt += "<td>" + (event.Host) + "<button id='hostButton' class='Host' value=" + event.ID + " onclick=openBiography(value) >" + "Biography" + "</button>" + "</button>" + "</td>"
+                    txt += "</tr>"
+                    txt += "<tr>";
+                    txt += "<td>" + "Location:" + "</td>"
+                    txt += "<td>" + (event.Location) + "</td>"
+                    txt += "</tr>"
+                    txt += "<tr>";
+                    txt += "<td>" + "Summary:" + "</td>"
+                    txt += "<td class='TWO'>" + (event.Summary) + "</td>"
+                    txt += "</tr>"
+                    txt += '<tr>';
+                    txt += "<td>" + "" + "</td>"
+                    txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=addFavourite(value)>Favourite</button>" + "</td>"
+                    txt += "</tr>"
+                    txt += "</table><br>"
+                    table += txt;
+                };
 
-function closeSlideMenu() {
-    document.getElementById('side-menu').style.width = '0';
-    document.getElementById('main').style.marginLeft = '0';
-};
+                function openSlideMenu() {
+                    document.getElementById('side-menu').style.width = '230px';
+                    document.getElementById('main').style.marginLeft = '230px';
+                };
 
-function addFavourite(ID) {
-    $.getJSON("talks.json", function (json) {
-    var obj = json;
-    for (var y = 0; y < (obj.talks).length; y++) {
-        if (ID === obj.talks[y].ID) {
-            getEvents(obj.talks[y]);
-            console.log("ADDED");
-        } else {
-            console.log(ID);
-            }
-        }
-    });
-};
-function openBiography(ID) {
-    modal.style.display = "block";
-    var txt = ""
-    $.getJSON("talks.json", function (json) {
-        var obj = json;
-        for (var y = 0; y < (obj.talks).length; y++) {
-            if (ID === obj.talks[y].ID) {
-                txt = "Biography:" + " " + (obj.talks[y].Bio);
-            } else {
-            }
-            document.getElementById("bioText").innerHTML = txt
-        }
-    })
-};
+                function closeSlideMenu() {
+                    document.getElementById('side-menu').style.width = '0';
+                    document.getElementById('main').style.marginLeft = '0';
+                };
+
+                function addFavourite(ID) {
+                    $.getJSON("talks.json", function (json) {
+                        var obj = json;
+                        for (var y = 0; y < (obj.talks).length; y++) {
+                            if (ID === obj.talks[y].ID) {
+                                getEvents(obj.talks[y]);
+                                console.log("ADDED");
+                            } else {
+                                console.log(ID);
+                            }
+                        }
+                    });
+                };
+                function openBiography(ID) {
+                    modal.style.display = "block";
+                    var txt = ""
+                    $.getJSON("talks.json", function (json) {
+                        var obj = json;
+                        for (var y = 0; y < (obj.talks).length; y++) {
+                            if (ID === obj.talks[y].ID) {
+                                txt = "Biography:" + " " + (obj.talks[y].Bio);
+                            } else {
+                            }
+                            document.getElementById("bioText").innerHTML = txt
+                        }
+                    })
+                };
 
 
-var span = document.getElementsByClassName("close1")[0];
-span.onclick = function () {
-    modal.style.display = "none";
-};
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
-</script>
+                var span = document.getElementsByClassName("close1")[0];
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                };
+            </script>
 </body>
+
 </html>

@@ -420,24 +420,6 @@ p {                            /*Tech Day is in...*/
   font-family: 'EricssonHilda-Light';
 }
 
-                         /*Tech Day is in... p{
-    font-size: 20px;
-    text-align: center;
-    font-family: 'EricssonHilda-Light';
-    font-weight: bold;
-}*/
-
-footer {                        /*countdown*/
-    border-style: solid ;
-    border-color: white;
-    border-width: 10px;
-    text-align: center;
-    background-color: white;
-    font-size: 50px; 
-    font-family: 'EricssonHilda-Regular';
-}
-
-
 table.map{                           /*Maps*/
     text-align: left;
     font-family:'EricssonHilda-Regular';
@@ -448,65 +430,68 @@ tr#THREE{
     font-family:'EricssonHilda-Bold';
 }
 
-button.zoneOne{
-    font-size: 20px;
+button{                         
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;
 }
-button.zoneTwo{
-    font-size: 20px;
-}
-button.zoneThree{
-    font-size: 20px;
-}
-button.zoneFour{
-    font-size: 20px;
-}
-button.zoneFive{
-    font-size: 20px;
-}
-button.zoneSix{
-    font-size: 20px;
-}
-button.zoneSeven{
-    font-size: 20px;
-}
-button.zoneEight{
-    font-size: 20px;
-}
-button.zoneNine{
-    font-size: 20px;
+/*All Page */
+.searchGrid {                     /*Allpage*/
+    display: grid;
+    padding-top: 5px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top";
+                         
+    text-align: center;
 }
 
 .zoneOne{
+    font-size: 20px;
     background-color: #FF3232;
     font-family: "EricssonHilda-Regular";  
 }
 .zoneTwo{
+    font-size: 20px;
     background-color: #FF8C0A;
     font-family: "EricssonHilda-Regular";
 }
 .zoneThree{
+    font-size: 20px;
     background-color: #FAD22D;
     font-family: "EricssonHilda-Regular";
 }
 .zoneFour{
+    font-size: 20px;
     background-color: #0FC373;
     font-family: "EricssonHilda-Regular";
 }
 .zoneFive{
+    font-size: 20px;
     background-color: #0082F0;
     font-family: "EricssonHilda-Regular";
 }.zoneSix{
+    font-size: 20px;
     background-color: #AF78D2;
     font-family: "EricssonHilda-Regular";
 }.zoneSeven{
+    font-size: 20px;
     background-color: #e0c240;
     font-family: "EricssonHilda-Regular";
 }
 .zoneEight{
+    font-size: 20px;
     background-color: #c27527 ;
     font-family: "EricssonHilda-Regular";
 }
 .zoneNine{
+    font-size: 20px;
     background-color: #5c1733;
     font-family: "EricssonHilda-Regular";
 }
