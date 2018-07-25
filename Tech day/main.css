@@ -23,7 +23,8 @@
    #main{
     transition:margin-left 0.5s;
     position: relative;
-    overflow: none;
+    
+
     width: 100%;
 }
 
@@ -384,7 +385,7 @@ body {text-align:left;}
                            "middle-left"
                            "bottom-left";
       text-align: center;
-      overflow: none; 
+       
   }
 
   .center {                    /*fav*/
