@@ -434,20 +434,25 @@ p {                            /*Tech Day is in...*/
                          
     text-align: center;
 }
-
-
-
-.searchGrid {                     /*Allpage*/
-    display: grid;
-    padding-top: 5px;
-
-    grid-template-columns: 25% 50% 25%;
+@media screen and (max-width: 800px){
+    .searchGrid{
+        grid-template-columns: 50% 50%;
     grid-auto-rows: auto ;
-    grid-template-areas: "top top top";
-                         
+    grid-template-areas: "top top"
+                         "middle-left middle-right"
+                         "bottom-left bottom right";
     text-align: center;
+    }
 }
 
+@media screen and (max-width: 500px){
+    .searchGrid{
+        grid-template-columns: 100%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top";
+    text-align: center;
+    }  
+}
 #searchSelect {                 /*Selector for Allpage*/
     display: inline-block;
     width: 90%;
