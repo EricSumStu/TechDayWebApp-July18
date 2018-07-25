@@ -1,4 +1,6 @@
 
+
+
 @font-face{
 
     font-family: 'EricssonHilda-Regular';
@@ -664,7 +666,6 @@ button{
             font-family:'EricssonHilda-Regular';
             color: white;
             position: absolute;
-            margin-left:720px;
             font-size: 17px;        
         }
 
