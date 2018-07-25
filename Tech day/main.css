@@ -28,6 +28,7 @@
 }
 
 
+
 .grid > div {               /*Homepage*/
   padding:1em;
    
@@ -292,7 +293,7 @@ td.ONE{
 }
 td.TWO{
     text-align: left;
-    padding-right: 10%;
+    padding-right: 1%;
 }
 
 
