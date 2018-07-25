@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="utf-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tech Day Ireland</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Tech Day Ireland</title>
                                 <!--FAVICONS-->
 <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -25,97 +23,85 @@
 <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen" href="login.style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 <script src="login.js"></script>
 </head>
-
 <body>
-
-
-    <header>
-        <img class="Banner" src="./images/TechDayBannerInternal.svg">
-    </header>
-
-
-    <main>
-        <div class="grid">
-            <div>
-                <a href="events.html">
-                    <img class="Tiles" src="./images/Events.png">
-                </a>
-            </div>
-            <div>
-                <a href="map.html">
-                    <img class="Tiles" src="./images/Maps2.png">
-                </a>
-            </div>
-            <div>
-                <a href="upcomingEvents.html">
-                    <img class="Tiles" src="./images/Upcoming Events.png">
-                </a>
-            </div>
-            <div>
-                <a href="fav.html">
-                    <img class="Tiles" src="./images/Favourites.png">
-                </a>
-            </div>
-            <div>
-                <a href="pasttechday.html">
-                    <img class="Tiles" src="./images/Past Tech Days.png">
-                </a>
-            </div>
-            <div>
-                <a href="about.html">
-                    <img class="Tiles" src="./images/About.jpg.png">
-                </a>
-            </div>
-        </div>
-    </main>
-    <script>
-
-
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get todays date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now an the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            // If the count down is finished, write  some text 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-
-</body>
-
-<div class="countdownGrid">
-    <div class="countdown1">
-        <p class="countdown1">
-            Tech Day Countdown
-        </p>
-    </div>
-    <div class="countdown2"
-    <footer id="demo"></footer>
-    </div>
+                                    <!--HEADER-->
+<header>
+<img class="Banner" src="./images/TechDayBannerInternal.svg">
+</header>
+                                <!--TILES-->
+<main>
+<div class="grid">
+<div>
+    <a href="events.html">
+    <img class="Tiles" src="./images/Events.png">
+    </a>
 </div>
+<div>
+    <a href="map.html">
+    <img class="Tiles" src="./images/Maps2.png">
+    </a>
+</div>
+<div>
+    <a href="upcomingEvents.html">
+    <img class="Tiles" src="./images/Upcoming Events.png">
+    </a>
+</div>
+<div>
+    <a href="fav.html">
+    <img class="Tiles" src="./images/Favourites.png">
+    </a>
+</div>
+<div>
+    <a href="pasttechday.html">
+    <img class="Tiles" src="./images/Past Tech Days.png">
+    </a>
+</div>
+<div>
+    <a href="about.html">
+    <img class="Tiles" src="./images/About.jpg.png">
+    </a>
+</div>
+</div>
+</main>
+                                    <!--SCRIPTS-->
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 4, 2018 9:00:00").getTime();
 
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+// Get todays date and time
+var now = new Date().getTime();
+// Find the distance between now an the count down date
+var distance = countDownDate - now;
+// Time calculations for days, hours, minutes and seconds
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// Display the result in the element with id="demo"
+document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+// If the count down is finished, write  some text 
+    if (distance < 0)   {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+                         }
+        }, 1000);
+</script>
+</body>
+                                <!--COUNTDOWN-->
+<div class="countdownGrid">
+<div class="countdown1">
+<p class="countdown1">Tech Day Countdown</p>
+</div>
+<div class="countdown2"
+<footer id="demo"></footer>
+</div>
+</div>
 </html>

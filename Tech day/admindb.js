@@ -24,8 +24,6 @@ async function addEvent(talk) {
     db.events.add(talk);
 }
 async function removeEvent(talk){
-    console.log(talk);
-    console.log(talk.Title);
     db.events.delete(talk);
 }
 
