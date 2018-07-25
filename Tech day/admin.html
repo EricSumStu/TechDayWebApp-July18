@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tech Day | Admin</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Tech Day | Admin</title>
                                 <!--FAVICONS-->
 <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -21,26 +21,24 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="admindb.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+<script src="admindb.js"></script>
+<link href="main.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-    <nav class="navbar">
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <svg width="30" height="30">
-                    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
-                    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
-                    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
-                </svg>
-            </a>
-        </span>
-
-        <ul class="navbar-nav">
+                                <!--NAVBAR-->
+<nav class="navbar">
+<span class="open-slide">
+<a href="#" onclick="openSlideMenu()">
+    <svg width="30" height="30">
+    <path d="M0,5 30,5" stroke="#000" stroke-width="5" />
+    <path d="M0,14 30,14" stroke="#000" stroke-width="5" />
+    <path d="M0,23 30,23" stroke="#000" stroke-width="5" />
+</svg>
+</a>
+</span>
+<ul class="navbar-nav">
             <li>
                 <a href="index.html">Home</a>
             </li>
@@ -62,13 +60,11 @@
             <li>
                 <a href="about.html">About</a>
             </li>
-        </ul>
-
-
-        <div id="side-menu" class="side-nav">
-
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-            <ul>
+</ul>
+                                <!--SIDEBAR-->
+<div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -91,13 +87,13 @@
                     <a href="about.html">About</a>
                 </li>
             </ul>
-        </div>
-    </nav>
-    </div>
-    </nav>
-    <br>
+</div>
+</nav>
+</div>
+</nav>
+<br>
 
-    
+                                    <!--ADD EVENT: ADMIN-->
     <FORM NAME="myform" ACTION="" METHOD="GET">
     <p>Add Event</p>
     <div>
@@ -140,9 +136,7 @@
     </div>
 
     </FORM>
-
-
-   
+                                   <!--UPDATE EVENT: ADMIN-->
     <FORM NAME="updateform" ACTION="" METHOD="GET"></FORM>
     <p>Update Event</p>
                 <div>
@@ -196,64 +190,58 @@
                 </div>
     
                 
-   
-    <script> 
-         window.addEventListener('load', e => {
-            clearEvents();
-            getEvents();
-        });
+                                <!--SCRIPTS-->
+<script> 
+    window.addEventListener('load', e => {
+    clearEvents();
+    getEvents();
+    });
        
-        function addNewEvent(newID, title, host, bio, location, time, summary, theme, category){
-            //var lastID = db.events.get();
-           // var count = lastID.value
-            //console.log(lastID);
-           // var newID = toString((parseInt(lastID) +1))
-            //console.log(newID)
-            var talk = { ID:newID, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
-             }
-            addEvent(talk)
+    function addNewEvent(newID, title, host, bio, location, time, summary, theme, category){
+    //var lastID = db.events.get();
+    // var count = lastID.value
+    //console.log(lastID);
+    // var newID = toString((parseInt(lastID) +1))
+    //console.log(newID)
+    var talk = { ID:newID, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+    }
+    addEvent(talk)
 
-        }
+    }
         
-        function findEvent(title, id, host, bio, location, time, summary, theme, category){
-            db.events.where('Title').equals(title).each(p => display(p))
-             console.log(title)
-            function display(p){
-            document.getElementById('inputboxUID').value = p.ID
-            document.getElementById('inputboxUHost').value = p.Host
-            document.getElementById('inputboxUBiography').value = p.Bio
-            document.getElementById('inputboxULocation').value = p.Location
-            document.getElementById('inputboxUTime').value = p.Time
-            document.getElementById('inputboxUSummary').value = p.Summary
-            document.getElementById('inputboxUTheme').value = p.Theme
-            document.getElementById('inputboxUCategory').value = p.Categories
-            };
-            
-        }
-function remove(talk){
-               db.events.clear(talk);
-            }
-
-        function updateEvent(title, id, host, bio, location, time, summary, theme, category){
-           db.events.where('Title').equals(title).each(p => removeEvent(p))
-           
-            //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
-             //}
-            //addEvent(talk)
-        };
-       function save(){
-
-       };
-
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '230px';
-            document.getElementById('main').style.marginLeft = '250px';
-        }
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-            document.getElementById('main').style.marginLeft = '0';
-        }
+    function findEvent(title, id, host, bio, location, time, summary, theme, category){
+    db.events.where('Title').equals(title).each(p => display(p))
+    console.log(title)
+    function display(p){
+    document.getElementById('inputboxUID').value = p.ID
+    document.getElementById('inputboxUHost').value = p.Host
+    document.getElementById('inputboxUBiography').value = p.Bio
+    document.getElementById('inputboxULocation').value = p.Location
+    document.getElementById('inputboxUTime').value = p.Time
+    document.getElementById('inputboxUSummary').value = p.Summary
+    document.getElementById('inputboxUTheme').value = p.Theme
+    document.getElementById('inputboxUCategory').value = p.Categories
+    };  
+    }
+    function remove(talk){
+    db.events.clear(talk);
+    }
+    function updateEvent(title, id, host, bio, location, time, summary, theme, category){
+    db.events.where('Title').equals(title).each(p => removeEvent(p))
+    //var talk = { ID:id, Title:title, Host:host, Bio:bio, Time:time, Summary:summary, Theme:theme, Categories:category
+    //}
+    //addEvent(talk)
+    };
+    function save(){
+    };
+    function openSlideMenu() {
+    document.getElementById('side-menu').style.width = '230px';
+    document.getElementById('main').style.marginLeft = '250px';
+    }
+    function closeSlideMenu() {
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+    }
     </script>
 </body>
-
 </html>
