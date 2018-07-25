@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Tech Day Ireland | Demos</title>
-                            <!--FAVICONS-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
@@ -105,7 +105,8 @@
                 <img src="./images/demo straight border.png">
             </a>
         </div>
-    <p id="demo"></p>
+
+        <p id="demo"></p>
         <div id="myModal" class="modal">
             <div class="modal-content1">
                 <span class="close1">&times;</span>
@@ -113,8 +114,9 @@
             </div>
         </div>
     </div>
-   
-   <script>
+
+
+    <script>
         var txt = "";
         var modal = document.getElementById('myModal');
         var table = "";
@@ -141,9 +143,9 @@
         });
 
         function printEvent(event) {
-            var txt = "<table>"
+            var txt = "<table class='events'>"
             txt += "<tr>";
-            txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
             txt += "</tr>"
             txt += "<tr>";

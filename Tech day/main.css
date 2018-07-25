@@ -23,7 +23,8 @@
    #main{
     transition:margin-left 0.5s;
     position: relative;
-    overflow: none;
+    
+
     width: 100%;
 }
 
@@ -63,25 +64,13 @@
     grid-auto-rows: auto ;
     grid-template-areas: "top";
     text-align: center;
-    }
-
-    
+    }  
 }
-
-
-
 
 body{
 	text-align: center;
   font-family: 'EricssonHilda-Light';
   font-weight: 100;}
-
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
 
 #clockdiv{
 	font-family: 'EricssonHilda-Light';
@@ -182,11 +171,19 @@ h1{
     .navbar a{
         color:white;
     }
+
+   
 }
 
 @media screen and (min-width:800px){
     .open-slide{
         display:none;
+    }
+
+    #main {
+        margin: auto;
+    width: 50%;
+    
     }
 }
 
@@ -198,7 +195,7 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
-#little{
+#eventsImages{
     display: block;
     width: 500%;
     height:60%;
@@ -207,7 +204,8 @@ img  {
     border-radius:5px; 
 }
 
-.Banner {               /*Style for Homepage*/
+
+.Banner {               /*All Banners*/
     display: block;
     width: 100%;
     height:80%;
@@ -264,7 +262,6 @@ img  {
      
  }
 
- /* Modal Content */
 .modal-content1 {
     background-color: #0fc373;
     margin: auto;
@@ -273,8 +270,7 @@ img  {
     width: 80%;
 }
 
-/* The Close Button */
-.close1 {
+.close1 {                   /* The Close Button */
     color: white;
     float: right;
     font-size: 28px;
@@ -291,13 +287,12 @@ td.ONE{
     padding-top: 20px;
 }
 td.TWO{
-    text-align: left;
+    text-align: justify;
     padding-right: 1%;
 }
 
 
 button.Fav{
-    
     background-color: #Af78D2;
     border: none;
     font-size: 20px;
@@ -314,7 +309,8 @@ button.Fav{
 
 }
 
-button.Host{
+button.Host /*Biography Buttons*/
+{
     background-color: #fad22d;
     border: none;
     font-size: 20px;
@@ -330,31 +326,11 @@ button.Host{
     width: auto;
 }
 
-
-
 table.events, tbody, tr, td {
     vertical-align: top;
 }
 
 body {text-align:left;}
-
-.count {                   /*countdown on upcoming events*/
-    left: 0;
-    line-height: 200px;
-    margin: auto;
-    margin-top: 33px;
-    position: relative;
-    top: 33%;
-    width: 100%;
-    padding-top: 10px;
-    border-style: solid ;
-    border-color: white;
-    border-width: 10px;
-    text-align: center;
-    background-color: white;
-    font-size: 50px; 
-    font-family: 'EricssonHilda-Regular';
-}
 
 #header{
     height: 100%;
@@ -375,7 +351,7 @@ body {text-align:left;}
                            "middle-left"
                            "bottom-left";
       text-align: center;
-      overflow: none; 
+       
   }
 
   .center {                    /*fav*/
@@ -397,30 +373,52 @@ p3{                                 /*fav*/
     font-family: 'EricssonHilda-Regular';
 }
 
+#mySelect {                     /*Selector for themes on favourites page*/
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    border-radius:20px; 
+    padding:5px;
+    margin-right:0px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none; 
+    font-size: 20px;
+}
+
+#typeSelect {               /*Selector for type on favourites page*/
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    border-radius:20px; 
+    padding:5px;
+    margin-right:0px;
+    font-family:'EricssonHilda-Regular';
+    background-color: #0082f0;
+    color: white;
+    border: none; 
+    font-size: 20px;
+}                           
+
+#favGrid {                     
+    display: grid;
+    padding-top: 5px;
+    
+     grid-template-columns: 100%;
+    grid-auto-rows: auto ; 
+    grid-row-gap: 10px; 
+    grid-row: padding 10px;
+    grid-template-areas: "top";
+    text-align: center;    
+}                               /*end of favoutites*/
+
 p {                            /*Tech Day is in...*/
     margin-left: 10px;
   margin-right: 10px;
   font-size: 20px;
   font-family: 'EricssonHilda-Light';
 }
-
-                         /*Tech Day is in... p{
-    font-size: 20px;
-    text-align: center;
-    font-family: 'EricssonHilda-Light';
-    font-weight: bold;
-}*/
-
-footer {                        /*countdown*/
-    border-style: solid ;
-    border-color: white;
-    border-width: 10px;
-    text-align: center;
-    background-color: white;
-    font-size: 50px; 
-    font-family: 'EricssonHilda-Regular';
-}
-
 
 table.map{                           /*Maps*/
     text-align: left;
@@ -432,34 +430,6 @@ tr#THREE{
     font-family:'EricssonHilda-Bold';
 }
 
-
-button.zoneOne{
-    font-size: 20px;
-}
-button.zoneTwo{
-    font-size: 20px;
-}
-button.zoneThree{
-    font-size: 20px;
-}
-button.zoneFour{
-    font-size: 20px;
-}
-button.zoneFive{
-    font-size: 20px;
-}
-button.zoneSix{
-    font-size: 20px;
-}
-button.zoneSeven{
-    font-size: 20px;
-}
-button.zoneEight{
-    font-size: 20px;
-}
-button.zoneNine{
-    font-size: 20px;
-}
 button{                         
     position:sticky;
     width: 90%;
@@ -482,86 +452,46 @@ button{
     text-align: center;
 }
 
-@media screen and (max-width: 500px){
-    .searchGrid{
-        grid-template-columns: 100%;
-    grid-auto-rows: auto ; 
-    grid-row-gap: 8px; 
-    grid-template-areas: "top";
-    text-align: center;
-    }
-
-    
-}
-#searchSelect { 
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    border-radius:20px; 
-    padding:5px;
-    margin-right:0px;
-    font-family:'EricssonHilda-Regular';
-    background-color: #0082f0;
-    color: white;
-    border: none; 
-    font-size: 20px;
-}
-
-#searchButton{
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    border-radius:20px; 
-    padding:5px;
-    font-family:'EricssonHilda-Regular';
-    background-color: #0082f0;
-    color: white;
-    border: none;
-    position: relative;
-    font-size: 20px;
-}
-#inputbox{
-    display: inline-block;
-    width: 90%;
-    height:80%;
-    position: relative;
-    border-radius:20px; 
-    border: solid 1px gray;
-    font-family:'EricssonHilda-Regular';
-    font-size: 20px;
-
-}
 .zoneOne{
+    font-size: 20px;
     background-color: #FF3232;
     font-family: "EricssonHilda-Regular";  
 }
 .zoneTwo{
+    font-size: 20px;
     background-color: #FF8C0A;
     font-family: "EricssonHilda-Regular";
 }
 .zoneThree{
+    font-size: 20px;
     background-color: #FAD22D;
     font-family: "EricssonHilda-Regular";
 }
 .zoneFour{
+    font-size: 20px;
     background-color: #0FC373;
     font-family: "EricssonHilda-Regular";
 }
 .zoneFive{
+    font-size: 20px;
     background-color: #0082F0;
     font-family: "EricssonHilda-Regular";
 }.zoneSix{
+    font-size: 20px;
     background-color: #AF78D2;
     font-family: "EricssonHilda-Regular";
 }.zoneSeven{
+    font-size: 20px;
     background-color: #e0c240;
     font-family: "EricssonHilda-Regular";
 }
 .zoneEight{
+    font-size: 20px;
     background-color: #c27527 ;
     font-family: "EricssonHilda-Regular";
 }
 .zoneNine{
+    font-size: 20px;
     background-color: #5c1733;
     font-family: "EricssonHilda-Regular";
 }
@@ -609,6 +539,17 @@ button{
     font-family: "EricssonHilda-Regular";
 }
 
+button{                         
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;                   /*End of Maps*/
+}
+
 .address{
     font-family: "EricssonHilda-Regular";
     font-size: 17px;
@@ -620,14 +561,24 @@ button{
     border-radius:20px; 
     background-color: #111;
     color:white;
+    width: 90%; 
+}
+
+.searchGrid {                     /*Allpage*/
+    display: grid;
+    padding-top: 5px;
+
+    grid-template-columns: 25% 50% 25%;
+    grid-auto-rows: auto ;
+    grid-template-areas: "top top top";
+                         
+    text-align: center;
+}
+
+#searchSelect {                 /*Selector for Allpage*/
+    display: inline-block;
     width: 90%;
-  
-}
-
-#mySelect {
-    display: inline-block;
-    width: 100%;
-    height:100%;
+    height:80%;
     border-radius:20px; 
     padding:5px;
     margin-right:0px;
@@ -638,19 +589,29 @@ button{
     font-size: 20px;
 }
 
-#typeSelect {
+#searchButton{
     display: inline-block;
-    width: 100%;
-    height:100%;
+    width: 90%;
+    height:80%;
     border-radius:20px; 
     padding:5px;
-    margin-right:0px;
     font-family:'EricssonHilda-Regular';
     background-color: #0082f0;
     color: white;
-    border: none; 
+    border: none;
+    position: relative;
     font-size: 20px;
 }
+#inputbox{
+    display: inline-block;
+    width: 90%;
+    height:80%;
+    position: relative;
+    border-radius:20px; 
+    border: solid 1px gray;
+    font-family:'EricssonHilda-Regular';
+    font-size: 20px;
+}                                   /*end of all page*/
 
 /*login*/
 /* Full-width input fields */
@@ -849,7 +810,7 @@ button{
             height:10%;
             position: relative;
             margin: auto;
-            border-radius:20px; 
+            border-radius:20px; /*end of Login*/
         }
 
 .countdownGrid {
@@ -881,6 +842,10 @@ button{
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    background-color: #FF3232;
+    text-align: center;
+    font-size: 50px; 
+    font-family: 'EricssonHilda-Regular';
 }
 /*past tech days*/
 video {
@@ -1092,17 +1057,57 @@ video {
           to {opacity: 1}
         }
 
-        #favGrid {                     /*favpage*/
-            display: grid;
-            padding-top: 5px;
-            
-             grid-template-columns: 100%;
-            grid-auto-rows: auto ; 
-            grid-row-gap: 10px; 
-            grid-row: padding 10px;
-            grid-template-areas: "top";
+        /*Admin Page*/
+        input.Host{
+            background-color: #fad22d;
+            border: none;
+            font-size: 20px;
+            font-family: 'EricssonHilda-Regular';
+            color: white;
+            padding: 5px 10px;
             text-align: center;
-            
-        
-            
-        }        
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            margin: 2px 10px;
+            height:auto;
+            width: 100%;
+        }
+        .gridAdmin > div {               /*Admin*/
+            padding:1em;
+             
+          
+          }
+          
+          #gridAdmin {                     /*Admin*/
+              display: grid;
+          
+              grid-template-columns: 25% 25% 25% 25%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top top top top"
+                                   "middle-left middle-middle middle-middle middle-right"
+                                   "bottom-left bottom-middle bottom-middle bottom right";
+              text-align: center;
+          }
+          
+          @media screen and (max-width: 800px){
+              #gridAdmin{
+                  grid-template-columns: 50% 50%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top top"
+                                   "middle-left middle-right"
+                                   "bottom-left bottom right";
+              text-align: center;
+              }
+          }
+          
+          @media screen and (max-width: 500px){
+              #gridAdmin{
+                  grid-template-columns: 100%;
+              grid-auto-rows: auto ;
+              grid-template-areas: "top";
+              text-align: center;
+              }
+          
+              
+          }      
