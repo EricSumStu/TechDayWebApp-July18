@@ -99,12 +99,13 @@
     </nav>
     <br>
 
-    <div id="main">
+    <div id="main" >
         <div>
             <a href="#">
                 <img src="./images/demo straight border.png">
             </a>
         </div>
+    
     <p id="demo"></p>
         <div id="myModal" class="modal">
             <div class="modal-content1">
@@ -113,6 +114,7 @@
             </div>
         </div>
     </div>
+
    
    <script>
         var txt = "";
@@ -141,7 +143,7 @@
         });
 
         function printEvent(event) {
-            var txt = "<table>"
+            var txt = "<table class='events'>"
             txt += "<tr>";
             txt += "<td>" + "<img id='little' src ='./images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"

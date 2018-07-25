@@ -183,11 +183,19 @@ h1{
     .navbar a{
         color:white;
     }
+
+   
 }
 
 @media screen and (min-width:800px){
     .open-slide{
         display:none;
+    }
+
+    #main {
+        margin: auto;
+    width: 50%;
+    
     }
 }
 
@@ -207,6 +215,7 @@ img  {
     margin: auto;
     border-radius:5px; 
 }
+
 
 .Banner {               /*Style for Homepage*/
     display: block;
@@ -292,7 +301,7 @@ td.ONE{
     padding-top: 20px;
 }
 td.TWO{
-    text-align: left;
+    text-align: justify;
     padding-right: 1%;
 }
 
