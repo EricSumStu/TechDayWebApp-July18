@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Tech Day Ireland | Maps</title>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--FAVICONS-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<style>
-    /*
+    <title>Tech Day Ireland | Maps</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <style>
+        /*
         body {
             font-family: Arial, Helvetica, sans-serif;
         }*/
+
         /* The Modal (background) */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-     /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
         }
-/* The Close Button */
-.close1 {
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    padding: 5px;
+
+        /* The Close Button */
+
+        .close1 {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            padding: 5px;
         }
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-            }
-</style>
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-                                <!--MAP JAVASCRIPT-->
+    <!--MAP JAVASCRIPT-->
     <script src="map.js"></script>
-                                <!--NAVBAR-->
+    <!--NAVBAR-->
     <nav class="navbar">
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
@@ -133,165 +140,167 @@
                 </li>
             </ul>
         </div>
-</nav>
-<br>
-                            <!--BANNER AND MAP-->
-<div id="main">
-    <div id="header">
-        <img src="images/mapsbanner.png" class="Banner" />
-        <br>
-        <img src="images/groundfloor.png" class="map" />
-</div>
-                            <!--ZONES-->
-<div class="grid1">
-    <div>
-    <button class="zoneOne" id="1" onclick=openEvents(id) align="middle">Zone One</button>
-    <div id="11" class="modal">
-    <div id="zoneOne2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone One</h2>
-        <p id="zone1"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
+    </nav>
+    <br>
+    <!--BANNER AND MAP-->
+    <div id="main">
+        <div id="header">
+            <img src="images/mapsbanner.png" class="Banner" />
+            <br>
+            <img src="images/groundfloor.png" class="map" />
         </div>
-    </div>
-</div>
-    <div>
-    <button class="zoneTwo" id="2" onclick=openEvents(id)>Zone Two</button>
-    <div id="21" class="modal">
-    <div id="zoneTwo2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone Two</h2>
-        <p id="zone2"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="3" class="zoneThree" onclick=openEvents(id)>Zone Three</button>
-    <div id="31" class="modal">
-    <div id="zoneThree2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone Three</h2>
-        <p id="zone3"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="4" class="zoneFour" onclick=openEvents(id)>Zone Four</button>
-    <div id="41" class="modal">
-    <div id="zoneFour2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone Four</h2>
-        <p id="zone4"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="5" class="zoneFive" onclick=openEvents(id)>Zone Five</button>
-    <div id="51" class="modal">
-    <div id="zoneFive2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone Five</h2>
-        <p id="zone5"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="6" class="zoneSix" onclick=openEvents(id)>Zone Six</button>
-    <div id="61" class="modal">
-    <div id="zoneSix2" class="modal-content">
-        <span class="close1">&times;</span>
-        <h2>Events on in Zone Six</h2>
-        <p id="zone6"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
-    <div id="71" class="modal">
-    <div id="zoneSeven2" class="modal-content">
-        <span id="modal7" class="close1">&times;</span>
-        <h2>Events on in Zone Seven</h2>
-        <p id="zone7"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-<div>
-    
-    <p class="xlarge">First Floor</p>
-    <img src="images/firstfloor.png" class="map" />
-</div>
+        <!--ZONES-->
+        <div class="grid1">
+            <div>
+                <button class="zoneOne" id="1" onclick=openEvents(id) align="middle">Zone One</button>
+                <div id="11" class="modal">
+                    <div id="zoneOne2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone One</h2>
+                        <p id="zone1"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="zoneTwo" id="2" onclick=openEvents(id)>Zone Two</button>
+                <div id="21" class="modal">
+                    <div id="zoneTwo2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone Two</h2>
+                        <p id="zone2"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="3" class="zoneThree" onclick=openEvents(id)>Zone Three</button>
+                <div id="31" class="modal">
+                    <div id="zoneThree2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone Three</h2>
+                        <p id="zone3"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="4" class="zoneFour" onclick=openEvents(id)>Zone Four</button>
+                <div id="41" class="modal">
+                    <div id="zoneFour2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone Four</h2>
+                        <p id="zone4"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="5" class="zoneFive" onclick=openEvents(id)>Zone Five</button>
+                <div id="51" class="modal">
+                    <div id="zoneFive2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone Five</h2>
+                        <p id="zone5"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="6" class="zoneSix" onclick=openEvents(id)>Zone Six</button>
+                <div id="61" class="modal">
+                    <div id="zoneSix2" class="modal-content">
+                        <span class="close1">&times;</span>
+                        <h2>Events on in Zone Six</h2>
+                        <p id="zone6"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
+                <div id="71" class="modal">
+                    <div id="zoneSeven2" class="modal-content">
+                        <span id="modal7" class="close1">&times;</span>
+                        <h2>Events on in Zone Seven</h2>
+                        <p id="zone7"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
 
-<div>
-    <button id="8" class="zoneEight" onclick=openEvents(id)>Zone Eight</button>
-    <div id="81" class="modal">
-    <div id="zoneEight2" class="modal-content">
-        <span id="modal8" class="close1">&times;</span>
-        <h1>Events on in Zone Eight</h1>
-        <p id="zone8"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
-        </div>
-    </div>
-</div>
-    <div>
-    <button id="9" class="zoneNine" onclick=openEvents(id)>Zone Nine</button>
-    <div id="91" class="modal">
-    <div id="zoneNine2" class="modal-content">
-        <span id="modal9" class="close1">&times;</span>
-        <h2>Events on in Zone Nine</h2>
-        <p id="zone9"></p>
-        <p>For more information, please refer to the map or check out the events page.</p>
+                <p class="xlarge">First Floor</p>
+                <img src="images/firstfloor.png" class="map" />
+            </div>
+
+            <div>
+                <button id="8" class="zoneEight" onclick=openEvents(id)>Zone Eight</button>
+                <div id="81" class="modal">
+                    <div id="zoneEight2" class="modal-content">
+                        <span id="modal8" class="close1">&times;</span>
+                        <h1>Events on in Zone Eight</h1>
+                        <p id="zone8"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="9" class="zoneNine" onclick=openEvents(id)>Zone Nine</button>
+                <div id="91" class="modal">
+                    <div id="zoneNine2" class="modal-content">
+                        <span id="modal9" class="close1">&times;</span>
+                        <h2>Events on in Zone Nine</h2>
+                        <p id="zone9"></p>
+                        <p>For more information, please refer to the map or check out the events page.</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!--TECH DAY ADDRESS/VENUE-->
+        <div class="address">
+            <h2>Tech Day Venue</h2>
+            <p id="txt"> Ericsson Software Campus,
+                <br> Cornamaddy,
+                <br> Athlone
+                <br> Co. Westmeath
+                <br>(090) 643 1000</p>
+        </div>
+        <br>
+        <div class="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813"
+                width="100%" height="600"></iframe>
+        </div>
     </div>
-</div>
-                            <!--TECH DAY ADDRESS/VENUE-->
-<div class="address">
-    <h2>Tech Day Venue</h2>
-        <p id="txt"> Ericsson Software Campus,
-            <br> Cornamaddy,
-            <br> Athlone
-            <br> Co. Westmeath
-            <br>(090) 643 1000</p>
-</div>
-    <br>
-    <div class="googleMaps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4754.350948981611!2d-7.901557349737544!3d53.42957071254222!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc8888ab6abee1ad8!2sEricsson!5e0!3m2!1sen!2sie!4v1531224391813"
-        width="100%" height="600"></iframe>
-    </div>
-</div>
-                            <!--SCRIPTS-->
-<script>
-    var spanID
-    function openEvents(id) {
-    var modalID = id + "1"
-    var box = document.getElementById(modalID)
-    box.style.display = "block";
-    var spanID = parseInt(id) - 1
-    var modal = document.getElementsByClassName('modal')[spanID];
-    var span = document.getElementsByClassName("close1")[spanID];
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-    window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    }
-    };
-    function openSlideMenu() {
-    document.getElementById('side-menu').style.width = '230px';
-    document.getElementById('main').style.marginLeft = '250px';
-    }
+    <!--SCRIPTS-->
+    <script>
+        var spanID
+        function openEvents(id) {
+            var modalID = id + "1"
+            var box = document.getElementById(modalID)
+            box.style.display = "block";
+            var spanID = parseInt(id) - 1
+            var modal = document.getElementsByClassName('modal')[spanID];
+            var span = document.getElementsByClassName("close1")[spanID];
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        };
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '230px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
 
-    function closeSlideMenu() {
-    document.getElementById('side-menu').style.width = '0';
-    document.getElementById('main').style.marginLeft = '0';}
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
     </script>
 </body>
+
 </html>
