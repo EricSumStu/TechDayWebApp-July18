@@ -53,11 +53,12 @@
     /* Black w/ opacity */
         }
 /* The Close Button */
-.close {
+.close1 {
     float: right;
     font-size: 28px;
     font-weight: bold;
     color: white;
+    padding: 5px;
         }
 .close:hover,
 .close:focus {
@@ -147,7 +148,7 @@
     <button class="zoneOne" id="1" onclick=openEvents(id) align="middle">Zone One</button>
     <div id="11" class="modal">
     <div id="zoneOne2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone One</h2>
         <p id="zone1"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -158,7 +159,7 @@
     <button class="zoneTwo" id="2" onclick=openEvents(id)>Zone Two</button>
     <div id="21" class="modal">
     <div id="zoneTwo2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone Two</h2>
         <p id="zone2"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -169,7 +170,7 @@
     <button id="3" class="zoneThree" onclick=openEvents(id)>Zone Three</button>
     <div id="31" class="modal">
     <div id="zoneThree2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone Three</h2>
         <p id="zone3"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -180,7 +181,7 @@
     <button id="4" class="zoneFour" onclick=openEvents(id)>Zone Four</button>
     <div id="41" class="modal">
     <div id="zoneFour2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone Four</h2>
         <p id="zone4"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -191,7 +192,7 @@
     <button id="5" class="zoneFive" onclick=openEvents(id)>Zone Five</button>
     <div id="51" class="modal">
     <div id="zoneFive2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone Five</h2>
         <p id="zone5"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -202,7 +203,7 @@
     <button id="6" class="zoneSix" onclick=openEvents(id)>Zone Six</button>
     <div id="61" class="modal">
     <div id="zoneSix2" class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close1">&times;</span>
         <h2>Events on in Zone Six</h2>
         <p id="zone6"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -213,7 +214,7 @@
     <button id="7" class="zoneSeven" onclick=openEvents(id)>Zone Seven</button>
     <div id="71" class="modal">
     <div id="zoneSeven2" class="modal-content">
-        <span id="modal7" class="close">&times;</span>
+        <span id="modal7" class="close1">&times;</span>
         <h2>Events on in Zone Seven</h2>
         <p id="zone7"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -235,7 +236,7 @@
     <button id="9" class="zoneNine" onclick=openEvents(id)>Zone Nine</button>
     <div id="91" class="modal">
     <div id="zoneNine2" class="modal-content">
-        <span id="modal9" class="close">&times;</span>
+        <span id="modal9" class="close1">&times;</span>
         <h2>Events on in Zone Nine</h2>
         <p id="zone9"></p>
         <p>For more information, please refer to the map or check out the events page.</p>
@@ -267,7 +268,7 @@
     box.style.display = "block";
     var spanID = parseInt(id) - 1
     var modal = document.getElementsByClassName('modal')[spanID];
-    var span = document.getElementsByClassName("close")[spanID];
+    var span = document.getElementsByClassName("close1")[spanID];
     span.onclick = function () {
         modal.style.display = "none";
     }
