@@ -1,4 +1,6 @@
 
+
+
 @font-face{
 
     font-family: 'EricssonHilda-Regular';
@@ -444,7 +446,7 @@ p {                            /*Tech Day is in...*/
 }
 #searchSelect {                 /*Selector for Allpage*/
     display: inline-block;
-    width: 100%;
+    width: 98%;
     height:80%;
     border-radius:20px; 
     padding:5px;
@@ -458,7 +460,7 @@ p {                            /*Tech Day is in...*/
 
 #searchButton{
     display: inline-block;
-    width: 100%;
+    width: 98%;
     height:80%;
     border-radius:20px; 
     padding:5px;
@@ -471,7 +473,7 @@ p {                            /*Tech Day is in...*/
 }
 #inputbox{
     display: inline-block;
-    width: 100%;
+    width: 98%;
     height:80%;
     position: relative;
     border-radius:20px; 
@@ -664,7 +666,6 @@ button{
             font-family:'EricssonHilda-Regular';
             color: white;
             position: absolute;
-            margin-left:720px;
             font-size: 17px;        
         }
 
