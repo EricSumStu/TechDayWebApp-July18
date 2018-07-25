@@ -812,6 +812,7 @@ button{
         }
 
 .countdownGrid {
+    margin-top: 10px;
     display: grid;
     grid-template-rows: 50% 50%;                  
     text-align: center;
@@ -1111,4 +1112,9 @@ p6{                             /*404 page*/
 
 #maintanence {
     background: #FAC22D;
+}
+/*Upcoming Events*/
+
+#spacer{
+    padding: 30px;
 }
