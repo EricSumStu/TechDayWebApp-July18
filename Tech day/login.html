@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Tech Day | Admin Login</title>
-                            <!--FAVICONS-->
-<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <!--FAVICONS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- CSS File-->
-<link rel="stylesheet" href="main.css"/>
-<!-- JS File -->
-<script src="login.js"></script>
+    <!-- CSS File-->
+    <link rel="stylesheet" href="main.css" />
+    <!-- JS File -->
+    <script src="login.js"></script>
 </head>
+
 <body>
-<!--LOGIN FORM: ADMIN-->
-     <h2>Admin Login</h2>     
-            <!-- POP UP WINDOW -->
-            <p onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="adminLogin">Login</p>
-            <div id="id01" class="modal">
-            <form name ="login" form class="modal-content animate">
-              <div class="imgcontainer">
+    <!--LOGIN FORM: ADMIN-->
+    <h2>Admin Login</h2>
+    <!-- POP UP WINDOW -->
+    <p onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="adminLogin">Login</p>
+    <div id="id01" class="modal">
+        <form name="login" form class="modal-content animate">
+            <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto"/>
-                <h3> Welcome to Tech Day Ireland<br>Web Administrator Login</h3>
-                <span><b>Enter now by supplying your user ID and password to gain access to the web admin.</b></span>
-                            <!---->
-     <form id="form_id" method="post" name="myform">
-            <div class="container">
-            <label>Username: </label>
-            <input type="text" name="username" id="username"/>
-            <label>Password: </label>
-            <input type="password" name="password" id="password"/>
-            <button type="submit" id="submit" onclick="validate()" class="login">Login</button>
-            <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
-           <label><br><br>Log-in is only allowed for the web admin. If you are not the web admin, please exit immediately. In accordance with requirements of data protection laws, we hereby inform you that personally identifiable information will be handled in log files for legal, security and costs reasons.</label>
-                  
-        </div>
-        </div>
+                <img src="images/loginavatar.png" alt="Avatar" class="avatar" width="auto" />
+                <h3> Welcome to Tech Day Ireland
+                    <br>Web Administrator Login</h3>
+                <span>
+                    <b>Enter now by supplying your user ID and password to gain access to the web admin.</b>
+                </span>
+                <!---->
+                <form id="form_id" method="post" name="myform">
+                    <div class="container">
+                        <label>Username: </label>
+                        <input type="text" name="username" id="username" />
+                        <label>Password: </label>
+                        <input type="password" name="password" id="password" />
+                        <button type="submit" id="submit" onclick="validate()" class="login">Login</button>
+                        <!--  <span><b class="note">Note: </b>For this demo use following username and password. <br/><b class="valid">Username: admin<br/>Password: password</b></span>   -->
+                        <label>
+                            <br>
+                            <br>Log-in is only allowed for the web admin. If you are not the web admin, please exit immediately.
+                            In accordance with requirements of data protection laws, we hereby inform you that personally
+                            identifiable information will be handled in log files for legal, security and costs reasons.</label>
+
+                    </div>
+            </div>
     </div>
-   </form>
-    </body>
- </html>
+    </form>
+</body>
+
+</html>

@@ -94,68 +94,68 @@
     </div>
     </nav>
     <br>
-<div class="main" >
-    <!--ADD EVENT: ADMIN-->
-    <FORM NAME="myform" ACTION="" METHOD="GET">
-       <div id=gridInfo> 
-        <p>Add Event </p>
-        <ul>
-            <li>1. Enter event details in the text box</li>
-            <li>2.Click 'Add Event' button</li>
-            <li>3. Click the 'Save changes' button</li>
-        </ul>
-        <p>Update Event </p>
-        <ul>
-                <li>1. Enter event Title in the text box</li>
-                <li>2. Click 'Find Event' button</li>
-                <li>3. Edit the parts of the event as needed in the text boxes</li>
-                <li>4. Click the 'Update Event' button</li>
-                <li>5. Click the 'Save changes' button</li>
-        </ul>
-        <p>Remove Event </p>
-        <ul>
-                <li>1. Enter event Title in the text box</li>
-                <li>2. Click 'Find Event' button</li>
-                <li>3. Click the 'Remove Event' button</li>
-                <li>4. Click the 'Save changes' button</li>
-        </ul>
-       </div>
-        <div>
-            <p>ID</p>
-            <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
-        </div>
-        <div>
-            <p>Title</p>
-            <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
-        </div>
-        <div>
-            <p>Host</p>
-            <INPUT TYPE="text" id="inputboxHost" VALUE="" placeholder="Host Name">
-        </div>
-        <div>
-            <p>Biography</p>
-            <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
-        </div>
-        <p>Location</p>
-        <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
-        </div>
-        <div>
-            <p>Time</p>
-            <INPUT TYPE="text" id="inputboxTime" VALUE="" placeholder="Hour only">
-        </div>
-        <div>
-            <p>Summary</p>
-            <INPUT TYPE="text" id="inputboxSummary" VALUE="" placeholder="Description of Event">
-        </div>
-        <div>
-            <p>Theme</p>
-            <INPUT TYPE="text" id="inputboxTheme" VALUE="" placeholder="Theme e.g 5G">
-        </div>
-        <div>
-            <p>Category</p>
-            <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
-        </div>
-<div id="gridAdmin">
+    <div class="main">
+        <!--ADD EVENT: ADMIN-->
+        <FORM NAME="myform" ACTION="" METHOD="GET">
+            <div id=gridInfo>
+                <p>Add Event </p>
+                <ul>
+                    <li>1. Enter event details in the text box</li>
+                    <li>2.Click 'Add Event' button</li>
+                    <li>3. Click the 'Save changes' button</li>
+                </ul>
+                <p>Update Event </p>
+                <ul>
+                    <li>1. Enter event Title in the text box</li>
+                    <li>2. Click 'Find Event' button</li>
+                    <li>3. Edit the parts of the event as needed in the text boxes</li>
+                    <li>4. Click the 'Update Event' button</li>
+                    <li>5. Click the 'Save changes' button</li>
+                </ul>
+                <p>Remove Event </p>
+                <ul>
+                    <li>1. Enter event Title in the text box</li>
+                    <li>2. Click 'Find Event' button</li>
+                    <li>3. Click the 'Remove Event' button</li>
+                    <li>4. Click the 'Save changes' button</li>
+                </ul>
+            </div>
+            <div>
+                <p>ID</p>
+                <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
+            </div>
+            <div>
+                <p>Title</p>
+                <INPUT TYPE="text" id="inputboxTitle" VALUE="" placeholder="Event Name">
+            </div>
+            <div>
+                <p>Host</p>
+                <INPUT TYPE="text" id="inputboxHost" VALUE="" placeholder="Host Name">
+            </div>
+            <div>
+                <p>Biography</p>
+                <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
+            </div>
+            <p>Location</p>
+            <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
+    </div>
+    <div>
+        <p>Time</p>
+        <INPUT TYPE="text" id="inputboxTime" VALUE="" placeholder="Hour only">
+    </div>
+    <div>
+        <p>Summary</p>
+        <INPUT TYPE="text" id="inputboxSummary" VALUE="" placeholder="Description of Event">
+    </div>
+    <div>
+        <p>Theme</p>
+        <INPUT TYPE="text" id="inputboxTheme" VALUE="" placeholder="Theme e.g 5G">
+    </div>
+    <div>
+        <p>Category</p>
+        <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
+    </div>
+    <div id="gridAdmin">
         <div>
             <INPUT class="Host" TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
         </div>
@@ -169,13 +169,13 @@
         <div>
             <INPUT class="Host" TYPE="button" id="removeButton" Value="Remove Event" onClick="">
         </div>
-        
-</div>
+
+    </div>
     <div>
-            <INPUT class="Host" TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
-        </div>
+        <INPUT class="Host" TYPE="button" id="saveButton" Value="Click to Save changes" onClick="save()">
+    </div>
     </FORM>
-</div>
+    </div>
     <!--SCRIPTS-->
     <script> 
         window.addEventListener('load', e => {
