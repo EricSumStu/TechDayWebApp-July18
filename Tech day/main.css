@@ -661,7 +661,7 @@ button{
     }
         
 /* Set a style for all buttons */
-        .loginButton { 
+        .loginButton {                    /*side navbar*/
             text-align: center;
             font-family:'EricssonHilda-Regular';
             color: white;
@@ -669,7 +669,7 @@ button{
             font-size: 17px;        
         }
 
-        #loginButton2 {
+        #loginButton2 {                 /*navbar*/
             text-align: center;
             font-family: 'EricssonHilda-Regular';
             color: white;
@@ -679,7 +679,7 @@ button{
             padding: 0px 5px;
         }
 
-        #submit{
+        #submit{                       /*login*/
             position:sticky;
             width: 80%;
             height:90%;
