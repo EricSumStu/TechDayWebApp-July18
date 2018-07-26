@@ -1183,6 +1183,19 @@ p6{                             /*404 page*/
 
 #maintanence {
     background: #FAC22D;
+    border-radius: 20px;
+    padding: 30px; 
+    font-family: 'EricssonHilda-Regular';
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+#titleFour{
+    font-family: 'EricssonHilda-Regular';
+    font-size: 22px;
+    text-align: center;
+    margin-left: 20px;
+    color: #000;
 }
 /*Upcoming Events*/
 
