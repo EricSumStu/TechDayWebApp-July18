@@ -8,7 +8,7 @@ var password = document.getElementById("password").value;
 // alert ("Login successful. Welcome admin!");
 alert ("Welcome to Tech Day!");
 window.close("login.html");
-window.open("index.html"); // Redirecting to other page.
+window.open("home.html"); // Redirecting to other page.
 return false;
 }
 else{
