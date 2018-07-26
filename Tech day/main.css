@@ -582,7 +582,7 @@ tr#THREE{
     color:white;  
 }.zoneSeven{
     font-size: 20px;
-    background-color: #e0c240;
+    background-color: #FAD22D;
     font-family: "EricssonHilda-Regular";
     position:sticky;
     width: 90%;
@@ -595,7 +595,7 @@ tr#THREE{
 }
 .zoneEight{
     font-size: 20px;
-    background-color: #c27527 ;
+    background-color: #FF8C0A ;
     font-family: "EricssonHilda-Regular";
     position:sticky;
     width: 90%;
@@ -651,12 +651,12 @@ tr#THREE{
     color: white;
     font-family: "EricssonHilda-Regular";
 }#zoneSeven2{
-    background-color: #e0c240;
+    background-color: #FAD22D;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneEight2{
-    background-color: #c27527 ;
+    background-color: #FF8C0A ;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
@@ -1159,7 +1159,37 @@ video {
               grid-template-areas: "top";
               text-align: center;
               } 
-          }      
+          }    
+          #gridInfo {                     /*Admin grid for info*/
+            display: grid;
+        
+            grid-template-columns: 33% 33% 33%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top top top top"
+                                 "middle-left middle-middle middle-middle middle-right"
+                                 "bottom-left bottom-middle bottom-middle bottom right";
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 800px){ /*Admin grid for buttons*/
+            #gridInfo{
+                grid-template-columns: 50% 50%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top top"
+                                 "middle-left middle-right"
+                                 "bottom-left bottom right";
+            text-align: center;
+            }
+        }
+        
+        @media screen and (max-width: 500px){ /*Admin grid for buttons*/
+            #gridInfo{
+                grid-template-columns: 100%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top";
+            text-align: center;
+            } 
+        }   
 
 p6{                             /*404 page*/
     font-family: 'EricssonHilda-Regular';
