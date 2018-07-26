@@ -717,19 +717,7 @@ tr#THREE{
     }
         
 /* Set a style for all buttons */
-        
-
-        #loginButton2 {                 /*side navbar*/
-            text-align: center;
-            font-family: 'EricssonHilda-Regular';
-            color: white;
-            font-size: 22px;
-            position: absolute;
-            margin-top: 227px;
-            padding: 0px 5px;
-        }
-
-        #submit{                       /*login*/
+                #submit{                       /*login*/
             position:sticky;
             width: 80%;
             height:90%;
