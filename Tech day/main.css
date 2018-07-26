@@ -620,16 +620,19 @@ tr#THREE{
     color:white;  
 }
 #zoneOne2{
+    box-align: center;
     background-color: #FF3232;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneTwo2{
+    
     background-color: #FF8C0A ;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneThree2{
+    align-self: center;
     background-color: #FAD22D;
     color: white;
     font-family: "EricssonHilda-Regular";
@@ -788,6 +791,7 @@ tr#THREE{
         
         /* Modal Content/Box */
         .modal-content {
+            align-content: center;
             background-color: white;
             margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;

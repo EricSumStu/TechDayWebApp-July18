@@ -75,7 +75,7 @@ $.getJSON("talks.json", function (json) {
         }
     }
 
-    var z1txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z1txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z1.length; x++) {
 
         var aTitle = z1[x].Title;
@@ -86,7 +86,7 @@ $.getJSON("talks.json", function (json) {
     }
     z1txt += '</table>';
 
-    var z2txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    /*var z2txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z2.length; x++) {
 
         var aTitle = z2[x].Title;
@@ -95,9 +95,9 @@ $.getJSON("talks.json", function (json) {
         
         z2txt += '<tr><td>' + aTitle + '</td><td>' + aTime + '</td><td>' + aLocation + '</td></tr>';
     }
-    z2txt += '</table>';
+    z2txt += '</table>';*/
 
-    var z3txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z3txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z3.length; x++) {
 
         var aTitle = z3[x].Title;
@@ -108,7 +108,7 @@ $.getJSON("talks.json", function (json) {
     }
     z3txt += '</table>';
 
-    var z4txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z4txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z4.length; x++) {
 
         var aTitle = z4[x].Title;
@@ -119,7 +119,7 @@ $.getJSON("talks.json", function (json) {
     }
     z4txt += '</table>';
 
-    var z5txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z5txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z5.length; x++) {
 
         var aTitle = z5[x].Title;
@@ -130,7 +130,7 @@ $.getJSON("talks.json", function (json) {
     }
     z5txt += '</table>';
 
-    var z6txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z6txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z6.length; x++) {
 
         var aTitle = z6[x].Title;
@@ -141,7 +141,7 @@ $.getJSON("talks.json", function (json) {
     }
     z6txt += '</table>';
 
-    var z7txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z7txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z7.length; x++) {
 
         var aTitle = z7[x].Title;
@@ -152,7 +152,7 @@ $.getJSON("talks.json", function (json) {
     }
     z7txt += '</table>';
 
-    var z8txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z8txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z8.length; x++) {
 
         var aTitle = z8[x].Title;
@@ -163,7 +163,7 @@ $.getJSON("talks.json", function (json) {
     }
     z8txt += '</table>';
     
-    var z9txt = '<table class="map"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
+    var z9txt = '<table class="map" align="center"><tr id=THREE><td>Title:</td><td>Time:</td><td>Location:</td></tr>';
     for (var x = 0; x < z9.length; x++) {
 
         var aTitle = z9[x].Title;
@@ -176,7 +176,7 @@ $.getJSON("talks.json", function (json) {
 
     window.onload = function () {
         document.getElementById("zone1").innerHTML = z1txt;
-        document.getElementById("zone2").innerHTML = z2txt;
+        //document.getElementById("zone2").innerHTML = z2txt;
         document.getElementById("zone3").innerHTML = z3txt;
         document.getElementById("zone4").innerHTML = z4txt;
         document.getElementById("zone5").innerHTML = z5txt;
