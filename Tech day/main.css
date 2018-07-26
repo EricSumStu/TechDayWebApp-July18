@@ -717,15 +717,16 @@ tr#THREE{
     }
         
 /* Set a style for all buttons */
-        .loginButton {                    /*side navbar*/
+        .loginButton {                    /*navbar*/
             text-align: center;
             font-family:'EricssonHilda-Regular';
             color: white;
+            margin-left: 725px;
             position: absolute;
             font-size: 17px;        
         }
 
-        #loginButton2 {                 /*navbar*/
+        #loginButton2 {                 /*side navbar*/
             text-align: center;
             font-family: 'EricssonHilda-Regular';
             color: white;
