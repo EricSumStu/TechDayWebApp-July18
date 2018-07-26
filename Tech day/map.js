@@ -26,7 +26,7 @@ $.getJSON("talks.json", function (json) {
     ("Brasilia"), ("Washington DC"), ("V.A. Lab")];
 
     for (var x = 1; x < 10; x++) {
-        var techDate = new Date("2018-10-4");
+        var techDate = new Date("2018-7-27");
         var today = new Date();
         var techDateSmall = techDate.toDateString(0, 10);
         var todaySmall = today.toDateString(0, 10);
