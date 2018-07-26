@@ -1119,3 +1119,14 @@ p6{                             /*404 page*/
 #spacer{
     padding: 30px;
 }
+
+#submitReg{
+    position:sticky;
+    width: 50%;
+    height:60%;
+    border-radius:20px; 
+    text-align: center;
+    font-family:'EricssonHilda-Regular';
+    background-color: rgba(4, 4, 87, 0.842);
+    color: white;
+}
