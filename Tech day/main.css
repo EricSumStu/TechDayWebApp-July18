@@ -477,7 +477,7 @@ p {                            /*Tech Day is in...*/
     height:80%;
     position: relative;
     border-radius:20px; 
-    border: solid .5px gray;
+    border: solid 1px gray;
     font-family:'EricssonHilda-Regular';
     font-size: 20px;
 }                                   /*end of all page*/
