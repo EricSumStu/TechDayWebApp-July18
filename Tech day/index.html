@@ -30,7 +30,7 @@
     <!--REG FORM:-->
    <center> <h2></h2></center>
             <div class="imgcontainer">
-                <img src="images/large tech day icon.png" alt="Avatar" class="avatar" width="auto" />
+                <img src="images/large tech day icon.png" alt="Avatar" class="regImg" width="auto" />
                 <h3> Welcome to Tech Day Ireland
                     <br>Web Administrator Login</h3>
                 <span>
@@ -42,7 +42,7 @@
                         
                         <label>Registration code: </label>
                         <input type="password" name="passwordReg" id="passwordReg" />
-                        <button type="submittReg" id="submitReg" onclick="validate()" class="login">Register</button>
+                        <button type="submitReg" id="submitReg" onclick="validate()">Register</button>
                         
 
                     </div>
@@ -54,7 +54,7 @@
     
     var password = document.getElementById("passwordReg").value;
   
-    if (password == "password"){
+    if (password == "1234"){
     window.close("index.html");
     window.open("home.html"); 
     return false;

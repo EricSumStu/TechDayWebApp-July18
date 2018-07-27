@@ -491,17 +491,6 @@ tr#THREE{
     font-family:'EricssonHilda-Bold';
 }
 
-button{                         
-    position:sticky;
-    width: 90%;
-    height:80%;
-    position:sticky;
-    border-radius:20px; 
-    padding:30px;
-    font-family:'EricssonHilda-Regular';
-    color:white;
-
-}
 .address{
     font-family: "EricssonHilda-Regular";
     font-size: 17px;
@@ -518,57 +507,132 @@ button{
 .zoneOne{
     font-size: 20px;
     background-color: #FF3232;
-    font-family: "EricssonHilda-Regular";  
+    font-family: "EricssonHilda-Regular"; 
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;   
 }
 .zoneTwo{
     font-size: 20px;
     background-color: #FF8C0A;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 .zoneThree{
     font-size: 20px;
     background-color: #FAD22D;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 .zoneFour{
     font-size: 20px;
     background-color: #0FC373;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 .zoneFive{
     font-size: 20px;
     background-color: #0082F0;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }.zoneSix{
     font-size: 20px;
     background-color: #AF78D2;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }.zoneSeven{
     font-size: 20px;
-    background-color: #e0c240;
+    background-color: #FAD22D;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 .zoneEight{
     font-size: 20px;
-    background-color: #c27527 ;
+    background-color: #FF8C0A ;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 .zoneNine{
     font-size: 20px;
     background-color: #5c1733;
     font-family: "EricssonHilda-Regular";
+    position:sticky;
+    width: 90%;
+    height:80%;
+    position:sticky;
+    border-radius:20px; 
+    padding:30px;
+    font-family:'EricssonHilda-Regular';
+    color:white;  
 }
 #zoneOne2{
+    box-align: center;
     background-color: #FF3232;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneTwo2{
+    
     background-color: #FF8C0A ;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneThree2{
+    align-self: center;
     background-color: #FAD22D;
     color: white;
     font-family: "EricssonHilda-Regular";
@@ -587,12 +651,12 @@ button{
     color: white;
     font-family: "EricssonHilda-Regular";
 }#zoneSeven2{
-    background-color: #e0c240;
+    background-color: #FAD22D;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
 #zoneEight2{
-    background-color: #c27527 ;
+    background-color: #FF8C0A ;
     color: white;
     font-family: "EricssonHilda-Regular";
 }
@@ -601,17 +665,9 @@ button{
     color: white;
     font-family: "EricssonHilda-Regular";
 }
+                        
+                    /*End of Maps*/
 
-button{                         
-    position:sticky;
-    width: 90%;
-    height:80%;
-    position:sticky;
-    border-radius:20px; 
-    padding:30px;
-    font-family:'EricssonHilda-Regular';
-    color:white;                   /*End of Maps*/
-}
 
 /*login*/
 /* Full-width input fields */
@@ -661,28 +717,11 @@ button{
     }
         
 /* Set a style for all buttons */
-        .loginButton {                    /*side navbar*/
-            text-align: center;
-            font-family:'EricssonHilda-Regular';
-            color: white;
-            position: absolute;
-            font-size: 17px;        
-        }
-
-        #loginButton2 {                 /*navbar*/
-            text-align: center;
-            font-family: 'EricssonHilda-Regular';
-            color: white;
-            font-size: 22px;
-            position: absolute;
-            margin-top: 227px;
-            padding: 0px 5px;
-        }
-
-        #submit{                       /*login*/
+                #submit{                       /*login*/
             position:sticky;
             width: 80%;
             height:90%;
+            padding: 30px;
             border-radius:20px; 
             text-align: center;
             font-family:'EricssonHilda-Regular';
@@ -735,6 +774,7 @@ button{
         
         /* Modal Content/Box */
         .modal-content {
+            align-content: center;
             background-color: white;
             margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
             border: 1px solid #888;
@@ -1102,7 +1142,37 @@ video {
               grid-template-areas: "top";
               text-align: center;
               } 
-          }      
+          }    
+          #gridInfo {                     /*Admin grid for info*/
+            display: grid;
+        
+            grid-template-columns: 33% 33% 33%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top top top top"
+                                 "middle-left middle-middle middle-middle middle-right"
+                                 "bottom-left bottom-middle bottom-middle bottom right";
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 800px){ /*Admin grid for buttons*/
+            #gridInfo{
+                grid-template-columns: 50% 50%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top top"
+                                 "middle-left middle-right"
+                                 "bottom-left bottom right";
+            text-align: center;
+            }
+        }
+        
+        @media screen and (max-width: 500px){ /*Admin grid for buttons*/
+            #gridInfo{
+                grid-template-columns: 100%;
+            grid-auto-rows: auto ;
+            grid-template-areas: "top";
+            text-align: center;
+            } 
+        }   
 
 p6{                             /*404 page*/
     font-family: 'EricssonHilda-Regular';
@@ -1113,20 +1183,74 @@ p6{                             /*404 page*/
 
 #maintanence {
     background: #FAC22D;
+    border-radius: 20px;
+    padding: 30px; 
+    font-family: 'EricssonHilda-Regular';
+    font-size: 22px;
+    text-align: center;
+    color: white;
+}
+#titleFour{
+    font-family: 'EricssonHilda-Regular';
+    font-size: 22px;
+    text-align: center;
+    margin-left: 20px;
+    color: #000;
 }
 /*Upcoming Events*/
 
 #spacer{
     padding: 30px;
 }
+/*Reg page*/ 
 
 #submitReg{
     position:sticky;
     width: 50%;
     height:60%;
     border-radius:20px; 
+    padding: 30px;
     text-align: center;
     font-family:'EricssonHilda-Regular';
     background-color: rgba(4, 4, 87, 0.842);
     color: white;
+}
+#passwordReg {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+img.regImg {
+    display: block;
+    width: 15%;
+    height: 15%;
+    position: relative;
+    margin: auto;
+    border-radius:20px; 
+}
+
+@media screen and (max-width: 800px){
+    img.regImg {
+        display: block;
+        width: 40%;
+        height: 40%;
+        position: relative;
+        margin: auto;
+        border-radius:20px; 
+    }
+    #submitReg{
+        position:sticky;
+        width: 50%;
+        height: 40%;
+        padding: 10px;
+        border-radius:20px; 
+        text-align: center;
+        font-family:'EricssonHilda-Regular';
+        background-color: rgba(4, 4, 87, 0.842);
+        color: white;
+    }
 }

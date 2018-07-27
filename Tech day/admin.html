@@ -42,13 +42,13 @@
         </span>
         <ul class="navbar-nav">
             <li>
-                <a href="index.html">Home</a>
+                <a href="home.html">Home</a>
             </li>
             <li>
-                <a href="Events.html">Events</a>
+                <a href="events.html">Events</a>
             </li>
             <li>
-                <a href="Map.html">Map</a>
+                <a href="map.html">Map</a>
             </li>
             <li>
                 <a href="upcomingEvents.html">Upcoming Events</a>
@@ -68,13 +68,13 @@
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="home.html">Home</a>
                 </li>
                 <li>
-                    <a href="Events.html">Events</a>
+                    <a href="events.html">Events</a>
                 </li>
                 <li>
-                    <a href="Map.html">Map</a>
+                    <a href="map.html">Map</a>
                 </li>
                 <li>
                     <a href="upcomingEvents.html">Upcoming Events</a>
@@ -94,32 +94,10 @@
     </div>
     </nav>
     <br>
-    <div class="main">
+    <div class="main" id="main">
         <!--ADD EVENT: ADMIN-->
         <FORM NAME="myform" ACTION="" METHOD="GET">
-            <div id=gridInfo>
-                <p>Add Event </p>
-                <ul>
-                    <li>1. Enter event details in the text box</li>
-                    <li>2.Click 'Add Event' button</li>
-                    <li>3. Click the 'Save changes' button</li>
-                </ul>
-                <p>Update Event </p>
-                <ul>
-                    <li>1. Enter event Title in the text box</li>
-                    <li>2. Click 'Find Event' button</li>
-                    <li>3. Edit the parts of the event as needed in the text boxes</li>
-                    <li>4. Click the 'Update Event' button</li>
-                    <li>5. Click the 'Save changes' button</li>
-                </ul>
-                <p>Remove Event </p>
-                <ul>
-                    <li>1. Enter event Title in the text box</li>
-                    <li>2. Click 'Find Event' button</li>
-                    <li>3. Click the 'Remove Event' button</li>
-                    <li>4. Click the 'Save changes' button</li>
-                </ul>
-            </div>
+            
             <div>
                 <p>ID</p>
                 <INPUT TYPE="text" id="inputboxID" VALUE="" placeholder="A Unique Number">
@@ -136,6 +114,7 @@
                 <p>Biography</p>
                 <INPUT TYPE="text" id="inputboxBiography" VALUE="" placeholder="Host Biography">
             </div>
+            <div>
             <p>Location</p>
             <INPUT TYPE="text" id="inputboxLocation" VALUE="" placeholder="Location">
     </div>
@@ -155,6 +134,33 @@
         <p>Category</p>
         <INPUT TYPE="text" id="inputboxCategory" VALUE="" placeholder="Type e.g Talk, Demo">
     </div>
+    <div id=gridInfo>
+         <div>
+                <p align="center">Add Event </p>
+                <ol align ="left">
+                    <li>Enter event details in the text box</li>
+                    <li>Click 'Add Event' button</li>
+                    <li>Click the 'Save changes' button</li>
+                </ol>
+            </div> <div>
+                <p align="center">Update Event </p>
+                <ol align ="left">
+                    <li>Enter event Title in the text box</li>
+                    <li>Click 'Find Event' button</li>
+                    <li>Edit the parts of the event as needed in the text boxes</li>
+                    <li>Click the 'Update Event' button</li>
+                    <li>Click the 'Save changes' button</li>
+                </ol>
+            </div> <div>
+                <p align="center">Remove Event </p>
+                <ol align ="left">
+                    <li>Enter event Title in the text box</li>
+                    <li>Click 'Find Event' button</li>
+                    <li>Click the 'Remove Event' button</li>
+                    <li>Click the 'Save changes' button</li>
+                </ol>
+            </div>
+            </div>
     <div id="gridAdmin">
         <div>
             <INPUT class="Host" TYPE="button" id="addEventButton" Value="Add Event" onClick="addNewEvent(inputboxID.value, inputboxTitle.value, inputboxHost.value, inputboxBiography.value,inputboxLocation.value,inputboxTime.value,inputboxSummary.value,inputboxTheme.value,inputboxCategory.value )">
