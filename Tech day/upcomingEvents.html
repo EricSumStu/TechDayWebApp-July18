@@ -157,13 +157,14 @@
                 };
                 $.getJSON("talks.json", function (json) {
                     var obj = json;
+                    console.log(nowTime)
                     for (var y = 0; y < (obj.talks).length; y++) {
                         if (techDay === false) {
                             countdown()
                         } else if (techDay === true && obj.talks[y].Time === nowTime + 1 || obj.talks[y].Time === nowTime) {
                             console.log("Tech Day is Today and event is this hour")
                             printEvent(obj.talks[y])
-                        } else if (techDay === true && nowTime < 8 && obj.talks[y].Time === 9 || obj.talks[y].Time === 10) {
+                        } else if (techDay === true && nowTime < 8 && obj.talks[y].Time === "9" || obj.talks[y].Time === "10") {
                             printEvent(obj.talks[y])
                         }
                     }
