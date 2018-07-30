@@ -79,9 +79,9 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="/styling/main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="db.js"></script>
+    <script src="/scripts/db.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -101,25 +101,25 @@
 
         <ul class="navbar-nav">
             <li>
-                <a href="home.html">Home</a>
+                <a href="./home.html">Home</a>
             </li>
             <li>
-                <a href="events.html">Events</a>
+                <a href="./events.html">Events</a>
             </li>
             <li>
-                <a href="map.html">Map</a>
+                <a href="./map.html">Map</a>
             </li>
             <li>
-                <a href="upcomingEvents.html">Upcoming Events</a>
+                <a href="./upcomingEvents.html">Upcoming Events</a>
             </li>
             <li>
-                <a href="fav.html">Favourites</a>
+                <a href="./fav.html">Favourites</a>
             </li>
             <li>
-                <a href="pasttechday.html">Past Tech Days</a>
+                <a href="./pasttechday.html">Past Tech Days</a>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <a href="./about.html">About</a>
             </li>
         </ul>
 
@@ -129,25 +129,25 @@
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="./home.html">Home</a>
                 </li>
                 <li>
-                    <a href="events.html">Events</a>
+                    <a href="./events.html">Events</a>
                 </li>
                 <li>
-                    <a href="map.html">Map</a>
+                    <a href="./map.html">Map</a>
                 </li>
                 <li>
-                    <a href="upcomingEvents.html">Upcoming Events</a>
+                    <a href="./upcomingEvents.html">Upcoming Events</a>
                 </li>
                 <li>
-                    <a href="fav.html">Favourites</a>
+                    <a href="./fav.html">Favourites</a>
                 </li>
                 <li>
-                    <a href="pasttechday.html">Past Tech Days</a>
+                    <a href="./pasttechday.html">Past Tech Days</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="./about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -158,7 +158,7 @@
     <div id="main">
         <div>
             <a href="#">
-                <img src="./images/AllEventsSquareBanner.png">
+                <img src="/images/AllEventsSquareBanner.png">
             </a>
         </div>
         <FORM NAME="myform" ACTION="" METHOD="GET"></FORM>
@@ -204,7 +204,7 @@
         if (todaySmall === techDateSmall) {
             techDay = true
         };
-        $.getJSON("talks.json", function (json) {
+        $.getJSON("/talks.json", function (json) {
             var obj = json;
             for (var y = 0; y < (obj.talks).length; y++) {
                 if ((techDay === false)) {
@@ -216,7 +216,7 @@
             document.getElementById("demo").innerHTML = table;
         });
         function addFavourite(ID) {
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     if (ID === obj.talks[y].ID) {
@@ -236,7 +236,7 @@
             } else if (valueInDropDown === 'Theme') {
                 searchTheme(input)
             } else if ((valueInDropDown === 'All') && (input === "")) {
-                $.getJSON("talks.json", function (json) {
+                $.getJSON("/talks.json", function (json) {
                     var obj = json;
                     for (var y = 0; y < (obj.talks).length; y++) {
                         if ((techDay === false)) {
@@ -254,7 +254,7 @@
         //search by Title
         function searchTitle(input) {
             table = "";
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     var titleCaps = (obj.talks[y].Title).toUpperCase();
@@ -271,7 +271,7 @@
         //search by Host
         function searchHost(input) {
             table = "";
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     var hostCaps = (obj.talks[y].Host).toUpperCase();
@@ -288,7 +288,7 @@
         //search by Theme
         function searchTheme(input) {
             table = "";
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     var themeCaps = (obj.talks[y].Theme).toUpperCase();
@@ -314,7 +314,7 @@
         function printEvent(event) {
             var txt = "<table>"
             txt += "<tr>";
-            txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "<img id='eventsImages' src ='/images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
             txt += "</tr>"
             txt += "<tr>";
@@ -347,7 +347,7 @@
         function openBiography(ID) {
             modal.style.display = "block";
             var txt = ""
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     if (ID === obj.talks[y].ID) {

@@ -1,7 +1,7 @@
 var tablemap = "";
 var txt;
 var modal = document.getElementById('myModal');
-$.getJSON("talks.json", function (json) {
+$.getJSON("/talks.json", function (json) {
     var obj = json;
     var z1 = [];
     var z2 = [];

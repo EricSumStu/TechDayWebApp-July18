@@ -23,11 +23,11 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/png" href="/images/favicon.png" sizes="16x16" />
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="/styling/main.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="db.js"></script>
+    <script src="/scripts/db.js"></script>
 </head>
 
 <body>
@@ -45,25 +45,25 @@
         <!--NAVBAR-->
         <ul class="navbar-nav">
             <li>
-                <a href="home.html">Home</a>
+                <a href="./home.html">Home</a>
             </li>
             <li>
-                <a href="events.html">Events</a>
+                <a href="./events.html">Events</a>
             </li>
             <li>
-                <a href="map.html">Map</a>
+                <a href="./map.html">Map</a>
             </li>
             <li>
-                <a href="upcomingEvents.html">Upcoming Events</a>
+                <a href="./upcomingEvents.html">Upcoming Events</a>
             </li>
             <li>
-                <a href="fav.html">Favourites</a>
+                <a href="./fav.html">Favourites</a>
             </li>
             <li>
-                <a href="pasttechday.html">Past Tech Days</a>
+                <a href="./pasttechday.html">Past Tech Days</a>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <a href="./about.html">About</a>
             </li>
         </ul>
 
@@ -73,25 +73,25 @@
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="./home.html">Home</a>
                 </li>
                 <li>
-                    <a href="events.html">Events</a>
+                    <a href="./events.html">Events</a>
                 </li>
                 <li>
-                    <a href="map.html">Map</a>
+                    <a href="./map.html">Map</a>
                 </li>
                 <li>
-                    <a href="upcomingEvents.html">Upcoming Events</a>
+                    <a href="./upcomingEvents.html">Upcoming Events</a>
                 </li>
                 <li>
-                    <a href="fav.html">Favourites</a>
+                    <a href="./fav.html">Favourites</a>
                 </li>
                 <li>
-                    <a href="pasttechday.html">Past Tech Days</a>
+                    <a href="./pasttechday.html">Past Tech Days</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="./about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -103,7 +103,7 @@
         <main class='pic'>
             <div>
                 <a href="#">
-                    <img src="./images/upcoming events banner not round.png">
+                    <img src="/images/upcoming events banner not round.png">
                 </a>
             </div>
         </main>
@@ -155,7 +155,7 @@
                             + minutes + "m " + seconds + "s " + '<br>' + "to see upcoming events";
                     }, 1000);
                 };
-                $.getJSON("talks.json", function (json) {
+                $.getJSON("/talks.json", function (json) {
                     var obj = json;
                     console.log(nowTime)
                     for (var y = 0; y < (obj.talks).length; y++) {
@@ -173,7 +173,7 @@
                 function printEvent(event) {
                     var txt = "<table>"
                     txt += "<tr>";
-                    txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+                    txt += "<td>" + "<img id='eventsImages' src ='/images/" + (event.ID) + ".png'>" + "</td>"
                     txt += "<td>" + "" + "</td>"
                     txt += "</tr>"
                     txt += "<tr>";
@@ -215,7 +215,7 @@
                 };
 
                 function addFavourite(ID) {
-                    $.getJSON("talks.json", function (json) {
+                    $.getJSON("/talks.json", function (json) {
                         var obj = json;
                         for (var y = 0; y < (obj.talks).length; y++) {
                             if (ID === obj.talks[y].ID) {
@@ -229,7 +229,7 @@
                 function openBiography(ID) {
                     modal.style.display = "block";
                     var txt = ""
-                    $.getJSON("talks.json", function (json) {
+                    $.getJSON("/talks.json", function (json) {
                         var obj = json;
                         for (var y = 0; y < (obj.talks).length; y++) {
                             if (ID === obj.talks[y].ID) {

@@ -23,14 +23,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="/styling/main.css" />
 </head>
 
 <body>
     <!--REG FORM:-->
    <center> <h2></h2></center>
             <div class="imgcontainer">
-                <img src="images/large tech day icon.png" alt="Avatar" class="regImg" width="auto" />
+                <img src="/images/large tech day icon.png" alt="Avatar" class="regImg" width="auto" />
                 <h3> Welcome to Tech Day Ireland
                     <br>Web Administrator Login</h3>
                 <span>
@@ -55,8 +55,8 @@
     var password = document.getElementById("passwordReg").value;
   
     if (password == "1234"){
-    window.close("index.html");
-    window.open("home.html"); 
+    window.close("./index.html");
+    window.open("./html/home.html"); 
     return false;
     }
     else{
