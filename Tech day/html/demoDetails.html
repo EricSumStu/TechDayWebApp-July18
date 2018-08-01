@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tech Day Ireland | Talks</title>
+    <title>Tech Day Ireland | Demos</title>
     <!--FAVICONS-->
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -22,9 +22,9 @@
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="/styling/main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="db.js"></script>
+    <script src="/scripts/db.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -44,25 +44,25 @@
 
         <ul class="navbar-nav">
             <li>
-                <a href="home.html">Home</a>
+                <a href="./home.html">Home</a>
             </li>
             <li>
-                <a href="Events.html">Events</a>
+                <a href="./events.html">Events</a>
             </li>
             <li>
-                <a href="Map.html">Map</a>
+                <a href="./map.html">Map</a>
             </li>
             <li>
-                <a href="upcomingEvents.html">Upcoming Events</a>
+                <a href="./upcomingEvents.html">Upcoming Events</a>
             </li>
             <li>
-                <a href="fav.html">Favourites</a>
+                <a href="./fav.html">Favourites</a>
             </li>
             <li>
-                <a href="pasttechday.html">Past Tech Days</a>
+                <a href="./pasttechday.html">Past Tech Days</a>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <a href="./about.html">About</a>
             </li>
         </ul>
 
@@ -72,25 +72,25 @@
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="./home.html">Home</a>
                 </li>
                 <li>
-                    <a href="Events.html">Events</a>
+                    <a href="./events.html">Events</a>
                 </li>
                 <li>
-                    <a href="Map.html">Map</a>
+                    <a href="./map.html">Map</a>
                 </li>
                 <li>
-                    <a href="upcomingEvents.html">Upcoming Events</a>
+                    <a href="./upcomingEvents.html">Upcoming Events</a>
                 </li>
                 <li>
-                    <a href="fav.html">Favourites</a>
+                    <a href="./fav.html">Favourites</a>
                 </li>
                 <li>
-                    <a href="pasttechday.html">Past Tech Days</a>
+                    <a href="./pasttechday.html">Past Tech Days</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="./about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -98,13 +98,13 @@
     </div>
     </nav>
     <br>
+
     <div id="main">
         <div>
             <a href="#">
-                <img src="./images/talks straight border.png">
+                <img src="/images/demo straight border.png">
             </a>
         </div>
-
 
         <p id="demo"></p>
         <div id="myModal" class="modal">
@@ -115,13 +115,14 @@
         </div>
     </div>
 
+
     <script>
-        var table = "";
+        var txt = "";
         var modal = document.getElementById('myModal');
-        var txt;
-        $.getJSON("talks.json", function (json) {
+        var table = "";
+        $.getJSON("/talks.json", function (json) {
             var obj = json;
-            var techDate = new Date("2018-10-4");
+            var techDate = new Date("2018-7-27");
             var today = new Date();
             var techDateSmall = techDate.toDateString(0, 10);
             var todaySmall = today.toDateString(0, 10);
@@ -132,32 +133,19 @@
                 techDay = true
             };
             for (var y = 0; y < (obj.talks).length; y++) {
-                if ((obj.talks[y].Categories === "Talk") && (techDay === false)) {
+                if ((obj.talks[y].Categories === "Demo") && (techDay === false)) {
                     printEvent(obj.talks[y])
-                } else if ((obj.talks[y].Categories === "Talk") && (techDay === true) && (obj.talks[y].Time >= now)) {
+                } else if ((obj.talks[y].Categories === "Demo") && (techDay === true) && (obj.talks[y].Time >= now)) {
                     printEvent(obj.talks[y])
                 }
             };
             document.getElementById("demo").innerHTML = table;
         });
 
-        function addFavourite(ID) {
-            $.getJSON("talks.json", function (json) {
-                var obj = json;
-                for (var y = 0; y < (obj.talks).length; y++) {
-                    if (ID === obj.talks[y].ID) {
-                        getEvents(obj.talks[y]);
-                        alert("Added to favourites");
-                    } else {
-                    }
-                }
-            });
-        };
-
         function printEvent(event) {
-            var txt = "<table>"
+            var txt = "<table class='events'>"
             txt += "<tr>";
-            txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "<img id='eventsImages' src ='/images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
             txt += "</tr>"
             txt += "<tr>";
@@ -188,10 +176,24 @@
             table += txt;
         }
 
+        function addFavourite(ID) {
+            $.getJSON("/talks.json", function (json) {
+                var obj = json;
+                for (var y = 0; y < (obj.talks).length; y++) {
+                    if (ID === obj.talks[y].ID) {
+                        getEvents(obj.talks[y]);
+                        console.log("ADDED");
+                    } else {
+                        console.log(ID);
+                    }
+                }
+            });
+        };
+
         function openBiography(ID) {
             modal.style.display = "block";
             var txt = ""
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     if (ID === obj.talks[y].ID) {
@@ -218,6 +220,7 @@
                 modal.style.display = "none";
             }
         }
+
 
 
         function openSlideMenu() {

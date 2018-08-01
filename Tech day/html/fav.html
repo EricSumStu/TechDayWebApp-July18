@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <title>Tech Day Ireland | Demos</title>
+    <title>Tech Day Ireland | Favourites</title>
     <!--FAVICONS-->
     <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
@@ -22,9 +22,9 @@
     <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="/styling/main.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="db.js"></script>
+    <script src="/scripts/db.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -44,53 +44,52 @@
 
         <ul class="navbar-nav">
             <li>
-                <a href="home.html">Home</a>
+                <a href="./home.html">Home</a>
             </li>
             <li>
-                <a href="Events.html">Events</a>
+                <a href="./events.html">Events</a>
             </li>
             <li>
-                <a href="Map.html">Map</a>
+                <a href="./map.html">Map</a>
             </li>
             <li>
-                <a href="upcomingEvents.html">Upcoming Events</a>
+                <a href="./upcomingEvents.html">Upcoming Events</a>
             </li>
             <li>
-                <a href="fav.html">Favourites</a>
+                <a href="./fav.html">Favourites</a>
             </li>
             <li>
-                <a href="pasttechday.html">Past Tech Days</a>
+                <a href="./pasttechday.html">Past Tech Days</a>
             </li>
             <li>
-                <a href="about.html">About</a>
+                <a href="./about.html">About</a>
             </li>
         </ul>
-
 
         <div id="side-menu" class="side-nav">
 
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <ul>
                 <li>
-                    <a href="home.html">Home</a>
+                    <a href="./home.html">Home</a>
                 </li>
                 <li>
-                    <a href="Events.html">Events</a>
+                    <a href="./events.html">Events</a>
                 </li>
                 <li>
-                    <a href="Map.html">Map</a>
+                    <a href="./map.html">Map</a>
                 </li>
                 <li>
-                    <a href="upcomingEvents.html">Upcoming Events</a>
+                    <a href="./upcomingEvents.html">Upcoming Events</a>
                 </li>
                 <li>
-                    <a href="fav.html">Favourites</a>
+                    <a href="./fav.html">Favourites</a>
                 </li>
                 <li>
-                    <a href="pasttechday.html">Past Tech Days</a>
+                    <a href="./pasttechday.html">Past Tech Days</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="./about.html">About</a>
                 </li>
             </ul>
         </div>
@@ -98,15 +97,33 @@
     </div>
     </nav>
     <br>
-
     <div id="main">
         <div>
             <a href="#">
-                <img src="./images/demo straight border.png">
+                <img src="/images/favourites banner not rounded.png">
             </a>
         </div>
 
+        <div id="favGrid">
+            <select id="mySelect" onchange="filterThemes()">
+                <option value="All">Themes
+                    <option value="5G">5G
+                        <option value="Cloud Native">Cloud Native
+                            <option value="The Future Of Network Management">The Future Of Network Management
+                                <option value="Zero Touch">Zero Touch
+
+            </select>
+
+            <select id="typeSelect" onchange="filterType()">
+                <option value="Type">Type of events
+                    <option value="Event">Events
+                        <option value="Demo">Demos
+                            <option value="Tech Talk">Tech Talks
+
+            </select>
+        </div>
         <p id="demo"></p>
+        <p id="type"></p>
         <div id="myModal" class="modal">
             <div class="modal-content1">
                 <span class="close1">&times;</span>
@@ -114,38 +131,104 @@
             </div>
         </div>
     </div>
+    <script>  
 
-
-    <script>
-        var txt = "";
-        var modal = document.getElementById('myModal');
         var table = "";
-        $.getJSON("talks.json", function (json) {
-            var obj = json;
-            var techDate = new Date("2018-7-27");
-            var today = new Date();
-            var techDateSmall = techDate.toDateString(0, 10);
-            var todaySmall = today.toDateString(0, 10);
-            console.log(techDateSmall, todaySmall);
-            var now = new Date().getUTCHours() + 1;
-            var techDay = false;
-            if (todaySmall === techDateSmall) {
-                techDay = true
-            };
-            for (var y = 0; y < (obj.talks).length; y++) {
-                if ((obj.talks[y].Categories === "Demo") && (techDay === false)) {
-                    printEvent(obj.talks[y])
-                } else if ((obj.talks[y].Categories === "Demo") && (techDay === true) && (obj.talks[y].Time >= now)) {
-                    printEvent(obj.talks[y])
-                }
-            };
-            document.getElementById("demo").innerHTML = table;
-        });
+        var list = [];
+        var modal = document.getElementById('myModal');
+        var txt;
+        var techDate = new Date("2018-7-27");
+        var today = new Date();
+        var techDateSmall = techDate.toDateString(0, 10);
+        var todaySmall = today.toDateString(0, 10);
+        console.log(techDateSmall, todaySmall);
+        var now = new Date().getUTCHours() + 1;
+        var techDay = false;
+        if (todaySmall === techDateSmall) {
+            techDay = true
+        };
+        var sortedList;
 
+        load();
+
+        async function load() {
+            await db.favourites.each(p => list.push(p));
+            sortedList = bubbleSort(list);
+            for (i = 0; i < sortedList.length; i++) {
+                display(sortedList[i]);
+            }
+        }
+
+        function display(i) {
+            var obj = i;
+            console.log(i)
+            if ((techDay === false)) {
+                printEvent(obj)
+            } else if ((techDay === true) && (obj.Time >= now)) {
+                printEvent(obj)
+            }
+            document.getElementById("demo").innerHTML = table;
+        };
+
+
+
+        function filterThemes() {
+            document.getElementById("typeSelect").value = 'Type';
+            var valueInDropdown = document.getElementById("mySelect").value;
+            console.log("You selected: " + valueInDropdown);
+            table = "";
+            for (i = 0; i < sortedList.length; i++) {
+                displayByTheme(sortedList[i], valueInDropdown);
+            }
+
+
+        }
+
+        function displayByTheme(event, valueInDropdown) {
+            if (event.Theme === valueInDropdown || valueInDropdown === "All") {
+                display(event);
+                console.log(event);
+            }
+
+            document.getElementById("demo").innerHTML = table;
+        };
+
+        function filterType() {
+            document.getElementById("mySelect").value = 'All';
+            var valueInDropdown = document.getElementById("typeSelect").value;
+            console.log("You selected: " + valueInDropdown);
+            table = "";
+            for (i = 0; i < sortedList.length; i++) {
+                displayByType(sortedList[i], valueInDropdown);
+            }
+
+        }
+
+        function displayByType(event, valueInDropdown) {
+            if (event.Categories === valueInDropdown || valueInDropdown === "Type") {
+                display(event);
+                console.log(event);
+            }
+
+            document.getElementById("demo").innerHTML = table;
+        };
+
+        function bubbleSort(events) {
+            for (var i = 0; i < (events.length - 1); i++) {
+                for (var j = 0; j < (events.length - i - 1); j++) {
+                    if (events[j].Time > events[j + 1].Time) {
+                        var tmp = events[j];
+                        events[j] = events[j + 1];
+                        events[j + 1] = tmp;
+                    }
+                }
+            }
+            return events;
+        };
         function printEvent(event) {
-            var txt = "<table class='events'>"
+            var txt = "<table>"
             txt += "<tr>";
-            txt += "<td>" + "<img id='eventsImages' src ='./images/" + (event.ID) + ".png'>" + "</td>"
+            txt += "<td>" + "<img id='eventsImages' src ='/images/" + (event.ID) + ".png'>" + "</td>"
             txt += "<td>" + "" + "</td>"
             txt += "</tr>"
             txt += "<tr>";
@@ -170,30 +253,38 @@
             txt += "</tr>"
             txt += '<tr>';
             txt += "<td>" + "" + "</td>"
-            txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=addFavourite(value)>Favourite</button>" + "</td>"
+            txt += '<td class="ONE">' + "<button id='favButton' class='Fav' value=" + event.ID + " onclick=removeFavourite(value)>Remove</button>" + "</td>"
             txt += "</tr>"
             txt += "</table><br>"
             table += txt;
         }
 
-        function addFavourite(ID) {
-            $.getJSON("talks.json", function (json) {
-                var obj = json;
-                for (var y = 0; y < (obj.talks).length; y++) {
-                    if (ID === obj.talks[y].ID) {
-                        getEvents(obj.talks[y]);
-                        console.log("ADDED");
-                    } else {
-                        console.log(ID);
-                    }
+        function removeFavourite(ID) {
+            removeEvents(ID);
+            table = "";
+            document.getElementById("mySelect").value = 'All';
+            document.getElementById("typeSelect").value = 'Type';
+
+            db.favourites.each(p => display(p));
+            function display(i) {
+                var obj = i;
+                if ((techDay === false)) {
+                    printEvent(obj);
+                } else if ((techDay === true) && (obj.Time >= now)) {
+                    printEvent(obj);
                 }
-            });
+                document.getElementById("demo").innerHTML = table;
+            };
+            document.getElementById("demo").innerHTML = table;
+
+            alert("Removed from favourites");
+
         };
 
         function openBiography(ID) {
             modal.style.display = "block";
             var txt = ""
-            $.getJSON("talks.json", function (json) {
+            $.getJSON("/talks.json", function (json) {
                 var obj = json;
                 for (var y = 0; y < (obj.talks).length; y++) {
                     if (ID === obj.talks[y].ID) {
@@ -205,34 +296,25 @@
             })
 
         };
-
-
         var span = document.getElementsByClassName("close1")[0];
-
-
         span.onclick = function () {
             modal.style.display = "none";
-        }
-
-
+        };
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
-
-
-
+        };
         function openSlideMenu() {
             document.getElementById('side-menu').style.width = '230px';
             document.getElementById('main').style.marginLeft = '250px';
         }
-
         function closeSlideMenu() {
             document.getElementById('side-menu').style.width = '0';
             document.getElementById('main').style.marginLeft = '0';
         }
     </script>
+</body>
 </body>
 
 </html>
